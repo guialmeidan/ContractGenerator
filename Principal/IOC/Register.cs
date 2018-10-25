@@ -36,6 +36,8 @@ namespace Principal.IOC
         {
             container.RegisterType<IPessoaRepositorio, PessoaRepositorio>(new HierarchicalLifetimeManager());
             container.RegisterType<IPessoaService, PessoaServico>(new HierarchicalLifetimeManager());
+            container.RegisterType<IApprovedRepositorio, ApprovedRepositorio>(new HierarchicalLifetimeManager());
+            container.RegisterType<IApprovedService, ApprovedServico>(new HierarchicalLifetimeManager());
             container.RegisterType<IOpportunityRepository, OpportunityRepository>(new HierarchicalLifetimeManager());
             container.RegisterType<ITestemunhaRepositorio, TestemunhaRepositorio>(new HierarchicalLifetimeManager());
             container.RegisterType<IEscritorioRepositorio, EscritorioRepositorio>(new HierarchicalLifetimeManager());

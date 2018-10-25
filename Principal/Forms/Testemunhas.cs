@@ -173,5 +173,10 @@ namespace Principal.Forms
             GT2Nome = form.SelectedItem.Nome;
             inputTestemunha2GT.Text = form.SelectedItem.Nome + " " + form.SelectedItem.Sobrenome;
         }
+
+        private void inputTestemunha1GV_EditValueChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

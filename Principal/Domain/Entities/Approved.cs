@@ -14,8 +14,10 @@ namespace Principal.Domain.Entities
         [Key]
         public int Id { get; set; }
         public int IdEP { get; set; }
+        public string NomeEP { get; set; }
         public int IdResponsavel { get; set; }
-        public int EPID { get; set; }
+        public string NomeResponsavel { get; set; }
+        public string EPID { get; set; }
         public int IdPresidente { get; set; }
         public string TipoProduto { get; set; }
         public string TNID { get; set; }
@@ -48,6 +50,8 @@ namespace Principal.Domain.Entities
         public bool ModoPagSeguro { get; set; }
         public bool ModoTransferencia { get; set; }
         public int IdTestemunha1 { get; set; }
+        public string NomeTestemunha1 { get; set; }
         public int IdTestemunha2 { get; set; }
+        public string NomeTestemunha2 { get; set; }
     }
 }

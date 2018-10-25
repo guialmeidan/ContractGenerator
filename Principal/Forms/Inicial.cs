@@ -1,5 +1,6 @@
 ﻿using DevExpress.XtraEditors;
 using Principal.Domain;
+using Principal.Domain.Entities;
 using Principal.Forms;
 using System;
 using System.Collections.Generic;
@@ -11,6 +12,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Escritorio = Principal.Forms.Escritorio;
 
 namespace Principal
 {
@@ -91,7 +93,7 @@ namespace Principal
                 f.BringToFront();
             else
             {
-                RegistroApproved registroApproved = new RegistroApproved();
+                RegistroApproved registroApproved = new RegistroApproved(null, 1);
                 registroApproved.MdiParent = this;
                 registroApproved.Show();
             }

@@ -48,7 +48,6 @@
             this.labelControl6 = new DevExpress.XtraEditors.LabelControl();
             this.labelControl7 = new DevExpress.XtraEditors.LabelControl();
             this.inputDataFim = new DevExpress.XtraEditors.DateEdit();
-            this.inputCargaHoraria = new DevExpress.XtraEditors.TextEdit();
             this.labelControl8 = new DevExpress.XtraEditors.LabelControl();
             this.inputFeeICX = new DevExpress.XtraEditors.TextEdit();
             this.labelControl10 = new DevExpress.XtraEditors.LabelControl();
@@ -58,15 +57,20 @@
             this.labelControl12 = new DevExpress.XtraEditors.LabelControl();
             this.inputAcomodacaoCoberta = new DevExpress.XtraEditors.TextEdit();
             this.labelControl13 = new DevExpress.XtraEditors.LabelControl();
-            this.inputAlimentacaoCoberta = new DevExpress.XtraEditors.TextEdit();
+            this.inputAlimentacaoFimDeSemana = new DevExpress.XtraEditors.TextEdit();
             this.labelControl14 = new DevExpress.XtraEditors.LabelControl();
-            this.inputAlimentacaoProvida = new DevExpress.XtraEditors.TextEdit();
+            this.inputAlimentacaoSemana = new DevExpress.XtraEditors.TextEdit();
             this.labelControl15 = new DevExpress.XtraEditors.LabelControl();
             this.inputComputador = new DevExpress.XtraEditors.TextEdit();
             this.labelControl16 = new DevExpress.XtraEditors.LabelControl();
-            this.labelControl9 = new DevExpress.XtraEditors.LabelControl();
             this.xtraTabControl = new DevExpress.XtraTab.XtraTabControl();
             this.xtraTabPageVaga = new DevExpress.XtraTab.XtraTabPage();
+            this.inputTrabalhoSabado = new DevExpress.XtraEditors.TextEdit();
+            this.labelControl25 = new DevExpress.XtraEditors.LabelControl();
+            this.radioGroupPrograma = new DevExpress.XtraEditors.RadioGroup();
+            this.labelControl9 = new DevExpress.XtraEditors.LabelControl();
+            this.inputCargaHorariaExtenso = new DevExpress.XtraEditors.TextEdit();
+            this.inputCargaHorariaNumero = new DevExpress.XtraEditors.SpinEdit();
             this.xtraTabPagePagamento = new DevExpress.XtraTab.XtraTabPage();
             this.inputNumeroParcelas = new System.Windows.Forms.NumericUpDown();
             this.labelControl21 = new DevExpress.XtraEditors.LabelControl();
@@ -84,6 +88,7 @@
             this.labelControl23 = new DevExpress.XtraEditors.LabelControl();
             this.inputTestemunha1 = new DevExpress.XtraEditors.ButtonEdit();
             this.botaoSalvar = new DevExpress.XtraEditors.SimpleButton();
+            this.botaoResetar = new DevExpress.XtraEditors.SimpleButton();
             ((System.ComponentModel.ISupportInitialize)(this.inputNomeEP.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.inputNomeResponsavel.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.groupControlDadosGerais)).BeginInit();
@@ -98,17 +103,20 @@
             ((System.ComponentModel.ISupportInitialize)(this.inputDataInicio.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.inputDataFim.Properties.CalendarTimeProperties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.inputDataFim.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.inputCargaHoraria.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.inputFeeICX.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.inputBolsaAuxilio.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.inputAcomodacaoProvida.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.inputAcomodacaoCoberta.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.inputAlimentacaoCoberta.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.inputAlimentacaoProvida.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.inputAlimentacaoFimDeSemana.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.inputAlimentacaoSemana.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.inputComputador.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.xtraTabControl)).BeginInit();
             this.xtraTabControl.SuspendLayout();
             this.xtraTabPageVaga.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.inputTrabalhoSabado.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.radioGroupPrograma.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.inputCargaHorariaExtenso.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.inputCargaHorariaNumero.Properties)).BeginInit();
             this.xtraTabPagePagamento.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.inputNumeroParcelas)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.inputDataPagamento.Properties.CalendarTimeProperties)).BeginInit();
@@ -204,6 +212,8 @@
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
             this.inputDataAPD.Properties.CalendarTimeProperties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.inputDataAPD.Properties.Mask.EditMask = "dd/MM/yyyy";
+            this.inputDataAPD.Properties.Mask.UseMaskAsDisplayFormat = true;
             this.inputDataAPD.Size = new System.Drawing.Size(100, 20);
             this.inputDataAPD.TabIndex = 60;
             // 
@@ -222,6 +232,8 @@
             this.inputEPID.Name = "inputEPID";
             this.inputEPID.Properties.Appearance.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.inputEPID.Properties.Appearance.Options.UseFont = true;
+            this.inputEPID.Properties.Mask.EditMask = "d";
+            this.inputEPID.Properties.Mask.SaveLiteral = false;
             this.inputEPID.Size = new System.Drawing.Size(100, 22);
             this.inputEPID.TabIndex = 37;
             // 
@@ -292,19 +304,21 @@
             // inputDataInicio
             // 
             this.inputDataInicio.EditValue = null;
-            this.inputDataInicio.Location = new System.Drawing.Point(534, 47);
+            this.inputDataInicio.Location = new System.Drawing.Point(500, 47);
             this.inputDataInicio.Name = "inputDataInicio";
             this.inputDataInicio.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
             this.inputDataInicio.Properties.CalendarTimeProperties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.inputDataInicio.Size = new System.Drawing.Size(100, 20);
+            this.inputDataInicio.Properties.Mask.EditMask = "dd/MM/yyyy";
+            this.inputDataInicio.Properties.Mask.UseMaskAsDisplayFormat = true;
+            this.inputDataInicio.Size = new System.Drawing.Size(134, 20);
             this.inputDataInicio.TabIndex = 39;
             // 
             // labelControl6
             // 
             this.labelControl6.Appearance.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelControl6.Location = new System.Drawing.Point(418, 48);
+            this.labelControl6.Location = new System.Drawing.Point(392, 48);
             this.labelControl6.Name = "labelControl6";
             this.labelControl6.Size = new System.Drawing.Size(63, 16);
             this.labelControl6.TabIndex = 40;
@@ -313,7 +327,7 @@
             // labelControl7
             // 
             this.labelControl7.Appearance.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelControl7.Location = new System.Drawing.Point(418, 74);
+            this.labelControl7.Location = new System.Drawing.Point(392, 74);
             this.labelControl7.Name = "labelControl7";
             this.labelControl7.Size = new System.Drawing.Size(54, 16);
             this.labelControl7.TabIndex = 42;
@@ -322,23 +336,16 @@
             // inputDataFim
             // 
             this.inputDataFim.EditValue = null;
-            this.inputDataFim.Location = new System.Drawing.Point(534, 73);
+            this.inputDataFim.Location = new System.Drawing.Point(500, 73);
             this.inputDataFim.Name = "inputDataFim";
             this.inputDataFim.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
             this.inputDataFim.Properties.CalendarTimeProperties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.inputDataFim.Size = new System.Drawing.Size(100, 20);
+            this.inputDataFim.Properties.Mask.EditMask = "dd/MM/yyyy";
+            this.inputDataFim.Properties.Mask.UseMaskAsDisplayFormat = true;
+            this.inputDataFim.Size = new System.Drawing.Size(134, 20);
             this.inputDataFim.TabIndex = 41;
-            // 
-            // inputCargaHoraria
-            // 
-            this.inputCargaHoraria.Location = new System.Drawing.Point(119, 126);
-            this.inputCargaHoraria.Name = "inputCargaHoraria";
-            this.inputCargaHoraria.Properties.Appearance.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.inputCargaHoraria.Properties.Appearance.Options.UseFont = true;
-            this.inputCargaHoraria.Size = new System.Drawing.Size(74, 22);
-            this.inputCargaHoraria.TabIndex = 44;
             // 
             // labelControl8
             // 
@@ -351,17 +358,17 @@
             // 
             // inputFeeICX
             // 
-            this.inputFeeICX.Location = new System.Drawing.Point(534, 98);
+            this.inputFeeICX.Location = new System.Drawing.Point(500, 98);
             this.inputFeeICX.Name = "inputFeeICX";
             this.inputFeeICX.Properties.Appearance.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.inputFeeICX.Properties.Appearance.Options.UseFont = true;
-            this.inputFeeICX.Size = new System.Drawing.Size(100, 22);
+            this.inputFeeICX.Size = new System.Drawing.Size(134, 22);
             this.inputFeeICX.TabIndex = 47;
             // 
             // labelControl10
             // 
             this.labelControl10.Appearance.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelControl10.Location = new System.Drawing.Point(418, 101);
+            this.labelControl10.Location = new System.Drawing.Point(392, 101);
             this.labelControl10.Name = "labelControl10";
             this.labelControl10.Size = new System.Drawing.Size(47, 16);
             this.labelControl10.TabIndex = 46;
@@ -387,17 +394,17 @@
             // 
             // inputAcomodacaoProvida
             // 
-            this.inputAcomodacaoProvida.Location = new System.Drawing.Point(534, 126);
+            this.inputAcomodacaoProvida.Location = new System.Drawing.Point(500, 126);
             this.inputAcomodacaoProvida.Name = "inputAcomodacaoProvida";
             this.inputAcomodacaoProvida.Properties.Appearance.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.inputAcomodacaoProvida.Properties.Appearance.Options.UseFont = true;
-            this.inputAcomodacaoProvida.Size = new System.Drawing.Size(100, 22);
+            this.inputAcomodacaoProvida.Size = new System.Drawing.Size(134, 22);
             this.inputAcomodacaoProvida.TabIndex = 51;
             // 
             // labelControl12
             // 
             this.labelControl12.Appearance.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelControl12.Location = new System.Drawing.Point(418, 129);
+            this.labelControl12.Location = new System.Drawing.Point(392, 129);
             this.labelControl12.Name = "labelControl12";
             this.labelControl12.Size = new System.Drawing.Size(88, 16);
             this.labelControl12.TabIndex = 50;
@@ -405,91 +412,82 @@
             // 
             // inputAcomodacaoCoberta
             // 
-            this.inputAcomodacaoCoberta.Location = new System.Drawing.Point(534, 154);
+            this.inputAcomodacaoCoberta.Location = new System.Drawing.Point(500, 154);
             this.inputAcomodacaoCoberta.Name = "inputAcomodacaoCoberta";
             this.inputAcomodacaoCoberta.Properties.Appearance.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.inputAcomodacaoCoberta.Properties.Appearance.Options.UseFont = true;
-            this.inputAcomodacaoCoberta.Size = new System.Drawing.Size(100, 22);
+            this.inputAcomodacaoCoberta.Size = new System.Drawing.Size(134, 22);
             this.inputAcomodacaoCoberta.TabIndex = 53;
             // 
             // labelControl13
             // 
             this.labelControl13.Appearance.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelControl13.Location = new System.Drawing.Point(418, 157);
+            this.labelControl13.Location = new System.Drawing.Point(392, 157);
             this.labelControl13.Name = "labelControl13";
             this.labelControl13.Size = new System.Drawing.Size(89, 16);
             this.labelControl13.TabIndex = 52;
             this.labelControl13.Text = "Acom. Coberta";
             // 
-            // inputAlimentacaoCoberta
+            // inputAlimentacaoFimDeSemana
             // 
-            this.inputAlimentacaoCoberta.Location = new System.Drawing.Point(119, 181);
-            this.inputAlimentacaoCoberta.Name = "inputAlimentacaoCoberta";
-            this.inputAlimentacaoCoberta.Properties.Appearance.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.inputAlimentacaoCoberta.Properties.Appearance.Options.UseFont = true;
-            this.inputAlimentacaoCoberta.Size = new System.Drawing.Size(250, 22);
-            this.inputAlimentacaoCoberta.TabIndex = 57;
+            this.inputAlimentacaoFimDeSemana.Location = new System.Drawing.Point(119, 210);
+            this.inputAlimentacaoFimDeSemana.Name = "inputAlimentacaoFimDeSemana";
+            this.inputAlimentacaoFimDeSemana.Properties.Appearance.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.inputAlimentacaoFimDeSemana.Properties.Appearance.Options.UseFont = true;
+            this.inputAlimentacaoFimDeSemana.Size = new System.Drawing.Size(250, 22);
+            this.inputAlimentacaoFimDeSemana.TabIndex = 57;
             // 
             // labelControl14
             // 
             this.labelControl14.Appearance.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelControl14.Location = new System.Drawing.Point(18, 184);
+            this.labelControl14.Location = new System.Drawing.Point(15, 213);
             this.labelControl14.Name = "labelControl14";
-            this.labelControl14.Size = new System.Drawing.Size(80, 16);
+            this.labelControl14.Size = new System.Drawing.Size(88, 16);
             this.labelControl14.TabIndex = 56;
-            this.labelControl14.Text = "Alim. Coberta";
+            this.labelControl14.Text = "Alim. Fim Sem.";
             // 
-            // inputAlimentacaoProvida
+            // inputAlimentacaoSemana
             // 
-            this.inputAlimentacaoProvida.Location = new System.Drawing.Point(119, 153);
-            this.inputAlimentacaoProvida.Name = "inputAlimentacaoProvida";
-            this.inputAlimentacaoProvida.Properties.Appearance.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.inputAlimentacaoProvida.Properties.Appearance.Options.UseFont = true;
-            this.inputAlimentacaoProvida.Size = new System.Drawing.Size(250, 22);
-            this.inputAlimentacaoProvida.TabIndex = 55;
+            this.inputAlimentacaoSemana.Location = new System.Drawing.Point(119, 182);
+            this.inputAlimentacaoSemana.Name = "inputAlimentacaoSemana";
+            this.inputAlimentacaoSemana.Properties.Appearance.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.inputAlimentacaoSemana.Properties.Appearance.Options.UseFont = true;
+            this.inputAlimentacaoSemana.Size = new System.Drawing.Size(250, 22);
+            this.inputAlimentacaoSemana.TabIndex = 55;
             // 
             // labelControl15
             // 
             this.labelControl15.Appearance.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelControl15.Location = new System.Drawing.Point(18, 156);
+            this.labelControl15.Location = new System.Drawing.Point(15, 185);
             this.labelControl15.Name = "labelControl15";
-            this.labelControl15.Size = new System.Drawing.Size(79, 16);
+            this.labelControl15.Size = new System.Drawing.Size(83, 16);
             this.labelControl15.TabIndex = 54;
-            this.labelControl15.Text = "Alim. Provida";
+            this.labelControl15.Text = "Alim. Semana";
             // 
             // inputComputador
             // 
-            this.inputComputador.Location = new System.Drawing.Point(534, 182);
+            this.inputComputador.Location = new System.Drawing.Point(500, 182);
             this.inputComputador.Name = "inputComputador";
             this.inputComputador.Properties.Appearance.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.inputComputador.Properties.Appearance.Options.UseFont = true;
-            this.inputComputador.Size = new System.Drawing.Size(100, 22);
+            this.inputComputador.Size = new System.Drawing.Size(134, 22);
             this.inputComputador.TabIndex = 59;
             // 
             // labelControl16
             // 
             this.labelControl16.Appearance.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelControl16.Location = new System.Drawing.Point(418, 185);
+            this.labelControl16.Location = new System.Drawing.Point(392, 185);
             this.labelControl16.Name = "labelControl16";
             this.labelControl16.Size = new System.Drawing.Size(74, 16);
             this.labelControl16.TabIndex = 58;
             this.labelControl16.Text = "Computador";
-            // 
-            // labelControl9
-            // 
-            this.labelControl9.Appearance.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelControl9.Location = new System.Drawing.Point(199, 127);
-            this.labelControl9.Name = "labelControl9";
-            this.labelControl9.Size = new System.Drawing.Size(101, 16);
-            this.labelControl9.TabIndex = 45;
-            this.labelControl9.Text = "Horas Semanais";
             // 
             // xtraTabControl
             // 
             this.xtraTabControl.Location = new System.Drawing.Point(12, 116);
             this.xtraTabControl.Name = "xtraTabControl";
             this.xtraTabControl.SelectedTabPage = this.xtraTabPageVaga;
-            this.xtraTabControl.Size = new System.Drawing.Size(660, 250);
+            this.xtraTabControl.Size = new System.Drawing.Size(660, 272);
             this.xtraTabControl.TabIndex = 38;
             this.xtraTabControl.TabPages.AddRange(new DevExpress.XtraTab.XtraTabPage[] {
             this.xtraTabPageVaga,
@@ -498,17 +496,20 @@
             // 
             // xtraTabPageVaga
             // 
-            this.xtraTabPageVaga.Controls.Add(this.inputAlimentacaoCoberta);
+            this.xtraTabPageVaga.Controls.Add(this.inputTrabalhoSabado);
+            this.xtraTabPageVaga.Controls.Add(this.labelControl25);
+            this.xtraTabPageVaga.Controls.Add(this.radioGroupPrograma);
+            this.xtraTabPageVaga.Controls.Add(this.labelControl9);
+            this.xtraTabPageVaga.Controls.Add(this.inputCargaHorariaExtenso);
+            this.xtraTabPageVaga.Controls.Add(this.inputAlimentacaoFimDeSemana);
             this.xtraTabPageVaga.Controls.Add(this.labelControl3);
             this.xtraTabPageVaga.Controls.Add(this.botaoPesquisar);
             this.xtraTabPageVaga.Controls.Add(this.labelControl4);
             this.xtraTabPageVaga.Controls.Add(this.labelControl8);
             this.xtraTabPageVaga.Controls.Add(this.inputPaisDestino);
-            this.xtraTabPageVaga.Controls.Add(this.inputCargaHoraria);
             this.xtraTabPageVaga.Controls.Add(this.labelControl5);
             this.xtraTabPageVaga.Controls.Add(this.labelControl6);
             this.xtraTabPageVaga.Controls.Add(this.inputCidadeDestino);
-            this.xtraTabPageVaga.Controls.Add(this.labelControl9);
             this.xtraTabPageVaga.Controls.Add(this.labelControl16);
             this.xtraTabPageVaga.Controls.Add(this.inputComputador);
             this.xtraTabPageVaga.Controls.Add(this.inputAcomodacaoProvida);
@@ -523,12 +524,92 @@
             this.xtraTabPageVaga.Controls.Add(this.inputBolsaAuxilio);
             this.xtraTabPageVaga.Controls.Add(this.labelControl7);
             this.xtraTabPageVaga.Controls.Add(this.labelControl10);
-            this.xtraTabPageVaga.Controls.Add(this.inputAlimentacaoProvida);
+            this.xtraTabPageVaga.Controls.Add(this.inputAlimentacaoSemana);
             this.xtraTabPageVaga.Controls.Add(this.labelControl15);
             this.xtraTabPageVaga.Controls.Add(this.inputAcomodacaoCoberta);
+            this.xtraTabPageVaga.Controls.Add(this.inputCargaHorariaNumero);
             this.xtraTabPageVaga.Name = "xtraTabPageVaga";
-            this.xtraTabPageVaga.Size = new System.Drawing.Size(654, 222);
+            this.xtraTabPageVaga.Size = new System.Drawing.Size(654, 244);
             this.xtraTabPageVaga.Text = "Dados da Vaga";
+            // 
+            // inputTrabalhoSabado
+            // 
+            this.inputTrabalhoSabado.Location = new System.Drawing.Point(119, 154);
+            this.inputTrabalhoSabado.Name = "inputTrabalhoSabado";
+            this.inputTrabalhoSabado.Properties.Appearance.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.inputTrabalhoSabado.Properties.Appearance.Options.UseFont = true;
+            this.inputTrabalhoSabado.Size = new System.Drawing.Size(250, 22);
+            this.inputTrabalhoSabado.TabIndex = 64;
+            // 
+            // labelControl25
+            // 
+            this.labelControl25.Appearance.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelControl25.Location = new System.Drawing.Point(15, 157);
+            this.labelControl25.Name = "labelControl25";
+            this.labelControl25.Size = new System.Drawing.Size(86, 16);
+            this.labelControl25.TabIndex = 63;
+            this.labelControl25.Text = "Trabalho Sáb.";
+            // 
+            // radioGroupPrograma
+            // 
+            this.radioGroupPrograma.Location = new System.Drawing.Point(500, 8);
+            this.radioGroupPrograma.Name = "radioGroupPrograma";
+            this.radioGroupPrograma.Properties.Appearance.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.radioGroupPrograma.Properties.Appearance.Options.UseFont = true;
+            this.radioGroupPrograma.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder;
+            this.radioGroupPrograma.Properties.Items.AddRange(new DevExpress.XtraEditors.Controls.RadioGroupItem[] {
+            new DevExpress.XtraEditors.Controls.RadioGroupItem(null, "GV"),
+            new DevExpress.XtraEditors.Controls.RadioGroupItem(null, "GE"),
+            new DevExpress.XtraEditors.Controls.RadioGroupItem(null, "GT")});
+            this.radioGroupPrograma.Size = new System.Drawing.Size(134, 25);
+            this.radioGroupPrograma.TabIndex = 62;
+            // 
+            // labelControl9
+            // 
+            this.labelControl9.Appearance.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelControl9.Location = new System.Drawing.Point(392, 12);
+            this.labelControl9.Name = "labelControl9";
+            this.labelControl9.Size = new System.Drawing.Size(47, 16);
+            this.labelControl9.TabIndex = 61;
+            this.labelControl9.Text = "Produto";
+            // 
+            // inputCargaHorariaExtenso
+            // 
+            this.inputCargaHorariaExtenso.Location = new System.Drawing.Point(174, 125);
+            this.inputCargaHorariaExtenso.Name = "inputCargaHorariaExtenso";
+            this.inputCargaHorariaExtenso.Properties.Appearance.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.inputCargaHorariaExtenso.Properties.Appearance.Options.UseFont = true;
+            this.inputCargaHorariaExtenso.Size = new System.Drawing.Size(195, 22);
+            this.inputCargaHorariaExtenso.TabIndex = 60;
+            // 
+            // inputCargaHorariaNumero
+            // 
+            this.inputCargaHorariaNumero.EditValue = new decimal(new int[] {
+            25,
+            0,
+            0,
+            0});
+            this.inputCargaHorariaNumero.Location = new System.Drawing.Point(119, 126);
+            this.inputCargaHorariaNumero.Name = "inputCargaHorariaNumero";
+            this.inputCargaHorariaNumero.Properties.Appearance.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.inputCargaHorariaNumero.Properties.Appearance.Options.UseFont = true;
+            this.inputCargaHorariaNumero.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.inputCargaHorariaNumero.Properties.EditValueChangedFiringMode = DevExpress.XtraEditors.Controls.EditValueChangedFiringMode.Default;
+            this.inputCargaHorariaNumero.Properties.IsFloatValue = false;
+            this.inputCargaHorariaNumero.Properties.Mask.EditMask = "d";
+            this.inputCargaHorariaNumero.Properties.MaxValue = new decimal(new int[] {
+            99,
+            0,
+            0,
+            0});
+            this.inputCargaHorariaNumero.Properties.MinValue = new decimal(new int[] {
+            25,
+            0,
+            0,
+            0});
+            this.inputCargaHorariaNumero.Size = new System.Drawing.Size(49, 22);
+            this.inputCargaHorariaNumero.TabIndex = 44;
             // 
             // xtraTabPagePagamento
             // 
@@ -543,7 +624,7 @@
             this.xtraTabPagePagamento.Controls.Add(this.labelControl18);
             this.xtraTabPagePagamento.Controls.Add(this.inputValorContrato);
             this.xtraTabPagePagamento.Name = "xtraTabPagePagamento";
-            this.xtraTabPagePagamento.Size = new System.Drawing.Size(654, 222);
+            this.xtraTabPagePagamento.Size = new System.Drawing.Size(654, 244);
             this.xtraTabPagePagamento.Text = "Dados do Pagamento";
             // 
             // inputNumeroParcelas
@@ -572,6 +653,8 @@
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
             this.inputDataPagamento.Properties.CalendarTimeProperties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.inputDataPagamento.Properties.Mask.EditMask = "dd/MM/yyyy";
+            this.inputDataPagamento.Properties.Mask.UseMaskAsDisplayFormat = true;
             this.inputDataPagamento.Size = new System.Drawing.Size(100, 20);
             this.inputDataPagamento.TabIndex = 42;
             // 
@@ -661,7 +744,7 @@
             this.xtraTabPageTestemunhas.Controls.Add(this.labelControl23);
             this.xtraTabPageTestemunhas.Controls.Add(this.inputTestemunha1);
             this.xtraTabPageTestemunhas.Name = "xtraTabPageTestemunhas";
-            this.xtraTabPageTestemunhas.Size = new System.Drawing.Size(654, 222);
+            this.xtraTabPageTestemunhas.Size = new System.Drawing.Size(654, 244);
             this.xtraTabPageTestemunhas.Text = "Testemunhas";
             // 
             // labelControl22
@@ -717,23 +800,35 @@
             this.botaoSalvar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.botaoSalvar.Appearance.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.botaoSalvar.Appearance.Options.UseFont = true;
-            this.botaoSalvar.Location = new System.Drawing.Point(13, 372);
+            this.botaoSalvar.Location = new System.Drawing.Point(12, 394);
             this.botaoSalvar.Name = "botaoSalvar";
             this.botaoSalvar.Size = new System.Drawing.Size(75, 30);
             this.botaoSalvar.TabIndex = 39;
             this.botaoSalvar.Text = "Salvar";
+            this.botaoSalvar.Click += new System.EventHandler(this.botaoSalvar_Click);
+            // 
+            // botaoResetar
+            // 
+            this.botaoResetar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.botaoResetar.Appearance.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.botaoResetar.Appearance.Options.UseFont = true;
+            this.botaoResetar.Location = new System.Drawing.Point(592, 394);
+            this.botaoResetar.Name = "botaoResetar";
+            this.botaoResetar.Size = new System.Drawing.Size(75, 30);
+            this.botaoResetar.TabIndex = 40;
+            this.botaoResetar.Text = "Resetar";
+            this.botaoResetar.Click += new System.EventHandler(this.botaoResetar_Click);
             // 
             // RegistroApproved
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(684, 411);
+            this.ClientSize = new System.Drawing.Size(684, 437);
+            this.Controls.Add(this.botaoResetar);
             this.Controls.Add(this.botaoSalvar);
             this.Controls.Add(this.xtraTabControl);
             this.Controls.Add(this.groupControlDadosGerais);
             this.MaximizeBox = false;
-            this.MaximumSize = new System.Drawing.Size(700, 450);
-            this.MinimumSize = new System.Drawing.Size(700, 450);
             this.Name = "RegistroApproved";
             this.ShowIcon = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
@@ -753,18 +848,21 @@
             ((System.ComponentModel.ISupportInitialize)(this.inputDataInicio.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.inputDataFim.Properties.CalendarTimeProperties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.inputDataFim.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.inputCargaHoraria.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.inputFeeICX.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.inputBolsaAuxilio.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.inputAcomodacaoProvida.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.inputAcomodacaoCoberta.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.inputAlimentacaoCoberta.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.inputAlimentacaoProvida.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.inputAlimentacaoFimDeSemana.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.inputAlimentacaoSemana.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.inputComputador.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.xtraTabControl)).EndInit();
             this.xtraTabControl.ResumeLayout(false);
             this.xtraTabPageVaga.ResumeLayout(false);
             this.xtraTabPageVaga.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.inputTrabalhoSabado.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.radioGroupPrograma.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.inputCargaHorariaExtenso.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.inputCargaHorariaNumero.Properties)).EndInit();
             this.xtraTabPagePagamento.ResumeLayout(false);
             this.xtraTabPagePagamento.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.inputNumeroParcelas)).EndInit();
@@ -798,17 +896,15 @@
         private DevExpress.XtraEditors.LabelControl labelControl4;
         private DevExpress.XtraEditors.LabelControl labelControl17;
         private DevExpress.XtraEditors.TextEdit inputEPID;
-        private DevExpress.XtraEditors.TextEdit inputAlimentacaoCoberta;
+        private DevExpress.XtraEditors.TextEdit inputAlimentacaoFimDeSemana;
         private DevExpress.XtraEditors.LabelControl labelControl8;
-        private DevExpress.XtraEditors.TextEdit inputCargaHoraria;
         private DevExpress.XtraEditors.LabelControl labelControl6;
-        private DevExpress.XtraEditors.LabelControl labelControl9;
         private DevExpress.XtraEditors.TextEdit inputComputador;
         private DevExpress.XtraEditors.LabelControl labelControl14;
         private DevExpress.XtraEditors.DateEdit inputDataFim;
         private DevExpress.XtraEditors.DateEdit inputDataInicio;
         private DevExpress.XtraEditors.LabelControl labelControl7;
-        private DevExpress.XtraEditors.TextEdit inputAlimentacaoProvida;
+        private DevExpress.XtraEditors.TextEdit inputAlimentacaoSemana;
         private DevExpress.XtraEditors.TextEdit inputAcomodacaoCoberta;
         private DevExpress.XtraEditors.LabelControl labelControl15;
         private DevExpress.XtraEditors.LabelControl labelControl10;
@@ -840,5 +936,12 @@
         private DevExpress.XtraEditors.LabelControl labelControl24;
         private DevExpress.XtraEditors.DateEdit inputDataAPD;
         private System.Windows.Forms.NumericUpDown inputNumeroParcelas;
+        private DevExpress.XtraEditors.TextEdit inputCargaHorariaExtenso;
+        private DevExpress.XtraEditors.SimpleButton botaoResetar;
+        private DevExpress.XtraEditors.RadioGroup radioGroupPrograma;
+        private DevExpress.XtraEditors.LabelControl labelControl9;
+        private DevExpress.XtraEditors.SpinEdit inputCargaHorariaNumero;
+        private DevExpress.XtraEditors.TextEdit inputTrabalhoSabado;
+        private DevExpress.XtraEditors.LabelControl labelControl25;
     }
 }

@@ -299,6 +299,7 @@
     <Compile Include="Domain\Repositories\IOpportunityRepository.cs" />
     <Compile Include="Domain\Repositories\IPessoaRepositorio.cs" />
     <Compile Include="Domain\Repositories\ITestemunhaRepositorio.cs" />
+    <Compile Include="Domain\Services\IApprovedService.cs" />
     <Compile Include="Domain\Services\IOpportunityService.cs" />
     <Compile Include="Domain\Services\IPessoaService.cs" />
     <Compile Include="Forms\ConsultaOpportunity.cs">
@@ -371,6 +372,7 @@
     <Compile Include="Infra\Repositories\EscritorioRepositorio.cs" />
     <Compile Include="Infra\Repositories\PessoaRepositorio.cs" />
     <Compile Include="Infra\Repositories\TestemunhaRepositorio.cs" />
+    <Compile Include="Infra\Services\ApprovedServico.cs" />
     <Compile Include="Infra\Services\PessoaServico.cs" />
     <Compile Include="IOC\Register.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

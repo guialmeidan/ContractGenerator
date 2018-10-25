@@ -1,3 +1,9 @@
+C:\Users\guilh\source\repos\Principal\Principal\bin\Debug\DevExpress.XtraBars.v15.1.dll
+C:\Users\guilh\source\repos\Principal\Principal\bin\Debug\DevExpress.XtraBars.v15.1.xml
+C:\Users\guilh\source\repos\Principal\Principal\bin\Debug\DevExpress.XtraReports.v15.1.Extensions.xml
+C:\Users\guilh\source\repos\Principal\Principal\bin\Debug\DevExpress.XtraTreeList.v15.1.xml
+C:\Users\guilh\source\repos\Principal\Principal\bin\Debug\es\DevExpress.XtraCharts.v15.1.resources.dll
+C:\Users\guilh\source\repos\Principal\Principal\bin\Debug\ja\DevExpress.XtraReports.v15.1.resources.dll
 C:\Users\guilh\source\repos\Principal\Principal\bin\Debug\amd64\Microsoft.VC90.CRT\Microsoft.VC90.CRT.manifest
 C:\Users\guilh\source\repos\Principal\Principal\bin\Debug\amd64\Microsoft.VC90.CRT\msvcr90.dll
 C:\Users\guilh\source\repos\Principal\Principal\bin\Debug\amd64\Microsoft.VC90.CRT\README_ENU.txt
@@ -131,7 +137,6 @@ C:\Users\guilh\source\repos\Principal\Principal\bin\Debug\DevExpress.Spreadsheet
 C:\Users\guilh\source\repos\Principal\Principal\bin\Debug\DevExpress.Utils.v15.1.dll
 C:\Users\guilh\source\repos\Principal\Principal\bin\Debug\DevExpress.Utils.v15.1.UI.dll
 C:\Users\guilh\source\repos\Principal\Principal\bin\Debug\DevExpress.Xpo.v15.1.dll
-C:\Users\guilh\source\repos\Principal\Principal\bin\Debug\DevExpress.XtraBars.v15.1.dll
 C:\Users\guilh\source\repos\Principal\Principal\bin\Debug\DevExpress.XtraCharts.v15.1.dll
 C:\Users\guilh\source\repos\Principal\Principal\bin\Debug\DevExpress.XtraEditors.v15.1.dll
 C:\Users\guilh\source\repos\Principal\Principal\bin\Debug\DevExpress.XtraGauges.v15.1.Core.dll
@@ -191,7 +196,6 @@ C:\Users\guilh\source\repos\Principal\Principal\bin\Debug\DevExpress.Spreadsheet
 C:\Users\guilh\source\repos\Principal\Principal\bin\Debug\DevExpress.Utils.v15.1.xml
 C:\Users\guilh\source\repos\Principal\Principal\bin\Debug\DevExpress.Utils.v15.1.UI.xml
 C:\Users\guilh\source\repos\Principal\Principal\bin\Debug\DevExpress.Xpo.v15.1.xml
-C:\Users\guilh\source\repos\Principal\Principal\bin\Debug\DevExpress.XtraBars.v15.1.xml
 C:\Users\guilh\source\repos\Principal\Principal\bin\Debug\DevExpress.XtraCharts.v15.1.xml
 C:\Users\guilh\source\repos\Principal\Principal\bin\Debug\DevExpress.XtraGauges.v15.1.Core.xml
 C:\Users\guilh\source\repos\Principal\Principal\bin\Debug\DevExpress.XtraGrid.v15.1.xml
@@ -200,13 +204,11 @@ C:\Users\guilh\source\repos\Principal\Principal\bin\Debug\DevExpress.XtraNavBar.
 C:\Users\guilh\source\repos\Principal\Principal\bin\Debug\DevExpress.XtraPivotGrid.v15.1.xml
 C:\Users\guilh\source\repos\Principal\Principal\bin\Debug\DevExpress.XtraPrinting.v15.1.xml
 C:\Users\guilh\source\repos\Principal\Principal\bin\Debug\DevExpress.XtraReports.v15.1.xml
-C:\Users\guilh\source\repos\Principal\Principal\bin\Debug\DevExpress.XtraReports.v15.1.Extensions.xml
 C:\Users\guilh\source\repos\Principal\Principal\bin\Debug\DevExpress.XtraRichEdit.v15.1.xml
 C:\Users\guilh\source\repos\Principal\Principal\bin\Debug\DevExpress.XtraRichEdit.v15.1.Extensions.xml
 C:\Users\guilh\source\repos\Principal\Principal\bin\Debug\DevExpress.XtraScheduler.v15.1.xml
 C:\Users\guilh\source\repos\Principal\Principal\bin\Debug\DevExpress.XtraScheduler.v15.1.Core.xml
 C:\Users\guilh\source\repos\Principal\Principal\bin\Debug\DevExpress.XtraSpreadsheet.v15.1.xml
-C:\Users\guilh\source\repos\Principal\Principal\bin\Debug\DevExpress.XtraTreeList.v15.1.xml
 C:\Users\guilh\source\repos\Principal\Principal\bin\Debug\DevExpress.XtraVerticalGrid.v15.1.xml
 C:\Users\guilh\source\repos\Principal\Principal\bin\Debug\EntityFramework.xml
 C:\Users\guilh\source\repos\Principal\Principal\bin\Debug\EntityFramework.SqlServer.xml
@@ -276,7 +278,6 @@ C:\Users\guilh\source\repos\Principal\Principal\bin\Debug\es\DevExpress.XtraBars
 C:\Users\guilh\source\repos\Principal\Principal\bin\Debug\ja\DevExpress.XtraBars.v15.1.resources.dll
 C:\Users\guilh\source\repos\Principal\Principal\bin\Debug\ru\DevExpress.XtraBars.v15.1.resources.dll
 C:\Users\guilh\source\repos\Principal\Principal\bin\Debug\de\DevExpress.XtraCharts.v15.1.resources.dll
-C:\Users\guilh\source\repos\Principal\Principal\bin\Debug\es\DevExpress.XtraCharts.v15.1.resources.dll
 C:\Users\guilh\source\repos\Principal\Principal\bin\Debug\ja\DevExpress.XtraCharts.v15.1.resources.dll
 C:\Users\guilh\source\repos\Principal\Principal\bin\Debug\ru\DevExpress.XtraCharts.v15.1.resources.dll
 C:\Users\guilh\source\repos\Principal\Principal\bin\Debug\de\DevExpress.XtraGauges.v15.1.Core.resources.dll
@@ -305,7 +306,6 @@ C:\Users\guilh\source\repos\Principal\Principal\bin\Debug\ja\DevExpress.XtraPrin
 C:\Users\guilh\source\repos\Principal\Principal\bin\Debug\ru\DevExpress.XtraPrinting.v15.1.resources.dll
 C:\Users\guilh\source\repos\Principal\Principal\bin\Debug\de\DevExpress.XtraReports.v15.1.resources.dll
 C:\Users\guilh\source\repos\Principal\Principal\bin\Debug\es\DevExpress.XtraReports.v15.1.resources.dll
-C:\Users\guilh\source\repos\Principal\Principal\bin\Debug\ja\DevExpress.XtraReports.v15.1.resources.dll
 C:\Users\guilh\source\repos\Principal\Principal\bin\Debug\ru\DevExpress.XtraReports.v15.1.resources.dll
 C:\Users\guilh\source\repos\Principal\Principal\bin\Debug\de\DevExpress.XtraReports.v15.1.Extensions.resources.dll
 C:\Users\guilh\source\repos\Principal\Principal\bin\Debug\es\DevExpress.XtraReports.v15.1.Extensions.resources.dll
@@ -364,4 +364,3 @@ C:\Users\guilh\source\repos\Principal\Principal\obj\Debug\GeraContrato.csproj.Co
 C:\Users\guilh\source\repos\Principal\Principal\obj\Debug\GeraContrato.csproj.CopyComplete
 C:\Users\guilh\source\repos\Principal\Principal\obj\Debug\Principal.exe
 C:\Users\guilh\source\repos\Principal\Principal\obj\Debug\Principal.pdb
-C:\Users\guilh\source\repos\Principal\Principal\obj\Debug\GeraContrato.csprojAssemblyReference.cache

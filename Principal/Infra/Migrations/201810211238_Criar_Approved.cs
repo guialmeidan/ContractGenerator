@@ -20,8 +20,10 @@ namespace Principal.Infra.Migrations
             Create.Table("Approved")
                     .WithColumn("Id").AsInt32().PrimaryKey()
                     .WithColumn("IdEP").AsInt32()
+                    .WithColumn("NomeEP").AsString(200)
                     .WithColumn("IdResponsavel").AsInt32().Nullable()
-                    .WithColumn("EPID").AsInt32().Nullable()
+                    .WithColumn("NomeResponsavel").AsString(200).Nullable()
+                    .WithColumn("EPID").AsString(20).Nullable()
                     .WithColumn("IdPresidente").AsInt32()
                     .WithColumn("TipoProduto").AsString(200)
                     .WithColumn("TNID").AsString(20)
@@ -54,7 +56,9 @@ namespace Principal.Infra.Migrations
                     .WithColumn("ModoPagSeguro").AsBoolean().Nullable()
                     .WithColumn("ModoTransferencia").AsBoolean().Nullable()
                     .WithColumn("IdTestemunha1").AsInt32()
-                    .WithColumn("IdTestemunha2").AsInt32();
+                    .WithColumn("NomeTestemunha1").AsString(200)
+                    .WithColumn("IdTestemunha2").AsInt32()
+                    .WithColumn("NomeTestemunha2").AsString(200);
         }
     }
 }

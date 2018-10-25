@@ -94,7 +94,6 @@
             new DevExpress.XtraEditors.Controls.EditorButton()});
             this.inputTestemunha2GV.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
             this.inputTestemunha2GV.Size = new System.Drawing.Size(380, 22);
-            this.inputTestemunha2GV.ButtonClick += inputGV2_EditButton;
             this.inputTestemunha2GV.TabIndex = 49;
             // 
             // labelControl2
@@ -119,8 +118,8 @@
             new DevExpress.XtraEditors.Controls.EditorButton()});
             this.inputTestemunha1GV.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
             this.inputTestemunha1GV.Size = new System.Drawing.Size(380, 22);
-            this.inputTestemunha1GV.ButtonClick += inputGV1_EditButton;
             this.inputTestemunha1GV.TabIndex = 2;
+            this.inputTestemunha1GV.EditValueChanged += new System.EventHandler(this.inputTestemunha1GV_EditValueChanged);
             // 
             // groupControl1
             // 
@@ -158,7 +157,6 @@
             new DevExpress.XtraEditors.Controls.EditorButton()});
             this.inputTestemunha2GE.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
             this.inputTestemunha2GE.Size = new System.Drawing.Size(380, 22);
-            this.inputTestemunha2GE.ButtonClick += inputGE2_EditButton;
             this.inputTestemunha2GE.TabIndex = 49;
             // 
             // labelControl4
@@ -183,7 +181,6 @@
             new DevExpress.XtraEditors.Controls.EditorButton()});
             this.inputTestemunha1GE.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
             this.inputTestemunha1GE.Size = new System.Drawing.Size(380, 22);
-            this.inputTestemunha1GE.ButtonClick += inputGE1_EditButton;
             this.inputTestemunha1GE.TabIndex = 2;
             // 
             // groupControl2
@@ -222,7 +219,6 @@
             new DevExpress.XtraEditors.Controls.EditorButton()});
             this.inputTestemunha2GT.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
             this.inputTestemunha2GT.Size = new System.Drawing.Size(380, 22);
-            this.inputTestemunha2GT.ButtonClick += inputGT2_EditButton;
             this.inputTestemunha2GT.TabIndex = 49;
             // 
             // labelControl6
@@ -247,7 +243,6 @@
             new DevExpress.XtraEditors.Controls.EditorButton()});
             this.inputTestemunha1GT.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
             this.inputTestemunha1GT.Size = new System.Drawing.Size(380, 22);
-            this.inputTestemunha1GT.ButtonClick += inputGT1_EditButton;
             this.inputTestemunha1GT.TabIndex = 2;
             // 
             // botaoSalvar
