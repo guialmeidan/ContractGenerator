@@ -121,4 +121,7 @@
   <data name="TNA Hubble - Logo Grande" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\TNA Hubble - Logo Grande.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="Pessoas" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Pessoas.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
 </root>

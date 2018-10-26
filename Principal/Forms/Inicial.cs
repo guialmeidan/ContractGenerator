@@ -88,14 +88,14 @@ namespace Principal
 
         private void registroDeApprovedToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            var f = Application.OpenForms[nameof(RegistroApproved)];
+            var f = Application.OpenForms[nameof(ListaApproveds)];
             if (f != null)
                 f.BringToFront();
             else
             {
-                RegistroApproved registroApproved = new RegistroApproved(null, 1);
-                registroApproved.MdiParent = this;
-                registroApproved.Show();
+                ListaApproveds listaApproveds = new ListaApproveds();
+                listaApproveds.MdiParent = this;
+                listaApproveds.Show();
             }
         }
     }

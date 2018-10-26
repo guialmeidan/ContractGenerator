@@ -80,14 +80,14 @@ namespace Principal.Forms
                 inputDataPagamento.Text = approved.DataPagamento.ToString();
                 inputModoPagamento.Text = approved.TipoPagamento.ToString();
                 inputNumeroParcelas.Text = approved.QtdParcelas.ToString();
-                inputFormasPagamento.SetSelected(0, approved.ModoBoleto);
-                inputFormasPagamento.SetSelected(1, approved.ModoCartaoCredito);
-                inputFormasPagamento.SetSelected(2, approved.ModoCartaoDebito);
-                inputFormasPagamento.SetSelected(3, approved.ModoCheque);
-                inputFormasPagamento.SetSelected(4, approved.ModoDeposito);
-                inputFormasPagamento.SetSelected(5, approved.ModoDinheiro);
-                inputFormasPagamento.SetSelected(6, approved.ModoPagSeguro);
-                inputFormasPagamento.SetSelected(7, approved.ModoTransferencia);
+                inputModoBoleto.Checked = approved.ModoBoleto;
+                inputModoCredito.Checked = approved.ModoCartaoCredito;
+                inputModoDebito.Checked = approved.ModoCartaoDebito;
+                inputModoCheque.Checked = approved.ModoCheque;
+                inputModoDeposito.Checked = approved.ModoDeposito;
+                inputModoDinheiro.Checked = approved.ModoDinheiro;
+                inputModoPagSeguro.Checked = approved.ModoPagSeguro;
+                inputModoTransferencia.Checked = approved.ModoTransferencia;
                 inputTestemunha1.Text = approved.NomeTestemunha1;
                 inputTestemunha2.Text = approved.NomeTestemunha2;
             }
@@ -101,6 +101,7 @@ namespace Principal.Forms
             inputDataAPD.Text = "";
             inputTNID.Text = "";
             radioGroupPrograma.SelectedIndex = 0;
+            inputModoPagamento.SelectedIndex = 0;
             inputPaisDestino.Text = "";
             inputCidadeDestino.Text = "";
             inputBolsaAuxilio.Text = "";
@@ -116,17 +117,18 @@ namespace Principal.Forms
             inputComputador.Text = "";
             inputValorContrato.Text = "";
             inputValorExtenso.Text = "";
+            inputTrabalhoSabado.Text = "";
             inputDataPagamento.Text = "";
             inputModoPagamento.Text = "";
             inputNumeroParcelas.Text = "";
-            inputFormasPagamento.SetSelected(0, false);
-            inputFormasPagamento.SetSelected(1, false);
-            inputFormasPagamento.SetSelected(2, false);
-            inputFormasPagamento.SetSelected(3, false);
-            inputFormasPagamento.SetSelected(4, false);
-            inputFormasPagamento.SetSelected(5, false);
-            inputFormasPagamento.SetSelected(6, false);
-            inputFormasPagamento.SetSelected(7, false);
+            inputModoBoleto.Checked = false;
+            inputModoCredito.Checked = false;
+            inputModoDebito.Checked = false;
+            inputModoCheque.Checked = false;
+            inputModoDeposito.Checked = false;
+            inputModoDinheiro.Checked = false;
+            inputModoPagSeguro.Checked = false;
+            inputModoTransferencia.Checked = false;
             inputTestemunha1.Text = "";
             inputTestemunha2.Text = "";
         }
@@ -151,9 +153,9 @@ namespace Principal.Forms
                         Approved approved = new Approved()
                         {
                             IdEP = IDEP,
-                            NomeEP = EPNome,
+                            NomeEP = inputNomeEP.Text,
                             IdResponsavel = IDResponsavel,
-                            NomeResponsavel = ResponsavelNome,
+                            NomeResponsavel = inputNomeResponsavel.Text,
                             EPID = inputEPID.Text,
                             IdPresidente = _escritorio.LCP,
                             TNID = inputTNID.Text,
@@ -178,18 +180,18 @@ namespace Principal.Forms
                             DataPagamento = inputDataPagamento.DateTime,
                             TipoPagamento = inputModoPagamento.SelectedIndex,
                             QtdParcelas = Convert.ToInt32(inputNumeroParcelas.Value),
-                            ModoBoleto = false,
-                            ModoCartaoCredito = false,
-                            ModoCartaoDebito = false,
-                            ModoCheque = false,
-                            ModoDeposito = false,
-                            ModoDinheiro = false,
-                            ModoPagSeguro = false,
-                            ModoTransferencia = false,
+                            ModoBoleto = inputModoBoleto.Checked,
+                            ModoCartaoCredito = inputModoCredito.Checked,
+                            ModoCartaoDebito = inputModoDebito.Checked,
+                            ModoCheque = inputModoCheque.Checked,
+                            ModoDeposito = inputModoDeposito.Checked,
+                            ModoDinheiro = inputModoDinheiro.Checked,
+                            ModoPagSeguro = inputModoPagSeguro.Checked,
+                            ModoTransferencia = inputModoTransferencia.Checked,
                             IdTestemunha1 = IDTestemunha1,
-                            NomeTestemunha1 = Testemunha1Nome,
+                            NomeTestemunha1 = inputTestemunha1.Text,
                             IdTestemunha2 = IDTestemunha2,
-                            NomeTestemunha2 = Testemunha2Nome
+                            NomeTestemunha2 = inputTestemunha2.Text
                         };
                         _servicoApproved.Criar(approved);
                     }

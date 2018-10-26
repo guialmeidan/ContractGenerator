@@ -333,6 +333,9 @@
       <DependentUpon>Inicial.cs</DependentUpon>
     </Compile>
     <Compile Include="ConsoleApplication1.cs" />
+    <Compile Include="Forms\ListaApproveds.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Forms\ListaPessoas.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -404,6 +407,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\Inicial.resx">
       <DependentUpon>Inicial.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\ListaApproveds.resx">
+      <DependentUpon>ListaApproveds.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\ListaPessoas.resx">
       <DependentUpon>ListaPessoas.cs</DependentUpon>
@@ -509,6 +515,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="DevExpress.XtraEditors.v15.1.dll" />
+    <None Include="Resources\Pessoas.png" />
     <None Include="Resources\TNA Hubble - Logo Grande.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

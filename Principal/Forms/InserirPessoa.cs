@@ -19,7 +19,8 @@ using DevExpress.XtraEditors;
 namespace Principal.Forms
 {
     public partial class InserirPessoa : XtraForm
-    {        
+    {
+        ListaPessoas _formListaPessoas;
         private IPessoaRepositorio _repositorioPessoa;
         private Pessoa _pessoa;
         Dictionary<string, Control> _binds = new Dictionary<string, Control>();
@@ -27,8 +28,9 @@ namespace Principal.Forms
         int _operacao;
 
         //OPERACAO 1 = NOVO, 2 = EDITAR
-        public InserirPessoa(Pessoa pessoa, int operacao)
+        public InserirPessoa(Pessoa pessoa, int operacao, ListaPessoas formListaPessoas)
         {
+            _formListaPessoas = formListaPessoas;
             _operacao = operacao;
             InitializeComponent();
             _pessoa = pessoa;
@@ -66,6 +68,7 @@ namespace Principal.Forms
         private void botaoResetar_Click(object sender, EventArgs e)
         {
             ResetarCampos();
+            _operacao = 1;
         }
 
         private void ResetarCampos()
@@ -143,6 +146,7 @@ namespace Principal.Forms
                             Complemento = inputComplemento.Text
                         };
                         _repositorioPessoa.Criar(pessoa);
+                        _pessoa = pessoa;
                     }
                         
                     else if(_operacao == 2)
@@ -168,11 +172,10 @@ namespace Principal.Forms
 
                         _repositorioPessoa.Atualizar(_pessoa);
                     }
-                        
 
                     MessageBox.Show("Registro gravado!\n", "Sucesso", MessageBoxButtons.OK, MessageBoxIcon.Information);
-
-                    //ResetarCampos();
+                    _operacao = 2;
+                    atualizarListaPessoas();
                 }
                 catch (Exception ex)
                 {
@@ -180,6 +183,11 @@ namespace Principal.Forms
                 }            
             }
             
+        }
+
+        public void atualizarListaPessoas()
+        {
+            _formListaPessoas.iniciarGrid();
         }
 
         private int validarPessoa(int flag)

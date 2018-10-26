@@ -37,12 +37,12 @@ namespace Principal
             this.testemunhaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.sairToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.emitirDocumentoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.registroDeApprovedToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.consultaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.tNIDToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.sobreToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.enviarSugestãoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.tutorialToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.registroDeApprovedToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -75,28 +75,28 @@ namespace Principal
             // pessoaToolStripMenuItem
             // 
             this.pessoaToolStripMenuItem.Name = "pessoaToolStripMenuItem";
-            this.pessoaToolStripMenuItem.Size = new System.Drawing.Size(139, 22);
+            this.pessoaToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.pessoaToolStripMenuItem.Text = "Pessoa";
             this.pessoaToolStripMenuItem.Click += new System.EventHandler(this.PessoaToolStripMenuItem_Click);
             // 
             // entidadeToolStripMenuItem
             // 
             this.entidadeToolStripMenuItem.Name = "entidadeToolStripMenuItem";
-            this.entidadeToolStripMenuItem.Size = new System.Drawing.Size(139, 22);
+            this.entidadeToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.entidadeToolStripMenuItem.Text = "Escritório";
             this.entidadeToolStripMenuItem.Click += new System.EventHandler(this.entidadeToolStripMenuItem_Click);
             // 
             // testemunhaToolStripMenuItem
             // 
             this.testemunhaToolStripMenuItem.Name = "testemunhaToolStripMenuItem";
-            this.testemunhaToolStripMenuItem.Size = new System.Drawing.Size(139, 22);
+            this.testemunhaToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.testemunhaToolStripMenuItem.Text = "Testemunha";
             this.testemunhaToolStripMenuItem.Click += new System.EventHandler(this.testemunhaToolStripMenuItem_Click);
             // 
             // sairToolStripMenuItem
             // 
             this.sairToolStripMenuItem.Name = "sairToolStripMenuItem";
-            this.sairToolStripMenuItem.Size = new System.Drawing.Size(139, 22);
+            this.sairToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.sairToolStripMenuItem.Text = "Sair";
             // 
             // emitirDocumentoToolStripMenuItem
@@ -107,6 +107,13 @@ namespace Principal
             this.emitirDocumentoToolStripMenuItem.Size = new System.Drawing.Size(143, 20);
             this.emitirDocumentoToolStripMenuItem.Text = "Emitir Contrato de OGX";
             this.emitirDocumentoToolStripMenuItem.Click += new System.EventHandler(this.emitirDocumentoToolStripMenuItem_Click);
+            // 
+            // registroDeApprovedToolStripMenuItem
+            // 
+            this.registroDeApprovedToolStripMenuItem.Name = "registroDeApprovedToolStripMenuItem";
+            this.registroDeApprovedToolStripMenuItem.Size = new System.Drawing.Size(188, 22);
+            this.registroDeApprovedToolStripMenuItem.Text = "Registro de Approved";
+            this.registroDeApprovedToolStripMenuItem.Click += new System.EventHandler(this.registroDeApprovedToolStripMenuItem_Click);
             // 
             // consultaToolStripMenuItem
             // 
@@ -143,13 +150,6 @@ namespace Principal
             this.tutorialToolStripMenuItem.Name = "tutorialToolStripMenuItem";
             this.tutorialToolStripMenuItem.Size = new System.Drawing.Size(163, 22);
             this.tutorialToolStripMenuItem.Text = "Sobre o Software";
-            // 
-            // registroDeApprovedToolStripMenuItem
-            // 
-            this.registroDeApprovedToolStripMenuItem.Name = "registroDeApprovedToolStripMenuItem";
-            this.registroDeApprovedToolStripMenuItem.Size = new System.Drawing.Size(188, 22);
-            this.registroDeApprovedToolStripMenuItem.Text = "Registro de Approved";
-            this.registroDeApprovedToolStripMenuItem.Click += new System.EventHandler(this.registroDeApprovedToolStripMenuItem_Click);
             // 
             // Principal
             // 

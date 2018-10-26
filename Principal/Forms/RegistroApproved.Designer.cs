@@ -72,10 +72,17 @@
             this.inputCargaHorariaExtenso = new DevExpress.XtraEditors.TextEdit();
             this.inputCargaHorariaNumero = new DevExpress.XtraEditors.SpinEdit();
             this.xtraTabPagePagamento = new DevExpress.XtraTab.XtraTabPage();
+            this.inputModoTransferencia = new DevExpress.XtraEditors.CheckEdit();
+            this.inputModoPagSeguro = new DevExpress.XtraEditors.CheckEdit();
+            this.inputModoDinheiro = new DevExpress.XtraEditors.CheckEdit();
+            this.inputModoDeposito = new DevExpress.XtraEditors.CheckEdit();
+            this.inputModoCheque = new DevExpress.XtraEditors.CheckEdit();
+            this.inputModoDebito = new DevExpress.XtraEditors.CheckEdit();
+            this.inputModoCredito = new DevExpress.XtraEditors.CheckEdit();
+            this.inputModoBoleto = new DevExpress.XtraEditors.CheckEdit();
             this.inputNumeroParcelas = new System.Windows.Forms.NumericUpDown();
             this.labelControl21 = new DevExpress.XtraEditors.LabelControl();
             this.inputDataPagamento = new DevExpress.XtraEditors.DateEdit();
-            this.inputFormasPagamento = new DevExpress.XtraEditors.CheckedListBoxControl();
             this.labelControl20 = new DevExpress.XtraEditors.LabelControl();
             this.inputModoPagamento = new DevExpress.XtraEditors.RadioGroup();
             this.labelControl19 = new DevExpress.XtraEditors.LabelControl();
@@ -118,10 +125,17 @@
             ((System.ComponentModel.ISupportInitialize)(this.inputCargaHorariaExtenso.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.inputCargaHorariaNumero.Properties)).BeginInit();
             this.xtraTabPagePagamento.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.inputModoTransferencia.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.inputModoPagSeguro.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.inputModoDinheiro.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.inputModoDeposito.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.inputModoCheque.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.inputModoDebito.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.inputModoCredito.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.inputModoBoleto.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.inputNumeroParcelas)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.inputDataPagamento.Properties.CalendarTimeProperties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.inputDataPagamento.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.inputFormasPagamento)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.inputModoPagamento.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.inputValorExtenso.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.inputValorContrato.Properties)).BeginInit();
@@ -132,8 +146,6 @@
             // 
             // labelControl1
             // 
-            this.labelControl1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
             this.labelControl1.Appearance.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelControl1.Location = new System.Drawing.Point(16, 32);
             this.labelControl1.Name = "labelControl1";
@@ -143,6 +155,8 @@
             // 
             // inputNomeEP
             // 
+            this.inputNomeEP.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.inputNomeEP.Location = new System.Drawing.Point(120, 29);
             this.inputNomeEP.Name = "inputNomeEP";
             this.inputNomeEP.Properties.AllowFocused = false;
@@ -156,6 +170,8 @@
             // 
             // inputNomeResponsavel
             // 
+            this.inputNomeResponsavel.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.inputNomeResponsavel.Location = new System.Drawing.Point(120, 57);
             this.inputNomeResponsavel.Name = "inputNomeResponsavel";
             this.inputNomeResponsavel.Properties.AllowFocused = false;
@@ -169,8 +185,6 @@
             // 
             // labelControl2
             // 
-            this.labelControl2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
             this.labelControl2.Appearance.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelControl2.Location = new System.Drawing.Point(16, 60);
             this.labelControl2.Name = "labelControl2";
@@ -180,6 +194,8 @@
             // 
             // groupControlDadosGerais
             // 
+            this.groupControlDadosGerais.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.groupControlDadosGerais.Controls.Add(this.labelControl24);
             this.groupControlDadosGerais.Controls.Add(this.inputDataAPD);
             this.groupControlDadosGerais.Controls.Add(this.labelControl17);
@@ -196,6 +212,7 @@
             // 
             // labelControl24
             // 
+            this.labelControl24.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.labelControl24.Appearance.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelControl24.Location = new System.Drawing.Point(469, 58);
             this.labelControl24.Name = "labelControl24";
@@ -205,6 +222,7 @@
             // 
             // inputDataAPD
             // 
+            this.inputDataAPD.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.inputDataAPD.EditValue = null;
             this.inputDataAPD.Location = new System.Drawing.Point(535, 57);
             this.inputDataAPD.Name = "inputDataAPD";
@@ -219,6 +237,7 @@
             // 
             // labelControl17
             // 
+            this.labelControl17.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.labelControl17.Appearance.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelControl17.Location = new System.Drawing.Point(469, 32);
             this.labelControl17.Name = "labelControl17";
@@ -228,6 +247,7 @@
             // 
             // inputEPID
             // 
+            this.inputEPID.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.inputEPID.Location = new System.Drawing.Point(535, 29);
             this.inputEPID.Name = "inputEPID";
             this.inputEPID.Properties.Appearance.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -267,6 +287,8 @@
             // 
             // inputPaisDestino
             // 
+            this.inputPaisDestino.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.inputPaisDestino.Location = new System.Drawing.Point(119, 45);
             this.inputPaisDestino.Name = "inputPaisDestino";
             this.inputPaisDestino.Properties.Appearance.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -285,6 +307,8 @@
             // 
             // inputCidadeDestino
             // 
+            this.inputCidadeDestino.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.inputCidadeDestino.Location = new System.Drawing.Point(119, 73);
             this.inputCidadeDestino.Name = "inputCidadeDestino";
             this.inputCidadeDestino.Properties.Appearance.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -303,6 +327,7 @@
             // 
             // inputDataInicio
             // 
+            this.inputDataInicio.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.inputDataInicio.EditValue = null;
             this.inputDataInicio.Location = new System.Drawing.Point(500, 47);
             this.inputDataInicio.Name = "inputDataInicio";
@@ -317,6 +342,7 @@
             // 
             // labelControl6
             // 
+            this.labelControl6.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.labelControl6.Appearance.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelControl6.Location = new System.Drawing.Point(392, 48);
             this.labelControl6.Name = "labelControl6";
@@ -326,6 +352,7 @@
             // 
             // labelControl7
             // 
+            this.labelControl7.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.labelControl7.Appearance.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelControl7.Location = new System.Drawing.Point(392, 74);
             this.labelControl7.Name = "labelControl7";
@@ -335,6 +362,7 @@
             // 
             // inputDataFim
             // 
+            this.inputDataFim.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.inputDataFim.EditValue = null;
             this.inputDataFim.Location = new System.Drawing.Point(500, 73);
             this.inputDataFim.Name = "inputDataFim";
@@ -358,6 +386,7 @@
             // 
             // inputFeeICX
             // 
+            this.inputFeeICX.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.inputFeeICX.Location = new System.Drawing.Point(500, 98);
             this.inputFeeICX.Name = "inputFeeICX";
             this.inputFeeICX.Properties.Appearance.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -367,6 +396,7 @@
             // 
             // labelControl10
             // 
+            this.labelControl10.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.labelControl10.Appearance.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelControl10.Location = new System.Drawing.Point(392, 101);
             this.labelControl10.Name = "labelControl10";
@@ -376,6 +406,8 @@
             // 
             // inputBolsaAuxilio
             // 
+            this.inputBolsaAuxilio.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.inputBolsaAuxilio.Location = new System.Drawing.Point(119, 99);
             this.inputBolsaAuxilio.Name = "inputBolsaAuxilio";
             this.inputBolsaAuxilio.Properties.Appearance.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -394,6 +426,7 @@
             // 
             // inputAcomodacaoProvida
             // 
+            this.inputAcomodacaoProvida.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.inputAcomodacaoProvida.Location = new System.Drawing.Point(500, 126);
             this.inputAcomodacaoProvida.Name = "inputAcomodacaoProvida";
             this.inputAcomodacaoProvida.Properties.Appearance.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -403,6 +436,7 @@
             // 
             // labelControl12
             // 
+            this.labelControl12.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.labelControl12.Appearance.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelControl12.Location = new System.Drawing.Point(392, 129);
             this.labelControl12.Name = "labelControl12";
@@ -412,6 +446,7 @@
             // 
             // inputAcomodacaoCoberta
             // 
+            this.inputAcomodacaoCoberta.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.inputAcomodacaoCoberta.Location = new System.Drawing.Point(500, 154);
             this.inputAcomodacaoCoberta.Name = "inputAcomodacaoCoberta";
             this.inputAcomodacaoCoberta.Properties.Appearance.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -421,6 +456,7 @@
             // 
             // labelControl13
             // 
+            this.labelControl13.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.labelControl13.Appearance.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelControl13.Location = new System.Drawing.Point(392, 157);
             this.labelControl13.Name = "labelControl13";
@@ -430,6 +466,8 @@
             // 
             // inputAlimentacaoFimDeSemana
             // 
+            this.inputAlimentacaoFimDeSemana.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.inputAlimentacaoFimDeSemana.Location = new System.Drawing.Point(119, 210);
             this.inputAlimentacaoFimDeSemana.Name = "inputAlimentacaoFimDeSemana";
             this.inputAlimentacaoFimDeSemana.Properties.Appearance.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -448,6 +486,8 @@
             // 
             // inputAlimentacaoSemana
             // 
+            this.inputAlimentacaoSemana.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.inputAlimentacaoSemana.Location = new System.Drawing.Point(119, 182);
             this.inputAlimentacaoSemana.Name = "inputAlimentacaoSemana";
             this.inputAlimentacaoSemana.Properties.Appearance.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -466,6 +506,7 @@
             // 
             // inputComputador
             // 
+            this.inputComputador.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.inputComputador.Location = new System.Drawing.Point(500, 182);
             this.inputComputador.Name = "inputComputador";
             this.inputComputador.Properties.Appearance.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -475,6 +516,7 @@
             // 
             // labelControl16
             // 
+            this.labelControl16.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.labelControl16.Appearance.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelControl16.Location = new System.Drawing.Point(392, 185);
             this.labelControl16.Name = "labelControl16";
@@ -484,6 +526,9 @@
             // 
             // xtraTabControl
             // 
+            this.xtraTabControl.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.xtraTabControl.Location = new System.Drawing.Point(12, 116);
             this.xtraTabControl.Name = "xtraTabControl";
             this.xtraTabControl.SelectedTabPage = this.xtraTabPageVaga;
@@ -534,6 +579,8 @@
             // 
             // inputTrabalhoSabado
             // 
+            this.inputTrabalhoSabado.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.inputTrabalhoSabado.Location = new System.Drawing.Point(119, 154);
             this.inputTrabalhoSabado.Name = "inputTrabalhoSabado";
             this.inputTrabalhoSabado.Properties.Appearance.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -552,6 +599,7 @@
             // 
             // radioGroupPrograma
             // 
+            this.radioGroupPrograma.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.radioGroupPrograma.Location = new System.Drawing.Point(500, 8);
             this.radioGroupPrograma.Name = "radioGroupPrograma";
             this.radioGroupPrograma.Properties.Appearance.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -566,6 +614,7 @@
             // 
             // labelControl9
             // 
+            this.labelControl9.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.labelControl9.Appearance.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelControl9.Location = new System.Drawing.Point(392, 12);
             this.labelControl9.Name = "labelControl9";
@@ -575,6 +624,8 @@
             // 
             // inputCargaHorariaExtenso
             // 
+            this.inputCargaHorariaExtenso.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.inputCargaHorariaExtenso.Location = new System.Drawing.Point(174, 125);
             this.inputCargaHorariaExtenso.Name = "inputCargaHorariaExtenso";
             this.inputCargaHorariaExtenso.Properties.Appearance.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -613,10 +664,17 @@
             // 
             // xtraTabPagePagamento
             // 
+            this.xtraTabPagePagamento.Controls.Add(this.inputModoTransferencia);
+            this.xtraTabPagePagamento.Controls.Add(this.inputModoPagSeguro);
+            this.xtraTabPagePagamento.Controls.Add(this.inputModoDinheiro);
+            this.xtraTabPagePagamento.Controls.Add(this.inputModoDeposito);
+            this.xtraTabPagePagamento.Controls.Add(this.inputModoCheque);
+            this.xtraTabPagePagamento.Controls.Add(this.inputModoDebito);
+            this.xtraTabPagePagamento.Controls.Add(this.inputModoCredito);
+            this.xtraTabPagePagamento.Controls.Add(this.inputModoBoleto);
             this.xtraTabPagePagamento.Controls.Add(this.inputNumeroParcelas);
             this.xtraTabPagePagamento.Controls.Add(this.labelControl21);
             this.xtraTabPagePagamento.Controls.Add(this.inputDataPagamento);
-            this.xtraTabPagePagamento.Controls.Add(this.inputFormasPagamento);
             this.xtraTabPagePagamento.Controls.Add(this.labelControl20);
             this.xtraTabPagePagamento.Controls.Add(this.inputModoPagamento);
             this.xtraTabPagePagamento.Controls.Add(this.labelControl19);
@@ -626,6 +684,94 @@
             this.xtraTabPagePagamento.Name = "xtraTabPagePagamento";
             this.xtraTabPagePagamento.Size = new System.Drawing.Size(654, 244);
             this.xtraTabPagePagamento.Text = "Dados do Pagamento";
+            // 
+            // inputModoTransferencia
+            // 
+            this.inputModoTransferencia.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.inputModoTransferencia.Location = new System.Drawing.Point(468, 154);
+            this.inputModoTransferencia.Name = "inputModoTransferencia";
+            this.inputModoTransferencia.Properties.Appearance.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.inputModoTransferencia.Properties.Appearance.Options.UseFont = true;
+            this.inputModoTransferencia.Properties.Caption = "Transferência Bancária";
+            this.inputModoTransferencia.Size = new System.Drawing.Size(166, 20);
+            this.inputModoTransferencia.TabIndex = 52;
+            // 
+            // inputModoPagSeguro
+            // 
+            this.inputModoPagSeguro.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.inputModoPagSeguro.Location = new System.Drawing.Point(468, 128);
+            this.inputModoPagSeguro.Name = "inputModoPagSeguro";
+            this.inputModoPagSeguro.Properties.Appearance.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.inputModoPagSeguro.Properties.Appearance.Options.UseFont = true;
+            this.inputModoPagSeguro.Properties.Caption = "PagSeguro";
+            this.inputModoPagSeguro.Size = new System.Drawing.Size(120, 20);
+            this.inputModoPagSeguro.TabIndex = 51;
+            // 
+            // inputModoDinheiro
+            // 
+            this.inputModoDinheiro.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.inputModoDinheiro.Location = new System.Drawing.Point(468, 102);
+            this.inputModoDinheiro.Name = "inputModoDinheiro";
+            this.inputModoDinheiro.Properties.Appearance.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.inputModoDinheiro.Properties.Appearance.Options.UseFont = true;
+            this.inputModoDinheiro.Properties.Caption = "Dinheiro";
+            this.inputModoDinheiro.Size = new System.Drawing.Size(120, 20);
+            this.inputModoDinheiro.TabIndex = 50;
+            // 
+            // inputModoDeposito
+            // 
+            this.inputModoDeposito.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.inputModoDeposito.Location = new System.Drawing.Point(468, 76);
+            this.inputModoDeposito.Name = "inputModoDeposito";
+            this.inputModoDeposito.Properties.Appearance.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.inputModoDeposito.Properties.Appearance.Options.UseFont = true;
+            this.inputModoDeposito.Properties.Caption = "Depósito Bancário";
+            this.inputModoDeposito.Size = new System.Drawing.Size(148, 20);
+            this.inputModoDeposito.TabIndex = 49;
+            // 
+            // inputModoCheque
+            // 
+            this.inputModoCheque.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.inputModoCheque.Location = new System.Drawing.Point(313, 154);
+            this.inputModoCheque.Name = "inputModoCheque";
+            this.inputModoCheque.Properties.Appearance.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.inputModoCheque.Properties.Appearance.Options.UseFont = true;
+            this.inputModoCheque.Properties.Caption = "Cheque";
+            this.inputModoCheque.Size = new System.Drawing.Size(120, 20);
+            this.inputModoCheque.TabIndex = 48;
+            // 
+            // inputModoDebito
+            // 
+            this.inputModoDebito.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.inputModoDebito.Location = new System.Drawing.Point(313, 128);
+            this.inputModoDebito.Name = "inputModoDebito";
+            this.inputModoDebito.Properties.Appearance.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.inputModoDebito.Properties.Appearance.Options.UseFont = true;
+            this.inputModoDebito.Properties.Caption = "Cartão de Débito";
+            this.inputModoDebito.Size = new System.Drawing.Size(139, 20);
+            this.inputModoDebito.TabIndex = 47;
+            // 
+            // inputModoCredito
+            // 
+            this.inputModoCredito.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.inputModoCredito.Location = new System.Drawing.Point(313, 102);
+            this.inputModoCredito.Name = "inputModoCredito";
+            this.inputModoCredito.Properties.Appearance.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.inputModoCredito.Properties.Appearance.Options.UseFont = true;
+            this.inputModoCredito.Properties.Caption = "Cartão de Crédito";
+            this.inputModoCredito.Size = new System.Drawing.Size(139, 20);
+            this.inputModoCredito.TabIndex = 46;
+            // 
+            // inputModoBoleto
+            // 
+            this.inputModoBoleto.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.inputModoBoleto.Location = new System.Drawing.Point(313, 76);
+            this.inputModoBoleto.Name = "inputModoBoleto";
+            this.inputModoBoleto.Properties.Appearance.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.inputModoBoleto.Properties.Appearance.Options.UseFont = true;
+            this.inputModoBoleto.Properties.Caption = "Boleto Bancário";
+            this.inputModoBoleto.Size = new System.Drawing.Size(120, 20);
+            this.inputModoBoleto.TabIndex = 45;
             // 
             // inputNumeroParcelas
             // 
@@ -637,8 +783,9 @@
             // 
             // labelControl21
             // 
+            this.labelControl21.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.labelControl21.Appearance.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelControl21.Location = new System.Drawing.Point(244, 13);
+            this.labelControl21.Location = new System.Drawing.Point(426, 14);
             this.labelControl21.Name = "labelControl21";
             this.labelControl21.Size = new System.Drawing.Size(102, 16);
             this.labelControl21.TabIndex = 43;
@@ -646,8 +793,9 @@
             // 
             // inputDataPagamento
             // 
+            this.inputDataPagamento.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.inputDataPagamento.EditValue = null;
-            this.inputDataPagamento.Location = new System.Drawing.Point(352, 11);
+            this.inputDataPagamento.Location = new System.Drawing.Point(534, 12);
             this.inputDataPagamento.Name = "inputDataPagamento";
             this.inputDataPagamento.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
@@ -657,26 +805,6 @@
             this.inputDataPagamento.Properties.Mask.UseMaskAsDisplayFormat = true;
             this.inputDataPagamento.Size = new System.Drawing.Size(100, 20);
             this.inputDataPagamento.TabIndex = 42;
-            // 
-            // inputFormasPagamento
-            // 
-            this.inputFormasPagamento.Appearance.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.inputFormasPagamento.Appearance.Options.UseFont = true;
-            this.inputFormasPagamento.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder;
-            this.inputFormasPagamento.Items.AddRange(new DevExpress.XtraEditors.Controls.CheckedListBoxItem[] {
-            new DevExpress.XtraEditors.Controls.CheckedListBoxItem(null, "Boleto Bancário"),
-            new DevExpress.XtraEditors.Controls.CheckedListBoxItem(null, "Cartão de Crédito"),
-            new DevExpress.XtraEditors.Controls.CheckedListBoxItem(null, "Cartão de Débito"),
-            new DevExpress.XtraEditors.Controls.CheckedListBoxItem(null, "Cheque"),
-            new DevExpress.XtraEditors.Controls.CheckedListBoxItem(null, "Depósito Bancário"),
-            new DevExpress.XtraEditors.Controls.CheckedListBoxItem(null, "Dinheiro"),
-            new DevExpress.XtraEditors.Controls.CheckedListBoxItem(null, "PagSeguro"),
-            new DevExpress.XtraEditors.Controls.CheckedListBoxItem(null, "Transferência Bancária")});
-            this.inputFormasPagamento.Location = new System.Drawing.Point(278, 77);
-            this.inputFormasPagamento.MultiColumn = true;
-            this.inputFormasPagamento.Name = "inputFormasPagamento";
-            this.inputFormasPagamento.Size = new System.Drawing.Size(356, 83);
-            this.inputFormasPagamento.TabIndex = 41;
             // 
             // labelControl20
             // 
@@ -712,6 +840,8 @@
             // 
             // inputValorExtenso
             // 
+            this.inputValorExtenso.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.inputValorExtenso.Location = new System.Drawing.Point(119, 38);
             this.inputValorExtenso.Name = "inputValorExtenso";
             this.inputValorExtenso.Properties.Appearance.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -749,8 +879,6 @@
             // 
             // labelControl22
             // 
-            this.labelControl22.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
             this.labelControl22.Appearance.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelControl22.Location = new System.Drawing.Point(14, 18);
             this.labelControl22.Name = "labelControl22";
@@ -760,6 +888,8 @@
             // 
             // inputTestemunha2
             // 
+            this.inputTestemunha2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.inputTestemunha2.Location = new System.Drawing.Point(118, 43);
             this.inputTestemunha2.Name = "inputTestemunha2";
             this.inputTestemunha2.Properties.AllowFocused = false;
@@ -773,8 +903,6 @@
             // 
             // labelControl23
             // 
-            this.labelControl23.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
             this.labelControl23.Appearance.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelControl23.Location = new System.Drawing.Point(14, 46);
             this.labelControl23.Name = "labelControl23";
@@ -784,6 +912,8 @@
             // 
             // inputTestemunha1
             // 
+            this.inputTestemunha1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.inputTestemunha1.Location = new System.Drawing.Point(118, 15);
             this.inputTestemunha1.Name = "inputTestemunha1";
             this.inputTestemunha1.Properties.AllowFocused = false;
@@ -828,7 +958,7 @@
             this.Controls.Add(this.botaoSalvar);
             this.Controls.Add(this.xtraTabControl);
             this.Controls.Add(this.groupControlDadosGerais);
-            this.MaximizeBox = false;
+            this.MinimumSize = new System.Drawing.Size(700, 476);
             this.Name = "RegistroApproved";
             this.ShowIcon = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
@@ -865,10 +995,17 @@
             ((System.ComponentModel.ISupportInitialize)(this.inputCargaHorariaNumero.Properties)).EndInit();
             this.xtraTabPagePagamento.ResumeLayout(false);
             this.xtraTabPagePagamento.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.inputModoTransferencia.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.inputModoPagSeguro.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.inputModoDinheiro.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.inputModoDeposito.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.inputModoCheque.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.inputModoDebito.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.inputModoCredito.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.inputModoBoleto.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.inputNumeroParcelas)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.inputDataPagamento.Properties.CalendarTimeProperties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.inputDataPagamento.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.inputFormasPagamento)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.inputModoPagamento.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.inputValorExtenso.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.inputValorContrato.Properties)).EndInit();
@@ -923,7 +1060,6 @@
         private DevExpress.XtraEditors.TextEdit inputValorExtenso;
         private DevExpress.XtraEditors.LabelControl labelControl18;
         private DevExpress.XtraEditors.TextEdit inputValorContrato;
-        private DevExpress.XtraEditors.CheckedListBoxControl inputFormasPagamento;
         private DevExpress.XtraEditors.LabelControl labelControl20;
         private DevExpress.XtraTab.XtraTabPage xtraTabPageTestemunhas;
         private DevExpress.XtraEditors.LabelControl labelControl22;
@@ -943,5 +1079,13 @@
         private DevExpress.XtraEditors.SpinEdit inputCargaHorariaNumero;
         private DevExpress.XtraEditors.TextEdit inputTrabalhoSabado;
         private DevExpress.XtraEditors.LabelControl labelControl25;
+        private DevExpress.XtraEditors.CheckEdit inputModoTransferencia;
+        private DevExpress.XtraEditors.CheckEdit inputModoPagSeguro;
+        private DevExpress.XtraEditors.CheckEdit inputModoDinheiro;
+        private DevExpress.XtraEditors.CheckEdit inputModoDeposito;
+        private DevExpress.XtraEditors.CheckEdit inputModoCheque;
+        private DevExpress.XtraEditors.CheckEdit inputModoDebito;
+        private DevExpress.XtraEditors.CheckEdit inputModoCredito;
+        private DevExpress.XtraEditors.CheckEdit inputModoBoleto;
     }
 }

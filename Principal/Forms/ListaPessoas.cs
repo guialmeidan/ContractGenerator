@@ -33,9 +33,11 @@ namespace Principal.Forms
             this.Text = "Lista de Pessoas";
         }
 
-        private void iniciarGrid()
+        public void iniciarGrid()
         {
-            gridControlListaPessoas.DataSource = _pessoaRepositorio.ListarTodasPessoas();
+            this.gridControlListaPessoas.Refresh();
+            this.gridControlListaPessoas.DataSource = _pessoaRepositorio.ListarTodasPessoas();
+
         }
 
         private void botaoPesquisar_Click(object sender, EventArgs e)
@@ -60,7 +62,7 @@ namespace Principal.Forms
                 f.BringToFront();
             else
             {
-                var formEdit = new InserirPessoa(null, operacao) { MdiParent = this.MdiParent };
+                var formEdit = new InserirPessoa(null, operacao, this) { MdiParent = this.MdiParent };
                 formEdit.Show();
             }
         }
@@ -69,7 +71,7 @@ namespace Principal.Forms
         {
             _pessoa = ((GridView)gridControlListaPessoas.MainView).GetFocusedRow() as Pessoa;
             if (_pessoa == null)
-                throw new Exception("Selecione uma linha");
+                throw new Exception("Selecione uma linha!");
             return _pessoa;
         }
 
@@ -80,7 +82,7 @@ namespace Principal.Forms
             var f = Application.OpenForms[nameof(InserirPessoa)];
             if (f != null)
                 f.Close();
-             var formEdit = new InserirPessoa(_pessoa, operacao) { MdiParent = this.MdiParent };
+             var formEdit = new InserirPessoa(_pessoa, operacao, this) { MdiParent = this.MdiParent };
              formEdit.Show();
         }
 
@@ -97,9 +99,6 @@ namespace Principal.Forms
                 _pessoaRepositorio.Remover(_pessoa);
                 gridControlListaPessoas.Refresh();
             }
-            
-            
-
         }
     }
 }

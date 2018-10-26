@@ -63,6 +63,16 @@ namespace Principal.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Pessoas {
+            get {
+                object obj = ResourceManager.GetObject("Pessoas", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap TNA_Hubble___Logo_Grande {
             get {
                 object obj = ResourceManager.GetObject("TNA Hubble - Logo Grande", resourceCulture);
