@@ -29,7 +29,7 @@ namespace Principal
 
         private void tNIDToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            Forms.ConsultaOpportunity janelaConsulta = new Forms.ConsultaOpportunity();
+            Forms.ConsultarVaga janelaConsulta = new Forms.ConsultarVaga();
             janelaConsulta.MdiParent = this;
             janelaConsulta.Show();
         }
@@ -75,15 +75,7 @@ namespace Principal
 
         private void emitirDocumentoToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            var f = Application.OpenForms[nameof(ContratoOGX)];
-            if (f != null)
-                f.BringToFront();
-            else
-            {
-                ContratoOGX contratoOGX = new ContratoOGX();
-                contratoOGX.MdiParent = this;
-                contratoOGX.Show();
-            }
+            
         }
 
         private void registroDeApprovedToolStripMenuItem_Click(object sender, EventArgs e)
@@ -96,6 +88,19 @@ namespace Principal
                 ListaApproveds listaApproveds = new ListaApproveds();
                 listaApproveds.MdiParent = this;
                 listaApproveds.Show();
+            }
+        }
+
+        private void tokenToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            var f = Application.OpenForms[nameof(Token)];
+            if (f != null)
+                f.BringToFront();
+            else
+            {
+                Token token = new Token();
+                token.MdiParent = this;
+                token.Show();
             }
         }
     }

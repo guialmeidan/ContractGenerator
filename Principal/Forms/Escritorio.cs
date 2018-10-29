@@ -28,6 +28,13 @@ namespace Principal.Forms
 
         public Escritorio()
         {
+            //Altera a cultura para substituir , por . e vice-versa (no caso dos valores monetários)
+            System.Globalization.CultureInfo newCulture = (System.Globalization.CultureInfo)System.Globalization.CultureInfo.CurrentCulture.Clone();
+            newCulture.NumberFormat.NumberGroupSeparator = ",";
+            newCulture.NumberFormat.NumberDecimalSeparator = ".";
+            System.Threading.Thread.CurrentThread.CurrentCulture = newCulture;
+            System.Threading.Thread.CurrentThread.CurrentUICulture = newCulture;
+
             InitializeComponent();
             _repositorioEscritorio = AppCore.Container.Resolve<IEscritorioRepositorio>();
             _repositorioPessoa = AppCore.Container.Resolve<IPessoaRepositorio>();
@@ -66,7 +73,7 @@ namespace Principal.Forms
                 }
                 catch (Exception ex)
                 {
-                    MessageBox.Show(ex.Message, "Atenção!",
+                    XtraMessageBox.Show(ex.Message, "Atenção!",
                     MessageBoxButtons.OK);
                 }
             }
@@ -101,11 +108,11 @@ namespace Principal.Forms
 
                     _repositorioEscritorio.Atualizar(_escritorio);
 
-                    MessageBox.Show("Registro gravado!\n", "Sucesso", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    XtraMessageBox.Show("Registro gravado!\n", "Sucesso", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
                 catch (Exception ex)
                 {
-                    MessageBox.Show("Erro ao registrar escritório\n" + ex.Message, "ERRO", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    XtraMessageBox.Show("Erro ao registrar escritório\n" + ex.Message, "ERRO", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
             }
         }
@@ -206,73 +213,73 @@ namespace Principal.Forms
         {
             if (inputNome.Text == "")
             {
-                MessageBox.Show("Informe o nome do CL!", "Cadastro Incompleto", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                XtraMessageBox.Show("Informe o nome do CL!", "Cadastro Incompleto", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 flag = 1;
             }
             else 
             if(inputLCP.Text == "")
             {
-                MessageBox.Show("Informe o nome do(a) LCP!", "Cadastro Incompleto", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                XtraMessageBox.Show("Informe o nome do(a) LCP!", "Cadastro Incompleto", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 flag = 1;
             }
             else
             if (inputCNPJ.Text == "")
             {
-                MessageBox.Show("Informe o CNPJ!", "Cadastro Incompleto", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                XtraMessageBox.Show("Informe o CNPJ!", "Cadastro Incompleto", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 flag = 1;
             }
             else
             if (removerMascara(inputCNPJ.Text) == "")
             {
-                MessageBox.Show("Informe o CNPJ!", "Cadastro Incompleto", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                XtraMessageBox.Show("Informe o CNPJ!", "Cadastro Incompleto", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 flag = 1;
             }
             else
                 if (validador.validarCNPJ(inputCNPJ.Text) == false)
             {
-                MessageBox.Show("CNPJ Inválido!", "Cadastro Incompleto", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                XtraMessageBox.Show("CNPJ Inválido!", "Cadastro Incompleto", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 flag = 1;
             }
             else
             if (removerMascara(inputCEP.Text) == "")
             {
-                MessageBox.Show("Informe o CEP!", "Cadastro Incompleto", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                XtraMessageBox.Show("Informe o CEP!", "Cadastro Incompleto", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 flag = 1;
             }
             else
             if (inputCidade.Text == "")
             {
-                MessageBox.Show("Informe a Cidade!", "Cadastro Incompleto", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                XtraMessageBox.Show("Informe a Cidade!", "Cadastro Incompleto", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 flag = 1;
             }
             else
             if (inputRua.Text == "")
             {
-                MessageBox.Show("Informe a Rua!", "Cadastro Incompleto", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                XtraMessageBox.Show("Informe a Rua!", "Cadastro Incompleto", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 flag = 1;
             }
             else
             if (inputNumero.Text == "")
             {
-                MessageBox.Show("Informe o Número!", "Cadastro Incompleto", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                XtraMessageBox.Show("Informe o Número!", "Cadastro Incompleto", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 flag = 1;
             }
             else
             if (inputBairro.Text == "")
             {
-                MessageBox.Show("Informe o Bairro!", "Cadastro Incompleto", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                XtraMessageBox.Show("Informe o Bairro!", "Cadastro Incompleto", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 flag = 1;
             }
             else
             if (inputUFEndereco.Text == "")
             {
-                MessageBox.Show("Informe a UF!", "Cadastro Incompleto", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                XtraMessageBox.Show("Informe a UF!", "Cadastro Incompleto", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 flag = 1;
             }
             else
             if (inputCidade.Text == "")
             {
-                MessageBox.Show("Informe a Cidade!", "Cadastro Incompleto", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                XtraMessageBox.Show("Informe a Cidade!", "Cadastro Incompleto", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 flag = 1;
             }
 
@@ -291,9 +298,14 @@ namespace Principal.Forms
             var pessoas = _repositorioPessoa.ListarTodasPessoas();
             var form = new SelecionarPessoa(pessoas);
             form.ShowDialog(MdiParent);
-            pessoaId = form.SelectedItem.Id;
-            pessoaNome = form.SelectedItem.Nome;
-            inputLCP.Text = form.SelectedItem.Nome + " " + form.SelectedItem.Sobrenome;
+
+            if(form.SelectedItem.Id != 0)
+            {
+                pessoaId = form.SelectedItem.Id;
+                pessoaNome = form.SelectedItem.Nome;
+                inputLCP.Text = form.SelectedItem.Nome + " " + form.SelectedItem.Sobrenome;
+            }
+                
         }
     }
 }

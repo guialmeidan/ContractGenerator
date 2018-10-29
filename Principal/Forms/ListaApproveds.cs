@@ -19,7 +19,7 @@ using Unity;
 
 namespace Principal.Forms
 {
-    public class ListaApproveds : XtraForm
+    public partial class ListaApproveds : XtraForm
     {
         private SimpleButton botaoPesquisar;
         private TextEdit inputPesquisa;
@@ -44,13 +44,6 @@ namespace Principal.Forms
             _approvedService = AppCore.Container.Resolve<IApprovedService>();
             iniciarGrid();
         }
-
-        private void iniciarGrid()
-        {
-            gridControlListaApproveds.Refresh();
-            gridControlListaApproveds.DataSource = _approvedService.ListarApproveds();
-        }
-
         private void InitializeComponent()
         {
             this.botaoPesquisar = new DevExpress.XtraEditors.SimpleButton();
@@ -234,9 +227,15 @@ namespace Principal.Forms
                 f.BringToFront();
             else
             {
-                var formEdit = new RegistroApproved(null, operacao) { MdiParent = this.MdiParent };
+                var formEdit = new RegistroApproved(null, operacao, this) { MdiParent = this.MdiParent };
                 formEdit.Show();
             }
+        }
+
+        public void iniciarGrid()
+        {
+            gridControlListaApproveds.Refresh();
+            gridControlListaApproveds.DataSource = _approvedService.ListarApproveds();
         }
 
         private void botaoEditar_Click(object sender, EventArgs e)
@@ -246,14 +245,14 @@ namespace Principal.Forms
             var f = Application.OpenForms[nameof(RegistroApproved)];
             if (f != null)
                 f.Close();
-            var formEdit = new RegistroApproved(_approved, operacao) { MdiParent = this.MdiParent };
+            var formEdit = new RegistroApproved(_approved, operacao, this) { MdiParent = this.MdiParent };
             formEdit.Show();
         }
 
         private void botaoRemover_Click(object sender, EventArgs e)
         {
             _approved = ObterApprovedSelecionado();
-            if (MessageBox.Show("Tem certeza que deseja remover o Approved de " + _approved.NomeEP + " (TN ID "+ _approved.TNID + ")?", "Confirmação", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+            if (XtraMessageBox.Show("Tem certeza que deseja remover o Approved de " + _approved.NomeEP + " (TN ID "+ _approved.TNID + ")?", "Confirmação", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
             {
                 _approvedService.Remover(_approved);
                 iniciarGrid();
@@ -264,7 +263,7 @@ namespace Principal.Forms
         {
             _approved = ((GridView)gridControlListaApproveds.MainView).GetFocusedRow() as Approved;
             if (_approved == null)
-                MessageBox.Show("Selecione uma linha!", "Atenção!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                XtraMessageBox.Show("Selecione uma linha!", "Atenção!", MessageBoxButtons.OK, MessageBoxIcon.Error);
             return _approved;
         }
 

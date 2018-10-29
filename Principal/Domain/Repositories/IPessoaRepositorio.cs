@@ -14,5 +14,6 @@ namespace Principal.Domain.Repositories
         void Atualizar(Pessoa pessoa);
         void Remover(Pessoa pessoa);
         Pessoa SelecionarPorId(int id);
+        bool VerificarSePessoaEstaEmApproved(int id);
     }
 }

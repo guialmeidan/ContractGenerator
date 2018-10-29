@@ -19,7 +19,8 @@ namespace Principal.Domain.Entities
         public string NomeResponsavel { get; set; }
         public string EPID { get; set; }
         public int IdPresidente { get; set; }
-        public string TipoProduto { get; set; }
+        public int TipoProdutoId { get; set; }
+        public string TipoProdutoDescricao { get; set; }
         public string TNID { get; set; }
         public string PaisDestino { get; set; }
         public string CidadeDestino { get; set; }
@@ -27,20 +28,22 @@ namespace Principal.Domain.Entities
         public DateTime DataFim { get; set; }
         public int CargaHorariaNumeral { get; set; }
         public string CargaHorariaExtenso { get; set; }
-        public bool TrabalhoSabado { get; set; }
+        public string TrabalhoSabado { get; set; }
         public string TaxaDestino { get; set; }
         public string BolsaAuxilio { get; set; }
-        public bool AcomodacaoProvida { get; set; }
-        public bool AcomodacaoCoberta { get; set; }
+        public string AcomodacaoProvida { get; set; }
+        public string AcomodacaoCoberta { get; set; }
         public string AlimentacaoDiaTrabalho { get; set; }
         public string AlimentacaoFimSemana { get; set; }
-        public bool Computador { get; set; }
+        public string Computador { get; set; }
         public DateTime DataApproved { get; set; }
         public decimal ValorContratoNumerico { get; set; }
         public string ValorContratoExtenso { get; set; }
         public DateTime DataPagamento { get; set; }
         public int TipoPagamento { get; set; }
         public int QtdParcelas { get; set; }
+        public decimal ValorParcialNumerico { get; set; }
+        public string ValorParcialExtenso { get; set; }
         public bool ModoBoleto { get; set; }
         public bool ModoCartaoCredito { get; set; }
         public bool ModoCartaoDebito { get; set; }

@@ -11,5 +11,6 @@ namespace Principal.Domain.Repositories
     {
         Testemunha ObterTestemunhas();
         void Atualizar(Testemunha escritorio);
+        bool VerificarTestemunhaExiste(int id);
     }
 }

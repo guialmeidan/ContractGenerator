@@ -10,6 +10,9 @@ using Dapper;
 using Dapper.Contrib.Extensions;
 using Dapper.Contrib;
 using Principal.Conversoes;
+using Principal.WinApp;
+using Unity;
+using Principal.Domain.Entities;
 
 namespace Principal.Infra.Repositories
 {
@@ -20,6 +23,7 @@ namespace Principal.Infra.Repositories
         public PessoaRepositorio(IDatabaseAdapter databaseAdapter)
         {
             DatabaseAdapter = databaseAdapter;
+            
         }
         public void Atualizar(Pessoa pessoa)
         {
@@ -53,18 +57,29 @@ namespace Principal.Infra.Repositories
 
         public IEnumerable<Pessoa> ListarTodasPessoas()
         {
+
             using (var conn = DatabaseAdapter.GetConnection())
             {
                 var query = "SELECT  * FROM \"Pessoa\" ";
                 return conn.Query<Pessoa>(query);
-                //conn.Open();
-                //var listaPessoas = conn.Query<Pessoa>("SELECT * FROM [Pessoa]".TSqlToANSI(null));
-                //return listaPessoas;
+            }
+        }
+
+        public bool VerificarSePessoaEstaEmApproved(int id)
+        {
+            using (var conn = DatabaseAdapter.GetConnection())
+            {
+                var query = $"SELECT  * FROM [Approved] Where [IdEP] = '{id}' or [IdResponsavel] = '{id}' or " +
+                                                              $"[IdTestemunha1] = '{id}' or [IdTestemunha2] = '{id}'";
+                if (conn.Query<Approved>(query).FirstOrDefault() == null)
+                    return false;
+                else return true;
             }
         }
 
         public void Remover(Pessoa pessoa)
         {
+            
             using (var conn = DatabaseAdapter.GetConnection())
             {
                 conn.Delete<Pessoa>(pessoa);
@@ -73,7 +88,11 @@ namespace Principal.Infra.Repositories
 
         public Pessoa SelecionarPorId(int id)
         {
-            throw new NotImplementedException();
+            using (var conn = DatabaseAdapter.GetConnection())
+            {
+                var query = $"SELECT  * FROM [Pessoa] Where [Id] = '{id}'";
+                return conn.Query<Pessoa>(query).FirstOrDefault(); ;
+            }
         }
     }
 }

@@ -1,4 +1,6 @@
-﻿namespace Principal.Forms
+﻿using System;
+
+namespace Principal.Forms
 {
     partial class RegistroApproved
     {
@@ -72,6 +74,11 @@
             this.inputCargaHorariaExtenso = new DevExpress.XtraEditors.TextEdit();
             this.inputCargaHorariaNumero = new DevExpress.XtraEditors.SpinEdit();
             this.xtraTabPagePagamento = new DevExpress.XtraTab.XtraTabPage();
+            this.inputNumeroParcelas = new DevExpress.XtraEditors.SpinEdit();
+            this.labelControlValorParcialExtenso = new DevExpress.XtraEditors.LabelControl();
+            this.inputValorParcialExtenso = new DevExpress.XtraEditors.TextEdit();
+            this.labelControlValorParcial = new DevExpress.XtraEditors.LabelControl();
+            this.inputValorParcial = new DevExpress.XtraEditors.TextEdit();
             this.inputModoTransferencia = new DevExpress.XtraEditors.CheckEdit();
             this.inputModoPagSeguro = new DevExpress.XtraEditors.CheckEdit();
             this.inputModoDinheiro = new DevExpress.XtraEditors.CheckEdit();
@@ -80,10 +87,9 @@
             this.inputModoDebito = new DevExpress.XtraEditors.CheckEdit();
             this.inputModoCredito = new DevExpress.XtraEditors.CheckEdit();
             this.inputModoBoleto = new DevExpress.XtraEditors.CheckEdit();
-            this.inputNumeroParcelas = new System.Windows.Forms.NumericUpDown();
             this.labelControl21 = new DevExpress.XtraEditors.LabelControl();
             this.inputDataPagamento = new DevExpress.XtraEditors.DateEdit();
-            this.labelControl20 = new DevExpress.XtraEditors.LabelControl();
+            this.labelControlNumeroParcelas = new DevExpress.XtraEditors.LabelControl();
             this.inputModoPagamento = new DevExpress.XtraEditors.RadioGroup();
             this.labelControl19 = new DevExpress.XtraEditors.LabelControl();
             this.inputValorExtenso = new DevExpress.XtraEditors.TextEdit();
@@ -96,6 +102,8 @@
             this.inputTestemunha1 = new DevExpress.XtraEditors.ButtonEdit();
             this.botaoSalvar = new DevExpress.XtraEditors.SimpleButton();
             this.botaoResetar = new DevExpress.XtraEditors.SimpleButton();
+            this.xtraTabPageDocumentos = new DevExpress.XtraTab.XtraTabPage();
+            this.botaoContrato = new DevExpress.XtraEditors.SimpleButton();
             ((System.ComponentModel.ISupportInitialize)(this.inputNomeEP.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.inputNomeResponsavel.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.groupControlDadosGerais)).BeginInit();
@@ -125,6 +133,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.inputCargaHorariaExtenso.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.inputCargaHorariaNumero.Properties)).BeginInit();
             this.xtraTabPagePagamento.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.inputNumeroParcelas.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.inputValorParcialExtenso.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.inputValorParcial.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.inputModoTransferencia.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.inputModoPagSeguro.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.inputModoDinheiro.Properties)).BeginInit();
@@ -133,7 +144,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.inputModoDebito.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.inputModoCredito.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.inputModoBoleto.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.inputNumeroParcelas)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.inputDataPagamento.Properties.CalendarTimeProperties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.inputDataPagamento.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.inputModoPagamento.Properties)).BeginInit();
@@ -142,6 +152,7 @@
             this.xtraTabPageTestemunhas.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.inputTestemunha2.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.inputTestemunha1.Properties)).BeginInit();
+            this.xtraTabPageDocumentos.SuspendLayout();
             this.SuspendLayout();
             // 
             // labelControl1
@@ -157,7 +168,7 @@
             // 
             this.inputNomeEP.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.inputNomeEP.Location = new System.Drawing.Point(120, 29);
+            this.inputNomeEP.Location = new System.Drawing.Point(137, 29);
             this.inputNomeEP.Name = "inputNomeEP";
             this.inputNomeEP.Properties.AllowFocused = false;
             this.inputNomeEP.Properties.Appearance.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -165,14 +176,14 @@
             this.inputNomeEP.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton()});
             this.inputNomeEP.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
-            this.inputNomeEP.Size = new System.Drawing.Size(333, 22);
+            this.inputNomeEP.Size = new System.Drawing.Size(316, 22);
             this.inputNomeEP.TabIndex = 33;
             // 
             // inputNomeResponsavel
             // 
             this.inputNomeResponsavel.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.inputNomeResponsavel.Location = new System.Drawing.Point(120, 57);
+            this.inputNomeResponsavel.Location = new System.Drawing.Point(137, 57);
             this.inputNomeResponsavel.Name = "inputNomeResponsavel";
             this.inputNomeResponsavel.Properties.AllowFocused = false;
             this.inputNomeResponsavel.Properties.Appearance.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -180,7 +191,7 @@
             this.inputNomeResponsavel.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton()});
             this.inputNomeResponsavel.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
-            this.inputNomeResponsavel.Size = new System.Drawing.Size(333, 22);
+            this.inputNomeResponsavel.Size = new System.Drawing.Size(316, 22);
             this.inputNomeResponsavel.TabIndex = 35;
             // 
             // labelControl2
@@ -226,13 +237,15 @@
             this.inputDataAPD.EditValue = null;
             this.inputDataAPD.Location = new System.Drawing.Point(535, 57);
             this.inputDataAPD.Name = "inputDataAPD";
+            this.inputDataAPD.Properties.Appearance.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.inputDataAPD.Properties.Appearance.Options.UseFont = true;
             this.inputDataAPD.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
             this.inputDataAPD.Properties.CalendarTimeProperties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
             this.inputDataAPD.Properties.Mask.EditMask = "dd/MM/yyyy";
             this.inputDataAPD.Properties.Mask.UseMaskAsDisplayFormat = true;
-            this.inputDataAPD.Size = new System.Drawing.Size(100, 20);
+            this.inputDataAPD.Size = new System.Drawing.Size(100, 22);
             this.inputDataAPD.TabIndex = 60;
             // 
             // labelControl17
@@ -252,8 +265,10 @@
             this.inputEPID.Name = "inputEPID";
             this.inputEPID.Properties.Appearance.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.inputEPID.Properties.Appearance.Options.UseFont = true;
-            this.inputEPID.Properties.Mask.EditMask = "d";
+            this.inputEPID.Properties.Mask.EditMask = "y";
             this.inputEPID.Properties.Mask.SaveLiteral = false;
+            this.inputEPID.Properties.Mask.ShowPlaceHolders = false;
+            this.inputEPID.Properties.MaxLength = 9;
             this.inputEPID.Size = new System.Drawing.Size(100, 22);
             this.inputEPID.TabIndex = 37;
             // 
@@ -284,6 +299,7 @@
             this.botaoPesquisar.Size = new System.Drawing.Size(75, 23);
             this.botaoPesquisar.TabIndex = 34;
             this.botaoPesquisar.Text = "Pesquisar";
+            this.botaoPesquisar.Click += new System.EventHandler(this.botaoPesquisar_Click);
             // 
             // inputPaisDestino
             // 
@@ -293,7 +309,7 @@
             this.inputPaisDestino.Name = "inputPaisDestino";
             this.inputPaisDestino.Properties.Appearance.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.inputPaisDestino.Properties.Appearance.Options.UseFont = true;
-            this.inputPaisDestino.Size = new System.Drawing.Size(250, 22);
+            this.inputPaisDestino.Size = new System.Drawing.Size(269, 22);
             this.inputPaisDestino.TabIndex = 36;
             // 
             // labelControl4
@@ -313,7 +329,7 @@
             this.inputCidadeDestino.Name = "inputCidadeDestino";
             this.inputCidadeDestino.Properties.Appearance.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.inputCidadeDestino.Properties.Appearance.Options.UseFont = true;
-            this.inputCidadeDestino.Size = new System.Drawing.Size(250, 22);
+            this.inputCidadeDestino.Size = new System.Drawing.Size(269, 22);
             this.inputCidadeDestino.TabIndex = 38;
             // 
             // labelControl5
@@ -329,22 +345,24 @@
             // 
             this.inputDataInicio.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.inputDataInicio.EditValue = null;
-            this.inputDataInicio.Location = new System.Drawing.Point(500, 47);
+            this.inputDataInicio.Location = new System.Drawing.Point(518, 47);
             this.inputDataInicio.Name = "inputDataInicio";
+            this.inputDataInicio.Properties.Appearance.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.inputDataInicio.Properties.Appearance.Options.UseFont = true;
             this.inputDataInicio.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
             this.inputDataInicio.Properties.CalendarTimeProperties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
             this.inputDataInicio.Properties.Mask.EditMask = "dd/MM/yyyy";
             this.inputDataInicio.Properties.Mask.UseMaskAsDisplayFormat = true;
-            this.inputDataInicio.Size = new System.Drawing.Size(134, 20);
+            this.inputDataInicio.Size = new System.Drawing.Size(116, 22);
             this.inputDataInicio.TabIndex = 39;
             // 
             // labelControl6
             // 
             this.labelControl6.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.labelControl6.Appearance.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelControl6.Location = new System.Drawing.Point(392, 48);
+            this.labelControl6.Location = new System.Drawing.Point(420, 50);
             this.labelControl6.Name = "labelControl6";
             this.labelControl6.Size = new System.Drawing.Size(63, 16);
             this.labelControl6.TabIndex = 40;
@@ -354,7 +372,7 @@
             // 
             this.labelControl7.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.labelControl7.Appearance.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelControl7.Location = new System.Drawing.Point(392, 74);
+            this.labelControl7.Location = new System.Drawing.Point(420, 76);
             this.labelControl7.Name = "labelControl7";
             this.labelControl7.Size = new System.Drawing.Size(54, 16);
             this.labelControl7.TabIndex = 42;
@@ -364,15 +382,17 @@
             // 
             this.inputDataFim.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.inputDataFim.EditValue = null;
-            this.inputDataFim.Location = new System.Drawing.Point(500, 73);
+            this.inputDataFim.Location = new System.Drawing.Point(518, 73);
             this.inputDataFim.Name = "inputDataFim";
+            this.inputDataFim.Properties.Appearance.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.inputDataFim.Properties.Appearance.Options.UseFont = true;
             this.inputDataFim.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
             this.inputDataFim.Properties.CalendarTimeProperties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
             this.inputDataFim.Properties.Mask.EditMask = "dd/MM/yyyy";
             this.inputDataFim.Properties.Mask.UseMaskAsDisplayFormat = true;
-            this.inputDataFim.Size = new System.Drawing.Size(134, 20);
+            this.inputDataFim.Size = new System.Drawing.Size(116, 22);
             this.inputDataFim.TabIndex = 41;
             // 
             // labelControl8
@@ -387,18 +407,18 @@
             // inputFeeICX
             // 
             this.inputFeeICX.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.inputFeeICX.Location = new System.Drawing.Point(500, 98);
+            this.inputFeeICX.Location = new System.Drawing.Point(119, 154);
             this.inputFeeICX.Name = "inputFeeICX";
             this.inputFeeICX.Properties.Appearance.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.inputFeeICX.Properties.Appearance.Options.UseFont = true;
-            this.inputFeeICX.Size = new System.Drawing.Size(134, 22);
+            this.inputFeeICX.Size = new System.Drawing.Size(269, 22);
             this.inputFeeICX.TabIndex = 47;
             // 
             // labelControl10
             // 
             this.labelControl10.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.labelControl10.Appearance.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelControl10.Location = new System.Drawing.Point(392, 101);
+            this.labelControl10.Location = new System.Drawing.Point(15, 157);
             this.labelControl10.Name = "labelControl10";
             this.labelControl10.Size = new System.Drawing.Size(47, 16);
             this.labelControl10.TabIndex = 46;
@@ -412,7 +432,7 @@
             this.inputBolsaAuxilio.Name = "inputBolsaAuxilio";
             this.inputBolsaAuxilio.Properties.Appearance.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.inputBolsaAuxilio.Properties.Appearance.Options.UseFont = true;
-            this.inputBolsaAuxilio.Size = new System.Drawing.Size(250, 22);
+            this.inputBolsaAuxilio.Size = new System.Drawing.Size(269, 22);
             this.inputBolsaAuxilio.TabIndex = 49;
             // 
             // labelControl11
@@ -427,18 +447,18 @@
             // inputAcomodacaoProvida
             // 
             this.inputAcomodacaoProvida.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.inputAcomodacaoProvida.Location = new System.Drawing.Point(500, 126);
+            this.inputAcomodacaoProvida.Location = new System.Drawing.Point(518, 126);
             this.inputAcomodacaoProvida.Name = "inputAcomodacaoProvida";
             this.inputAcomodacaoProvida.Properties.Appearance.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.inputAcomodacaoProvida.Properties.Appearance.Options.UseFont = true;
-            this.inputAcomodacaoProvida.Size = new System.Drawing.Size(134, 22);
+            this.inputAcomodacaoProvida.Size = new System.Drawing.Size(116, 22);
             this.inputAcomodacaoProvida.TabIndex = 51;
             // 
             // labelControl12
             // 
             this.labelControl12.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.labelControl12.Appearance.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelControl12.Location = new System.Drawing.Point(392, 129);
+            this.labelControl12.Location = new System.Drawing.Point(420, 131);
             this.labelControl12.Name = "labelControl12";
             this.labelControl12.Size = new System.Drawing.Size(88, 16);
             this.labelControl12.TabIndex = 50;
@@ -447,18 +467,18 @@
             // inputAcomodacaoCoberta
             // 
             this.inputAcomodacaoCoberta.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.inputAcomodacaoCoberta.Location = new System.Drawing.Point(500, 154);
+            this.inputAcomodacaoCoberta.Location = new System.Drawing.Point(518, 154);
             this.inputAcomodacaoCoberta.Name = "inputAcomodacaoCoberta";
             this.inputAcomodacaoCoberta.Properties.Appearance.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.inputAcomodacaoCoberta.Properties.Appearance.Options.UseFont = true;
-            this.inputAcomodacaoCoberta.Size = new System.Drawing.Size(134, 22);
+            this.inputAcomodacaoCoberta.Size = new System.Drawing.Size(116, 22);
             this.inputAcomodacaoCoberta.TabIndex = 53;
             // 
             // labelControl13
             // 
             this.labelControl13.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.labelControl13.Appearance.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelControl13.Location = new System.Drawing.Point(392, 157);
+            this.labelControl13.Location = new System.Drawing.Point(420, 159);
             this.labelControl13.Name = "labelControl13";
             this.labelControl13.Size = new System.Drawing.Size(89, 16);
             this.labelControl13.TabIndex = 52;
@@ -472,7 +492,7 @@
             this.inputAlimentacaoFimDeSemana.Name = "inputAlimentacaoFimDeSemana";
             this.inputAlimentacaoFimDeSemana.Properties.Appearance.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.inputAlimentacaoFimDeSemana.Properties.Appearance.Options.UseFont = true;
-            this.inputAlimentacaoFimDeSemana.Size = new System.Drawing.Size(250, 22);
+            this.inputAlimentacaoFimDeSemana.Size = new System.Drawing.Size(269, 22);
             this.inputAlimentacaoFimDeSemana.TabIndex = 57;
             // 
             // labelControl14
@@ -492,7 +512,7 @@
             this.inputAlimentacaoSemana.Name = "inputAlimentacaoSemana";
             this.inputAlimentacaoSemana.Properties.Appearance.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.inputAlimentacaoSemana.Properties.Appearance.Options.UseFont = true;
-            this.inputAlimentacaoSemana.Size = new System.Drawing.Size(250, 22);
+            this.inputAlimentacaoSemana.Size = new System.Drawing.Size(269, 22);
             this.inputAlimentacaoSemana.TabIndex = 55;
             // 
             // labelControl15
@@ -507,18 +527,18 @@
             // inputComputador
             // 
             this.inputComputador.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.inputComputador.Location = new System.Drawing.Point(500, 182);
+            this.inputComputador.Location = new System.Drawing.Point(518, 182);
             this.inputComputador.Name = "inputComputador";
             this.inputComputador.Properties.Appearance.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.inputComputador.Properties.Appearance.Options.UseFont = true;
-            this.inputComputador.Size = new System.Drawing.Size(134, 22);
+            this.inputComputador.Size = new System.Drawing.Size(116, 22);
             this.inputComputador.TabIndex = 59;
             // 
             // labelControl16
             // 
             this.labelControl16.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.labelControl16.Appearance.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelControl16.Location = new System.Drawing.Point(392, 185);
+            this.labelControl16.Location = new System.Drawing.Point(420, 187);
             this.labelControl16.Name = "labelControl16";
             this.labelControl16.Size = new System.Drawing.Size(74, 16);
             this.labelControl16.TabIndex = 58;
@@ -537,7 +557,8 @@
             this.xtraTabControl.TabPages.AddRange(new DevExpress.XtraTab.XtraTabPage[] {
             this.xtraTabPageVaga,
             this.xtraTabPagePagamento,
-            this.xtraTabPageTestemunhas});
+            this.xtraTabPageTestemunhas,
+            this.xtraTabPageDocumentos});
             // 
             // xtraTabPageVaga
             // 
@@ -581,17 +602,17 @@
             // 
             this.inputTrabalhoSabado.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.inputTrabalhoSabado.Location = new System.Drawing.Point(119, 154);
+            this.inputTrabalhoSabado.Location = new System.Drawing.Point(518, 98);
             this.inputTrabalhoSabado.Name = "inputTrabalhoSabado";
             this.inputTrabalhoSabado.Properties.Appearance.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.inputTrabalhoSabado.Properties.Appearance.Options.UseFont = true;
-            this.inputTrabalhoSabado.Size = new System.Drawing.Size(250, 22);
+            this.inputTrabalhoSabado.Size = new System.Drawing.Size(116, 22);
             this.inputTrabalhoSabado.TabIndex = 64;
             // 
             // labelControl25
             // 
             this.labelControl25.Appearance.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelControl25.Location = new System.Drawing.Point(15, 157);
+            this.labelControl25.Location = new System.Drawing.Point(420, 103);
             this.labelControl25.Name = "labelControl25";
             this.labelControl25.Size = new System.Drawing.Size(86, 16);
             this.labelControl25.TabIndex = 63;
@@ -611,12 +632,13 @@
             new DevExpress.XtraEditors.Controls.RadioGroupItem(null, "GT")});
             this.radioGroupPrograma.Size = new System.Drawing.Size(134, 25);
             this.radioGroupPrograma.TabIndex = 62;
+            this.radioGroupPrograma.SelectedIndexChanged += new System.EventHandler(this.atribuirTestemunhas);
             // 
             // labelControl9
             // 
             this.labelControl9.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.labelControl9.Appearance.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelControl9.Location = new System.Drawing.Point(392, 12);
+            this.labelControl9.Location = new System.Drawing.Point(420, 12);
             this.labelControl9.Name = "labelControl9";
             this.labelControl9.Size = new System.Drawing.Size(47, 16);
             this.labelControl9.TabIndex = 61;
@@ -630,7 +652,7 @@
             this.inputCargaHorariaExtenso.Name = "inputCargaHorariaExtenso";
             this.inputCargaHorariaExtenso.Properties.Appearance.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.inputCargaHorariaExtenso.Properties.Appearance.Options.UseFont = true;
-            this.inputCargaHorariaExtenso.Size = new System.Drawing.Size(195, 22);
+            this.inputCargaHorariaExtenso.Size = new System.Drawing.Size(214, 22);
             this.inputCargaHorariaExtenso.TabIndex = 60;
             // 
             // inputCargaHorariaNumero
@@ -661,9 +683,15 @@
             0});
             this.inputCargaHorariaNumero.Size = new System.Drawing.Size(49, 22);
             this.inputCargaHorariaNumero.TabIndex = 44;
+            this.inputCargaHorariaNumero.EditValueChanged += new System.EventHandler(this.alterarCargaHorariaNumerica);
             // 
             // xtraTabPagePagamento
             // 
+            this.xtraTabPagePagamento.Controls.Add(this.inputNumeroParcelas);
+            this.xtraTabPagePagamento.Controls.Add(this.labelControlValorParcialExtenso);
+            this.xtraTabPagePagamento.Controls.Add(this.inputValorParcialExtenso);
+            this.xtraTabPagePagamento.Controls.Add(this.labelControlValorParcial);
+            this.xtraTabPagePagamento.Controls.Add(this.inputValorParcial);
             this.xtraTabPagePagamento.Controls.Add(this.inputModoTransferencia);
             this.xtraTabPagePagamento.Controls.Add(this.inputModoPagSeguro);
             this.xtraTabPagePagamento.Controls.Add(this.inputModoDinheiro);
@@ -672,10 +700,9 @@
             this.xtraTabPagePagamento.Controls.Add(this.inputModoDebito);
             this.xtraTabPagePagamento.Controls.Add(this.inputModoCredito);
             this.xtraTabPagePagamento.Controls.Add(this.inputModoBoleto);
-            this.xtraTabPagePagamento.Controls.Add(this.inputNumeroParcelas);
             this.xtraTabPagePagamento.Controls.Add(this.labelControl21);
             this.xtraTabPagePagamento.Controls.Add(this.inputDataPagamento);
-            this.xtraTabPagePagamento.Controls.Add(this.labelControl20);
+            this.xtraTabPagePagamento.Controls.Add(this.labelControlNumeroParcelas);
             this.xtraTabPagePagamento.Controls.Add(this.inputModoPagamento);
             this.xtraTabPagePagamento.Controls.Add(this.labelControl19);
             this.xtraTabPagePagamento.Controls.Add(this.inputValorExtenso);
@@ -684,6 +711,81 @@
             this.xtraTabPagePagamento.Name = "xtraTabPagePagamento";
             this.xtraTabPagePagamento.Size = new System.Drawing.Size(654, 244);
             this.xtraTabPagePagamento.Text = "Dados do Pagamento";
+            // 
+            // inputNumeroParcelas
+            // 
+            this.inputNumeroParcelas.EditValue = new decimal(new int[] {
+            2,
+            0,
+            0,
+            0});
+            this.inputNumeroParcelas.Location = new System.Drawing.Point(136, 101);
+            this.inputNumeroParcelas.Name = "inputNumeroParcelas";
+            this.inputNumeroParcelas.Properties.Appearance.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.inputNumeroParcelas.Properties.Appearance.Options.UseFont = true;
+            this.inputNumeroParcelas.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.inputNumeroParcelas.Properties.EditValueChangedFiringMode = DevExpress.XtraEditors.Controls.EditValueChangedFiringMode.Default;
+            this.inputNumeroParcelas.Properties.IsFloatValue = false;
+            this.inputNumeroParcelas.Properties.Mask.EditMask = "d";
+            this.inputNumeroParcelas.Properties.MaxValue = new decimal(new int[] {
+            99,
+            0,
+            0,
+            0});
+            this.inputNumeroParcelas.Properties.MinValue = new decimal(new int[] {
+            2,
+            0,
+            0,
+            0});
+            this.inputNumeroParcelas.Size = new System.Drawing.Size(49, 22);
+            this.inputNumeroParcelas.TabIndex = 57;
+            this.inputNumeroParcelas.EditValueChanged += new System.EventHandler(this.alterarValorParcial);
+            // 
+            // labelControlValorParcialExtenso
+            // 
+            this.labelControlValorParcialExtenso.Appearance.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelControlValorParcialExtenso.Location = new System.Drawing.Point(15, 195);
+            this.labelControlValorParcialExtenso.Name = "labelControlValorParcialExtenso";
+            this.labelControlValorParcialExtenso.Size = new System.Drawing.Size(83, 16);
+            this.labelControlValorParcialExtenso.TabIndex = 56;
+            this.labelControlValorParcialExtenso.Text = "Valor Extenso";
+            // 
+            // inputValorParcialExtenso
+            // 
+            this.inputValorParcialExtenso.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.inputValorParcialExtenso.Location = new System.Drawing.Point(136, 192);
+            this.inputValorParcialExtenso.Name = "inputValorParcialExtenso";
+            this.inputValorParcialExtenso.Properties.Appearance.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.inputValorParcialExtenso.Properties.Appearance.Options.UseFont = true;
+            this.inputValorParcialExtenso.Size = new System.Drawing.Size(498, 22);
+            this.inputValorParcialExtenso.TabIndex = 55;
+            // 
+            // labelControlValorParcial
+            // 
+            this.labelControlValorParcial.Appearance.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelControlValorParcial.Location = new System.Drawing.Point(15, 167);
+            this.labelControlValorParcial.Name = "labelControlValorParcial";
+            this.labelControlValorParcial.Size = new System.Drawing.Size(105, 16);
+            this.labelControlValorParcial.TabIndex = 53;
+            this.labelControlValorParcial.Text = "Valor Parcial (R$)";
+            // 
+            // inputValorParcial
+            // 
+            this.inputValorParcial.Location = new System.Drawing.Point(136, 164);
+            this.inputValorParcial.Name = "inputValorParcial";
+            this.inputValorParcial.Properties.Appearance.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.inputValorParcial.Properties.Appearance.Options.UseFont = true;
+            this.inputValorParcial.Properties.Mask.AutoComplete = DevExpress.XtraEditors.Mask.AutoCompleteType.Strong;
+            this.inputValorParcial.Properties.Mask.EditMask = "n";
+            this.inputValorParcial.Properties.Mask.IgnoreMaskBlank = false;
+            this.inputValorParcial.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.Numeric;
+            this.inputValorParcial.Properties.Mask.ShowPlaceHolders = false;
+            this.inputValorParcial.Properties.Mask.UseMaskAsDisplayFormat = true;
+            this.inputValorParcial.Size = new System.Drawing.Size(93, 22);
+            this.inputValorParcial.TabIndex = 54;
+            this.inputValorParcial.EditValueChanged += new System.EventHandler(this.alterarValorParcialExtenso);
             // 
             // inputModoTransferencia
             // 
@@ -773,14 +875,6 @@
             this.inputModoBoleto.Size = new System.Drawing.Size(120, 20);
             this.inputModoBoleto.TabIndex = 45;
             // 
-            // inputNumeroParcelas
-            // 
-            this.inputNumeroParcelas.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.inputNumeroParcelas.Location = new System.Drawing.Point(119, 101);
-            this.inputNumeroParcelas.Name = "inputNumeroParcelas";
-            this.inputNumeroParcelas.Size = new System.Drawing.Size(52, 22);
-            this.inputNumeroParcelas.TabIndex = 44;
-            // 
             // labelControl21
             // 
             this.labelControl21.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
@@ -797,23 +891,25 @@
             this.inputDataPagamento.EditValue = null;
             this.inputDataPagamento.Location = new System.Drawing.Point(534, 12);
             this.inputDataPagamento.Name = "inputDataPagamento";
+            this.inputDataPagamento.Properties.Appearance.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.inputDataPagamento.Properties.Appearance.Options.UseFont = true;
             this.inputDataPagamento.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
             this.inputDataPagamento.Properties.CalendarTimeProperties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
             this.inputDataPagamento.Properties.Mask.EditMask = "dd/MM/yyyy";
             this.inputDataPagamento.Properties.Mask.UseMaskAsDisplayFormat = true;
-            this.inputDataPagamento.Size = new System.Drawing.Size(100, 20);
+            this.inputDataPagamento.Size = new System.Drawing.Size(100, 22);
             this.inputDataPagamento.TabIndex = 42;
             // 
-            // labelControl20
+            // labelControlNumeroParcelas
             // 
-            this.labelControl20.Appearance.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelControl20.Location = new System.Drawing.Point(177, 104);
-            this.labelControl20.Name = "labelControl20";
-            this.labelControl20.Size = new System.Drawing.Size(38, 16);
-            this.labelControl20.TabIndex = 40;
-            this.labelControl20.Text = "Vezes";
+            this.labelControlNumeroParcelas.Appearance.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelControlNumeroParcelas.Location = new System.Drawing.Point(192, 104);
+            this.labelControlNumeroParcelas.Name = "labelControlNumeroParcelas";
+            this.labelControlNumeroParcelas.Size = new System.Drawing.Size(38, 16);
+            this.labelControlNumeroParcelas.TabIndex = 40;
+            this.labelControlNumeroParcelas.Text = "Vezes";
             // 
             // inputModoPagamento
             // 
@@ -828,6 +924,7 @@
             new DevExpress.XtraEditors.Controls.RadioGroupItem(null, "Isento")});
             this.inputModoPagamento.Size = new System.Drawing.Size(109, 93);
             this.inputModoPagamento.TabIndex = 38;
+            this.inputModoPagamento.SelectedIndexChanged += new System.EventHandler(this.alterarNumeroParcelas);
             // 
             // labelControl19
             // 
@@ -842,11 +939,11 @@
             // 
             this.inputValorExtenso.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.inputValorExtenso.Location = new System.Drawing.Point(119, 38);
+            this.inputValorExtenso.Location = new System.Drawing.Point(136, 38);
             this.inputValorExtenso.Name = "inputValorExtenso";
             this.inputValorExtenso.Properties.Appearance.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.inputValorExtenso.Properties.Appearance.Options.UseFont = true;
-            this.inputValorExtenso.Size = new System.Drawing.Size(515, 22);
+            this.inputValorExtenso.Size = new System.Drawing.Size(498, 22);
             this.inputValorExtenso.TabIndex = 36;
             // 
             // labelControl18
@@ -854,18 +951,25 @@
             this.labelControl18.Appearance.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelControl18.Location = new System.Drawing.Point(15, 13);
             this.labelControl18.Name = "labelControl18";
-            this.labelControl18.Size = new System.Drawing.Size(60, 16);
+            this.labelControl18.Size = new System.Drawing.Size(113, 16);
             this.labelControl18.TabIndex = 34;
-            this.labelControl18.Text = "Valor (R$)";
+            this.labelControl18.Text = "Valor Contrato (R$)";
             // 
             // inputValorContrato
             // 
-            this.inputValorContrato.Location = new System.Drawing.Point(119, 10);
+            this.inputValorContrato.Location = new System.Drawing.Point(136, 10);
             this.inputValorContrato.Name = "inputValorContrato";
             this.inputValorContrato.Properties.Appearance.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.inputValorContrato.Properties.Appearance.Options.UseFont = true;
+            this.inputValorContrato.Properties.Mask.AutoComplete = DevExpress.XtraEditors.Mask.AutoCompleteType.Strong;
+            this.inputValorContrato.Properties.Mask.EditMask = "n";
+            this.inputValorContrato.Properties.Mask.IgnoreMaskBlank = false;
+            this.inputValorContrato.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.Numeric;
+            this.inputValorContrato.Properties.Mask.ShowPlaceHolders = false;
+            this.inputValorContrato.Properties.Mask.UseMaskAsDisplayFormat = true;
             this.inputValorContrato.Size = new System.Drawing.Size(93, 22);
             this.inputValorContrato.TabIndex = 35;
+            this.inputValorContrato.EditValueChanged += new System.EventHandler(this.alterarValorContrato);
             // 
             // xtraTabPageTestemunhas
             // 
@@ -949,6 +1053,25 @@
             this.botaoResetar.Text = "Resetar";
             this.botaoResetar.Click += new System.EventHandler(this.botaoResetar_Click);
             // 
+            // xtraTabPageDocumentos
+            // 
+            this.xtraTabPageDocumentos.Controls.Add(this.botaoContrato);
+            this.xtraTabPageDocumentos.Name = "xtraTabPageDocumentos";
+            this.xtraTabPageDocumentos.Size = new System.Drawing.Size(654, 244);
+            this.xtraTabPageDocumentos.Text = "Documentos";
+            // 
+            // botaoContrato
+            // 
+            this.botaoContrato.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.botaoContrato.Appearance.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.botaoContrato.Appearance.Options.UseFont = true;
+            this.botaoContrato.Location = new System.Drawing.Point(15, 52);
+            this.botaoContrato.Name = "botaoContrato";
+            this.botaoContrato.Size = new System.Drawing.Size(75, 30);
+            this.botaoContrato.TabIndex = 41;
+            this.botaoContrato.Text = "Contrato";
+            this.botaoContrato.Click += new System.EventHandler(this.botaoContrato_Click);
+            // 
             // RegistroApproved
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -995,6 +1118,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.inputCargaHorariaNumero.Properties)).EndInit();
             this.xtraTabPagePagamento.ResumeLayout(false);
             this.xtraTabPagePagamento.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.inputNumeroParcelas.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.inputValorParcialExtenso.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.inputValorParcial.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.inputModoTransferencia.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.inputModoPagSeguro.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.inputModoDinheiro.Properties)).EndInit();
@@ -1003,7 +1129,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.inputModoDebito.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.inputModoCredito.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.inputModoBoleto.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.inputNumeroParcelas)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.inputDataPagamento.Properties.CalendarTimeProperties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.inputDataPagamento.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.inputModoPagamento.Properties)).EndInit();
@@ -1013,10 +1138,10 @@
             this.xtraTabPageTestemunhas.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.inputTestemunha2.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.inputTestemunha1.Properties)).EndInit();
+            this.xtraTabPageDocumentos.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
-
         #endregion
 
         private DevExpress.XtraEditors.LabelControl labelControl1;
@@ -1060,7 +1185,7 @@
         private DevExpress.XtraEditors.TextEdit inputValorExtenso;
         private DevExpress.XtraEditors.LabelControl labelControl18;
         private DevExpress.XtraEditors.TextEdit inputValorContrato;
-        private DevExpress.XtraEditors.LabelControl labelControl20;
+        private DevExpress.XtraEditors.LabelControl labelControlNumeroParcelas;
         private DevExpress.XtraTab.XtraTabPage xtraTabPageTestemunhas;
         private DevExpress.XtraEditors.LabelControl labelControl22;
         private DevExpress.XtraEditors.ButtonEdit inputTestemunha2;
@@ -1071,7 +1196,6 @@
         private DevExpress.XtraEditors.DateEdit inputDataPagamento;
         private DevExpress.XtraEditors.LabelControl labelControl24;
         private DevExpress.XtraEditors.DateEdit inputDataAPD;
-        private System.Windows.Forms.NumericUpDown inputNumeroParcelas;
         private DevExpress.XtraEditors.TextEdit inputCargaHorariaExtenso;
         private DevExpress.XtraEditors.SimpleButton botaoResetar;
         private DevExpress.XtraEditors.RadioGroup radioGroupPrograma;
@@ -1087,5 +1211,12 @@
         private DevExpress.XtraEditors.CheckEdit inputModoDebito;
         private DevExpress.XtraEditors.CheckEdit inputModoCredito;
         private DevExpress.XtraEditors.CheckEdit inputModoBoleto;
+        private DevExpress.XtraEditors.LabelControl labelControlValorParcialExtenso;
+        private DevExpress.XtraEditors.TextEdit inputValorParcialExtenso;
+        private DevExpress.XtraEditors.LabelControl labelControlValorParcial;
+        private DevExpress.XtraEditors.TextEdit inputValorParcial;
+        private DevExpress.XtraEditors.SpinEdit inputNumeroParcelas;
+        private DevExpress.XtraTab.XtraTabPage xtraTabPageDocumentos;
+        private DevExpress.XtraEditors.SimpleButton botaoContrato;
     }
 }

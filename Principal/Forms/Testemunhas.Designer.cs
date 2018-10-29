@@ -71,6 +71,24 @@
             this.groupControlDadosGerais.Size = new System.Drawing.Size(514, 96);
             this.groupControlDadosGerais.TabIndex = 48;
             this.groupControlDadosGerais.Text = "Global Volunteer";
+
+            //
+            //ButtonEdits
+            //
+            this.inputTestemunha1GV.ButtonClick += inputGV1_EditButton;
+            this.inputTestemunha2GV.ButtonClick += inputGV2_EditButton;
+            this.inputTestemunha1GE.ButtonClick += inputGE1_EditButton;
+            this.inputTestemunha2GE.ButtonClick += inputGE2_EditButton;
+            this.inputTestemunha1GT.ButtonClick += inputGT1_EditButton;
+            this.inputTestemunha2GT.ButtonClick += inputGT2_EditButton;
+
+            //this.inputTestemunha1GV.ButtonClick += inputGV1_EditButton;
+            //this.inputTestemunha2GV.ButtonClick += inputGV2_EditButton;
+            //this.inputTestemunha1GE.ButtonClick += inputGE1_EditButton;
+            //this.inputTestemunha2GE.ButtonClick += inputGE2_EditButton;
+            //this.inputTestemunha1GT.ButtonClick += inputGT1_EditButton;
+            //this.inputTestemunha2GT.ButtonClick += inputGT2_EditButton;
+
             // 
             // labelControl1
             // 
@@ -119,7 +137,6 @@
             this.inputTestemunha1GV.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
             this.inputTestemunha1GV.Size = new System.Drawing.Size(380, 22);
             this.inputTestemunha1GV.TabIndex = 2;
-            this.inputTestemunha1GV.EditValueChanged += new System.EventHandler(this.inputTestemunha1GV_EditValueChanged);
             // 
             // groupControl1
             // 

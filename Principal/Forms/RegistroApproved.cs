@@ -19,11 +19,20 @@ namespace Principal.Forms
 {
     public partial class RegistroApproved : XtraForm
     {
+        ListaApproveds _formListaApproveds;
         private IApprovedService _servicoApproved;
         private IPessoaRepositorio _repositorioPessoa;
         private IEscritorioRepositorio _repositorioEscritorio;
+        private IOpportunityRepository _repositorioOpportunity;
+        private ITokenPublicoRepositorio _repositorioTokenPublico;
+        private ITestemunhaRepositorio _repositorioTestemunha;
+
         private Domain.Entities.Escritorio _escritorio;
+        private Domain.Entities.TokenPublico _token;
+        private Domain.Entities.Testemunha _testemunha;
+        
         private Approved _approved;
+
         private int IDEP;
         private string EPNome;
         private int IDResponsavel;
@@ -32,13 +41,22 @@ namespace Principal.Forms
         private string Testemunha1Nome;
         private int IDTestemunha2;
         private string Testemunha2Nome;
-        Dictionary<string, Control> _binds = new Dictionary<string, Control>();
-        Validacoes validador = new Validacoes();
         int _operacao;
 
+        Dictionary<string, Control> _binds = new Dictionary<string, Control>();
+        Validacoes validador = new Validacoes();
+
         //OPERACAO 1 = NOVO, 2 = EDITAR
-        public RegistroApproved(Approved approved, int operacao)
+        public RegistroApproved(Approved approved, int operacao, ListaApproveds formListaApproveds)
         {
+            //Altera a cultura para substituir , por . e vice-versa (no caso dos valores monetários)
+            System.Globalization.CultureInfo newCulture = (System.Globalization.CultureInfo)System.Globalization.CultureInfo.CurrentCulture.Clone();
+            newCulture.NumberFormat.NumberGroupSeparator = ".";
+            newCulture.NumberFormat.NumberDecimalSeparator = ",";
+            System.Threading.Thread.CurrentThread.CurrentCulture = newCulture;
+            System.Threading.Thread.CurrentThread.CurrentUICulture = newCulture;
+
+            _formListaApproveds = formListaApproveds;
             _operacao = operacao;
             InitializeComponent();
             this.Text = "Registro de Approved";
@@ -46,7 +64,12 @@ namespace Principal.Forms
             _servicoApproved = AppCore.Container.Resolve<IApprovedService>();
             _repositorioPessoa = AppCore.Container.Resolve<IPessoaRepositorio>();
             _repositorioEscritorio = AppCore.Container.Resolve<IEscritorioRepositorio>();
+            _repositorioOpportunity = AppCore.Container.Resolve<IOpportunityRepository>();
+            _repositorioTokenPublico = AppCore.Container.Resolve<ITokenPublicoRepositorio>();
+            _repositorioTestemunha = AppCore.Container.Resolve<ITestemunhaRepositorio>();
             _escritorio = _repositorioEscritorio.ObterEscritorio();
+            _token = _repositorioTokenPublico.ObterToken();
+            _testemunha = _repositorioTestemunha.ObterTestemunhas();
 
             if (_operacao == 1)
             {
@@ -56,12 +79,16 @@ namespace Principal.Forms
             else if (_operacao == 2)
             {
                 this.Dock = DockStyle.Fill;
+                IDEP = approved.IdEP;
+                IDResponsavel = approved.IdResponsavel;
+                IDTestemunha1 = approved.IdTestemunha1;
+                IDTestemunha2 = approved.IdTestemunha2;
                 inputNomeEP.Text = approved.NomeEP;
                 inputNomeResponsavel.Text = approved.NomeResponsavel;
                 inputEPID.Text = approved.EPID;
                 inputDataAPD.Text = approved.DataApproved.ToString();
                 inputTNID.Text = approved.TNID;
-                radioGroupPrograma.SelectedIndex = Conversoes.Conversoes.converteStringIntTipoProduto(approved.TipoProduto);
+                radioGroupPrograma.SelectedIndex = approved.TipoProdutoId;
                 inputPaisDestino.Text = approved.PaisDestino;
                 inputCidadeDestino.Text = approved.CidadeDestino;
                 inputBolsaAuxilio.Text = approved.BolsaAuxilio;
@@ -71,14 +98,17 @@ namespace Principal.Forms
                 inputAlimentacaoFimDeSemana.Text = approved.AlimentacaoFimSemana;
                 inputDataInicio.Text = approved.DataInicio.ToString();
                 inputDataFim.Text = approved.DataFim.ToString();
+                inputTrabalhoSabado.Text = approved.TrabalhoSabado;
                 inputFeeICX.Text = approved.TaxaDestino;
                 inputAcomodacaoProvida.Text = approved.AcomodacaoProvida.ToString();
                 inputAcomodacaoCoberta.Text = approved.AcomodacaoCoberta.ToString();
                 inputComputador.Text = approved.Computador.ToString();
                 inputValorContrato.Text = approved.ValorContratoNumerico.ToString();
                 inputValorExtenso.Text = approved.ValorContratoExtenso;
+                inputValorParcial.Text = approved.ValorParcialNumerico.ToString();
+                inputValorParcialExtenso.Text = approved.ValorParcialExtenso;
                 inputDataPagamento.Text = approved.DataPagamento.ToString();
-                inputModoPagamento.Text = approved.TipoPagamento.ToString();
+                inputModoPagamento.SelectedIndex = approved.TipoPagamento;
                 inputNumeroParcelas.Text = approved.QtdParcelas.ToString();
                 inputModoBoleto.Checked = approved.ModoBoleto;
                 inputModoCredito.Checked = approved.ModoCartaoCredito;
@@ -90,6 +120,8 @@ namespace Principal.Forms
                 inputModoTransferencia.Checked = approved.ModoTransferencia;
                 inputTestemunha1.Text = approved.NomeTestemunha1;
                 inputTestemunha2.Text = approved.NomeTestemunha2;
+                if(approved.TipoPagamento != 1)
+                    mostrarCamposParcelas(false);
             }
         }
 
@@ -121,16 +153,14 @@ namespace Principal.Forms
             inputDataPagamento.Text = "";
             inputModoPagamento.Text = "";
             inputNumeroParcelas.Text = "";
-            inputModoBoleto.Checked = false;
-            inputModoCredito.Checked = false;
-            inputModoDebito.Checked = false;
-            inputModoCheque.Checked = false;
-            inputModoDeposito.Checked = false;
-            inputModoDinheiro.Checked = false;
-            inputModoPagSeguro.Checked = false;
-            inputModoTransferencia.Checked = false;
+            inputValorParcial.Text = "";
+            inputValorParcialExtenso.Text = "";
+            resetarModosPagamento();
             inputTestemunha1.Text = "";
             inputTestemunha2.Text = "";
+
+            mostrarCamposParcelas(false);
+            obterTestemunhas();
         }
 
         private void botaoResetar_Click(object sender, EventArgs e)
@@ -144,7 +174,7 @@ namespace Principal.Forms
             int flag = 0;
             flag = validarApproved(flag);
 
-            if(flag == 0)
+            if (flag == 0)
             {
                 try
                 {
@@ -158,28 +188,31 @@ namespace Principal.Forms
                             NomeResponsavel = inputNomeResponsavel.Text,
                             EPID = inputEPID.Text,
                             IdPresidente = _escritorio.LCP,
+                            TipoProdutoId = radioGroupPrograma.SelectedIndex,
+                            TipoProdutoDescricao = Conversoes.Conversoes.ConverteIntStringTipoProduto(radioGroupPrograma.SelectedIndex),
                             TNID = inputTNID.Text,
-                            TipoProduto = Conversoes.Conversoes.converteIntStringTipoProduto(radioGroupPrograma.SelectedIndex),
                             PaisDestino = inputPaisDestino.Text,
                             CidadeDestino = inputCidadeDestino.Text,
                             DataInicio = inputDataInicio.DateTime,
                             DataFim = inputDataFim.DateTime,
                             CargaHorariaNumeral = Convert.ToInt32(inputCargaHorariaNumero.Value),
                             CargaHorariaExtenso = inputCargaHorariaExtenso.Text,
-                            TrabalhoSabado = Conversoes.Conversoes.convertePortuguesBool(inputTrabalhoSabado.Text),
+                            TrabalhoSabado = inputTrabalhoSabado.Text,
                             TaxaDestino = inputFeeICX.Text,
                             BolsaAuxilio = inputBolsaAuxilio.Text,
-                            AcomodacaoProvida = Conversoes.Conversoes.convertePortuguesBool(inputAcomodacaoProvida.Text),
-                            AcomodacaoCoberta = Conversoes.Conversoes.convertePortuguesBool(inputAcomodacaoCoberta.Text),
+                            AcomodacaoProvida = inputAcomodacaoProvida.Text,
+                            AcomodacaoCoberta = inputAcomodacaoCoberta.Text,
                             AlimentacaoDiaTrabalho = inputAlimentacaoSemana.Text,
                             AlimentacaoFimSemana = inputAlimentacaoFimDeSemana.Text,
-                            Computador = Conversoes.Conversoes.convertePortuguesBool(inputAcomodacaoProvida.Text),
+                            Computador = inputAcomodacaoProvida.Text,
                             DataApproved = inputDataAPD.DateTime,
                             ValorContratoNumerico = Convert.ToDecimal(inputValorContrato.Text),
-                            ValorContratoExtenso = inputValorContrato.Text,
+                            ValorContratoExtenso = inputValorExtenso.Text,
                             DataPagamento = inputDataPagamento.DateTime,
                             TipoPagamento = inputModoPagamento.SelectedIndex,
                             QtdParcelas = Convert.ToInt32(inputNumeroParcelas.Value),
+                            ValorParcialNumerico = Convert.ToDecimal(inputValorParcial.Text),
+                            ValorParcialExtenso = inputValorParcialExtenso.Text,
                             ModoBoleto = inputModoBoleto.Checked,
                             ModoCartaoCredito = inputModoCredito.Checked,
                             ModoCartaoDebito = inputModoDebito.Checked,
@@ -194,20 +227,255 @@ namespace Principal.Forms
                             NomeTestemunha2 = inputTestemunha2.Text
                         };
                         _servicoApproved.Criar(approved);
+                        _approved = approved;
                     }
+                    else if (_operacao == 2)
+                    {
+                        _approved.IdEP = IDEP;
+                        _approved.NomeEP = inputNomeEP.Text;
+                        _approved.IdResponsavel = IDResponsavel;
+                        _approved.NomeResponsavel = inputNomeResponsavel.Text;
+                        _approved.EPID = inputEPID.Text;
+                        _approved.IdPresidente = _escritorio.LCP;
+                        _approved.TipoProdutoId = radioGroupPrograma.SelectedIndex;
+                        _approved.TipoProdutoDescricao = Conversoes.Conversoes.ConverteIntStringTipoProduto(radioGroupPrograma.SelectedIndex);
+                        _approved.TNID = inputTNID.Text;
+                        _approved.PaisDestino = inputPaisDestino.Text;
+                        _approved.CidadeDestino = inputCidadeDestino.Text;
+                        _approved.DataInicio = inputDataInicio.DateTime;
+                        _approved.DataFim = inputDataFim.DateTime;
+                        _approved.CargaHorariaNumeral = Convert.ToInt32(inputCargaHorariaNumero.Value);
+                        _approved.CargaHorariaExtenso = inputCargaHorariaExtenso.Text;
+                        _approved.TrabalhoSabado = inputTrabalhoSabado.Text;
+                        _approved.TaxaDestino = inputFeeICX.Text;
+                        _approved.BolsaAuxilio = inputBolsaAuxilio.Text;
+                        _approved.AcomodacaoProvida = inputAcomodacaoProvida.Text;
+                        _approved.AcomodacaoCoberta = inputAcomodacaoCoberta.Text;
+                        _approved.AlimentacaoDiaTrabalho = inputAlimentacaoSemana.Text;
+                        _approved.AlimentacaoFimSemana = inputAlimentacaoFimDeSemana.Text;
+                        _approved.Computador = inputAcomodacaoProvida.Text;
+                        _approved.DataApproved = inputDataAPD.DateTime;
+                        _approved.ValorContratoNumerico = Convert.ToDecimal(inputValorContrato.Text);
+                        _approved.ValorContratoExtenso = inputValorExtenso.Text;
+                        _approved.DataPagamento = inputDataPagamento.DateTime;
+                        _approved.TipoPagamento = inputModoPagamento.SelectedIndex;
+                        _approved.QtdParcelas = Convert.ToInt32(inputNumeroParcelas.Value);
+                        _approved.ValorParcialNumerico = Convert.ToDecimal(inputValorParcial.Text);
+                        _approved.ValorParcialExtenso = inputValorParcialExtenso.Text;
+                        _approved.ModoBoleto = inputModoBoleto.Checked;
+                        _approved.ModoCartaoCredito = inputModoCredito.Checked;
+                        _approved.ModoCartaoDebito = inputModoDebito.Checked;
+                        _approved.ModoCheque = inputModoCheque.Checked;
+                        _approved.ModoDeposito = inputModoDeposito.Checked;
+                        _approved.ModoDinheiro = inputModoDinheiro.Checked;
+                        _approved.ModoPagSeguro = inputModoPagSeguro.Checked;
+                        _approved.ModoTransferencia = inputModoTransferencia.Checked;
+                        _approved.IdTestemunha1 = IDTestemunha1;
+                        _approved.NomeTestemunha1 = inputTestemunha1.Text;
+                        _approved.IdTestemunha2 = IDTestemunha2;
+                        _approved.NomeTestemunha2 = inputTestemunha2.Text;
+
+                        _servicoApproved.Atualizar(_approved);
+                    }
+
+                    XtraMessageBox.Show("Registro gravado!\n", "Sucesso", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    _operacao = 2;
+                    atualizarListaApproveds();
                 }
                 catch (Exception ex)
                 {
-                    MessageBox.Show("Erro ao salvar Approved\n" + ex.Message, "ERRO", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    XtraMessageBox.Show("Erro ao salvar Approved\n" + ex.Message, "ERRO", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
             }
-
             //Fim do Metodo
+        }
+
+        private void atualizarListaApproveds()
+        {
+            var f = Application.OpenForms[nameof(ListaApproveds)];
+            if (f != null)
+                _formListaApproveds.iniciarGrid();
         }
 
         private int validarApproved(int flag)
         {
-            return 0;
+            if (IDEP == 0 || inputNomeEP.Text == "")
+            {
+                XtraMessageBox.Show("Informe o EP!", "Cadastro Incompleto", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                flag = 1;
+            }
+            else 
+            if (inputDataAPD.Text == "")
+            {
+                XtraMessageBox.Show("Informe a data de approved!", "Cadastro Incompleto", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                flag = 1;
+            }
+            else
+            if (inputTNID.Text == "")
+            {
+                XtraMessageBox.Show("Informe a TN ID!", "Cadastro Incompleto", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                flag = 1;
+            }
+            else
+            if (inputPaisDestino.Text == "")
+            {
+                XtraMessageBox.Show("Informe o país de destino!", "Cadastro Incompleto", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                flag = 1;
+            }
+            else
+            if (inputCidadeDestino.Text == "")
+            {
+                XtraMessageBox.Show("Informe a cidade de destino!", "Cadastro Incompleto", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                flag = 1;
+            }
+            else
+            if (inputBolsaAuxilio.Text == "")
+            {
+                XtraMessageBox.Show("Informe o valor da bolsa auxílio ou especifique caso não exista!", "Cadastro Incompleto", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                flag = 1;
+            }
+            else
+            if (inputFeeICX.Text == "")
+            {
+                XtraMessageBox.Show("Informe a fee de ICX!", "Cadastro Incompleto", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                flag = 1;
+            }
+            else
+            if (inputCargaHorariaNumero.Text == "")
+            {
+                XtraMessageBox.Show("Informe a carga horária!", "Cadastro Incompleto", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                flag = 1;
+            }
+            else
+            if (inputCargaHorariaExtenso.Text == "")
+            {
+                XtraMessageBox.Show("Informe o valor por extenso da carga horária!", "Cadastro Incompleto", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                flag = 1;
+            }
+            else
+            if (inputAlimentacaoSemana.Text == "")
+            {
+                XtraMessageBox.Show("Informe se existe alimentação por dia de trabalho!", "Cadastro Incompleto", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                flag = 1;
+            }
+            else
+            if (inputAlimentacaoFimDeSemana.Text == "")
+            {
+                XtraMessageBox.Show("Informe se existe alimentação aos finais de semana!", "Cadastro Incompleto", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                flag = 1;
+            }
+            else
+            if (inputDataInicio.Text == "")
+            {
+                XtraMessageBox.Show("Informe a data de início do intercâmbio!", "Cadastro Incompleto", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                flag = 1;
+            }
+            else
+            if (inputDataFim.Text == "")
+            {
+                XtraMessageBox.Show("Informe a data final do intercâmbio!", "Cadastro Incompleto", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                flag = 1;
+            }
+            else
+            if (inputDataFim.DateTime < inputDataInicio.DateTime)
+            {
+                XtraMessageBox.Show("Erro nas datas de realização!", "Atenção", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                flag = 1;
+            }
+            else
+            if ((inputDataFim.DateTime - inputDataInicio.DateTime).TotalDays < 28)
+            {
+                XtraMessageBox.Show("Intercâmbio de duração menor que 4 semanas não é permido!", "Cadastro Incompleto", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                flag = 1;
+            }
+            else
+            if (inputTrabalhoSabado.Text == "")
+            {
+                XtraMessageBox.Show("Informe se existe trabalho aos sábados!", "Cadastro Incompleto", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                flag = 1;
+            }
+            else
+            if (inputAcomodacaoProvida.Text == "")
+            {
+                XtraMessageBox.Show("Informe se a acomodação é provida!", "Cadastro Incompleto", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                flag = 1;
+            }
+            else
+            if (inputAcomodacaoCoberta.Text == "")
+            {
+                XtraMessageBox.Show("Informe se a acomodação é coberta!", "Cadastro Incompleto", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                flag = 1;
+            }
+            else
+            if (inputComputador.Text == "")
+            {
+                XtraMessageBox.Show("Informe a instituição de trabalho fornece computador!", "Cadastro Incompleto", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                flag = 1;
+            }
+            else
+            if (inputValorContrato.Text == "" || inputValorExtenso.Text == "")
+            {
+                XtraMessageBox.Show("Informe o valor do contrato!", "Cadastro Incompleto", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                flag = 1;
+            }
+            else
+            if (inputDataPagamento.Text == "")
+            {
+                XtraMessageBox.Show("Informe a data de pagamento!", "Cadastro Incompleto", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                flag = 1;
+            }
+            else
+            if ((inputModoPagamento.SelectedIndex == 0 || inputModoPagamento.SelectedIndex == 1) && Convert.ToDecimal(inputValorContrato.Text) == 0)
+            {
+                XtraMessageBox.Show("Informe o valor do contrato corretamente!", "Cadastro Incompleto", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                flag = 1;
+            }
+            else
+            if (!verificarSeExisteModoPagamento())
+                if (inputModoPagamento.SelectedIndex == 0 || inputModoPagamento.SelectedIndex == 1)
+                {
+                XtraMessageBox.Show("Selecione pelo menos uma forma de pagamento!", "Cadastro Incompleto", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                flag = 1;
+                }
+                else
+                if (inputModoPagamento.SelectedIndex == 1)
+                    if(inputNumeroParcelas.Text == "")
+                    {
+                    XtraMessageBox.Show("Informe em quantas parcelas o pagamento foi parcelado!", "Cadastro Incompleto", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    flag = 1;
+                    }
+
+             else
+             if(inputValorParcial.Text == "" || inputValorParcialExtenso.Text == "")
+                    {
+                        XtraMessageBox.Show("Informe o valor parcial referente a primeira parcela!", "Cadastro Incompleto", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        flag = 1;
+                    }
+             else if (inputValorContrato.Text == "" || inputValorExtenso.Text == "")
+             {
+                XtraMessageBox.Show("Informe o valor do contrato!", "Cadastro Incompleto", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                flag = 1;
+             }
+            else 
+            if (IDTestemunha1 == 0 || IDTestemunha2 == 0)
+            {
+                XtraMessageBox.Show("Informe as testemunhas do contrato!", "Cadastro Incompleto", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                flag = 1;
+            }
+            else if ((inputDataFim.DateTime - inputDataInicio.DateTime).TotalDays < 42)
+            {
+                XtraMessageBox.Show("O intercâmbio possui menos que 6 semanas de duração!", "Atenção", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+
+            return flag;
+        }
+
+        private bool verificarSeExisteModoPagamento()
+        {
+            if (inputModoBoleto.Checked == true || inputModoCredito.Checked == true || inputModoDebito.Checked == true || inputModoCheque.Checked == true ||
+                inputModoDeposito.Checked == true || inputModoDinheiro.Checked == true || inputModoPagSeguro.Checked == true || inputModoTransferencia.Checked == true)
+                return true;
+            return false;
         }
 
         private void inputNomeEP_ButtonClick(object sender, EventArgs e)
@@ -216,9 +484,13 @@ namespace Principal.Forms
             var pessoas = _repositorioPessoa.ListarTodasPessoas();
             var form = new SelecionarPessoa(pessoas);
             form.ShowDialog(MdiParent);
-            IDEP = form.SelectedItem.Id;
-            EPNome = form.SelectedItem.Nome;
-            inputNomeEP.Text = form.SelectedItem.Nome + " " + form.SelectedItem.Sobrenome;
+            
+            if (form.SelectedItem.Id != 0)
+            {
+                IDEP = form.SelectedItem.Id;
+                EPNome = form.SelectedItem.Nome;
+                inputNomeEP.Text = form.SelectedItem.Nome + " " + form.SelectedItem.Sobrenome;
+            }
         }
 
         private void inputNomeResponsavel_ButtonClick(object sender, EventArgs e)
@@ -227,9 +499,13 @@ namespace Principal.Forms
             var pessoas = _repositorioPessoa.ListarTodasPessoas();
             var form = new SelecionarPessoa(pessoas);
             form.ShowDialog(MdiParent);
-            IDResponsavel = form.SelectedItem.Id;
-            ResponsavelNome = form.SelectedItem.Nome;
-            inputNomeResponsavel.Text = form.SelectedItem.Nome + " " + form.SelectedItem.Sobrenome;
+            
+            if (form.SelectedItem.Id != 0)
+            {
+                IDResponsavel = form.SelectedItem.Id;
+                ResponsavelNome = form.SelectedItem.Nome;
+                inputNomeResponsavel.Text = form.SelectedItem.Nome + " " + form.SelectedItem.Sobrenome;
+            }
         }
 
         private void inputTestemunha1_ButtonClick(object sender, EventArgs e)
@@ -238,9 +514,13 @@ namespace Principal.Forms
             var pessoas = _repositorioPessoa.ListarTodasPessoas();
             var form = new SelecionarPessoa(pessoas);
             form.ShowDialog(MdiParent);
-            IDTestemunha1 = form.SelectedItem.Id;
-            Testemunha1Nome = form.SelectedItem.Nome;
-            inputTestemunha1.Text = form.SelectedItem.Nome + " " + form.SelectedItem.Sobrenome;
+            
+            if (form.SelectedItem.Id != 0)
+            {
+                IDTestemunha1 = form.SelectedItem.Id;
+                Testemunha1Nome = form.SelectedItem.Nome;
+                inputTestemunha1.Text = form.SelectedItem.Nome + " " + form.SelectedItem.Sobrenome;
+            }
         }
 
         private void inputTestemunha2_ButtonClick(object sender, EventArgs e)
@@ -249,9 +529,177 @@ namespace Principal.Forms
             var pessoas = _repositorioPessoa.ListarTodasPessoas();
             var form = new SelecionarPessoa(pessoas);
             form.ShowDialog(MdiParent);
-            IDTestemunha2 = form.SelectedItem.Id;
-            Testemunha2Nome = form.SelectedItem.Nome;
-            inputTestemunha2.Text = form.SelectedItem.Nome + " " + form.SelectedItem.Sobrenome;
+            
+            if (form.SelectedItem.Id != 0)
+            {
+                IDTestemunha2 = form.SelectedItem.Id;
+                Testemunha2Nome = form.SelectedItem.Nome;
+                inputTestemunha2.Text = form.SelectedItem.Nome + " " + form.SelectedItem.Sobrenome;
+            }
+                
+        }
+
+        private void botaoPesquisar_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                VagaResumidaBR vaga = new VagaResumidaBR(_repositorioOpportunity.ObterPorId(Convert.ToInt32(inputTNID.Text), _token.Token));
+                preencherCampos(vaga);
+            }
+            catch (Exception ex)
+            {
+                XtraMessageBox.Show("Erro ao buscar vaga!", "Atenção!",
+                MessageBoxButtons.OK);
+            }
+        }
+
+        private void preencherCampos(VagaResumidaBR vaga)
+        {
+            this.inputPaisDestino.Text = vaga.PaisDestino;
+            this.inputCidadeDestino.Text = vaga.CidadeDestino;
+            this.inputCargaHorariaNumero.Text = vaga.CargaHorariaNumerica.ToString();
+            this.inputCargaHorariaExtenso.Text = vaga.CargaHorariaExtenso;
+            this.radioGroupPrograma.SelectedIndex = vaga.TipoProdutoId;
+            this.inputDataInicio.DateTime = vaga.DataInicio.Date;
+            this.inputDataFim.DateTime = vaga.DataFim.Date;
+            this.inputTrabalhoSabado.Text = vaga.TrabalhoSabado;
+            this.inputAcomodacaoProvida.Text = vaga.AcomodacaoProvida;
+            this.inputAcomodacaoCoberta.Text = vaga.AcomodacaoCoberta;
+            this.inputBolsaAuxilio.Text = vaga.BolsaAuxilio;
+            this.inputAlimentacaoSemana.Text = vaga.AlimentacaoSemana;
+            this.inputAlimentacaoFimDeSemana.Text = vaga.AlimentacaoFimSemana;
+            this.inputComputador.Text = vaga.Computador;
+        }
+
+        private void alterarCargaHorariaNumerica(object sender, EventArgs e)
+        {
+            inputCargaHorariaExtenso.Text = Conversoes.Conversoes.ConverteNumericoExtenso(Convert.ToInt32(inputCargaHorariaNumero.Text)) + " Horas Semanais";
+        }
+
+        private void alterarValorContrato(object sender, EventArgs e)
+        {
+            inputValorExtenso.Text = Conversoes.Conversoes.EscreverExtenso(Convert.ToDecimal(inputValorContrato.Text));
+
+            if (inputModoPagamento.SelectedIndex == 1)
+                alterarValorParcial(sender, e);
+        }
+
+        private void alterarValorParcialExtenso(object sender, EventArgs e)
+        {
+            inputValorParcialExtenso.Text = Conversoes.Conversoes.EscreverExtenso(Convert.ToDecimal(inputValorParcial.Text));
+        }
+
+        private void alterarNumeroParcelas(object sender, EventArgs e)
+        {
+            if (inputModoPagamento.SelectedIndex == 1)
+            {
+                mostrarCamposParcelas(true);
+                visibilidadeModosPagamento(true);
+                alterarValorParcial(sender, e);
+            }
+            else if (inputModoPagamento.SelectedIndex == 2) {
+                mostrarCamposParcelas(false);
+                inputValorContrato.Text = "0";
+                inputValorParcial.Text = "0";
+                resetarModosPagamento();
+                visibilidadeModosPagamento(false);
+            }
+            else if (inputModoPagamento.SelectedIndex == 0)
+            {
+                mostrarCamposParcelas(false);
+                visibilidadeModosPagamento(true);
+            }
+        }
+
+        private void visibilidadeModosPagamento(bool visibilidade)
+        {
+            inputModoBoleto.Visible = visibilidade;
+            inputModoCredito.Visible = visibilidade;
+            inputModoDebito.Visible = visibilidade;
+            inputModoCheque.Visible = visibilidade;
+            inputModoDeposito.Visible = visibilidade;
+            inputModoDinheiro.Visible = visibilidade;
+            inputModoPagSeguro.Visible = visibilidade;
+            inputModoTransferencia.Visible = visibilidade;
+        }
+
+        private void resetarModosPagamento() {
+            inputModoBoleto.Checked = false;
+            inputModoCredito.Checked = false;
+            inputModoDebito.Checked = false;
+            inputModoCheque.Checked = false;
+            inputModoDeposito.Checked = false;
+            inputModoDinheiro.Checked = false;
+            inputModoPagSeguro.Checked = false;
+            inputModoTransferencia.Checked = false;
+        }
+
+        private void alterarValorParcial(object sender, EventArgs e)
+        {
+            decimal valorContrato = Convert.ToDecimal(inputValorContrato.Text);
+            if (valorContrato > 0 && Convert.ToInt32(inputNumeroParcelas.Value) > 0)
+            {
+                valorContrato = valorContrato / Convert.ToInt32(inputNumeroParcelas.Value);
+                inputValorParcial.Text = valorContrato.ToString();
+            }
+        }
+
+        private void mostrarCamposParcelas(bool flag)
+        {
+            labelControlNumeroParcelas.Visible = flag;
+            inputNumeroParcelas.Visible = flag;
+            labelControlValorParcial.Visible = flag;
+            inputValorParcial.Visible = flag;
+            labelControlValorParcialExtenso.Visible = flag;
+            inputValorParcialExtenso.Visible = flag;
+        }
+
+        private void atribuirTestemunhas(object sender, EventArgs e)
+        {
+            obterTestemunhas();
+        }
+
+        private void obterTestemunhas()
+        {
+            int tipoProduto = this.radioGroupPrograma.SelectedIndex;
+
+            try
+            {
+                if (tipoProduto == 0)
+                {
+                    IDTestemunha1 = _testemunha.IdTestemunha1GV;
+                    IDTestemunha2 = _testemunha.IdTestemunha2GV;
+                    inputTestemunha1.Text = _testemunha.NomeTestemunha1GV;
+                    inputTestemunha2.Text = _testemunha.NomeTestemunha2GV;
+                }
+                else if (tipoProduto == 1)
+                {
+                    IDTestemunha1 = _testemunha.IdTestemunha1GE;
+                    IDTestemunha2 = _testemunha.IdTestemunha2GE;
+                    inputTestemunha1.Text = _testemunha.NomeTestemunha1GE;
+                    inputTestemunha2.Text = _testemunha.NomeTestemunha2GE;
+                }
+                else if (tipoProduto == 2)
+                {
+                    IDTestemunha1 = _testemunha.IdTestemunha1GT;
+                    IDTestemunha2 = _testemunha.IdTestemunha2GT;
+                    inputTestemunha1.Text = _testemunha.NomeTestemunha1GT;
+                    inputTestemunha2.Text = _testemunha.NomeTestemunha2GT;
+                }
+            }
+            catch (Exception ex)
+            {
+            }
+
+        }
+
+        private void botaoContrato_Click(object sender, EventArgs e)
+        {
+            var f = Application.OpenForms[nameof(ContratoOGX)];
+            if (f != null)
+                f.Close();
+            var formEdit = new ContratoOGX(_approved) { MdiParent = this.MdiParent };
+            formEdit.Show();
         }
     }
 }

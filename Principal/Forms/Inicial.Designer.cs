@@ -97,15 +97,16 @@ namespace Principal
             // 
             this.sairToolStripMenuItem.Name = "sairToolStripMenuItem";
             this.sairToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.sairToolStripMenuItem.Text = "Sair";
+            this.sairToolStripMenuItem.Text = "Token";
+            this.sairToolStripMenuItem.Click += new System.EventHandler(this.tokenToolStripMenuItem_Click);
             // 
             // emitirDocumentoToolStripMenuItem
             // 
             this.emitirDocumentoToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.registroDeApprovedToolStripMenuItem});
             this.emitirDocumentoToolStripMenuItem.Name = "emitirDocumentoToolStripMenuItem";
-            this.emitirDocumentoToolStripMenuItem.Size = new System.Drawing.Size(143, 20);
-            this.emitirDocumentoToolStripMenuItem.Text = "Emitir Contrato de OGX";
+            this.emitirDocumentoToolStripMenuItem.Size = new System.Drawing.Size(71, 20);
+            this.emitirDocumentoToolStripMenuItem.Text = "Approved";
             this.emitirDocumentoToolStripMenuItem.Click += new System.EventHandler(this.emitirDocumentoToolStripMenuItem_Click);
             // 
             // registroDeApprovedToolStripMenuItem

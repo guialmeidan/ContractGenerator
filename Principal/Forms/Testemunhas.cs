@@ -99,11 +99,11 @@ namespace Principal.Forms
 
                 _repositorioTestemunha.Atualizar(_testemunha);
 
-                MessageBox.Show("Registro gravado!\n", "Sucesso", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                XtraMessageBox.Show("Registro gravado!\n", "Sucesso", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
             catch (Exception ex)
             {
-                MessageBox.Show("Erro ao registrar testemunhas\n" + ex.Message, "ERRO", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                XtraMessageBox.Show("Erro ao registrar testemunhas\n" + ex.Message, "ERRO", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
 
         }
@@ -116,7 +116,8 @@ namespace Principal.Forms
             form.ShowDialog(MdiParent);
             GV1Id = form.SelectedItem.Id;
             GV1Nome = form.SelectedItem.Nome;
-            inputTestemunha1GV.Text = form.SelectedItem.Nome + " " + form.SelectedItem.Sobrenome;
+            if(GV1Id != 0)
+                inputTestemunha1GV.Text = form.SelectedItem.Nome + " " + form.SelectedItem.Sobrenome;
         }
 
         private void inputGV2_EditButton(object sender, EventArgs e)
@@ -127,7 +128,8 @@ namespace Principal.Forms
             form.ShowDialog(MdiParent);
             GV2Id = form.SelectedItem.Id;
             GV2Nome = form.SelectedItem.Nome;
-            inputTestemunha2GV.Text = form.SelectedItem.Nome + " " + form.SelectedItem.Sobrenome;
+            if (GV2Id != 0)
+                inputTestemunha2GV.Text = form.SelectedItem.Nome + " " + form.SelectedItem.Sobrenome;
         }
 
         private void inputGE1_EditButton(object sender, EventArgs e)
@@ -138,7 +140,8 @@ namespace Principal.Forms
             form.ShowDialog(MdiParent);
             GE1Id = form.SelectedItem.Id;
             GE1Nome = form.SelectedItem.Nome;
-            inputTestemunha1GE.Text = form.SelectedItem.Nome + " " + form.SelectedItem.Sobrenome;
+            if (GE1Id != 0)
+                inputTestemunha1GE.Text = form.SelectedItem.Nome + " " + form.SelectedItem.Sobrenome;
         }
 
         private void inputGE2_EditButton(object sender, EventArgs e)
@@ -149,7 +152,8 @@ namespace Principal.Forms
             form.ShowDialog(MdiParent);
             GE2Id = form.SelectedItem.Id;
             GE2Nome = form.SelectedItem.Nome;
-            inputTestemunha2GE.Text = form.SelectedItem.Nome + " " + form.SelectedItem.Sobrenome;
+            if (GE2Id != 0)
+                inputTestemunha2GE.Text = form.SelectedItem.Nome + " " + form.SelectedItem.Sobrenome;
         }
 
         private void inputGT1_EditButton(object sender, EventArgs e)
@@ -160,7 +164,8 @@ namespace Principal.Forms
             form.ShowDialog(MdiParent);
             GT1Id = form.SelectedItem.Id;
             GT1Nome = form.SelectedItem.Nome;
-            inputTestemunha1GT.Text = form.SelectedItem.Nome + " " + form.SelectedItem.Sobrenome;
+            if (GT1Id != 0)
+                inputTestemunha1GT.Text = form.SelectedItem.Nome + " " + form.SelectedItem.Sobrenome;
         }
 
         private void inputGT2_EditButton(object sender, EventArgs e)
@@ -171,12 +176,8 @@ namespace Principal.Forms
             form.ShowDialog(MdiParent);
             GT2Id = form.SelectedItem.Id;
             GT2Nome = form.SelectedItem.Nome;
-            inputTestemunha2GT.Text = form.SelectedItem.Nome + " " + form.SelectedItem.Sobrenome;
-        }
-
-        private void inputTestemunha1GV_EditValueChanged(object sender, EventArgs e)
-        {
-
+            if (GT2Id != 0)
+                inputTestemunha2GT.Text = form.SelectedItem.Nome + " " + form.SelectedItem.Sobrenome;
         }
     }
 }
