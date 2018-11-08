@@ -65,6 +65,7 @@ namespace Principal.Forms
             {
                 try
                 {
+                    this.ExibirFormEspera();
                     var resultado = ws.consultaCEP(inputCEP.Text);
                     this.inputRua.Text = resultado.end;
                     this.inputCidade.Text = resultado.cidade;
@@ -75,6 +76,10 @@ namespace Principal.Forms
                 {
                     XtraMessageBox.Show(ex.Message, "Atenção!",
                     MessageBoxButtons.OK);
+                }
+                finally
+                {
+                    this.FecharFormEspera();
                 }
             }
         }
@@ -306,6 +311,11 @@ namespace Principal.Forms
                 inputLCP.Text = form.SelectedItem.Nome + " " + form.SelectedItem.Sobrenome;
             }
                 
+        }
+
+        private void inputLCP_EditValueChanged_1(object sender, EventArgs e)
+        {
+
         }
     }
 }

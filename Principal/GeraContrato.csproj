@@ -219,7 +219,7 @@
       <Private>True</Private>
     </Reference>
     <Reference Include="Newtonsoft.Json, Version=10.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
-      <HintPath>..\packages\Newtonsoft.Json.10.0.2\lib\net45\Newtonsoft.Json.dll</HintPath>
+      <HintPath>..\packages\Newtonsoft.Json.10.0.3\lib\net45\Newtonsoft.Json.dll</HintPath>
     </Reference>
     <Reference Include="PresentationCore" />
     <Reference Include="RestSharp, Version=106.4.2.0, Culture=neutral, PublicKeyToken=598062e77f915f75, processorArchitecture=MSIL">
@@ -325,7 +325,9 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Conversoes\Conversoes.cs" />
+    <Compile Include="Conversoes\ConverterMoedas.cs" />
     <Compile Include="Domain\Entities\Approved.cs" />
+    <Compile Include="Domain\Entities\DiretorioArmazenamento.cs" />
     <Compile Include="Domain\Entities\Escritorio.cs" />
     <Compile Include="Domain\Entities\Opportunity.cs" />
     <Compile Include="Domain\Entities\Pessoa.cs" />
@@ -333,6 +335,7 @@
     <Compile Include="Domain\Entities\Testemunha.cs" />
     <Compile Include="Domain\Entities\VagaResumidaBR.cs" />
     <Compile Include="Domain\Repositories\IApprovedRepositorio.cs" />
+    <Compile Include="Domain\Repositories\IDiretorioArmazenamento.cs" />
     <Compile Include="Domain\Repositories\IEscritorioRepositorio.cs" />
     <Compile Include="Domain\Repositories\IOpportunityRepository.cs" />
     <Compile Include="Domain\Repositories\IPessoaRepositorio.cs" />
@@ -347,11 +350,11 @@
     <Compile Include="Forms\ConsultarVaga.Designer.cs">
       <DependentUpon>ConsultarVaga.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\ContratoOGX.cs">
+    <Compile Include="Forms\ContratoTrabalhoOGX.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\ContratoOGX.Designer.cs">
-      <DependentUpon>ContratoOGX.cs</DependentUpon>
+    <Compile Include="Forms\ContratoTrabalhoOGX.Designer.cs">
+      <DependentUpon>ContratoTrabalhoOGX.cs</DependentUpon>
     </Compile>
     <Compile Include="Forms\Escritorio.cs">
       <SubType>Form</SubType>
@@ -359,6 +362,7 @@
     <Compile Include="Forms\Escritorio.Designer.cs">
       <DependentUpon>Escritorio.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\FormExtentions.cs" />
     <Compile Include="Forms\InserirPessoa.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -381,6 +385,12 @@
     <Compile Include="Forms\ListaPessoas.Designer.cs">
       <DependentUpon>ListaPessoas.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\PastaDestino.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\PastaDestino.Designer.cs">
+      <DependentUpon>PastaDestino.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\RegistroApproved.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -392,6 +402,18 @@
     </Compile>
     <Compile Include="Forms\SelecionarPessoa.Designer.cs">
       <DependentUpon>SelecionarPessoa.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Sobre.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Sobre.Designer.cs">
+      <DependentUpon>Sobre.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\TermoVoluntario.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\TermoVoluntario.Designer.cs">
+      <DependentUpon>TermoVoluntario.cs</DependentUpon>
     </Compile>
     <Compile Include="Forms\Testemunhas.cs">
       <SubType>Form</SubType>
@@ -407,6 +429,7 @@
     </Compile>
     <Compile Include="Infra\DatabaseFactory\DatabaseAdapters\DatabaseAdapterSQL.cs" />
     <Compile Include="Infra\DatabaseFactory\IDatabaseAdapter.cs" />
+    <Compile Include="Infra\Migrations\201011051832_Criar_DiretorioArmazenamento.cs" />
     <Compile Include="Infra\Migrations\201810012310_Criar_Banco.cs" />
     <Compile Include="Infra\Migrations\201810012330_Criar_Pessoa.cs" />
     <Compile Include="Infra\Migrations\201810141300_Criar_Escritorio.cs" />
@@ -418,6 +441,7 @@
     <Compile Include="Infra\Opportunity\OpportunityRepository.cs" />
     <Compile Include="Infra\Opportunity\OpportunityService.cs" />
     <Compile Include="Infra\Repositories\ApprovedRepositorio.cs" />
+    <Compile Include="Infra\Repositories\DiretorioArmazenamentoRepositorio.cs" />
     <Compile Include="Infra\Repositories\EscritorioRepositorio.cs" />
     <Compile Include="Infra\Repositories\PessoaRepositorio.cs" />
     <Compile Include="Infra\Repositories\TestemunhaRepositorio.cs" />
@@ -443,8 +467,8 @@
     <EmbeddedResource Include="Forms\ConsultarVaga.resx">
       <DependentUpon>ConsultarVaga.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\ContratoOGX.resx">
-      <DependentUpon>ContratoOGX.cs</DependentUpon>
+    <EmbeddedResource Include="Forms\ContratoTrabalhoOGX.resx">
+      <DependentUpon>ContratoTrabalhoOGX.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\Escritorio.resx">
       <DependentUpon>Escritorio.cs</DependentUpon>
@@ -461,11 +485,23 @@
     <EmbeddedResource Include="Forms\ListaPessoas.resx">
       <DependentUpon>ListaPessoas.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Forms\PastaDestino.resx">
+      <DependentUpon>PastaDestino.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\RegistroApproved.pt-BR.resx">
+      <DependentUpon>RegistroApproved.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forms\RegistroApproved.resx">
       <DependentUpon>RegistroApproved.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\SelecionarPessoa.resx">
       <DependentUpon>SelecionarPessoa.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Sobre.resx">
+      <DependentUpon>Sobre.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\TermoVoluntario.resx">
+      <DependentUpon>TermoVoluntario.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\Testemunhas.resx">
       <DependentUpon>Testemunhas.cs</DependentUpon>
@@ -490,6 +526,9 @@
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
     <None Include="Resources\Contrato-OGX.docx">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Resources\Termo-OGX.docx">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
     <None Include="Web References\br.com.correios.apps\AtendeClienteService.wsdl" />
@@ -568,6 +607,11 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="DevExpress.XtraEditors.v15.1.dll" />
+    <Content Include="Resources\EditorTextoIcone.png" />
+    <Content Include="Resources\PDFIcone.png" />
+    <Content Include="Resources\TNA Hubble - Icone.ico">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
     <None Include="Resources\Pessoas.png" />
     <None Include="Resources\TNA Hubble - Logo Grande.png" />
   </ItemGroup>

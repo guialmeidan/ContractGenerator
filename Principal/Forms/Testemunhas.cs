@@ -103,7 +103,7 @@ namespace Principal.Forms
             }
             catch (Exception ex)
             {
-                XtraMessageBox.Show("Erro ao registrar testemunhas\n" + ex.Message, "ERRO", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                XtraMessageBox.Show("Erro ao registrar testemunhas!\n" + ex.Message, "ERRO", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
 
         }
@@ -178,6 +178,36 @@ namespace Principal.Forms
             GT2Nome = form.SelectedItem.Nome;
             if (GT2Id != 0)
                 inputTestemunha2GT.Text = form.SelectedItem.Nome + " " + form.SelectedItem.Sobrenome;
+        }
+
+        private void inputTestemunha1GV_EditValueChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void inputTestemunha2GV_EditValueChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void inputTestemunha1GE_EditValueChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void inputTestemunha2GE_EditValueChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void inputTestemunha1GT_EditValueChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void inputTestemunha2GT_EditValueChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

@@ -122,8 +122,9 @@
             new DevExpress.XtraEditors.Controls.EditorButton()});
             this.inputLCP.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
             this.inputLCP.Size = new System.Drawing.Size(380, 22);
-            this.inputLCP.ButtonClick += inputLCP_EditValueChanged;
             this.inputLCP.TabIndex = 2;
+            this.inputLCP.ButtonClick += this.inputLCP_EditValueChanged;
+            //this.inputLCP.ButtonClick += this.inputLCP_EditValueChanged;
             // 
             // inputNome
             // 
@@ -366,6 +367,7 @@
             this.Controls.Add(this.botaoSalvar);
             this.Controls.Add(this.groupControl2);
             this.Controls.Add(this.groupControlDadosGerais);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.MaximizeBox = false;
             this.MaximumSize = new System.Drawing.Size(723, 344);
             this.MinimumSize = new System.Drawing.Size(723, 344);

@@ -20,8 +20,8 @@ namespace Principal.Forms
     {
         private IOpportunityRepository _repositorioOpportunity;
         private IOpportunityService _opportunityService;
-
-        public string token = "e316ebe109dd84ed16734e5161a2d236d0a7e6daf499941f7c110078e3c75493";
+        private ITokenPublicoRepositorio _repositorioTokenPublico;
+        private Domain.Entities.TokenPublico _token;
 
         public ConsultarVaga()
         {
@@ -29,19 +29,27 @@ namespace Principal.Forms
 
             _opportunityService = AppCore.Container.Resolve<IOpportunityService>();
             _repositorioOpportunity = AppCore.Container.Resolve<IOpportunityRepository>();
+            _repositorioTokenPublico = AppCore.Container.Resolve<ITokenPublicoRepositorio>();
+
+            _token = _repositorioTokenPublico.ObterToken();
         }
 
         private void botaoBuscar_Click(object sender, EventArgs e)
         {
             try
             {
-                VagaResumidaBR vaga = new VagaResumidaBR(_repositorioOpportunity.ObterPorId(Convert.ToInt32(inputTNID.Text), token));
+                this.ExibirFormEspera();
+                VagaResumidaBR vaga = new VagaResumidaBR(_repositorioOpportunity.ObterPorId(Convert.ToInt32(inputTNID.Text), _token.Token));
                 preencherCampos(vaga);
             }
             catch (Exception ex)
             {
                 XtraMessageBox.Show("Erro ao buscar vaga", "Atenção!",
                 MessageBoxButtons.OK);
+            }
+            finally
+            {
+                this.FecharFormEspera();
             }
         }
 

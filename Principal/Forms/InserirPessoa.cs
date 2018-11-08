@@ -83,7 +83,7 @@ namespace Principal.Forms
             inputNome.Text = "";
             inputSobrenome.Text = "";
             inputEstadoCivil.SelectedIndex = 0;
-            inputNacionalidade.Text = "";
+            inputNacionalidade.Text = "Brasileiro(a)";
             inputProfissao.Text = "";
             radioGroupDocumento.SelectedIndex = 0;
             inputNumeroDoc.Text = "";
@@ -107,6 +107,7 @@ namespace Principal.Forms
             {
                 try
                 {
+                    this.ExibirFormEspera();
                     var resultado = ws.consultaCEP(inputCEP.Text);
                     this.inputRua.Text = resultado.end;
                     this.inputCidade.Text = resultado.cidade;
@@ -117,6 +118,10 @@ namespace Principal.Forms
                 {
                     XtraMessageBox.Show(ex.Message, "Atenção!",
                     MessageBoxButtons.OK);
+                }
+                finally
+                {
+                    this.FecharFormEspera();
                 }
             }
         }

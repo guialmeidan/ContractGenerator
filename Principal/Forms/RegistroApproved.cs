@@ -21,16 +21,15 @@ namespace Principal.Forms
     {
         ListaApproveds _formListaApproveds;
         private IApprovedService _servicoApproved;
-        private IPessoaRepositorio _repositorioPessoa;
+        private IPessoaRepositorio _repositorioPessoa;        
         private IEscritorioRepositorio _repositorioEscritorio;
         private IOpportunityRepository _repositorioOpportunity;
         private ITokenPublicoRepositorio _repositorioTokenPublico;
         private ITestemunhaRepositorio _repositorioTestemunha;
-
         private Domain.Entities.Escritorio _escritorio;
         private Domain.Entities.TokenPublico _token;
-        private Domain.Entities.Testemunha _testemunha;
-        
+        private Domain.Entities.Testemunha _testemunha;        
+
         private Approved _approved;
 
         private int IDEP;
@@ -42,6 +41,7 @@ namespace Principal.Forms
         private int IDTestemunha2;
         private string Testemunha2Nome;
         int _operacao;
+        bool _documento;
 
         Dictionary<string, Control> _binds = new Dictionary<string, Control>();
         Validacoes validador = new Validacoes();
@@ -58,6 +58,7 @@ namespace Principal.Forms
 
             _formListaApproveds = formListaApproveds;
             _operacao = operacao;
+            _documento = false;
             InitializeComponent();
             this.Text = "Registro de Approved";
             _approved = approved;
@@ -66,10 +67,10 @@ namespace Principal.Forms
             _repositorioEscritorio = AppCore.Container.Resolve<IEscritorioRepositorio>();
             _repositorioOpportunity = AppCore.Container.Resolve<IOpportunityRepository>();
             _repositorioTokenPublico = AppCore.Container.Resolve<ITokenPublicoRepositorio>();
-            _repositorioTestemunha = AppCore.Container.Resolve<ITestemunhaRepositorio>();
+            _repositorioTestemunha = AppCore.Container.Resolve<ITestemunhaRepositorio>();            
             _escritorio = _repositorioEscritorio.ObterEscritorio();
             _token = _repositorioTokenPublico.ObterToken();
-            _testemunha = _repositorioTestemunha.ObterTestemunhas();
+            _testemunha = _repositorioTestemunha.ObterTestemunhas();            
 
             if (_operacao == 1)
             {
@@ -122,6 +123,7 @@ namespace Principal.Forms
                 inputTestemunha2.Text = approved.NomeTestemunha2;
                 if(approved.TipoPagamento != 1)
                     mostrarCamposParcelas(false);
+                _documento = true;
             }
         }
 
@@ -158,6 +160,7 @@ namespace Principal.Forms
             resetarModosPagamento();
             inputTestemunha1.Text = "";
             inputTestemunha2.Text = "";
+            _documento = false;
 
             mostrarCamposParcelas(false);
             obterTestemunhas();
@@ -228,6 +231,7 @@ namespace Principal.Forms
                         };
                         _servicoApproved.Criar(approved);
                         _approved = approved;
+                        _documento = true;
                     }
                     else if (_operacao == 2)
                     {
@@ -275,16 +279,18 @@ namespace Principal.Forms
                         _approved.IdTestemunha2 = IDTestemunha2;
                         _approved.NomeTestemunha2 = inputTestemunha2.Text;
 
-                        _servicoApproved.Atualizar(_approved);
+                        _servicoApproved.Atualizar(_approved);                        
                     }
 
                     XtraMessageBox.Show("Registro gravado!\n", "Sucesso", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     _operacao = 2;
+                    _documento = true;
                     atualizarListaApproveds();
                 }
                 catch (Exception ex)
                 {
-                    XtraMessageBox.Show("Erro ao salvar Approved\n" + ex.Message, "ERRO", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    XtraMessageBox.Show("Erro ao salvar Approved!\n" + ex.Message, "ERRO", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    _documento = false;
                 }
             }
             //Fim do Metodo
@@ -499,12 +505,17 @@ namespace Principal.Forms
             var pessoas = _repositorioPessoa.ListarTodasPessoas();
             var form = new SelecionarPessoa(pessoas);
             form.ShowDialog(MdiParent);
-            
             if (form.SelectedItem.Id != 0)
             {
                 IDResponsavel = form.SelectedItem.Id;
                 ResponsavelNome = form.SelectedItem.Nome;
                 inputNomeResponsavel.Text = form.SelectedItem.Nome + " " + form.SelectedItem.Sobrenome;
+            }
+            else
+            {
+                IDResponsavel = 0;
+                ResponsavelNome = "";
+                inputNomeResponsavel.Text = "";
             }
         }
 
@@ -543,6 +554,7 @@ namespace Principal.Forms
         {
             try
             {
+                this.ExibirFormEspera();
                 VagaResumidaBR vaga = new VagaResumidaBR(_repositorioOpportunity.ObterPorId(Convert.ToInt32(inputTNID.Text), _token.Token));
                 preencherCampos(vaga);
             }
@@ -550,6 +562,10 @@ namespace Principal.Forms
             {
                 XtraMessageBox.Show("Erro ao buscar vaga!", "Atenção!",
                 MessageBoxButtons.OK);
+            }
+            finally
+            {
+                this.FecharFormEspera();
             }
         }
 
@@ -578,7 +594,7 @@ namespace Principal.Forms
 
         private void alterarValorContrato(object sender, EventArgs e)
         {
-            inputValorExtenso.Text = Conversoes.Conversoes.EscreverExtenso(Convert.ToDecimal(inputValorContrato.Text));
+            inputValorExtenso.Text = Conversoes.Conversoes.EscreverExtenso(Convert.ToDecimal(inputValorContrato.Text), "BRL");
 
             if (inputModoPagamento.SelectedIndex == 1)
                 alterarValorParcial(sender, e);
@@ -586,7 +602,7 @@ namespace Principal.Forms
 
         private void alterarValorParcialExtenso(object sender, EventArgs e)
         {
-            inputValorParcialExtenso.Text = Conversoes.Conversoes.EscreverExtenso(Convert.ToDecimal(inputValorParcial.Text));
+            inputValorParcialExtenso.Text = Conversoes.Conversoes.EscreverExtenso(Convert.ToDecimal(inputValorParcial.Text), "BRL");
         }
 
         private void alterarNumeroParcelas(object sender, EventArgs e)
@@ -693,13 +709,118 @@ namespace Principal.Forms
 
         }
 
-        private void botaoContrato_Click(object sender, EventArgs e)
+        private void botaoContratoText_Click(object sender, EventArgs e)
         {
-            var f = Application.OpenForms[nameof(ContratoOGX)];
-            if (f != null)
-                f.Close();
-            var formEdit = new ContratoOGX(_approved) { MdiParent = this.MdiParent };
-            formEdit.Show();
+            try
+            {
+                validarNovoApproved();
+                if (_documento == true)
+                {
+                    this.ExibirFormEspera();
+                    var f = Application.OpenForms[nameof(ContratoTrabalhoOGX)];
+                    if (f != null)
+                        f.Close();
+                    var formEdit = new ContratoTrabalhoOGX(_approved, 1) { MdiParent = this.MdiParent };
+                    formEdit.Show();
+                }
+            }
+            catch (Exception ex)
+            {
+                XtraMessageBox.Show("Erro ao carregar documento! Verifique se todas as informações estão preenchidas\n" + ex.Message, "ERRO", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                _documento = false;
+            }
+            finally
+            {
+                this.FecharFormEspera();
+            }
+
+        }
+
+        private void botaoContratoPDF_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                validarNovoApproved();
+                if (_documento == true)
+                {
+                    this.ExibirFormEspera();
+                    var f = Application.OpenForms[nameof(ContratoTrabalhoOGX)];
+                    if (f != null)
+                        f.Close();
+                    var formEdit = new ContratoTrabalhoOGX(_approved, 2) { MdiParent = this.MdiParent };
+                    formEdit.Show();
+                }
+            }
+            catch (Exception ex)
+            {
+                XtraMessageBox.Show("Erro ao carregar documento! Verifique se todas as informações estão preenchidas\n" + ex.Message, "ERRO", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                _documento = false;
+            }
+            finally
+            {
+                this.FecharFormEspera();
+            }
+        }
+
+        private void botaoTermoText_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                validarNovoApproved();
+                if (_documento == true)
+                {
+                    this.ExibirFormEspera();
+                    var f = Application.OpenForms[nameof(TermoVoluntario)];
+                    if (f != null)
+                        f.Close();
+                    var formEdit = new TermoVoluntario(_approved, 1) { MdiParent = this.MdiParent };
+                    formEdit.Show();
+                }
+            }
+            catch (Exception ex)
+            {
+                XtraMessageBox.Show("Erro ao carregar documento! Verifique se todas as informações estão preenchidas\n" + ex.Message, "ERRO", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                _documento = false;
+            }
+            finally
+            {
+                this.FecharFormEspera();
+            }
+        }
+
+        private void botaoTermoPDF_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                validarNovoApproved();
+                if (_documento == true)
+                {
+                    this.ExibirFormEspera();
+                    var f = Application.OpenForms[nameof(TermoVoluntario)];
+                    if (f != null)
+                        f.Close();
+                    var formEdit = new TermoVoluntario(_approved, 2) { MdiParent = this.MdiParent };
+                    formEdit.Show();
+                }
+            }
+            catch (Exception ex)
+            {
+                XtraMessageBox.Show("Erro ao carregar documento! Verifique se todas as informações estão preenchidas\n" + ex.Message, "ERRO", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                _documento = false;
+            }
+            finally
+            {
+                this.FecharFormEspera();
+            }
+        }
+
+        private void validarNovoApproved()
+        {
+                    
+                            if (_documento == false)
+            {
+                XtraMessageBox.Show("Salve o registro antes de prosseguir!", "Ação não permitida!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
     }
 }

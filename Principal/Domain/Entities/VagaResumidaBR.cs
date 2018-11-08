@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Principal.Conversoes;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -42,8 +43,8 @@ namespace Principal.Domain.Entities
             this.LocalizacaoONG = vagaEXPA.role_info.city;
             this.TipoProdutoId = Conversoes.Conversoes.ConverteStringIntTipoProduto(vagaEXPA.programmes.short_name);
             this.TipoProdutoDescricao = Conversoes.Conversoes.ConverteStringCurtaStringLongaTipoProduto(vagaEXPA.programmes.short_name);
-            this.DataInicio = vagaEXPA.earliest_start_date.Date;
-            this.DataFim = vagaEXPA.latest_end_date.Date;
+            this.DataInicio = vagaEXPA.earliest_start_date.Date.AddDays(-1);
+            this.DataFim = vagaEXPA.latest_end_date.Date.AddDays(-1);
             this.TrabalhoSabado = Conversoes.Conversoes.converteBoolPortugues(vagaEXPA.specifics_info.saturday_work);
             this.AcomodacaoProvida = Conversoes.Conversoes.ConverteAcomodacaoProvida(vagaEXPA.logistics_info.accommodation_provided);
             this.AcomodacaoCoberta = Conversoes.Conversoes.ConverteStringBoolParaPortugues(vagaEXPA.logistics_info.accommodation_covered);
@@ -68,13 +69,15 @@ namespace Principal.Domain.Entities
         }
 
         private string obterBolsaAuxilio(Opportunity.MainOpportunity vagaEXPA)
-        {
+        {           
             var salario = "";
             if (string.IsNullOrEmpty(vagaEXPA.specifics_info.salary) || vagaEXPA.specifics_info.salary.Equals("0"))
             {
                 salario = "Não possui";
             }
-            else salario = vagaEXPA.specifics_info.salary + " " + vagaEXPA.specifics_info.salary_currency.alphabetic_code + " (" + vagaEXPA.specifics_info.salary_currency.name + ")";
+            else salario = vagaEXPA.specifics_info.salary_currency.alphabetic_code + " " +
+                            Convert.ToDecimal(vagaEXPA.specifics_info.salary).ToString("n2") + " (" +
+                           Conversoes.Conversoes.EscreverExtenso(Convert.ToDecimal(vagaEXPA.specifics_info.salary), vagaEXPA.specifics_info.salary_currency.alphabetic_code) + ")";
             return salario;
         }
 
@@ -104,7 +107,7 @@ namespace Principal.Domain.Entities
                 cargaHorariaSemanal = (horaFim - horaInicio) * 6;
             else cargaHorariaSemanal = (horaFim - horaInicio) * 5;
             
-            return cargaHorariaSemanal;
+            return Math.Abs(cargaHorariaSemanal);
         }
     }
 }

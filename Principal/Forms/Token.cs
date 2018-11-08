@@ -29,13 +29,22 @@ namespace Principal.Forms
 
         private void botaoSalvar_Click(object sender, EventArgs e)
         {
-            if(inputToken.Text == "")
-                XtraMessageBox.Show("Preencha o campo Token\n", "ERRO", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            else if (XtraMessageBox.Show("Tem certeza que deseja atualizar o token? Esta operação não é reversível!", "Confirmação", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+            try
             {
-                _tokenPublico.Token = inputToken.Text;
-                _repositorioTokenPublico.Atualizar(_tokenPublico);
-                inputToken.Text = _tokenPublico.Token;
+
+                if (inputToken.Text == "")
+                    XtraMessageBox.Show("Preencha o campo Token\n", "ERRO", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                else if (XtraMessageBox.Show("Tem certeza que deseja atualizar o token? Esta operação não é reversível!", "Confirmação", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+                {
+                    _tokenPublico.Token = inputToken.Text;
+                    _repositorioTokenPublico.Atualizar(_tokenPublico);
+                    inputToken.Text = _tokenPublico.Token;
+                    XtraMessageBox.Show("Token Alterado!\n", "Sucesso", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+            }
+            catch (Exception ex)
+            {
+                XtraMessageBox.Show("Erro ao atualizar token!\n" + ex.Message, "ERRO", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
     }

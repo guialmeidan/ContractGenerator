@@ -103,6 +103,38 @@ namespace Principal
                 token.Show();
             }
         }
+
+        private void cadastrarDiretórioToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            var f = Application.OpenForms[nameof(PastaDestino)];
+            if (f != null)
+                f.BringToFront();
+            else
+            {
+                PastaDestino pastaDestino = new PastaDestino();
+                pastaDestino.MdiParent = this;
+                pastaDestino.Show();
+            }
+        }
+
+        private void tutorialToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            var f = Application.OpenForms[nameof(Sobre)];
+            if (f != null)
+                f.BringToFront();
+            else
+            {
+                Sobre pastaDestino = new Sobre();
+                pastaDestino.MdiParent = this;
+                pastaDestino.Show();
+            }
+        }
+
+        private void enviarSugestãoToolStripMenuItem_Click(object sender, EventArgs e)
+        {            
+            System.Diagnostics.Process.Start("https://docs.google.com/forms/d/e/1FAIpQLSeK2uRcUAM73eQso-lS0Ug7n9QgSZF1nPz2zBuDe_kf6ZJNKA/viewform?usp=sf_link");
+        }
+
     }
     
 }

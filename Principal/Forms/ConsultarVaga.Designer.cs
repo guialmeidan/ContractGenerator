@@ -595,6 +595,7 @@
             this.Controls.Add(this.botaoBuscar);
             this.Controls.Add(this.groupControl1);
             this.Controls.Add(this.groupInformacoesGerais);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.MaximizeBox = false;
             this.MaximumSize = new System.Drawing.Size(750, 644);
             this.MinimumSize = new System.Drawing.Size(750, 644);

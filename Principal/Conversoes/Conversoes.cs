@@ -1,4 +1,6 @@
 ﻿using DevExpress.XtraEditors;
+using Principal.Domain;
+using Principal.Domain.Entities;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -12,6 +14,26 @@ namespace Principal.Conversoes
 {
     public static class Conversoes
     {
+        public static string retornarStringDocumentoCompleto(Pessoa pessoa)
+        {
+            if (pessoa.TipoDocumento == 0)
+                return "RG nº " + pessoa.NumeroDocumento + " emitido pelo(a) " + pessoa.OrgaoExpedidor + "/" + pessoa.UFDocumento;
+            else if (pessoa.TipoDocumento == 1)
+                return "Passaporte nº " + pessoa.NumeroDocumento;
+            else return "RNE nº " + pessoa.NumeroDocumento;
+        }
+
+        public static string retornarStringCompletaResponsavel(Pessoa pessoa)
+        {
+            if (pessoa.Id > 0)
+                return " neste ato representado(a) por " + pessoa.Nome + " " + pessoa.Sobrenome + ", " + pessoa.Nacionalidade +
+                    ", portador do " + retornarStringDocumentoCompleto(pessoa) + " e inscrito(a) no CPF sob o nº " + pessoa.CPF +
+                    ", residente e domiciliado(a) na " + pessoa.Rua + ", " + pessoa.Complemento + " " + pessoa.Bairro + ", CEP " +
+                    pessoa.CEP + ", " + pessoa.Cidade + " - " + pessoa.UFEndereco;
+            else return "";
+
+        }
+
 
         public static string TSqlToANSI(this string value, string provider)
         {
@@ -54,13 +76,13 @@ namespace Principal.Conversoes
 
         public static string ConverteAlimentacaoSemana(string valor)
         {
-            if (valor.Contains("1 meal"))
+            if (valor.ToUpper().Contains("1 meal".ToUpper()))
                 valor = "1 refeição por dia de trabalho";
-            else if (valor.Contains("2 meal"))
+            else if (valor.ToUpper().Contains("2 meal".ToUpper()))
                 valor = "2 refeições por dia de trabalho";
-            else if (valor.Contains("3 meal"))
+            else if (valor.ToUpper().Contains("3 meal".ToUpper()))
                 valor = "3 refeições por dia de trabalho";
-            else if (valor.Contains("Not covered"))
+            else if (valor.ToUpper().Contains("Not covered".ToUpper()))
                 valor = "Não possui";
             else valor = "Não foi possível verificar";
             return valor;
@@ -68,18 +90,18 @@ namespace Principal.Conversoes
 
         public static string ConverteAcomodacaoProvida(string valor)
         {
-            if (valor.Equals("Provided"))
+            if (valor.ToUpper().Equals("Provided".ToUpper()))
                 return "Sim";
-            else if (valor.Equals("Not Provided"))
+            else if (valor.ToUpper().Equals("Not Provided".ToUpper()))
                 return "Não";
             else return "Não foi possível verificar";
         }
 
         public static string ConverteStringBoolParaPortugues(string valor)
         {
-            if (valor.Equals("false"))
+            if (valor.ToUpper().Equals("false".ToUpper()))
                 return "Não";
-            else if (valor.Equals("true"))
+            else if (valor.ToUpper().Equals("true".ToUpper()))
                 return "Sim";
             else return "Não foi possível verificar";
         }
@@ -193,7 +215,7 @@ namespace Principal.Conversoes
                     case '3': dezena = "e Trinta "; break;
                     case '4': dezena = "e Quarenta "; break;
                     case '5': dezena = "e Cinquenta "; break;
-                    case '6': dezena = "e Secenta "; break;
+                    case '6': dezena = "e Sessenta "; break;
                     case '7': dezena = "e Setenta "; break;
                     case '8': dezena = "e Oitenta "; break;
                     case '9': dezena = "e Noventa "; break;
@@ -229,10 +251,63 @@ namespace Principal.Conversoes
             return extenso;
         }
 
-        public static string EscreverExtenso(decimal valor)
+        public static string retornarMesExtenso(int month)
         {
+            switch (month)
+            {
+                case 1: return "Janeiro";
+                case 2: return "Fevereiro"; 
+                case 3: return "Março"; 
+                case 4: return "Abril";
+                case 5: return "Maio";
+                case 6: return "Junho"; 
+                case 7: return "Julho"; 
+                case 8: return "Agosto";
+                case 9: return "Setembro";
+                case 10: return "Outubro"; 
+                case 11: return "Novembro"; 
+                case 12: return "Dezembro";
+                default: return "Janeiro";
+;            }
+        }
+
+        public static string retornarModosPagamento(Approved approved)
+        {
+            if (approved.TipoPagamento == 2)
+                return "Isento";
+            else return "[ " + converteBoolParaX(approved.ModoBoleto) + " ] Boleto Bancário     " +
+                    "[ " + converteBoolParaX(approved.ModoCartaoCredito) + " ] Cartão de Crédito     " +
+                    "[ " + converteBoolParaX(approved.ModoCartaoDebito) + " ] Cartão de Débito     " +
+                    "[ " + converteBoolParaX(approved.ModoCheque) + " ] Cheque                           " +
+                    "[ " + converteBoolParaX(approved.ModoDinheiro) + " ] Dinheiro     " +
+                    "[ " + converteBoolParaX(approved.ModoTransferencia) + " ] Transferência Bancária     " +
+                    "[ " + converteBoolParaX(approved.ModoDeposito) + " ] Depósito Bancário     " +
+                    "[ " + converteBoolParaX(approved.ModoPagSeguro) + " ] PagSeguro     ";
+
+        }
+
+        public static string converteBoolParaX(bool modoPagamento)
+        {
+            if (modoPagamento == true)
+                return "x";
+            else return "";
+        }
+
+        public static string retornarTipoPagamento(Approved approved)
+        {
+            if (approved.TipoPagamento == 0)
+                return "À vista";
+            else if (approved.TipoPagamento == 1)
+                return "Parcelado em " + approved.QtdParcelas + " vezes";
+            else return "Isento";
+        }
+
+        public static string EscreverExtenso(decimal valor, string codigoMoeda)
+        {
+            ConverterMoedas converter = new ConverterMoedas(codigoMoeda);
+
             if (valor == 0)
-                return "Zero reais";
+                return "Zero " + converter.MoedaPlural;
             else if (valor <= 0 | valor >= 1000000000000000)
                 return "Valor não suportado pelo sistema.";
             else
@@ -279,9 +354,9 @@ namespace Principal.Conversoes
                                     if (valor_por_extenso.Substring(valor_por_extenso.Length - 8, 8) == "Trilhões")
                                 valor_por_extenso += " de";
                         if (Convert.ToInt64(strValor.Substring(0, 15)) == 1)
-                            valor_por_extenso += " Real";
+                            valor_por_extenso += " " + converter.MoedaSingular;
                         else if (Convert.ToInt64(strValor.Substring(0, 15)) > 1)
-                            valor_por_extenso += " Reais";
+                            valor_por_extenso += " " + converter.MoedaPlural;
                         if (Convert.ToInt32(strValor.Substring(16, 2)) > 0 && valor_por_extenso != string.Empty)
                             valor_por_extenso += " e ";
                     }

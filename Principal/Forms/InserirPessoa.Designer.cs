@@ -195,7 +195,7 @@ namespace Principal.Forms
             // inputNacionalidade
             // 
             this.inputNacionalidade.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.inputNacionalidade.EditValue = "Brasileiro(a)";
+            this.inputNacionalidade.EditValue = "";
             this.inputNacionalidade.Location = new System.Drawing.Point(579, 57);
             this.inputNacionalidade.Name = "inputNacionalidade";
             this.inputNacionalidade.Properties.Appearance.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));

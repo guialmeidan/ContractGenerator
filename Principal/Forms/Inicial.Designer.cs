@@ -35,11 +35,13 @@ namespace Principal
             this.pessoaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.entidadeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.testemunhaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.sairToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.emitirDocumentoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.registroDeApprovedToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.consultaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.tNIDToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.configuraçõesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.cadastrarDiretórioToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.tokenToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.sobreToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.enviarSugestãoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.tutorialToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -53,6 +55,7 @@ namespace Principal
             this.toolStripMenuItem1,
             this.emitirDocumentoToolStripMenuItem,
             this.consultaToolStripMenuItem,
+            this.configuraçõesToolStripMenuItem,
             this.sobreToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
@@ -65,8 +68,7 @@ namespace Principal
             this.toolStripMenuItem1.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.pessoaToolStripMenuItem,
             this.entidadeToolStripMenuItem,
-            this.testemunhaToolStripMenuItem,
-            this.sairToolStripMenuItem});
+            this.testemunhaToolStripMenuItem});
             this.toolStripMenuItem1.Name = "toolStripMenuItem1";
             this.toolStripMenuItem1.Size = new System.Drawing.Size(71, 20);
             this.toolStripMenuItem1.Text = "Cadastros";
@@ -75,8 +77,9 @@ namespace Principal
             // pessoaToolStripMenuItem
             // 
             this.pessoaToolStripMenuItem.Name = "pessoaToolStripMenuItem";
+            this.pessoaToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.P)));
             this.pessoaToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.pessoaToolStripMenuItem.Text = "Pessoa";
+            this.pessoaToolStripMenuItem.Text = "Pessoas";
             this.pessoaToolStripMenuItem.Click += new System.EventHandler(this.PessoaToolStripMenuItem_Click);
             // 
             // entidadeToolStripMenuItem
@@ -93,13 +96,6 @@ namespace Principal
             this.testemunhaToolStripMenuItem.Text = "Testemunha";
             this.testemunhaToolStripMenuItem.Click += new System.EventHandler(this.testemunhaToolStripMenuItem_Click);
             // 
-            // sairToolStripMenuItem
-            // 
-            this.sairToolStripMenuItem.Name = "sairToolStripMenuItem";
-            this.sairToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.sairToolStripMenuItem.Text = "Token";
-            this.sairToolStripMenuItem.Click += new System.EventHandler(this.tokenToolStripMenuItem_Click);
-            // 
             // emitirDocumentoToolStripMenuItem
             // 
             this.emitirDocumentoToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
@@ -112,8 +108,9 @@ namespace Principal
             // registroDeApprovedToolStripMenuItem
             // 
             this.registroDeApprovedToolStripMenuItem.Name = "registroDeApprovedToolStripMenuItem";
-            this.registroDeApprovedToolStripMenuItem.Size = new System.Drawing.Size(188, 22);
-            this.registroDeApprovedToolStripMenuItem.Text = "Registro de Approved";
+            this.registroDeApprovedToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.A)));
+            this.registroDeApprovedToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.registroDeApprovedToolStripMenuItem.Text = "Approveds";
             this.registroDeApprovedToolStripMenuItem.Click += new System.EventHandler(this.registroDeApprovedToolStripMenuItem_Click);
             // 
             // consultaToolStripMenuItem
@@ -127,9 +124,33 @@ namespace Principal
             // tNIDToolStripMenuItem
             // 
             this.tNIDToolStripMenuItem.Name = "tNIDToolStripMenuItem";
-            this.tNIDToolStripMenuItem.Size = new System.Drawing.Size(104, 22);
+            this.tNIDToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.T)));
+            this.tNIDToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.tNIDToolStripMenuItem.Text = "TN ID";
             this.tNIDToolStripMenuItem.Click += new System.EventHandler(this.tNIDToolStripMenuItem_Click);
+            // 
+            // configuraçõesToolStripMenuItem
+            // 
+            this.configuraçõesToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.cadastrarDiretórioToolStripMenuItem,
+            this.tokenToolStripMenuItem});
+            this.configuraçõesToolStripMenuItem.Name = "configuraçõesToolStripMenuItem";
+            this.configuraçõesToolStripMenuItem.Size = new System.Drawing.Size(96, 20);
+            this.configuraçõesToolStripMenuItem.Text = "Configurações";
+            // 
+            // cadastrarDiretórioToolStripMenuItem
+            // 
+            this.cadastrarDiretórioToolStripMenuItem.Name = "cadastrarDiretórioToolStripMenuItem";
+            this.cadastrarDiretórioToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.cadastrarDiretórioToolStripMenuItem.Text = "Alterar Diretório";
+            this.cadastrarDiretórioToolStripMenuItem.Click += new System.EventHandler(this.cadastrarDiretórioToolStripMenuItem_Click);
+            // 
+            // tokenToolStripMenuItem
+            // 
+            this.tokenToolStripMenuItem.Name = "tokenToolStripMenuItem";
+            this.tokenToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.tokenToolStripMenuItem.Text = "Token";
+            this.tokenToolStripMenuItem.Click += new System.EventHandler(this.tokenToolStripMenuItem_Click);
             // 
             // sobreToolStripMenuItem
             // 
@@ -143,14 +164,16 @@ namespace Principal
             // enviarSugestãoToolStripMenuItem
             // 
             this.enviarSugestãoToolStripMenuItem.Name = "enviarSugestãoToolStripMenuItem";
-            this.enviarSugestãoToolStripMenuItem.Size = new System.Drawing.Size(163, 22);
+            this.enviarSugestãoToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.enviarSugestãoToolStripMenuItem.Text = "Enviar Sugestão";
+            this.enviarSugestãoToolStripMenuItem.Click += new System.EventHandler(this.enviarSugestãoToolStripMenuItem_Click);
             // 
             // tutorialToolStripMenuItem
             // 
             this.tutorialToolStripMenuItem.Name = "tutorialToolStripMenuItem";
-            this.tutorialToolStripMenuItem.Size = new System.Drawing.Size(163, 22);
+            this.tutorialToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.tutorialToolStripMenuItem.Text = "Sobre o Software";
+            this.tutorialToolStripMenuItem.Click += new System.EventHandler(this.tutorialToolStripMenuItem_Click);
             // 
             // Principal
             // 
@@ -186,7 +209,6 @@ namespace Principal
         private System.Windows.Forms.ToolStripMenuItem pessoaToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem entidadeToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem testemunhaToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem sairToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem emitirDocumentoToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem sobreToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem enviarSugestãoToolStripMenuItem;
@@ -194,6 +216,9 @@ namespace Principal
         private System.Windows.Forms.ToolStripMenuItem consultaToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem tNIDToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem registroDeApprovedToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem configuraçõesToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem tokenToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem cadastrarDiretórioToolStripMenuItem;
     }
 }
 
