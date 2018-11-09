@@ -382,3 +382,4 @@ C:\Users\guilh\source\repos\Principal\Principal\obj\Debug\Principal.exe
 C:\Users\guilh\source\repos\Principal\Principal\obj\Debug\Principal.pdb
 C:\Users\guilh\source\repos\Principal\Principal\obj\Debug\GeraContrato.csprojAssemblyReference.cache
 C:\Users\guilh\source\repos\Principal\Principal\bin\Debug\Resources\TNA Hubble - Icone.ico
+C:\Users\guilh\source\repos\Principal\Principal\obj\Debug\Principal.Forms.MenuLateral.resources

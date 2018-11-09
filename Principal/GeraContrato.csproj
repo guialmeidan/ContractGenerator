@@ -385,6 +385,12 @@
     <Compile Include="Forms\ListaPessoas.Designer.cs">
       <DependentUpon>ListaPessoas.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\MenuLateral.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\MenuLateral.Designer.cs">
+      <DependentUpon>MenuLateral.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\PastaDestino.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -484,6 +490,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\ListaPessoas.resx">
       <DependentUpon>ListaPessoas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\MenuLateral.resx">
+      <DependentUpon>MenuLateral.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\PastaDestino.resx">
       <DependentUpon>PastaDestino.cs</DependentUpon>
@@ -608,7 +617,11 @@
   <ItemGroup>
     <Content Include="DevExpress.XtraEditors.v15.1.dll" />
     <Content Include="Resources\EditorTextoIcone.png" />
+    <None Include="Resources\iconeAdicionar.png" />
+    <None Include="Resources\iconeConfiguracao.png" />
+    <None Include="Resources\iconeConsultar.png" />
     <Content Include="Resources\PDFIcone.png" />
+    <None Include="Resources\subModulo.png" />
     <Content Include="Resources\TNA Hubble - Icone.ico">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>

@@ -37,7 +37,7 @@ namespace Principal.Forms
             _repositorioEscritorio = AppCore.Container.Resolve<IEscritorioRepositorio>();
 
             iniciarGrid();
-            this.Text = "Lista de Pessoas";
+            this.Text = "Pessoas";
         }
 
         public void iniciarGrid()
