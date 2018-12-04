@@ -111,7 +111,7 @@
             this.labelControl2.TabIndex = 48;
             this.labelControl2.Text = "LCP";
             // 
-            // inputLCP
+            // inputLCP this.inputLCP.ButtonClick += inputLCP_EditValueChanged;
             // 
             this.inputLCP.Location = new System.Drawing.Point(73, 61);
             this.inputLCP.Name = "inputLCP";
@@ -123,10 +123,10 @@
             this.inputLCP.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
             this.inputLCP.Size = new System.Drawing.Size(380, 22);
             this.inputLCP.TabIndex = 2;
-            this.inputLCP.ButtonClick += this.inputLCP_EditValueChanged;
-            //this.inputLCP.ButtonClick += this.inputLCP_EditValueChanged;
+            this.inputLCP.ButtonClick += inputLCP_EditValueChanged;
+            
             // 
-            // inputNome
+            // inputNome 
             // 
             this.inputNome.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
@@ -284,9 +284,9 @@
             this.labelControl14.Appearance.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelControl14.Location = new System.Drawing.Point(16, 57);
             this.labelControl14.Name = "labelControl14";
-            this.labelControl14.Size = new System.Drawing.Size(25, 16);
+            this.labelControl14.Size = new System.Drawing.Size(70, 16);
             this.labelControl14.TabIndex = 46;
-            this.labelControl14.Text = "Rua";
+            this.labelControl14.Text = "Logradouro";
             // 
             // labelControl15
             // 

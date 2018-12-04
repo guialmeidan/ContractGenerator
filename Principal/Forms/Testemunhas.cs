@@ -58,54 +58,82 @@ namespace Principal.Forms
 
         private void botaoSalvar_Click(object sender, EventArgs e)
         {
-            try
+                try
+                {
+                    {
+                        //indica que houve alteracao de Testemunhas
+                        if (GV1Id > 0 && GV1Nome != null)
+                        {
+                            _testemunha.IdTestemunha1GV = GV1Id;
+                            _testemunha.NomeTestemunha1GV = inputTestemunha1GV.Text;
+                        }
+
+                        if (GV2Id > 0 && GV2Nome != null)
+                        {
+                            _testemunha.IdTestemunha2GV = GV2Id;
+                            _testemunha.NomeTestemunha2GV = inputTestemunha2GV.Text;
+                        }
+
+                        if (GE1Id > 0 && GE1Nome != null)
+                        {
+                            _testemunha.IdTestemunha1GE = GE1Id;
+                            _testemunha.NomeTestemunha1GE = inputTestemunha1GE.Text;
+                        }
+
+                        if (GE2Id > 0 && GE2Nome != null)
+                        {
+                            _testemunha.IdTestemunha2GE = GE2Id;
+                            _testemunha.NomeTestemunha2GE = inputTestemunha2GE.Text;
+                        }
+
+                        if (GT1Id > 0 && GT1Nome != null)
+                        {
+                            _testemunha.IdTestemunha1GT = GT1Id;
+                            _testemunha.NomeTestemunha1GT = inputTestemunha1GT.Text;
+                        }
+
+                        if (GT2Id > 0 && GT2Nome != null)
+                        {
+                            _testemunha.IdTestemunha2GT = GT2Id;
+                            _testemunha.NomeTestemunha2GT = inputTestemunha2GT.Text;
+                        }
+
+                    int flag = 0;
+                    flag = validarTestemunhasIguais(flag);
+
+                    if (flag == 0)
+                    {
+                        _repositorioTestemunha.Atualizar(_testemunha);
+                        XtraMessageBox.Show("Registro gravado!\n", "Sucesso", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    }
+                    }
+                }
+                catch (Exception ex)
+                {
+                    XtraMessageBox.Show("Erro ao registrar testemunhas!\n" + ex.Message, "ERRO", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+
+        }
+
+        private int validarTestemunhasIguais(int flag)
+        {
+            //verifica se existem testemunhas iguais
+            if (_testemunha.IdTestemunha1GV == _testemunha.IdTestemunha2GV)
             {
-                //indica que houve alteracao de Testemunhas
-                if (GV1Id > 0 && GV1Nome != null)
-                {
-                    _testemunha.IdTestemunha1GV = GV1Id;
-                    _testemunha.NomeTestemunha1GV = inputTestemunha1GV.Text;
-                }
-
-                if (GV2Id > 0 && GV2Nome != null)
-                {
-                    _testemunha.IdTestemunha2GV = GV2Id;
-                    _testemunha.NomeTestemunha2GV = inputTestemunha2GV.Text;
-                }
-
-                if (GE1Id > 0 && GE1Nome != null)
-                {
-                    _testemunha.IdTestemunha1GE = GE1Id;
-                    _testemunha.NomeTestemunha1GE = inputTestemunha1GE.Text;
-                }
-
-                if (GE2Id > 0 && GE2Nome != null)
-                {
-                    _testemunha.IdTestemunha2GE = GE2Id;
-                    _testemunha.NomeTestemunha2GE = inputTestemunha2GE.Text;
-                }
-
-                if (GT1Id > 0 && GT1Nome != null)
-                {
-                    _testemunha.IdTestemunha1GT = GT1Id;
-                    _testemunha.NomeTestemunha1GT = inputTestemunha1GT.Text;
-                }
-
-                if (GT2Id > 0 && GT2Nome != null)
-                {
-                    _testemunha.IdTestemunha2GT = GT2Id;
-                    _testemunha.NomeTestemunha2GT = inputTestemunha2GT.Text;
-                }
-
-                _repositorioTestemunha.Atualizar(_testemunha);
-
-                XtraMessageBox.Show("Registro gravado!\n", "Sucesso", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                XtraMessageBox.Show("GV está com testemunhas 1 e 2 iguais!", "Atenção", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                flag = 1;
             }
-            catch (Exception ex)
+            else if (_testemunha.IdTestemunha1GE == _testemunha.IdTestemunha2GE)
             {
-                XtraMessageBox.Show("Erro ao registrar testemunhas!\n" + ex.Message, "ERRO", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                XtraMessageBox.Show("GE está com testemunhas 1 e 2 iguais!", "Atenção", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                flag = 1;
             }
-
+            else if (_testemunha.IdTestemunha1GT == _testemunha.IdTestemunha2GT)
+            {
+                XtraMessageBox.Show("GT está com testemunhas 1 e 2 iguais!", "Atenção", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                flag = 1;
+            }
+            return flag;
         }
 
         private void inputGV1_EditButton(object sender, EventArgs e)
@@ -178,36 +206,6 @@ namespace Principal.Forms
             GT2Nome = form.SelectedItem.Nome;
             if (GT2Id != 0)
                 inputTestemunha2GT.Text = form.SelectedItem.Nome + " " + form.SelectedItem.Sobrenome;
-        }
-
-        private void inputTestemunha1GV_EditValueChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void inputTestemunha2GV_EditValueChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void inputTestemunha1GE_EditValueChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void inputTestemunha2GE_EditValueChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void inputTestemunha1GT_EditValueChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void inputTestemunha2GT_EditValueChanged(object sender, EventArgs e)
-        {
-
         }
     }
 }

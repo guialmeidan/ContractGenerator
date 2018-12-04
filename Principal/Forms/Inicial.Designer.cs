@@ -31,9 +31,6 @@ namespace Principal
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Principal));
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
-            this.sobreToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.enviarSugestãoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.tutorialToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.modulosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.cadastrosToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.escritórioToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -45,6 +42,9 @@ namespace Principal
             this.tokenToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.consultaToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.tNIDToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.sobreToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.enviarSugestãoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.tutorialToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -59,29 +59,6 @@ namespace Principal
             this.menuStrip1.Size = new System.Drawing.Size(784, 24);
             this.menuStrip1.TabIndex = 0;
             this.menuStrip1.Text = "menuStrip1";
-            // 
-            // sobreToolStripMenuItem
-            // 
-            this.sobreToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.enviarSugestãoToolStripMenuItem,
-            this.tutorialToolStripMenuItem});
-            this.sobreToolStripMenuItem.Name = "sobreToolStripMenuItem";
-            this.sobreToolStripMenuItem.Size = new System.Drawing.Size(49, 20);
-            this.sobreToolStripMenuItem.Text = "Sobre";
-            // 
-            // enviarSugestãoToolStripMenuItem
-            // 
-            this.enviarSugestãoToolStripMenuItem.Name = "enviarSugestãoToolStripMenuItem";
-            this.enviarSugestãoToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.enviarSugestãoToolStripMenuItem.Text = "Enviar Sugestão";
-            this.enviarSugestãoToolStripMenuItem.Click += new System.EventHandler(this.enviarSugestãoToolStripMenuItem_Click);
-            // 
-            // tutorialToolStripMenuItem
-            // 
-            this.tutorialToolStripMenuItem.Name = "tutorialToolStripMenuItem";
-            this.tutorialToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.tutorialToolStripMenuItem.Text = "Sobre o Software";
-            this.tutorialToolStripMenuItem.Click += new System.EventHandler(this.tutorialToolStripMenuItem_Click);
             // 
             // modulosToolStripMenuItem
             // 
@@ -106,14 +83,14 @@ namespace Principal
             // escritórioToolStripMenuItem
             // 
             this.escritórioToolStripMenuItem.Name = "escritórioToolStripMenuItem";
-            this.escritórioToolStripMenuItem.Size = new System.Drawing.Size(126, 22);
-            this.escritórioToolStripMenuItem.Text = "Approved";
+            this.escritórioToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.escritórioToolStripMenuItem.Text = "Approval";
             this.escritórioToolStripMenuItem.Click += new System.EventHandler(this.escritorioToolStripMenuItem_Click);
             // 
             // pessoaToolStripMenuItem1
             // 
             this.pessoaToolStripMenuItem1.Name = "pessoaToolStripMenuItem1";
-            this.pessoaToolStripMenuItem1.Size = new System.Drawing.Size(126, 22);
+            this.pessoaToolStripMenuItem1.Size = new System.Drawing.Size(180, 22);
             this.pessoaToolStripMenuItem1.Text = "Pessoa";
             this.pessoaToolStripMenuItem1.Click += new System.EventHandler(this.pessoaToolStripMenuItem1_Click);
             // 
@@ -169,9 +146,32 @@ namespace Principal
             // tNIDToolStripMenuItem1
             // 
             this.tNIDToolStripMenuItem1.Name = "tNIDToolStripMenuItem1";
-            this.tNIDToolStripMenuItem1.Size = new System.Drawing.Size(180, 22);
+            this.tNIDToolStripMenuItem1.Size = new System.Drawing.Size(158, 22);
             this.tNIDToolStripMenuItem1.Text = "Consultar TN ID";
             this.tNIDToolStripMenuItem1.Click += new System.EventHandler(this.tNIDToolStripMenuItem1_Click);
+            // 
+            // sobreToolStripMenuItem
+            // 
+            this.sobreToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.enviarSugestãoToolStripMenuItem,
+            this.tutorialToolStripMenuItem});
+            this.sobreToolStripMenuItem.Name = "sobreToolStripMenuItem";
+            this.sobreToolStripMenuItem.Size = new System.Drawing.Size(49, 20);
+            this.sobreToolStripMenuItem.Text = "Sobre";
+            // 
+            // enviarSugestãoToolStripMenuItem
+            // 
+            this.enviarSugestãoToolStripMenuItem.Name = "enviarSugestãoToolStripMenuItem";
+            this.enviarSugestãoToolStripMenuItem.Size = new System.Drawing.Size(163, 22);
+            this.enviarSugestãoToolStripMenuItem.Text = "Enviar Sugestão";
+            this.enviarSugestãoToolStripMenuItem.Click += new System.EventHandler(this.enviarSugestãoToolStripMenuItem_Click);
+            // 
+            // tutorialToolStripMenuItem
+            // 
+            this.tutorialToolStripMenuItem.Name = "tutorialToolStripMenuItem";
+            this.tutorialToolStripMenuItem.Size = new System.Drawing.Size(163, 22);
+            this.tutorialToolStripMenuItem.Text = "Sobre o Software";
+            this.tutorialToolStripMenuItem.Click += new System.EventHandler(this.tutorialToolStripMenuItem_Click);
             // 
             // Principal
             // 

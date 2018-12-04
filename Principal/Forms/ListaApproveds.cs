@@ -210,7 +210,7 @@ namespace Principal.Forms
             this.Name = "ListaApproveds";
             this.ShowIcon = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Approveds";
+            this.Text = "Approvals";
             ((System.ComponentModel.ISupportInitialize)(this.inputPesquisa.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridControlListaApproveds)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).EndInit();

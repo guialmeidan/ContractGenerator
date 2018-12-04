@@ -336,6 +336,7 @@ namespace Principal.Forms
             new DevExpress.XtraEditors.Controls.RadioGroupItem(null, "RNE")});
             this.radioGroupDocumento.Size = new System.Drawing.Size(105, 91);
             this.radioGroupDocumento.TabIndex = 6;
+            this.radioGroupDocumento.SelectedIndexChanged += new System.EventHandler(this.radioGroupDocumento_SelectedIndexChanged);
             // 
             // inputOrgaoExpedidor
             // 
@@ -351,6 +352,7 @@ namespace Principal.Forms
             "PM",
             "PC",
             "CNT",
+            "CREA",
             "DIC",
             "DETRAN",
             "CTPS",
@@ -358,16 +360,19 @@ namespace Principal.Forms
             "IFP",
             "IPF",
             "IML",
+            "ITEP",
             "MTE",
+            "MA",
+            "ME",
             "MMA",
             "MAE",
             "MEX",
             "POF",
             "POM",
+            "SDS",
             "SES",
             "SJS",
             "SJTS"});
-            this.inputOrgaoExpedidor.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
             this.inputOrgaoExpedidor.Size = new System.Drawing.Size(102, 22);
             this.inputOrgaoExpedidor.TabIndex = 7;
             // 
@@ -548,9 +553,9 @@ namespace Principal.Forms
             this.labelControl14.Appearance.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelControl14.Location = new System.Drawing.Point(16, 57);
             this.labelControl14.Name = "labelControl14";
-            this.labelControl14.Size = new System.Drawing.Size(25, 16);
+            this.labelControl14.Size = new System.Drawing.Size(70, 16);
             this.labelControl14.TabIndex = 46;
-            this.labelControl14.Text = "Rua";
+            this.labelControl14.Text = "Logradouro";
             // 
             // inputEmail
             // 

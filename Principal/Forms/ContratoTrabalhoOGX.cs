@@ -132,6 +132,7 @@ namespace Principal.Forms
 
             richTextBox.Document.ReplaceAll("<<diaPagamento>>", _approved.DataPagamento.Date.Day.ToString() + "/" + _approved.DataPagamento.Date.Month.ToString() + "/" + _approved.DataPagamento.Date.Year.ToString(), SearchOptions.CaseSensitive);
             richTextBox.Document.ReplaceAll("<<condicaoPagamento>>", obterCondicaoPagamento(), SearchOptions.CaseSensitive);
+            richTextBox.Document.ReplaceAll("<<datasParcelas>>", obterDatasParcelas(), SearchOptions.CaseSensitive);
 
             richTextBox.Document.ReplaceAll("<<estadoCompletoAIESEC>>", _escritorio.UFCompleto, SearchOptions.CaseSensitive);
 
@@ -168,6 +169,19 @@ namespace Principal.Forms
 
 
             }
+        }
+
+        private string obterDatasParcelas()
+        {
+            string parcelas = "Isento";
+            int numeroParcelas = _approved.QtdParcelas;
+
+            if(numeroParcelas > 0)
+            {
+
+            }
+
+            return parcelas;
         }
 
         private void CarregarDocumento()

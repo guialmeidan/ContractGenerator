@@ -60,10 +60,5 @@ namespace Principal.Forms
                 XtraMessageBox.Show("Erro ao atualizar pasta de destino!\n" + ex.Message, "ERRO", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
-
-        private void inputCaminhoPasta_EditValueChanged_1(object sender, EventArgs e)
-        {
-
-        }
     }
 }

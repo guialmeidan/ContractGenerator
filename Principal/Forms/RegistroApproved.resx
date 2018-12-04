@@ -157,7 +157,7 @@
     <value>Microsoft Sans Serif, 9.75pt</value>
   </data>
   <data name="inputNomeEP.Size" type="System.Drawing.Size, System.Drawing">
-    <value>316, 22</value>
+    <value>289, 22</value>
   </data>
   <data name="inputNomeEP.TabIndex" type="System.Int32, mscorlib">
     <value>33</value>
@@ -184,7 +184,7 @@
     <value>Microsoft Sans Serif, 9.75pt</value>
   </data>
   <data name="inputNomeResponsavel.Size" type="System.Drawing.Size, System.Drawing">
-    <value>316, 22</value>
+    <value>289, 22</value>
   </data>
   <data name="inputNomeResponsavel.TabIndex" type="System.Int32, mscorlib">
     <value>35</value>
@@ -238,16 +238,16 @@
     <value>Microsoft Sans Serif, 9.75pt</value>
   </data>
   <data name="labelControl24.Location" type="System.Drawing.Point, System.Drawing">
-    <value>469, 58</value>
+    <value>458, 58</value>
   </data>
   <data name="labelControl24.Size" type="System.Drawing.Size, System.Drawing">
-    <value>60, 16</value>
+    <value>77, 16</value>
   </data>
   <data name="labelControl24.TabIndex" type="System.Int32, mscorlib">
     <value>61</value>
   </data>
   <data name="labelControl24.Text" xml:space="preserve">
-    <value>Data APD</value>
+    <value>Data de Ass.</value>
   </data>
   <data name="&gt;&gt;labelControl24.Name" xml:space="preserve">
     <value>labelControl24</value>
@@ -268,7 +268,7 @@
     <value />
   </data>
   <data name="inputDataAPD.Location" type="System.Drawing.Point, System.Drawing">
-    <value>535, 57</value>
+    <value>556, 57</value>
   </data>
   <data name="inputDataAPD.Properties.Appearance.Font" type="System.Drawing.Font, System.Drawing">
     <value>Microsoft Sans Serif, 9.75pt</value>
@@ -287,7 +287,7 @@
     <value>True</value>
   </data>
   <data name="inputDataAPD.Size" type="System.Drawing.Size, System.Drawing">
-    <value>100, 22</value>
+    <value>116, 22</value>
   </data>
   <data name="inputDataAPD.TabIndex" type="System.Int32, mscorlib">
     <value>60</value>
@@ -311,7 +311,7 @@
     <value>Microsoft Sans Serif, 9.75pt</value>
   </data>
   <data name="labelControl17.Location" type="System.Drawing.Point, System.Drawing">
-    <value>469, 32</value>
+    <value>458, 32</value>
   </data>
   <data name="labelControl17.Size" type="System.Drawing.Size, System.Drawing">
     <value>34, 16</value>
@@ -338,7 +338,7 @@
     <value>Top, Right</value>
   </data>
   <data name="inputEPID.Location" type="System.Drawing.Point, System.Drawing">
-    <value>535, 29</value>
+    <value>556, 29</value>
   </data>
   <data name="inputEPID.Properties.Appearance.Font" type="System.Drawing.Font, System.Drawing">
     <value>Microsoft Sans Serif, 9.75pt</value>
@@ -353,7 +353,7 @@
     <value>False</value>
   </data>
   <data name="inputEPID.Size" type="System.Drawing.Size, System.Drawing">
-    <value>100, 22</value>
+    <value>116, 22</value>
   </data>
   <data name="inputEPID.TabIndex" type="System.Int32, mscorlib">
     <value>37</value>
@@ -374,7 +374,7 @@
     <value>12, 12</value>
   </data>
   <data name="groupControlDadosGerais.Size" type="System.Drawing.Size, System.Drawing">
-    <value>660, 95</value>
+    <value>697, 95</value>
   </data>
   <data name="groupControlDadosGerais.TabIndex" type="System.Int32, mscorlib">
     <value>36</value>
@@ -482,7 +482,7 @@
     <value>Microsoft Sans Serif, 9.75pt</value>
   </data>
   <data name="inputPaisDestino.Size" type="System.Drawing.Size, System.Drawing">
-    <value>269, 22</value>
+    <value>306, 22</value>
   </data>
   <data name="inputPaisDestino.TabIndex" type="System.Int32, mscorlib">
     <value>36</value>
@@ -536,7 +536,7 @@
     <value>Microsoft Sans Serif, 9.75pt</value>
   </data>
   <data name="inputCidadeDestino.Size" type="System.Drawing.Size, System.Drawing">
-    <value>269, 22</value>
+    <value>306, 22</value>
   </data>
   <data name="inputCidadeDestino.TabIndex" type="System.Int32, mscorlib">
     <value>38</value>
@@ -587,7 +587,7 @@
     <value />
   </data>
   <data name="inputDataInicio.Location" type="System.Drawing.Point, System.Drawing">
-    <value>518, 47</value>
+    <value>555, 47</value>
   </data>
   <data name="inputDataInicio.Properties.Appearance.Font" type="System.Drawing.Font, System.Drawing">
     <value>Microsoft Sans Serif, 9.75pt</value>
@@ -629,7 +629,7 @@
     <value>Microsoft Sans Serif, 9.75pt</value>
   </data>
   <data name="labelControl6.Location" type="System.Drawing.Point, System.Drawing">
-    <value>420, 50</value>
+    <value>457, 50</value>
   </data>
   <data name="labelControl6.Size" type="System.Drawing.Size, System.Drawing">
     <value>63, 16</value>
@@ -659,7 +659,7 @@
     <value>Microsoft Sans Serif, 9.75pt</value>
   </data>
   <data name="labelControl7.Location" type="System.Drawing.Point, System.Drawing">
-    <value>420, 76</value>
+    <value>457, 76</value>
   </data>
   <data name="labelControl7.Size" type="System.Drawing.Size, System.Drawing">
     <value>54, 16</value>
@@ -689,7 +689,7 @@
     <value />
   </data>
   <data name="inputDataFim.Location" type="System.Drawing.Point, System.Drawing">
-    <value>518, 73</value>
+    <value>555, 73</value>
   </data>
   <data name="inputDataFim.Properties.Appearance.Font" type="System.Drawing.Font, System.Drawing">
     <value>Microsoft Sans Serif, 9.75pt</value>
@@ -752,7 +752,7 @@
     <value>9</value>
   </data>
   <data name="inputFeeICX.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
-    <value>Top, Right</value>
+    <value>Top, Left, Right</value>
   </data>
   <data name="inputFeeICX.Location" type="System.Drawing.Point, System.Drawing">
     <value>119, 154</value>
@@ -761,7 +761,7 @@
     <value>Microsoft Sans Serif, 9.75pt</value>
   </data>
   <data name="inputFeeICX.Size" type="System.Drawing.Size, System.Drawing">
-    <value>269, 22</value>
+    <value>306, 22</value>
   </data>
   <data name="inputFeeICX.TabIndex" type="System.Int32, mscorlib">
     <value>47</value>
@@ -777,9 +777,6 @@
   </data>
   <data name="&gt;&gt;inputFeeICX.ZOrder" xml:space="preserve">
     <value>18</value>
-  </data>
-  <data name="labelControl10.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
-    <value>Top, Right</value>
   </data>
   <data name="labelControl10.Appearance.Font" type="System.Drawing.Font, System.Drawing">
     <value>Microsoft Sans Serif, 9.75pt</value>
@@ -818,7 +815,7 @@
     <value>Microsoft Sans Serif, 9.75pt</value>
   </data>
   <data name="inputBolsaAuxilio.Size" type="System.Drawing.Size, System.Drawing">
-    <value>269, 22</value>
+    <value>306, 22</value>
   </data>
   <data name="inputBolsaAuxilio.TabIndex" type="System.Int32, mscorlib">
     <value>49</value>
@@ -866,7 +863,7 @@
     <value>Top, Right</value>
   </data>
   <data name="inputAcomodacaoProvida.Location" type="System.Drawing.Point, System.Drawing">
-    <value>518, 126</value>
+    <value>555, 126</value>
   </data>
   <data name="inputAcomodacaoProvida.Properties.Appearance.Font" type="System.Drawing.Font, System.Drawing">
     <value>Microsoft Sans Serif, 9.75pt</value>
@@ -896,7 +893,7 @@
     <value>Microsoft Sans Serif, 9.75pt</value>
   </data>
   <data name="labelControl12.Location" type="System.Drawing.Point, System.Drawing">
-    <value>420, 131</value>
+    <value>457, 131</value>
   </data>
   <data name="labelControl12.Size" type="System.Drawing.Size, System.Drawing">
     <value>88, 16</value>
@@ -923,7 +920,7 @@
     <value>Top, Right</value>
   </data>
   <data name="inputAcomodacaoCoberta.Location" type="System.Drawing.Point, System.Drawing">
-    <value>518, 154</value>
+    <value>555, 154</value>
   </data>
   <data name="inputAcomodacaoCoberta.Properties.Appearance.Font" type="System.Drawing.Font, System.Drawing">
     <value>Microsoft Sans Serif, 9.75pt</value>
@@ -953,7 +950,7 @@
     <value>Microsoft Sans Serif, 9.75pt</value>
   </data>
   <data name="labelControl13.Location" type="System.Drawing.Point, System.Drawing">
-    <value>420, 159</value>
+    <value>457, 159</value>
   </data>
   <data name="labelControl13.Size" type="System.Drawing.Size, System.Drawing">
     <value>89, 16</value>
@@ -986,7 +983,7 @@
     <value>Microsoft Sans Serif, 9.75pt</value>
   </data>
   <data name="inputAlimentacaoFimDeSemana.Size" type="System.Drawing.Size, System.Drawing">
-    <value>269, 22</value>
+    <value>306, 22</value>
   </data>
   <data name="inputAlimentacaoFimDeSemana.TabIndex" type="System.Int32, mscorlib">
     <value>57</value>
@@ -1040,7 +1037,7 @@
     <value>Microsoft Sans Serif, 9.75pt</value>
   </data>
   <data name="inputAlimentacaoSemana.Size" type="System.Drawing.Size, System.Drawing">
-    <value>269, 22</value>
+    <value>306, 22</value>
   </data>
   <data name="inputAlimentacaoSemana.TabIndex" type="System.Int32, mscorlib">
     <value>55</value>
@@ -1088,7 +1085,7 @@
     <value>Top, Right</value>
   </data>
   <data name="inputComputador.Location" type="System.Drawing.Point, System.Drawing">
-    <value>518, 182</value>
+    <value>555, 182</value>
   </data>
   <data name="inputComputador.Properties.Appearance.Font" type="System.Drawing.Font, System.Drawing">
     <value>Microsoft Sans Serif, 9.75pt</value>
@@ -1118,7 +1115,7 @@
     <value>Microsoft Sans Serif, 9.75pt</value>
   </data>
   <data name="labelControl16.Location" type="System.Drawing.Point, System.Drawing">
-    <value>420, 187</value>
+    <value>457, 187</value>
   </data>
   <data name="labelControl16.Size" type="System.Drawing.Size, System.Drawing">
     <value>74, 16</value>
@@ -1220,7 +1217,7 @@
     <value>31</value>
   </data>
   <data name="xtraTabPageVaga.Size" type="System.Drawing.Size, System.Drawing">
-    <value>654, 244</value>
+    <value>691, 244</value>
   </data>
   <data name="xtraTabPageVaga.Text" xml:space="preserve">
     <value>Dados da Vaga</value>
@@ -1238,7 +1235,7 @@
     <value>0</value>
   </data>
   <data name="xtraTabControl.Size" type="System.Drawing.Size, System.Drawing">
-    <value>660, 272</value>
+    <value>697, 272</value>
   </data>
   <data name="xtraTabControl.TabIndex" type="System.Int32, mscorlib">
     <value>38</value>
@@ -1496,7 +1493,7 @@
     <value>20</value>
   </data>
   <data name="xtraTabPagePagamento.Size" type="System.Drawing.Size, System.Drawing">
-    <value>654, 244</value>
+    <value>691, 244</value>
   </data>
   <data name="xtraTabPagePagamento.Text" xml:space="preserve">
     <value>Dados do Pagamento</value>
@@ -1512,6 +1509,852 @@
   </data>
   <data name="&gt;&gt;xtraTabPagePagamento.ZOrder" xml:space="preserve">
     <value>1</value>
+  </data>
+  <data name="inputLabelParcela12.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Right</value>
+  </data>
+  <data name="labelControl36.Appearance.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 9.75pt</value>
+  </data>
+  <data name="inputLabelParcela12.Location" type="System.Drawing.Point, System.Drawing">
+    <value>438, 161</value>
+  </data>
+  <data name="inputLabelParcela12.Size" type="System.Drawing.Size, System.Drawing">
+    <value>69, 16</value>
+  </data>
+  <data name="inputLabelParcela12.TabIndex" type="System.Int32, mscorlib">
+    <value>85</value>
+  </data>
+  <data name="inputLabelParcela12.Text" xml:space="preserve">
+    <value>12ª Parcela</value>
+  </data>
+  <data name="&gt;&gt;inputLabelParcela12.Name" xml:space="preserve">
+    <value>inputLabelParcela12</value>
+  </data>
+  <data name="&gt;&gt;inputLabelParcela12.Type" xml:space="preserve">
+    <value>DevExpress.XtraEditors.LabelControl, DevExpress.XtraEditors.v15.1, Version=15.1.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;inputLabelParcela12.Parent" xml:space="preserve">
+    <value>xtraTabPageParcelas</value>
+  </data>
+  <data name="&gt;&gt;inputLabelParcela12.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="inputParcela12.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Right</value>
+  </data>
+  <data name="inputParcela12.EditValue" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="inputParcela12.Location" type="System.Drawing.Point, System.Drawing">
+    <value>555, 158</value>
+  </data>
+  <data name="inputParcela12.Properties.Appearance.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 9.75pt</value>
+  </data>
+  <data name="inputParcela12.Properties.Buttons" type="DevExpress.XtraEditors.Controls.ButtonPredefines, DevExpress.Utils.v15.1">
+    <value>Combo</value>
+  </data>
+  <data name="inputParcela12.Properties.CalendarTimeProperties.Buttons" type="DevExpress.XtraEditors.Controls.ButtonPredefines, DevExpress.Utils.v15.1">
+    <value>Combo</value>
+  </data>
+  <data name="inputParcela12.Properties.Mask.EditMask" xml:space="preserve">
+    <value>dd/MM/yyyy</value>
+  </data>
+  <data name="inputParcela12.Properties.Mask.UseMaskAsDisplayFormat" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="inputParcela12.Size" type="System.Drawing.Size, System.Drawing">
+    <value>116, 22</value>
+  </data>
+  <data name="inputParcela12.TabIndex" type="System.Int32, mscorlib">
+    <value>84</value>
+  </data>
+  <data name="&gt;&gt;inputParcela12.Name" xml:space="preserve">
+    <value>inputParcela12</value>
+  </data>
+  <data name="&gt;&gt;inputParcela12.Type" xml:space="preserve">
+    <value>DevExpress.XtraEditors.DateEdit, DevExpress.XtraEditors.v15.1, Version=15.1.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;inputParcela12.Parent" xml:space="preserve">
+    <value>xtraTabPageParcelas</value>
+  </data>
+  <data name="&gt;&gt;inputParcela12.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="inputLabelParcela11.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Right</value>
+  </data>
+  <data name="labelControl35.Appearance.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 9.75pt</value>
+  </data>
+  <data name="inputLabelParcela11.Location" type="System.Drawing.Point, System.Drawing">
+    <value>438, 133</value>
+  </data>
+  <data name="inputLabelParcela11.Size" type="System.Drawing.Size, System.Drawing">
+    <value>69, 16</value>
+  </data>
+  <data name="inputLabelParcela11.TabIndex" type="System.Int32, mscorlib">
+    <value>83</value>
+  </data>
+  <data name="inputLabelParcela11.Text" xml:space="preserve">
+    <value>11ª Parcela</value>
+  </data>
+  <data name="&gt;&gt;inputLabelParcela11.Name" xml:space="preserve">
+    <value>inputLabelParcela11</value>
+  </data>
+  <data name="&gt;&gt;inputLabelParcela11.Type" xml:space="preserve">
+    <value>DevExpress.XtraEditors.LabelControl, DevExpress.XtraEditors.v15.1, Version=15.1.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;inputLabelParcela11.Parent" xml:space="preserve">
+    <value>xtraTabPageParcelas</value>
+  </data>
+  <data name="&gt;&gt;inputLabelParcela11.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="inputParcela11.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Right</value>
+  </data>
+  <data name="inputParcela11.EditValue" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="inputParcela11.Location" type="System.Drawing.Point, System.Drawing">
+    <value>555, 130</value>
+  </data>
+  <data name="inputParcela11.Properties.Appearance.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 9.75pt</value>
+  </data>
+  <data name="inputParcela11.Properties.Buttons" type="DevExpress.XtraEditors.Controls.ButtonPredefines, DevExpress.Utils.v15.1">
+    <value>Combo</value>
+  </data>
+  <data name="inputParcela11.Properties.CalendarTimeProperties.Buttons" type="DevExpress.XtraEditors.Controls.ButtonPredefines, DevExpress.Utils.v15.1">
+    <value>Combo</value>
+  </data>
+  <data name="inputParcela11.Properties.Mask.EditMask" xml:space="preserve">
+    <value>dd/MM/yyyy</value>
+  </data>
+  <data name="inputParcela11.Properties.Mask.UseMaskAsDisplayFormat" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="inputParcela11.Size" type="System.Drawing.Size, System.Drawing">
+    <value>116, 22</value>
+  </data>
+  <data name="inputParcela11.TabIndex" type="System.Int32, mscorlib">
+    <value>82</value>
+  </data>
+  <data name="&gt;&gt;inputParcela11.Name" xml:space="preserve">
+    <value>inputParcela11</value>
+  </data>
+  <data name="&gt;&gt;inputParcela11.Type" xml:space="preserve">
+    <value>DevExpress.XtraEditors.DateEdit, DevExpress.XtraEditors.v15.1, Version=15.1.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;inputParcela11.Parent" xml:space="preserve">
+    <value>xtraTabPageParcelas</value>
+  </data>
+  <data name="&gt;&gt;inputParcela11.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="inputLabelParcela10.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Right</value>
+  </data>
+  <data name="labelControl34.Appearance.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 9.75pt</value>
+  </data>
+  <data name="inputLabelParcela10.Location" type="System.Drawing.Point, System.Drawing">
+    <value>438, 105</value>
+  </data>
+  <data name="inputLabelParcela10.Size" type="System.Drawing.Size, System.Drawing">
+    <value>69, 16</value>
+  </data>
+  <data name="inputLabelParcela10.TabIndex" type="System.Int32, mscorlib">
+    <value>81</value>
+  </data>
+  <data name="inputLabelParcela10.Text" xml:space="preserve">
+    <value>10ª Parcela</value>
+  </data>
+  <data name="&gt;&gt;inputLabelParcela10.Name" xml:space="preserve">
+    <value>inputLabelParcela10</value>
+  </data>
+  <data name="&gt;&gt;inputLabelParcela10.Type" xml:space="preserve">
+    <value>DevExpress.XtraEditors.LabelControl, DevExpress.XtraEditors.v15.1, Version=15.1.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;inputLabelParcela10.Parent" xml:space="preserve">
+    <value>xtraTabPageParcelas</value>
+  </data>
+  <data name="&gt;&gt;inputLabelParcela10.ZOrder" xml:space="preserve">
+    <value>4</value>
+  </data>
+  <data name="inputParcela10.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Right</value>
+  </data>
+  <data name="inputParcela10.EditValue" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="inputParcela10.Location" type="System.Drawing.Point, System.Drawing">
+    <value>555, 102</value>
+  </data>
+  <data name="inputParcela10.Properties.Appearance.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 9.75pt</value>
+  </data>
+  <data name="inputParcela10.Properties.Buttons" type="DevExpress.XtraEditors.Controls.ButtonPredefines, DevExpress.Utils.v15.1">
+    <value>Combo</value>
+  </data>
+  <data name="inputParcela10.Properties.CalendarTimeProperties.Buttons" type="DevExpress.XtraEditors.Controls.ButtonPredefines, DevExpress.Utils.v15.1">
+    <value>Combo</value>
+  </data>
+  <data name="inputParcela10.Properties.Mask.EditMask" xml:space="preserve">
+    <value>dd/MM/yyyy</value>
+  </data>
+  <data name="inputParcela10.Properties.Mask.UseMaskAsDisplayFormat" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="inputParcela10.Size" type="System.Drawing.Size, System.Drawing">
+    <value>116, 22</value>
+  </data>
+  <data name="inputParcela10.TabIndex" type="System.Int32, mscorlib">
+    <value>80</value>
+  </data>
+  <data name="&gt;&gt;inputParcela10.Name" xml:space="preserve">
+    <value>inputParcela10</value>
+  </data>
+  <data name="&gt;&gt;inputParcela10.Type" xml:space="preserve">
+    <value>DevExpress.XtraEditors.DateEdit, DevExpress.XtraEditors.v15.1, Version=15.1.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;inputParcela10.Parent" xml:space="preserve">
+    <value>xtraTabPageParcelas</value>
+  </data>
+  <data name="&gt;&gt;inputParcela10.ZOrder" xml:space="preserve">
+    <value>5</value>
+  </data>
+  <data name="inputLabelParcela9.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Right</value>
+  </data>
+  <data name="labelControl33.Appearance.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 9.75pt</value>
+  </data>
+  <data name="inputLabelParcela9.Location" type="System.Drawing.Point, System.Drawing">
+    <value>438, 77</value>
+  </data>
+  <data name="inputLabelParcela9.Size" type="System.Drawing.Size, System.Drawing">
+    <value>62, 16</value>
+  </data>
+  <data name="inputLabelParcela9.TabIndex" type="System.Int32, mscorlib">
+    <value>79</value>
+  </data>
+  <data name="inputLabelParcela9.Text" xml:space="preserve">
+    <value>9ª Parcela</value>
+  </data>
+  <data name="&gt;&gt;inputLabelParcela9.Name" xml:space="preserve">
+    <value>inputLabelParcela9</value>
+  </data>
+  <data name="&gt;&gt;inputLabelParcela9.Type" xml:space="preserve">
+    <value>DevExpress.XtraEditors.LabelControl, DevExpress.XtraEditors.v15.1, Version=15.1.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;inputLabelParcela9.Parent" xml:space="preserve">
+    <value>xtraTabPageParcelas</value>
+  </data>
+  <data name="&gt;&gt;inputLabelParcela9.ZOrder" xml:space="preserve">
+    <value>6</value>
+  </data>
+  <data name="inputParcela9.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Right</value>
+  </data>
+  <data name="inputParcela9.EditValue" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="inputParcela9.Location" type="System.Drawing.Point, System.Drawing">
+    <value>555, 74</value>
+  </data>
+  <data name="inputParcela9.Properties.Appearance.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 9.75pt</value>
+  </data>
+  <data name="inputParcela9.Properties.Buttons" type="DevExpress.XtraEditors.Controls.ButtonPredefines, DevExpress.Utils.v15.1">
+    <value>Combo</value>
+  </data>
+  <data name="inputParcela9.Properties.CalendarTimeProperties.Buttons" type="DevExpress.XtraEditors.Controls.ButtonPredefines, DevExpress.Utils.v15.1">
+    <value>Combo</value>
+  </data>
+  <data name="inputParcela9.Properties.Mask.EditMask" xml:space="preserve">
+    <value>dd/MM/yyyy</value>
+  </data>
+  <data name="inputParcela9.Properties.Mask.UseMaskAsDisplayFormat" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="inputParcela9.Size" type="System.Drawing.Size, System.Drawing">
+    <value>116, 22</value>
+  </data>
+  <data name="inputParcela9.TabIndex" type="System.Int32, mscorlib">
+    <value>78</value>
+  </data>
+  <data name="&gt;&gt;inputParcela9.Name" xml:space="preserve">
+    <value>inputParcela9</value>
+  </data>
+  <data name="&gt;&gt;inputParcela9.Type" xml:space="preserve">
+    <value>DevExpress.XtraEditors.DateEdit, DevExpress.XtraEditors.v15.1, Version=15.1.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;inputParcela9.Parent" xml:space="preserve">
+    <value>xtraTabPageParcelas</value>
+  </data>
+  <data name="&gt;&gt;inputParcela9.ZOrder" xml:space="preserve">
+    <value>7</value>
+  </data>
+  <data name="inputLabelParcela8.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Right</value>
+  </data>
+  <data name="labelControl32.Appearance.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 9.75pt</value>
+  </data>
+  <data name="inputLabelParcela8.Location" type="System.Drawing.Point, System.Drawing">
+    <value>438, 49</value>
+  </data>
+  <data name="inputLabelParcela8.Size" type="System.Drawing.Size, System.Drawing">
+    <value>62, 16</value>
+  </data>
+  <data name="inputLabelParcela8.TabIndex" type="System.Int32, mscorlib">
+    <value>77</value>
+  </data>
+  <data name="inputLabelParcela8.Text" xml:space="preserve">
+    <value>8ª Parcela</value>
+  </data>
+  <data name="&gt;&gt;inputLabelParcela8.Name" xml:space="preserve">
+    <value>inputLabelParcela8</value>
+  </data>
+  <data name="&gt;&gt;inputLabelParcela8.Type" xml:space="preserve">
+    <value>DevExpress.XtraEditors.LabelControl, DevExpress.XtraEditors.v15.1, Version=15.1.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;inputLabelParcela8.Parent" xml:space="preserve">
+    <value>xtraTabPageParcelas</value>
+  </data>
+  <data name="&gt;&gt;inputLabelParcela8.ZOrder" xml:space="preserve">
+    <value>8</value>
+  </data>
+  <data name="inputParcela8.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Right</value>
+  </data>
+  <data name="inputParcela8.EditValue" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="inputParcela8.Location" type="System.Drawing.Point, System.Drawing">
+    <value>555, 46</value>
+  </data>
+  <data name="inputParcela8.Properties.Appearance.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 9.75pt</value>
+  </data>
+  <data name="inputParcela8.Properties.Buttons" type="DevExpress.XtraEditors.Controls.ButtonPredefines, DevExpress.Utils.v15.1">
+    <value>Combo</value>
+  </data>
+  <data name="inputParcela8.Properties.CalendarTimeProperties.Buttons" type="DevExpress.XtraEditors.Controls.ButtonPredefines, DevExpress.Utils.v15.1">
+    <value>Combo</value>
+  </data>
+  <data name="inputParcela8.Properties.Mask.EditMask" xml:space="preserve">
+    <value>dd/MM/yyyy</value>
+  </data>
+  <data name="inputParcela8.Properties.Mask.UseMaskAsDisplayFormat" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="inputParcela8.Size" type="System.Drawing.Size, System.Drawing">
+    <value>116, 22</value>
+  </data>
+  <data name="inputParcela8.TabIndex" type="System.Int32, mscorlib">
+    <value>76</value>
+  </data>
+  <data name="&gt;&gt;inputParcela8.Name" xml:space="preserve">
+    <value>inputParcela8</value>
+  </data>
+  <data name="&gt;&gt;inputParcela8.Type" xml:space="preserve">
+    <value>DevExpress.XtraEditors.DateEdit, DevExpress.XtraEditors.v15.1, Version=15.1.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;inputParcela8.Parent" xml:space="preserve">
+    <value>xtraTabPageParcelas</value>
+  </data>
+  <data name="&gt;&gt;inputParcela8.ZOrder" xml:space="preserve">
+    <value>9</value>
+  </data>
+  <data name="inputLabelParcela7.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Right</value>
+  </data>
+  <data name="labelControl31.Appearance.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 9.75pt</value>
+  </data>
+  <data name="inputLabelParcela7.Location" type="System.Drawing.Point, System.Drawing">
+    <value>438, 21</value>
+  </data>
+  <data name="inputLabelParcela7.Size" type="System.Drawing.Size, System.Drawing">
+    <value>62, 16</value>
+  </data>
+  <data name="inputLabelParcela7.TabIndex" type="System.Int32, mscorlib">
+    <value>75</value>
+  </data>
+  <data name="inputLabelParcela7.Text" xml:space="preserve">
+    <value>7ª Parcela</value>
+  </data>
+  <data name="&gt;&gt;inputLabelParcela7.Name" xml:space="preserve">
+    <value>inputLabelParcela7</value>
+  </data>
+  <data name="&gt;&gt;inputLabelParcela7.Type" xml:space="preserve">
+    <value>DevExpress.XtraEditors.LabelControl, DevExpress.XtraEditors.v15.1, Version=15.1.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;inputLabelParcela7.Parent" xml:space="preserve">
+    <value>xtraTabPageParcelas</value>
+  </data>
+  <data name="&gt;&gt;inputLabelParcela7.ZOrder" xml:space="preserve">
+    <value>10</value>
+  </data>
+  <data name="inputParcela7.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Right</value>
+  </data>
+  <data name="inputParcela7.EditValue" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="inputParcela7.Location" type="System.Drawing.Point, System.Drawing">
+    <value>555, 18</value>
+  </data>
+  <data name="inputParcela7.Properties.Appearance.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 9.75pt</value>
+  </data>
+  <data name="inputParcela7.Properties.Buttons" type="DevExpress.XtraEditors.Controls.ButtonPredefines, DevExpress.Utils.v15.1">
+    <value>Combo</value>
+  </data>
+  <data name="inputParcela7.Properties.CalendarTimeProperties.Buttons" type="DevExpress.XtraEditors.Controls.ButtonPredefines, DevExpress.Utils.v15.1">
+    <value>Combo</value>
+  </data>
+  <data name="inputParcela7.Properties.Mask.EditMask" xml:space="preserve">
+    <value>dd/MM/yyyy</value>
+  </data>
+  <data name="inputParcela7.Properties.Mask.UseMaskAsDisplayFormat" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="inputParcela7.Size" type="System.Drawing.Size, System.Drawing">
+    <value>116, 22</value>
+  </data>
+  <data name="inputParcela7.TabIndex" type="System.Int32, mscorlib">
+    <value>74</value>
+  </data>
+  <data name="&gt;&gt;inputParcela7.Name" xml:space="preserve">
+    <value>inputParcela7</value>
+  </data>
+  <data name="&gt;&gt;inputParcela7.Type" xml:space="preserve">
+    <value>DevExpress.XtraEditors.DateEdit, DevExpress.XtraEditors.v15.1, Version=15.1.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;inputParcela7.Parent" xml:space="preserve">
+    <value>xtraTabPageParcelas</value>
+  </data>
+  <data name="&gt;&gt;inputParcela7.ZOrder" xml:space="preserve">
+    <value>11</value>
+  </data>
+  <data name="labelControl30.Appearance.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 9.75pt</value>
+  </data>
+  <data name="inputLabelParcela6.Location" type="System.Drawing.Point, System.Drawing">
+    <value>19, 161</value>
+  </data>
+  <data name="inputLabelParcela6.Size" type="System.Drawing.Size, System.Drawing">
+    <value>62, 16</value>
+  </data>
+  <data name="inputLabelParcela6.TabIndex" type="System.Int32, mscorlib">
+    <value>73</value>
+  </data>
+  <data name="inputLabelParcela6.Text" xml:space="preserve">
+    <value>6ª Parcela</value>
+  </data>
+  <data name="&gt;&gt;inputLabelParcela6.Name" xml:space="preserve">
+    <value>inputLabelParcela6</value>
+  </data>
+  <data name="&gt;&gt;inputLabelParcela6.Type" xml:space="preserve">
+    <value>DevExpress.XtraEditors.LabelControl, DevExpress.XtraEditors.v15.1, Version=15.1.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;inputLabelParcela6.Parent" xml:space="preserve">
+    <value>xtraTabPageParcelas</value>
+  </data>
+  <data name="&gt;&gt;inputLabelParcela6.ZOrder" xml:space="preserve">
+    <value>12</value>
+  </data>
+  <data name="inputParcela6.EditValue" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="inputParcela6.Location" type="System.Drawing.Point, System.Drawing">
+    <value>136, 158</value>
+  </data>
+  <data name="inputParcela6.Properties.Appearance.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 9.75pt</value>
+  </data>
+  <data name="inputParcela6.Properties.Buttons" type="DevExpress.XtraEditors.Controls.ButtonPredefines, DevExpress.Utils.v15.1">
+    <value>Combo</value>
+  </data>
+  <data name="inputParcela6.Properties.CalendarTimeProperties.Buttons" type="DevExpress.XtraEditors.Controls.ButtonPredefines, DevExpress.Utils.v15.1">
+    <value>Combo</value>
+  </data>
+  <data name="inputParcela6.Properties.Mask.EditMask" xml:space="preserve">
+    <value>dd/MM/yyyy</value>
+  </data>
+  <data name="inputParcela6.Properties.Mask.UseMaskAsDisplayFormat" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="inputParcela6.Size" type="System.Drawing.Size, System.Drawing">
+    <value>116, 22</value>
+  </data>
+  <data name="inputParcela6.TabIndex" type="System.Int32, mscorlib">
+    <value>72</value>
+  </data>
+  <data name="&gt;&gt;inputParcela6.Name" xml:space="preserve">
+    <value>inputParcela6</value>
+  </data>
+  <data name="&gt;&gt;inputParcela6.Type" xml:space="preserve">
+    <value>DevExpress.XtraEditors.DateEdit, DevExpress.XtraEditors.v15.1, Version=15.1.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;inputParcela6.Parent" xml:space="preserve">
+    <value>xtraTabPageParcelas</value>
+  </data>
+  <data name="&gt;&gt;inputParcela6.ZOrder" xml:space="preserve">
+    <value>13</value>
+  </data>
+  <data name="labelControl29.Appearance.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 9.75pt</value>
+  </data>
+  <data name="inputLabelParcela5.Location" type="System.Drawing.Point, System.Drawing">
+    <value>19, 133</value>
+  </data>
+  <data name="inputLabelParcela5.Size" type="System.Drawing.Size, System.Drawing">
+    <value>62, 16</value>
+  </data>
+  <data name="inputLabelParcela5.TabIndex" type="System.Int32, mscorlib">
+    <value>71</value>
+  </data>
+  <data name="inputLabelParcela5.Text" xml:space="preserve">
+    <value>5ª Parcela</value>
+  </data>
+  <data name="&gt;&gt;inputLabelParcela5.Name" xml:space="preserve">
+    <value>inputLabelParcela5</value>
+  </data>
+  <data name="&gt;&gt;inputLabelParcela5.Type" xml:space="preserve">
+    <value>DevExpress.XtraEditors.LabelControl, DevExpress.XtraEditors.v15.1, Version=15.1.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;inputLabelParcela5.Parent" xml:space="preserve">
+    <value>xtraTabPageParcelas</value>
+  </data>
+  <data name="&gt;&gt;inputLabelParcela5.ZOrder" xml:space="preserve">
+    <value>14</value>
+  </data>
+  <data name="inputParcela5.EditValue" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="inputParcela5.Location" type="System.Drawing.Point, System.Drawing">
+    <value>136, 130</value>
+  </data>
+  <data name="inputParcela5.Properties.Appearance.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 9.75pt</value>
+  </data>
+  <data name="inputParcela5.Properties.Buttons" type="DevExpress.XtraEditors.Controls.ButtonPredefines, DevExpress.Utils.v15.1">
+    <value>Combo</value>
+  </data>
+  <data name="inputParcela5.Properties.CalendarTimeProperties.Buttons" type="DevExpress.XtraEditors.Controls.ButtonPredefines, DevExpress.Utils.v15.1">
+    <value>Combo</value>
+  </data>
+  <data name="inputParcela5.Properties.Mask.EditMask" xml:space="preserve">
+    <value>dd/MM/yyyy</value>
+  </data>
+  <data name="inputParcela5.Properties.Mask.UseMaskAsDisplayFormat" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="inputParcela5.Size" type="System.Drawing.Size, System.Drawing">
+    <value>116, 22</value>
+  </data>
+  <data name="inputParcela5.TabIndex" type="System.Int32, mscorlib">
+    <value>70</value>
+  </data>
+  <data name="&gt;&gt;inputParcela5.Name" xml:space="preserve">
+    <value>inputParcela5</value>
+  </data>
+  <data name="&gt;&gt;inputParcela5.Type" xml:space="preserve">
+    <value>DevExpress.XtraEditors.DateEdit, DevExpress.XtraEditors.v15.1, Version=15.1.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;inputParcela5.Parent" xml:space="preserve">
+    <value>xtraTabPageParcelas</value>
+  </data>
+  <data name="&gt;&gt;inputParcela5.ZOrder" xml:space="preserve">
+    <value>15</value>
+  </data>
+  <data name="labelControl28.Appearance.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 9.75pt</value>
+  </data>
+  <data name="inputLabelParcela4.Location" type="System.Drawing.Point, System.Drawing">
+    <value>19, 105</value>
+  </data>
+  <data name="inputLabelParcela4.Size" type="System.Drawing.Size, System.Drawing">
+    <value>62, 16</value>
+  </data>
+  <data name="inputLabelParcela4.TabIndex" type="System.Int32, mscorlib">
+    <value>69</value>
+  </data>
+  <data name="inputLabelParcela4.Text" xml:space="preserve">
+    <value>4ª Parcela</value>
+  </data>
+  <data name="&gt;&gt;inputLabelParcela4.Name" xml:space="preserve">
+    <value>inputLabelParcela4</value>
+  </data>
+  <data name="&gt;&gt;inputLabelParcela4.Type" xml:space="preserve">
+    <value>DevExpress.XtraEditors.LabelControl, DevExpress.XtraEditors.v15.1, Version=15.1.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;inputLabelParcela4.Parent" xml:space="preserve">
+    <value>xtraTabPageParcelas</value>
+  </data>
+  <data name="&gt;&gt;inputLabelParcela4.ZOrder" xml:space="preserve">
+    <value>16</value>
+  </data>
+  <data name="inputParcela4.EditValue" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="inputParcela4.Location" type="System.Drawing.Point, System.Drawing">
+    <value>136, 102</value>
+  </data>
+  <data name="inputParcela4.Properties.Appearance.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 9.75pt</value>
+  </data>
+  <data name="inputParcela4.Properties.Buttons" type="DevExpress.XtraEditors.Controls.ButtonPredefines, DevExpress.Utils.v15.1">
+    <value>Combo</value>
+  </data>
+  <data name="inputParcela4.Properties.CalendarTimeProperties.Buttons" type="DevExpress.XtraEditors.Controls.ButtonPredefines, DevExpress.Utils.v15.1">
+    <value>Combo</value>
+  </data>
+  <data name="inputParcela4.Properties.Mask.EditMask" xml:space="preserve">
+    <value>dd/MM/yyyy</value>
+  </data>
+  <data name="inputParcela4.Properties.Mask.UseMaskAsDisplayFormat" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="inputParcela4.Size" type="System.Drawing.Size, System.Drawing">
+    <value>116, 22</value>
+  </data>
+  <data name="inputParcela4.TabIndex" type="System.Int32, mscorlib">
+    <value>68</value>
+  </data>
+  <data name="&gt;&gt;inputParcela4.Name" xml:space="preserve">
+    <value>inputParcela4</value>
+  </data>
+  <data name="&gt;&gt;inputParcela4.Type" xml:space="preserve">
+    <value>DevExpress.XtraEditors.DateEdit, DevExpress.XtraEditors.v15.1, Version=15.1.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;inputParcela4.Parent" xml:space="preserve">
+    <value>xtraTabPageParcelas</value>
+  </data>
+  <data name="&gt;&gt;inputParcela4.ZOrder" xml:space="preserve">
+    <value>17</value>
+  </data>
+  <data name="labelControl27.Appearance.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 9.75pt</value>
+  </data>
+  <data name="inputLabelParcela3.Location" type="System.Drawing.Point, System.Drawing">
+    <value>19, 77</value>
+  </data>
+  <data name="inputLabelParcela3.Size" type="System.Drawing.Size, System.Drawing">
+    <value>62, 16</value>
+  </data>
+  <data name="inputLabelParcela3.TabIndex" type="System.Int32, mscorlib">
+    <value>67</value>
+  </data>
+  <data name="inputLabelParcela3.Text" xml:space="preserve">
+    <value>3ª Parcela</value>
+  </data>
+  <data name="&gt;&gt;inputLabelParcela3.Name" xml:space="preserve">
+    <value>inputLabelParcela3</value>
+  </data>
+  <data name="&gt;&gt;inputLabelParcela3.Type" xml:space="preserve">
+    <value>DevExpress.XtraEditors.LabelControl, DevExpress.XtraEditors.v15.1, Version=15.1.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;inputLabelParcela3.Parent" xml:space="preserve">
+    <value>xtraTabPageParcelas</value>
+  </data>
+  <data name="&gt;&gt;inputLabelParcela3.ZOrder" xml:space="preserve">
+    <value>18</value>
+  </data>
+  <data name="inputParcela3.EditValue" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="inputParcela3.Location" type="System.Drawing.Point, System.Drawing">
+    <value>136, 74</value>
+  </data>
+  <data name="inputParcela3.Properties.Appearance.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 9.75pt</value>
+  </data>
+  <data name="inputParcela3.Properties.Buttons" type="DevExpress.XtraEditors.Controls.ButtonPredefines, DevExpress.Utils.v15.1">
+    <value>Combo</value>
+  </data>
+  <data name="inputParcela3.Properties.CalendarTimeProperties.Buttons" type="DevExpress.XtraEditors.Controls.ButtonPredefines, DevExpress.Utils.v15.1">
+    <value>Combo</value>
+  </data>
+  <data name="inputParcela3.Properties.Mask.EditMask" xml:space="preserve">
+    <value>dd/MM/yyyy</value>
+  </data>
+  <data name="inputParcela3.Properties.Mask.UseMaskAsDisplayFormat" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="inputParcela3.Size" type="System.Drawing.Size, System.Drawing">
+    <value>116, 22</value>
+  </data>
+  <data name="inputParcela3.TabIndex" type="System.Int32, mscorlib">
+    <value>66</value>
+  </data>
+  <data name="&gt;&gt;inputParcela3.Name" xml:space="preserve">
+    <value>inputParcela3</value>
+  </data>
+  <data name="&gt;&gt;inputParcela3.Type" xml:space="preserve">
+    <value>DevExpress.XtraEditors.DateEdit, DevExpress.XtraEditors.v15.1, Version=15.1.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;inputParcela3.Parent" xml:space="preserve">
+    <value>xtraTabPageParcelas</value>
+  </data>
+  <data name="&gt;&gt;inputParcela3.ZOrder" xml:space="preserve">
+    <value>19</value>
+  </data>
+  <data name="labelControl26.Appearance.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 9.75pt</value>
+  </data>
+  <data name="inputLabelParcela2.Location" type="System.Drawing.Point, System.Drawing">
+    <value>19, 49</value>
+  </data>
+  <data name="inputLabelParcela2.Size" type="System.Drawing.Size, System.Drawing">
+    <value>62, 16</value>
+  </data>
+  <data name="inputLabelParcela2.TabIndex" type="System.Int32, mscorlib">
+    <value>65</value>
+  </data>
+  <data name="inputLabelParcela2.Text" xml:space="preserve">
+    <value>2ª Parcela</value>
+  </data>
+  <data name="&gt;&gt;inputLabelParcela2.Name" xml:space="preserve">
+    <value>inputLabelParcela2</value>
+  </data>
+  <data name="&gt;&gt;inputLabelParcela2.Type" xml:space="preserve">
+    <value>DevExpress.XtraEditors.LabelControl, DevExpress.XtraEditors.v15.1, Version=15.1.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;inputLabelParcela2.Parent" xml:space="preserve">
+    <value>xtraTabPageParcelas</value>
+  </data>
+  <data name="&gt;&gt;inputLabelParcela2.ZOrder" xml:space="preserve">
+    <value>20</value>
+  </data>
+  <data name="inputParcela2.EditValue" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="inputParcela2.Location" type="System.Drawing.Point, System.Drawing">
+    <value>136, 46</value>
+  </data>
+  <data name="inputParcela2.Properties.Appearance.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 9.75pt</value>
+  </data>
+  <data name="inputParcela2.Properties.Buttons" type="DevExpress.XtraEditors.Controls.ButtonPredefines, DevExpress.Utils.v15.1">
+    <value>Combo</value>
+  </data>
+  <data name="inputParcela2.Properties.CalendarTimeProperties.Buttons" type="DevExpress.XtraEditors.Controls.ButtonPredefines, DevExpress.Utils.v15.1">
+    <value>Combo</value>
+  </data>
+  <data name="inputParcela2.Properties.Mask.EditMask" xml:space="preserve">
+    <value>dd/MM/yyyy</value>
+  </data>
+  <data name="inputParcela2.Properties.Mask.UseMaskAsDisplayFormat" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="inputParcela2.Size" type="System.Drawing.Size, System.Drawing">
+    <value>116, 22</value>
+  </data>
+  <data name="inputParcela2.TabIndex" type="System.Int32, mscorlib">
+    <value>64</value>
+  </data>
+  <data name="&gt;&gt;inputParcela2.Name" xml:space="preserve">
+    <value>inputParcela2</value>
+  </data>
+  <data name="&gt;&gt;inputParcela2.Type" xml:space="preserve">
+    <value>DevExpress.XtraEditors.DateEdit, DevExpress.XtraEditors.v15.1, Version=15.1.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;inputParcela2.Parent" xml:space="preserve">
+    <value>xtraTabPageParcelas</value>
+  </data>
+  <data name="&gt;&gt;inputParcela2.ZOrder" xml:space="preserve">
+    <value>21</value>
+  </data>
+  <data name="labelControl20.Appearance.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 9.75pt</value>
+  </data>
+  <data name="inputLabelParcela1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>19, 21</value>
+  </data>
+  <data name="inputLabelParcela1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>62, 16</value>
+  </data>
+  <data name="inputLabelParcela1.TabIndex" type="System.Int32, mscorlib">
+    <value>63</value>
+  </data>
+  <data name="inputLabelParcela1.Text" xml:space="preserve">
+    <value>1ª Parcela</value>
+  </data>
+  <data name="&gt;&gt;inputLabelParcela1.Name" xml:space="preserve">
+    <value>inputLabelParcela1</value>
+  </data>
+  <data name="&gt;&gt;inputLabelParcela1.Type" xml:space="preserve">
+    <value>DevExpress.XtraEditors.LabelControl, DevExpress.XtraEditors.v15.1, Version=15.1.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;inputLabelParcela1.Parent" xml:space="preserve">
+    <value>xtraTabPageParcelas</value>
+  </data>
+  <data name="&gt;&gt;inputLabelParcela1.ZOrder" xml:space="preserve">
+    <value>22</value>
+  </data>
+  <data name="inputParcela1.EditValue" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="inputParcela1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>136, 18</value>
+  </data>
+  <data name="inputParcela1.Properties.Appearance.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 9.75pt</value>
+  </data>
+  <data name="inputParcela1.Properties.Buttons" type="DevExpress.XtraEditors.Controls.ButtonPredefines, DevExpress.Utils.v15.1">
+    <value>Combo</value>
+  </data>
+  <data name="inputParcela1.Properties.CalendarTimeProperties.Buttons" type="DevExpress.XtraEditors.Controls.ButtonPredefines, DevExpress.Utils.v15.1">
+    <value>Combo</value>
+  </data>
+  <data name="inputParcela1.Properties.Mask.EditMask" xml:space="preserve">
+    <value>dd/MM/yyyy</value>
+  </data>
+  <data name="inputParcela1.Properties.Mask.UseMaskAsDisplayFormat" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="inputParcela1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>116, 22</value>
+  </data>
+  <data name="inputParcela1.TabIndex" type="System.Int32, mscorlib">
+    <value>62</value>
+  </data>
+  <data name="&gt;&gt;inputParcela1.Name" xml:space="preserve">
+    <value>inputParcela1</value>
+  </data>
+  <data name="&gt;&gt;inputParcela1.Type" xml:space="preserve">
+    <value>DevExpress.XtraEditors.DateEdit, DevExpress.XtraEditors.v15.1, Version=15.1.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;inputParcela1.Parent" xml:space="preserve">
+    <value>xtraTabPageParcelas</value>
+  </data>
+  <data name="&gt;&gt;inputParcela1.ZOrder" xml:space="preserve">
+    <value>23</value>
+  </data>
+  <data name="xtraTabPageParcelas.Size" type="System.Drawing.Size, System.Drawing">
+    <value>691, 244</value>
+  </data>
+  <data name="xtraTabPageParcelas.Text" xml:space="preserve">
+    <value>Parcelas</value>
+  </data>
+  <data name="&gt;&gt;xtraTabPageParcelas.Name" xml:space="preserve">
+    <value>xtraTabPageParcelas</value>
+  </data>
+  <data name="&gt;&gt;xtraTabPageParcelas.Type" xml:space="preserve">
+    <value>DevExpress.XtraTab.XtraTabPage, DevExpress.XtraEditors.v15.1, Version=15.1.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;xtraTabPageParcelas.Parent" xml:space="preserve">
+    <value>xtraTabControl</value>
+  </data>
+  <data name="&gt;&gt;xtraTabPageParcelas.ZOrder" xml:space="preserve">
+    <value>2</value>
   </data>
   <data name="&gt;&gt;labelControl22.Name" xml:space="preserve">
     <value>labelControl22</value>
@@ -1562,7 +2405,7 @@
     <value>3</value>
   </data>
   <data name="xtraTabPageTestemunhas.Size" type="System.Drawing.Size, System.Drawing">
-    <value>654, 244</value>
+    <value>691, 244</value>
   </data>
   <data name="xtraTabPageTestemunhas.Text" xml:space="preserve">
     <value>Testemunhas</value>
@@ -1577,67 +2420,7 @@
     <value>xtraTabControl</value>
   </data>
   <data name="&gt;&gt;xtraTabPageTestemunhas.ZOrder" xml:space="preserve">
-    <value>2</value>
-  </data>
-  <data name="pictureEditTermoPDF.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
-    <value>Top, Right</value>
-  </data>
-  <data name="pictureEditTermoPDF.Location" type="System.Drawing.Point, System.Drawing">
-    <value>158, 59</value>
-  </data>
-  <data name="pictureEditTermoPDF.Size" type="System.Drawing.Size, System.Drawing">
-    <value>105, 94</value>
-  </data>
-  <data name="pictureEditTermoPDF.TabIndex" type="System.Int32, mscorlib">
     <value>3</value>
-  </data>
-  <data name="&gt;&gt;pictureEditTermoPDF.Name" xml:space="preserve">
-    <value>pictureEditTermoPDF</value>
-  </data>
-  <data name="&gt;&gt;pictureEditTermoPDF.Type" xml:space="preserve">
-    <value>DevExpress.XtraEditors.PictureEdit, DevExpress.XtraEditors.v15.1, Version=15.1.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
-  </data>
-  <data name="&gt;&gt;pictureEditTermoPDF.Parent" xml:space="preserve">
-    <value>groupBox2</value>
-  </data>
-  <data name="&gt;&gt;pictureEditTermoPDF.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <data name="pictureEditTermoText.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
-    <value>Top, Right</value>
-  </data>
-  <data name="pictureEditTermoText.Location" type="System.Drawing.Point, System.Drawing">
-    <value>24, 59</value>
-  </data>
-  <data name="pictureEditTermoText.Size" type="System.Drawing.Size, System.Drawing">
-    <value>105, 94</value>
-  </data>
-  <data name="pictureEditTermoText.TabIndex" type="System.Int32, mscorlib">
-    <value>2</value>
-  </data>
-  <data name="&gt;&gt;pictureEditTermoText.Name" xml:space="preserve">
-    <value>pictureEditTermoText</value>
-  </data>
-  <data name="&gt;&gt;pictureEditTermoText.Type" xml:space="preserve">
-    <value>DevExpress.XtraEditors.PictureEdit, DevExpress.XtraEditors.v15.1, Version=15.1.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
-  </data>
-  <data name="&gt;&gt;pictureEditTermoText.Parent" xml:space="preserve">
-    <value>groupBox2</value>
-  </data>
-  <data name="&gt;&gt;pictureEditTermoText.ZOrder" xml:space="preserve">
-    <value>1</value>
-  </data>
-  <data name="groupBox2.Location" type="System.Drawing.Point, System.Drawing">
-    <value>354, 13</value>
-  </data>
-  <data name="groupBox2.Size" type="System.Drawing.Size, System.Drawing">
-    <value>282, 214</value>
-  </data>
-  <data name="groupBox2.TabIndex" type="System.Int32, mscorlib">
-    <value>44</value>
-  </data>
-  <data name="groupBox2.Text" xml:space="preserve">
-    <value>Termo de Voluntariado</value>
   </data>
   <data name="&gt;&gt;groupBox2.Name" xml:space="preserve">
     <value>groupBox2</value>
@@ -1650,42 +2433,6 @@
   </data>
   <data name="&gt;&gt;groupBox2.ZOrder" xml:space="preserve">
     <value>0</value>
-  </data>
-  <data name="&gt;&gt;pictureEditContratoPDF.Name" xml:space="preserve">
-    <value>pictureEditContratoPDF</value>
-  </data>
-  <data name="&gt;&gt;pictureEditContratoPDF.Type" xml:space="preserve">
-    <value>DevExpress.XtraEditors.PictureEdit, DevExpress.XtraEditors.v15.1, Version=15.1.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
-  </data>
-  <data name="&gt;&gt;pictureEditContratoPDF.Parent" xml:space="preserve">
-    <value>groupBox1</value>
-  </data>
-  <data name="&gt;&gt;pictureEditContratoPDF.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <data name="&gt;&gt;pictureEditContratoText.Name" xml:space="preserve">
-    <value>pictureEditContratoText</value>
-  </data>
-  <data name="&gt;&gt;pictureEditContratoText.Type" xml:space="preserve">
-    <value>DevExpress.XtraEditors.PictureEdit, DevExpress.XtraEditors.v15.1, Version=15.1.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
-  </data>
-  <data name="&gt;&gt;pictureEditContratoText.Parent" xml:space="preserve">
-    <value>groupBox1</value>
-  </data>
-  <data name="&gt;&gt;pictureEditContratoText.ZOrder" xml:space="preserve">
-    <value>1</value>
-  </data>
-  <data name="groupBox1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>15, 13</value>
-  </data>
-  <data name="groupBox1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>282, 214</value>
-  </data>
-  <data name="groupBox1.TabIndex" type="System.Int32, mscorlib">
-    <value>43</value>
-  </data>
-  <data name="groupBox1.Text" xml:space="preserve">
-    <value>Contrato</value>
   </data>
   <data name="&gt;&gt;groupBox1.Name" xml:space="preserve">
     <value>groupBox1</value>
@@ -1700,7 +2447,7 @@
     <value>1</value>
   </data>
   <data name="xtraTabPageDocumentos.Size" type="System.Drawing.Size, System.Drawing">
-    <value>654, 244</value>
+    <value>691, 244</value>
   </data>
   <data name="xtraTabPageDocumentos.Text" xml:space="preserve">
     <value>Documentos</value>
@@ -1715,7 +2462,7 @@
     <value>xtraTabControl</value>
   </data>
   <data name="&gt;&gt;xtraTabPageDocumentos.ZOrder" xml:space="preserve">
-    <value>3</value>
+    <value>4</value>
   </data>
   <data name="&gt;&gt;xtraTabControl.Name" xml:space="preserve">
     <value>xtraTabControl</value>
@@ -1730,10 +2477,10 @@
     <value>2</value>
   </data>
   <data name="inputTrabalhoSabado.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
-    <value>Top, Left, Right</value>
+    <value>Top, Right</value>
   </data>
   <data name="inputTrabalhoSabado.Location" type="System.Drawing.Point, System.Drawing">
-    <value>518, 98</value>
+    <value>555, 98</value>
   </data>
   <data name="inputTrabalhoSabado.Properties.Appearance.Font" type="System.Drawing.Font, System.Drawing">
     <value>Microsoft Sans Serif, 9.75pt</value>
@@ -1756,11 +2503,14 @@
   <data name="&gt;&gt;inputTrabalhoSabado.ZOrder" xml:space="preserve">
     <value>0</value>
   </data>
+  <data name="labelControl25.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Right</value>
+  </data>
   <data name="labelControl25.Appearance.Font" type="System.Drawing.Font, System.Drawing">
     <value>Microsoft Sans Serif, 9.75pt</value>
   </data>
   <data name="labelControl25.Location" type="System.Drawing.Point, System.Drawing">
-    <value>420, 103</value>
+    <value>457, 101</value>
   </data>
   <data name="labelControl25.Size" type="System.Drawing.Size, System.Drawing">
     <value>86, 16</value>
@@ -1787,7 +2537,7 @@
     <value>Top, Right</value>
   </data>
   <data name="radioGroupPrograma.Location" type="System.Drawing.Point, System.Drawing">
-    <value>500, 8</value>
+    <value>537, 8</value>
   </data>
   <data name="radioGroupPrograma.Properties.Appearance.Font" type="System.Drawing.Font, System.Drawing">
     <value>Microsoft Sans Serif, 9.75pt</value>
@@ -1835,7 +2585,7 @@
     <value>Microsoft Sans Serif, 9.75pt</value>
   </data>
   <data name="labelControl9.Location" type="System.Drawing.Point, System.Drawing">
-    <value>420, 12</value>
+    <value>457, 12</value>
   </data>
   <data name="labelControl9.Size" type="System.Drawing.Size, System.Drawing">
     <value>47, 16</value>
@@ -1868,7 +2618,7 @@
     <value>Microsoft Sans Serif, 9.75pt</value>
   </data>
   <data name="inputCargaHorariaExtenso.Size" type="System.Drawing.Size, System.Drawing">
-    <value>214, 22</value>
+    <value>251, 22</value>
   </data>
   <data name="inputCargaHorariaExtenso.TabIndex" type="System.Int32, mscorlib">
     <value>60</value>
@@ -1988,7 +2738,7 @@
     <value>Microsoft Sans Serif, 9.75pt</value>
   </data>
   <data name="inputValorParcialExtenso.Size" type="System.Drawing.Size, System.Drawing">
-    <value>498, 22</value>
+    <value>535, 22</value>
   </data>
   <data name="inputValorParcialExtenso.TabIndex" type="System.Int32, mscorlib">
     <value>55</value>
@@ -2079,7 +2829,7 @@
     <value>Top, Right</value>
   </data>
   <data name="inputModoTransferencia.Location" type="System.Drawing.Point, System.Drawing">
-    <value>468, 154</value>
+    <value>505, 154</value>
   </data>
   <data name="inputModoTransferencia.Properties.Appearance.Font" type="System.Drawing.Font, System.Drawing">
     <value>Microsoft Sans Serif, 9.75pt</value>
@@ -2109,7 +2859,7 @@
     <value>Top, Right</value>
   </data>
   <data name="inputModoPagSeguro.Location" type="System.Drawing.Point, System.Drawing">
-    <value>468, 128</value>
+    <value>505, 128</value>
   </data>
   <data name="inputModoPagSeguro.Properties.Appearance.Font" type="System.Drawing.Font, System.Drawing">
     <value>Microsoft Sans Serif, 9.75pt</value>
@@ -2139,7 +2889,7 @@
     <value>Top, Right</value>
   </data>
   <data name="inputModoDinheiro.Location" type="System.Drawing.Point, System.Drawing">
-    <value>468, 102</value>
+    <value>505, 102</value>
   </data>
   <data name="inputModoDinheiro.Properties.Appearance.Font" type="System.Drawing.Font, System.Drawing">
     <value>Microsoft Sans Serif, 9.75pt</value>
@@ -2169,7 +2919,7 @@
     <value>Top, Right</value>
   </data>
   <data name="inputModoDeposito.Location" type="System.Drawing.Point, System.Drawing">
-    <value>468, 76</value>
+    <value>505, 76</value>
   </data>
   <data name="inputModoDeposito.Properties.Appearance.Font" type="System.Drawing.Font, System.Drawing">
     <value>Microsoft Sans Serif, 9.75pt</value>
@@ -2199,7 +2949,7 @@
     <value>Top, Right</value>
   </data>
   <data name="inputModoCheque.Location" type="System.Drawing.Point, System.Drawing">
-    <value>313, 154</value>
+    <value>350, 154</value>
   </data>
   <data name="inputModoCheque.Properties.Appearance.Font" type="System.Drawing.Font, System.Drawing">
     <value>Microsoft Sans Serif, 9.75pt</value>
@@ -2229,7 +2979,7 @@
     <value>Top, Right</value>
   </data>
   <data name="inputModoDebito.Location" type="System.Drawing.Point, System.Drawing">
-    <value>313, 128</value>
+    <value>350, 128</value>
   </data>
   <data name="inputModoDebito.Properties.Appearance.Font" type="System.Drawing.Font, System.Drawing">
     <value>Microsoft Sans Serif, 9.75pt</value>
@@ -2259,7 +3009,7 @@
     <value>Top, Right</value>
   </data>
   <data name="inputModoCredito.Location" type="System.Drawing.Point, System.Drawing">
-    <value>313, 102</value>
+    <value>350, 102</value>
   </data>
   <data name="inputModoCredito.Properties.Appearance.Font" type="System.Drawing.Font, System.Drawing">
     <value>Microsoft Sans Serif, 9.75pt</value>
@@ -2289,7 +3039,7 @@
     <value>Top, Right</value>
   </data>
   <data name="inputModoBoleto.Location" type="System.Drawing.Point, System.Drawing">
-    <value>313, 76</value>
+    <value>350, 76</value>
   </data>
   <data name="inputModoBoleto.Properties.Appearance.Font" type="System.Drawing.Font, System.Drawing">
     <value>Microsoft Sans Serif, 9.75pt</value>
@@ -2322,7 +3072,7 @@
     <value>Microsoft Sans Serif, 9.75pt</value>
   </data>
   <data name="labelControl21.Location" type="System.Drawing.Point, System.Drawing">
-    <value>426, 14</value>
+    <value>432, 13</value>
   </data>
   <data name="labelControl21.Size" type="System.Drawing.Size, System.Drawing">
     <value>102, 16</value>
@@ -2352,7 +3102,7 @@
     <value />
   </data>
   <data name="inputDataPagamento.Location" type="System.Drawing.Point, System.Drawing">
-    <value>534, 12</value>
+    <value>555, 10</value>
   </data>
   <data name="inputDataPagamento.Properties.Appearance.Font" type="System.Drawing.Font, System.Drawing">
     <value>Microsoft Sans Serif, 9.75pt</value>
@@ -2370,7 +3120,7 @@
     <value>True</value>
   </data>
   <data name="inputDataPagamento.Size" type="System.Drawing.Size, System.Drawing">
-    <value>100, 22</value>
+    <value>116, 22</value>
   </data>
   <data name="inputDataPagamento.TabIndex" type="System.Int32, mscorlib">
     <value>42</value>
@@ -2493,7 +3243,7 @@
     <value>Microsoft Sans Serif, 9.75pt</value>
   </data>
   <data name="inputValorExtenso.Size" type="System.Drawing.Size, System.Drawing">
-    <value>498, 22</value>
+    <value>535, 22</value>
   </data>
   <data name="inputValorExtenso.TabIndex" type="System.Int32, mscorlib">
     <value>36</value>
@@ -2687,6 +3437,150 @@
   <data name="&gt;&gt;inputTestemunha1.ZOrder" xml:space="preserve">
     <value>3</value>
   </data>
+  <data name="&gt;&gt;pictureEditTermoPDF.Name" xml:space="preserve">
+    <value>pictureEditTermoPDF</value>
+  </data>
+  <data name="&gt;&gt;pictureEditTermoPDF.Type" xml:space="preserve">
+    <value>DevExpress.XtraEditors.PictureEdit, DevExpress.XtraEditors.v15.1, Version=15.1.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;pictureEditTermoPDF.Parent" xml:space="preserve">
+    <value>groupBox2</value>
+  </data>
+  <data name="&gt;&gt;pictureEditTermoPDF.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;pictureEditTermoText.Name" xml:space="preserve">
+    <value>pictureEditTermoText</value>
+  </data>
+  <data name="&gt;&gt;pictureEditTermoText.Type" xml:space="preserve">
+    <value>DevExpress.XtraEditors.PictureEdit, DevExpress.XtraEditors.v15.1, Version=15.1.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;pictureEditTermoText.Parent" xml:space="preserve">
+    <value>groupBox2</value>
+  </data>
+  <data name="&gt;&gt;pictureEditTermoText.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="groupBox2.Location" type="System.Drawing.Point, System.Drawing">
+    <value>354, 13</value>
+  </data>
+  <data name="groupBox2.Size" type="System.Drawing.Size, System.Drawing">
+    <value>282, 214</value>
+  </data>
+  <data name="groupBox2.TabIndex" type="System.Int32, mscorlib">
+    <value>44</value>
+  </data>
+  <data name="groupBox2.Text" xml:space="preserve">
+    <value>Termo de Voluntariado</value>
+  </data>
+  <data name="&gt;&gt;groupBox2.Name" xml:space="preserve">
+    <value>groupBox2</value>
+  </data>
+  <data name="&gt;&gt;groupBox2.Type" xml:space="preserve">
+    <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;groupBox2.Parent" xml:space="preserve">
+    <value>xtraTabPageDocumentos</value>
+  </data>
+  <data name="&gt;&gt;groupBox2.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="pictureEditTermoPDF.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Right</value>
+  </data>
+  <data name="pictureEditTermoPDF.Location" type="System.Drawing.Point, System.Drawing">
+    <value>158, 59</value>
+  </data>
+  <data name="pictureEditTermoPDF.Size" type="System.Drawing.Size, System.Drawing">
+    <value>105, 94</value>
+  </data>
+  <data name="pictureEditTermoPDF.TabIndex" type="System.Int32, mscorlib">
+    <value>3</value>
+  </data>
+  <data name="&gt;&gt;pictureEditTermoPDF.Name" xml:space="preserve">
+    <value>pictureEditTermoPDF</value>
+  </data>
+  <data name="&gt;&gt;pictureEditTermoPDF.Type" xml:space="preserve">
+    <value>DevExpress.XtraEditors.PictureEdit, DevExpress.XtraEditors.v15.1, Version=15.1.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;pictureEditTermoPDF.Parent" xml:space="preserve">
+    <value>groupBox2</value>
+  </data>
+  <data name="&gt;&gt;pictureEditTermoPDF.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="pictureEditTermoText.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Right</value>
+  </data>
+  <data name="pictureEditTermoText.Location" type="System.Drawing.Point, System.Drawing">
+    <value>24, 59</value>
+  </data>
+  <data name="pictureEditTermoText.Size" type="System.Drawing.Size, System.Drawing">
+    <value>105, 94</value>
+  </data>
+  <data name="pictureEditTermoText.TabIndex" type="System.Int32, mscorlib">
+    <value>2</value>
+  </data>
+  <data name="&gt;&gt;pictureEditTermoText.Name" xml:space="preserve">
+    <value>pictureEditTermoText</value>
+  </data>
+  <data name="&gt;&gt;pictureEditTermoText.Type" xml:space="preserve">
+    <value>DevExpress.XtraEditors.PictureEdit, DevExpress.XtraEditors.v15.1, Version=15.1.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;pictureEditTermoText.Parent" xml:space="preserve">
+    <value>groupBox2</value>
+  </data>
+  <data name="&gt;&gt;pictureEditTermoText.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="&gt;&gt;pictureEditContratoPDF.Name" xml:space="preserve">
+    <value>pictureEditContratoPDF</value>
+  </data>
+  <data name="&gt;&gt;pictureEditContratoPDF.Type" xml:space="preserve">
+    <value>DevExpress.XtraEditors.PictureEdit, DevExpress.XtraEditors.v15.1, Version=15.1.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;pictureEditContratoPDF.Parent" xml:space="preserve">
+    <value>groupBox1</value>
+  </data>
+  <data name="&gt;&gt;pictureEditContratoPDF.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;pictureEditContratoText.Name" xml:space="preserve">
+    <value>pictureEditContratoText</value>
+  </data>
+  <data name="&gt;&gt;pictureEditContratoText.Type" xml:space="preserve">
+    <value>DevExpress.XtraEditors.PictureEdit, DevExpress.XtraEditors.v15.1, Version=15.1.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;pictureEditContratoText.Parent" xml:space="preserve">
+    <value>groupBox1</value>
+  </data>
+  <data name="&gt;&gt;pictureEditContratoText.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="groupBox1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>15, 13</value>
+  </data>
+  <data name="groupBox1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>282, 214</value>
+  </data>
+  <data name="groupBox1.TabIndex" type="System.Int32, mscorlib">
+    <value>43</value>
+  </data>
+  <data name="groupBox1.Text" xml:space="preserve">
+    <value>Contrato</value>
+  </data>
+  <data name="&gt;&gt;groupBox1.Name" xml:space="preserve">
+    <value>groupBox1</value>
+  </data>
+  <data name="&gt;&gt;groupBox1.Type" xml:space="preserve">
+    <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;groupBox1.Parent" xml:space="preserve">
+    <value>xtraTabPageDocumentos</value>
+  </data>
+  <data name="&gt;&gt;groupBox1.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
   <data name="pictureEditContratoPDF.Location" type="System.Drawing.Point, System.Drawing">
     <value>156, 59</value>
   </data>
@@ -2766,7 +3660,7 @@
     <value>Microsoft Sans Serif, 9.75pt</value>
   </data>
   <data name="botaoResetar.Location" type="System.Drawing.Point, System.Drawing">
-    <value>592, 394</value>
+    <value>629, 394</value>
   </data>
   <data name="botaoResetar.Size" type="System.Drawing.Size, System.Drawing">
     <value>75, 30</value>
@@ -2796,7 +3690,7 @@
     <value>6, 13</value>
   </data>
   <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
-    <value>684, 437</value>
+    <value>721, 437</value>
   </data>
   <data name="$this.MinimumSize" type="System.Drawing.Size, System.Drawing">
     <value>700, 476</value>

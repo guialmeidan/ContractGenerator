@@ -44,6 +44,18 @@ namespace Principal.Domain.Entities
         public int QtdParcelas { get; set; }
         public decimal ValorParcialNumerico { get; set; }
         public string ValorParcialExtenso { get; set; }
+        public DateTime Parcela1 { get; set; }
+        public DateTime Parcela2 { get; set; }
+        public DateTime Parcela3 { get; set; }
+        public DateTime Parcela4 { get; set; }
+        public DateTime Parcela5 { get; set; }
+        public DateTime Parcela6 { get; set; }
+        public DateTime Parcela7 { get; set; }
+        public DateTime Parcela8 { get; set; }
+        public DateTime Parcela9 { get; set; }
+        public DateTime Parcela10 { get; set; }
+        public DateTime Parcela11 { get; set; }
+        public DateTime Parcela12 { get; set; }
         public bool ModoBoleto { get; set; }
         public bool ModoCartaoCredito { get; set; }
         public bool ModoCartaoDebito { get; set; }

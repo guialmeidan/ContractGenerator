@@ -96,6 +96,31 @@ namespace Principal.Forms
             this.inputValorExtenso = new DevExpress.XtraEditors.TextEdit();
             this.labelControl18 = new DevExpress.XtraEditors.LabelControl();
             this.inputValorContrato = new DevExpress.XtraEditors.TextEdit();
+            this.xtraTabPageParcelas = new DevExpress.XtraTab.XtraTabPage();
+            this.inputLabelParcela12 = new DevExpress.XtraEditors.LabelControl();
+            this.inputParcela12 = new DevExpress.XtraEditors.DateEdit();
+            this.inputLabelParcela11 = new DevExpress.XtraEditors.LabelControl();
+            this.inputParcela11 = new DevExpress.XtraEditors.DateEdit();
+            this.inputLabelParcela10 = new DevExpress.XtraEditors.LabelControl();
+            this.inputParcela10 = new DevExpress.XtraEditors.DateEdit();
+            this.inputLabelParcela9 = new DevExpress.XtraEditors.LabelControl();
+            this.inputParcela9 = new DevExpress.XtraEditors.DateEdit();
+            this.inputLabelParcela8 = new DevExpress.XtraEditors.LabelControl();
+            this.inputParcela8 = new DevExpress.XtraEditors.DateEdit();
+            this.inputLabelParcela7 = new DevExpress.XtraEditors.LabelControl();
+            this.inputParcela7 = new DevExpress.XtraEditors.DateEdit();
+            this.inputLabelParcela6 = new DevExpress.XtraEditors.LabelControl();
+            this.inputParcela6 = new DevExpress.XtraEditors.DateEdit();
+            this.inputLabelParcela5 = new DevExpress.XtraEditors.LabelControl();
+            this.inputParcela5 = new DevExpress.XtraEditors.DateEdit();
+            this.inputLabelParcela4 = new DevExpress.XtraEditors.LabelControl();
+            this.inputParcela4 = new DevExpress.XtraEditors.DateEdit();
+            this.inputLabelParcela3 = new DevExpress.XtraEditors.LabelControl();
+            this.inputParcela3 = new DevExpress.XtraEditors.DateEdit();
+            this.inputLabelParcela2 = new DevExpress.XtraEditors.LabelControl();
+            this.inputParcela2 = new DevExpress.XtraEditors.DateEdit();
+            this.inputLabelParcela1 = new DevExpress.XtraEditors.LabelControl();
+            this.inputParcela1 = new DevExpress.XtraEditors.DateEdit();
             this.xtraTabPageTestemunhas = new DevExpress.XtraTab.XtraTabPage();
             this.labelControl22 = new DevExpress.XtraEditors.LabelControl();
             this.inputTestemunha2 = new DevExpress.XtraEditors.ButtonEdit();
@@ -155,6 +180,31 @@ namespace Principal.Forms
             ((System.ComponentModel.ISupportInitialize)(this.inputModoPagamento.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.inputValorExtenso.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.inputValorContrato.Properties)).BeginInit();
+            this.xtraTabPageParcelas.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.inputParcela12.Properties.CalendarTimeProperties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.inputParcela12.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.inputParcela11.Properties.CalendarTimeProperties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.inputParcela11.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.inputParcela10.Properties.CalendarTimeProperties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.inputParcela10.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.inputParcela9.Properties.CalendarTimeProperties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.inputParcela9.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.inputParcela8.Properties.CalendarTimeProperties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.inputParcela8.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.inputParcela7.Properties.CalendarTimeProperties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.inputParcela7.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.inputParcela6.Properties.CalendarTimeProperties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.inputParcela6.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.inputParcela5.Properties.CalendarTimeProperties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.inputParcela5.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.inputParcela4.Properties.CalendarTimeProperties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.inputParcela4.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.inputParcela3.Properties.CalendarTimeProperties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.inputParcela3.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.inputParcela2.Properties.CalendarTimeProperties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.inputParcela2.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.inputParcela1.Properties.CalendarTimeProperties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.inputParcela1.Properties)).BeginInit();
             this.xtraTabPageTestemunhas.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.inputTestemunha2.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.inputTestemunha1.Properties)).BeginInit();
@@ -350,8 +400,8 @@ namespace Principal.Forms
             // 
             // labelControl10
             // 
-            resources.ApplyResources(this.labelControl10, "labelControl10");
             this.labelControl10.Appearance.Font = ((System.Drawing.Font)(resources.GetObject("labelControl10.Appearance.Font")));
+            resources.ApplyResources(this.labelControl10, "labelControl10");
             this.labelControl10.Name = "labelControl10";
             // 
             // inputBolsaAuxilio
@@ -440,6 +490,7 @@ namespace Principal.Forms
             this.xtraTabControl.TabPages.AddRange(new DevExpress.XtraTab.XtraTabPage[] {
             this.xtraTabPageVaga,
             this.xtraTabPagePagamento,
+            this.xtraTabPageParcelas,
             this.xtraTabPageTestemunhas,
             this.xtraTabPageDocumentos});
             // 
@@ -489,8 +540,8 @@ namespace Principal.Forms
             // 
             // labelControl25
             // 
-            this.labelControl25.Appearance.Font = ((System.Drawing.Font)(resources.GetObject("labelControl25.Appearance.Font")));
             resources.ApplyResources(this.labelControl25, "labelControl25");
+            this.labelControl25.Appearance.Font = ((System.Drawing.Font)(resources.GetObject("labelControl25.Appearance.Font")));
             this.labelControl25.Name = "labelControl25";
             // 
             // radioGroupPrograma
@@ -580,7 +631,7 @@ namespace Principal.Forms
             this.inputNumeroParcelas.Properties.IsFloatValue = false;
             this.inputNumeroParcelas.Properties.Mask.EditMask = resources.GetString("inputNumeroParcelas.Properties.Mask.EditMask");
             this.inputNumeroParcelas.Properties.MaxValue = new decimal(new int[] {
-            99,
+            12,
             0,
             0,
             0});
@@ -759,6 +810,264 @@ namespace Principal.Forms
             this.inputValorContrato.Properties.Mask.UseMaskAsDisplayFormat = ((bool)(resources.GetObject("inputValorContrato.Properties.Mask.UseMaskAsDisplayFormat")));
             this.inputValorContrato.EditValueChanged += new System.EventHandler(this.alterarValorContrato);
             // 
+            // xtraTabPageParcelas
+            // 
+            this.xtraTabPageParcelas.Controls.Add(this.inputLabelParcela12);
+            this.xtraTabPageParcelas.Controls.Add(this.inputParcela12);
+            this.xtraTabPageParcelas.Controls.Add(this.inputLabelParcela11);
+            this.xtraTabPageParcelas.Controls.Add(this.inputParcela11);
+            this.xtraTabPageParcelas.Controls.Add(this.inputLabelParcela10);
+            this.xtraTabPageParcelas.Controls.Add(this.inputParcela10);
+            this.xtraTabPageParcelas.Controls.Add(this.inputLabelParcela9);
+            this.xtraTabPageParcelas.Controls.Add(this.inputParcela9);
+            this.xtraTabPageParcelas.Controls.Add(this.inputLabelParcela8);
+            this.xtraTabPageParcelas.Controls.Add(this.inputParcela8);
+            this.xtraTabPageParcelas.Controls.Add(this.inputLabelParcela7);
+            this.xtraTabPageParcelas.Controls.Add(this.inputParcela7);
+            this.xtraTabPageParcelas.Controls.Add(this.inputLabelParcela6);
+            this.xtraTabPageParcelas.Controls.Add(this.inputParcela6);
+            this.xtraTabPageParcelas.Controls.Add(this.inputLabelParcela5);
+            this.xtraTabPageParcelas.Controls.Add(this.inputParcela5);
+            this.xtraTabPageParcelas.Controls.Add(this.inputLabelParcela4);
+            this.xtraTabPageParcelas.Controls.Add(this.inputParcela4);
+            this.xtraTabPageParcelas.Controls.Add(this.inputLabelParcela3);
+            this.xtraTabPageParcelas.Controls.Add(this.inputParcela3);
+            this.xtraTabPageParcelas.Controls.Add(this.inputLabelParcela2);
+            this.xtraTabPageParcelas.Controls.Add(this.inputParcela2);
+            this.xtraTabPageParcelas.Controls.Add(this.inputLabelParcela1);
+            this.xtraTabPageParcelas.Controls.Add(this.inputParcela1);
+            this.xtraTabPageParcelas.Name = "xtraTabPageParcelas";
+            resources.ApplyResources(this.xtraTabPageParcelas, "xtraTabPageParcelas");
+            // 
+            // inputLabelParcela12
+            // 
+            resources.ApplyResources(this.inputLabelParcela12, "inputLabelParcela12");
+            this.inputLabelParcela12.Appearance.Font = ((System.Drawing.Font)(resources.GetObject("labelControl36.Appearance.Font")));
+            this.inputLabelParcela12.Name = "inputLabelParcela12";
+            // 
+            // inputParcela12
+            // 
+            resources.ApplyResources(this.inputParcela12, "inputParcela12");
+            this.inputParcela12.Name = "inputParcela12";
+            this.inputParcela12.Properties.Appearance.Font = ((System.Drawing.Font)(resources.GetObject("inputParcela12.Properties.Appearance.Font")));
+            this.inputParcela12.Properties.Appearance.Options.UseFont = true;
+            this.inputParcela12.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(((DevExpress.XtraEditors.Controls.ButtonPredefines)(resources.GetObject("inputParcela12.Properties.Buttons"))))});
+            this.inputParcela12.Properties.CalendarTimeProperties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(((DevExpress.XtraEditors.Controls.ButtonPredefines)(resources.GetObject("inputParcela12.Properties.CalendarTimeProperties.Buttons"))))});
+            this.inputParcela12.Properties.Mask.EditMask = resources.GetString("inputParcela12.Properties.Mask.EditMask");
+            this.inputParcela12.Properties.Mask.UseMaskAsDisplayFormat = ((bool)(resources.GetObject("inputParcela12.Properties.Mask.UseMaskAsDisplayFormat")));
+            // 
+            // inputLabelParcela11
+            // 
+            resources.ApplyResources(this.inputLabelParcela11, "inputLabelParcela11");
+            this.inputLabelParcela11.Appearance.Font = ((System.Drawing.Font)(resources.GetObject("labelControl35.Appearance.Font")));
+            this.inputLabelParcela11.Name = "inputLabelParcela11";
+            // 
+            // inputParcela11
+            // 
+            resources.ApplyResources(this.inputParcela11, "inputParcela11");
+            this.inputParcela11.Name = "inputParcela11";
+            this.inputParcela11.Properties.Appearance.Font = ((System.Drawing.Font)(resources.GetObject("inputParcela11.Properties.Appearance.Font")));
+            this.inputParcela11.Properties.Appearance.Options.UseFont = true;
+            this.inputParcela11.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(((DevExpress.XtraEditors.Controls.ButtonPredefines)(resources.GetObject("inputParcela11.Properties.Buttons"))))});
+            this.inputParcela11.Properties.CalendarTimeProperties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(((DevExpress.XtraEditors.Controls.ButtonPredefines)(resources.GetObject("inputParcela11.Properties.CalendarTimeProperties.Buttons"))))});
+            this.inputParcela11.Properties.Mask.EditMask = resources.GetString("inputParcela11.Properties.Mask.EditMask");
+            this.inputParcela11.Properties.Mask.UseMaskAsDisplayFormat = ((bool)(resources.GetObject("inputParcela11.Properties.Mask.UseMaskAsDisplayFormat")));
+            // 
+            // inputLabelParcela10
+            // 
+            resources.ApplyResources(this.inputLabelParcela10, "inputLabelParcela10");
+            this.inputLabelParcela10.Appearance.Font = ((System.Drawing.Font)(resources.GetObject("labelControl34.Appearance.Font")));
+            this.inputLabelParcela10.Name = "inputLabelParcela10";
+            // 
+            // inputParcela10
+            // 
+            resources.ApplyResources(this.inputParcela10, "inputParcela10");
+            this.inputParcela10.Name = "inputParcela10";
+            this.inputParcela10.Properties.Appearance.Font = ((System.Drawing.Font)(resources.GetObject("inputParcela10.Properties.Appearance.Font")));
+            this.inputParcela10.Properties.Appearance.Options.UseFont = true;
+            this.inputParcela10.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(((DevExpress.XtraEditors.Controls.ButtonPredefines)(resources.GetObject("inputParcela10.Properties.Buttons"))))});
+            this.inputParcela10.Properties.CalendarTimeProperties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(((DevExpress.XtraEditors.Controls.ButtonPredefines)(resources.GetObject("inputParcela10.Properties.CalendarTimeProperties.Buttons"))))});
+            this.inputParcela10.Properties.Mask.EditMask = resources.GetString("inputParcela10.Properties.Mask.EditMask");
+            this.inputParcela10.Properties.Mask.UseMaskAsDisplayFormat = ((bool)(resources.GetObject("inputParcela10.Properties.Mask.UseMaskAsDisplayFormat")));
+            // 
+            // inputLabelParcela9
+            // 
+            resources.ApplyResources(this.inputLabelParcela9, "inputLabelParcela9");
+            this.inputLabelParcela9.Appearance.Font = ((System.Drawing.Font)(resources.GetObject("labelControl33.Appearance.Font")));
+            this.inputLabelParcela9.Name = "inputLabelParcela9";
+
+            // 
+            // inputParcela9
+            // 
+            resources.ApplyResources(this.inputParcela9, "inputParcela9");
+            this.inputParcela9.Name = "inputParcela9";
+            this.inputParcela9.Properties.Appearance.Font = ((System.Drawing.Font)(resources.GetObject("inputParcela9.Properties.Appearance.Font")));
+            this.inputParcela9.Properties.Appearance.Options.UseFont = true;
+            this.inputParcela9.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(((DevExpress.XtraEditors.Controls.ButtonPredefines)(resources.GetObject("inputParcela9.Properties.Buttons"))))});
+            this.inputParcela9.Properties.CalendarTimeProperties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(((DevExpress.XtraEditors.Controls.ButtonPredefines)(resources.GetObject("inputParcela9.Properties.CalendarTimeProperties.Buttons"))))});
+            this.inputParcela9.Properties.Mask.EditMask = resources.GetString("inputParcela9.Properties.Mask.EditMask");
+            this.inputParcela9.Properties.Mask.UseMaskAsDisplayFormat = ((bool)(resources.GetObject("inputParcela9.Properties.Mask.UseMaskAsDisplayFormat")));
+            // 
+            // inputLabelParcela8
+            // 
+            resources.ApplyResources(this.inputLabelParcela8, "inputLabelParcela8");
+            this.inputLabelParcela8.Appearance.Font = ((System.Drawing.Font)(resources.GetObject("labelControl32.Appearance.Font")));
+            this.inputLabelParcela8.Name = "inputLabelParcela8";
+            // 
+            // inputParcela8
+            // 
+            resources.ApplyResources(this.inputParcela8, "inputParcela8");
+            this.inputParcela8.Name = "inputParcela8";
+            this.inputParcela8.Properties.Appearance.Font = ((System.Drawing.Font)(resources.GetObject("inputParcela8.Properties.Appearance.Font")));
+            this.inputParcela8.Properties.Appearance.Options.UseFont = true;
+            this.inputParcela8.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(((DevExpress.XtraEditors.Controls.ButtonPredefines)(resources.GetObject("inputParcela8.Properties.Buttons"))))});
+            this.inputParcela8.Properties.CalendarTimeProperties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(((DevExpress.XtraEditors.Controls.ButtonPredefines)(resources.GetObject("inputParcela8.Properties.CalendarTimeProperties.Buttons"))))});
+            this.inputParcela8.Properties.Mask.EditMask = resources.GetString("inputParcela8.Properties.Mask.EditMask");
+            this.inputParcela8.Properties.Mask.UseMaskAsDisplayFormat = ((bool)(resources.GetObject("inputParcela8.Properties.Mask.UseMaskAsDisplayFormat")));
+            // 
+            // inputLabelParcela7
+            // 
+            resources.ApplyResources(this.inputLabelParcela7, "inputLabelParcela7");
+            this.inputLabelParcela7.Appearance.Font = ((System.Drawing.Font)(resources.GetObject("labelControl31.Appearance.Font")));
+            this.inputLabelParcela7.Name = "inputLabelParcela7";
+            // 
+            // inputParcela7
+            // 
+            resources.ApplyResources(this.inputParcela7, "inputParcela7");
+            this.inputParcela7.Name = "inputParcela7";
+            this.inputParcela7.Properties.Appearance.Font = ((System.Drawing.Font)(resources.GetObject("inputParcela7.Properties.Appearance.Font")));
+            this.inputParcela7.Properties.Appearance.Options.UseFont = true;
+            this.inputParcela7.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(((DevExpress.XtraEditors.Controls.ButtonPredefines)(resources.GetObject("inputParcela7.Properties.Buttons"))))});
+            this.inputParcela7.Properties.CalendarTimeProperties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(((DevExpress.XtraEditors.Controls.ButtonPredefines)(resources.GetObject("inputParcela7.Properties.CalendarTimeProperties.Buttons"))))});
+            this.inputParcela7.Properties.Mask.EditMask = resources.GetString("inputParcela7.Properties.Mask.EditMask");
+            this.inputParcela7.Properties.Mask.UseMaskAsDisplayFormat = ((bool)(resources.GetObject("inputParcela7.Properties.Mask.UseMaskAsDisplayFormat")));
+            // 
+            // inputLabelParcela6
+            // 
+            this.inputLabelParcela6.Appearance.Font = ((System.Drawing.Font)(resources.GetObject("labelControl30.Appearance.Font")));
+            resources.ApplyResources(this.inputLabelParcela6, "inputLabelParcela6");
+            this.inputLabelParcela6.Name = "inputLabelParcela6";
+            // 
+            // inputParcela6
+            // 
+            resources.ApplyResources(this.inputParcela6, "inputParcela6");
+            this.inputParcela6.Name = "inputParcela6";
+            this.inputParcela6.Properties.Appearance.Font = ((System.Drawing.Font)(resources.GetObject("inputParcela6.Properties.Appearance.Font")));
+            this.inputParcela6.Properties.Appearance.Options.UseFont = true;
+            this.inputParcela6.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(((DevExpress.XtraEditors.Controls.ButtonPredefines)(resources.GetObject("inputParcela6.Properties.Buttons"))))});
+            this.inputParcela6.Properties.CalendarTimeProperties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(((DevExpress.XtraEditors.Controls.ButtonPredefines)(resources.GetObject("inputParcela6.Properties.CalendarTimeProperties.Buttons"))))});
+            this.inputParcela6.Properties.Mask.EditMask = resources.GetString("inputParcela6.Properties.Mask.EditMask");
+            this.inputParcela6.Properties.Mask.UseMaskAsDisplayFormat = ((bool)(resources.GetObject("inputParcela6.Properties.Mask.UseMaskAsDisplayFormat")));
+            // 
+            // inputLabelParcela5
+            // 
+            this.inputLabelParcela5.Appearance.Font = ((System.Drawing.Font)(resources.GetObject("labelControl29.Appearance.Font")));
+            resources.ApplyResources(this.inputLabelParcela5, "inputLabelParcela5");
+            this.inputLabelParcela5.Name = "inputLabelParcela5";
+            // 
+            // inputParcela5
+            // 
+            resources.ApplyResources(this.inputParcela5, "inputParcela5");
+            this.inputParcela5.Name = "inputParcela5";
+            this.inputParcela5.Properties.Appearance.Font = ((System.Drawing.Font)(resources.GetObject("inputParcela5.Properties.Appearance.Font")));
+            this.inputParcela5.Properties.Appearance.Options.UseFont = true;
+            this.inputParcela5.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(((DevExpress.XtraEditors.Controls.ButtonPredefines)(resources.GetObject("inputParcela5.Properties.Buttons"))))});
+            this.inputParcela5.Properties.CalendarTimeProperties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(((DevExpress.XtraEditors.Controls.ButtonPredefines)(resources.GetObject("inputParcela5.Properties.CalendarTimeProperties.Buttons"))))});
+            this.inputParcela5.Properties.Mask.EditMask = resources.GetString("inputParcela5.Properties.Mask.EditMask");
+            this.inputParcela5.Properties.Mask.UseMaskAsDisplayFormat = ((bool)(resources.GetObject("inputParcela5.Properties.Mask.UseMaskAsDisplayFormat")));
+            // 
+            // inputLabelParcela4
+            // 
+            this.inputLabelParcela4.Appearance.Font = ((System.Drawing.Font)(resources.GetObject("labelControl28.Appearance.Font")));
+            resources.ApplyResources(this.inputLabelParcela4, "inputLabelParcela4");
+            this.inputLabelParcela4.Name = "inputLabelParcela4";
+            // 
+            // inputParcela4
+            // 
+            resources.ApplyResources(this.inputParcela4, "inputParcela4");
+            this.inputParcela4.Name = "inputParcela4";
+            this.inputParcela4.Properties.Appearance.Font = ((System.Drawing.Font)(resources.GetObject("inputParcela4.Properties.Appearance.Font")));
+            this.inputParcela4.Properties.Appearance.Options.UseFont = true;
+            this.inputParcela4.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(((DevExpress.XtraEditors.Controls.ButtonPredefines)(resources.GetObject("inputParcela4.Properties.Buttons"))))});
+            this.inputParcela4.Properties.CalendarTimeProperties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(((DevExpress.XtraEditors.Controls.ButtonPredefines)(resources.GetObject("inputParcela4.Properties.CalendarTimeProperties.Buttons"))))});
+            this.inputParcela4.Properties.Mask.EditMask = resources.GetString("inputParcela4.Properties.Mask.EditMask");
+            this.inputParcela4.Properties.Mask.UseMaskAsDisplayFormat = ((bool)(resources.GetObject("inputParcela4.Properties.Mask.UseMaskAsDisplayFormat")));
+            // 
+            // inputLabelParcela3
+            // 
+            this.inputLabelParcela3.Appearance.Font = ((System.Drawing.Font)(resources.GetObject("labelControl27.Appearance.Font")));
+            resources.ApplyResources(this.inputLabelParcela3, "inputLabelParcela3");
+            this.inputLabelParcela3.Name = "inputLabelParcela3";
+            // 
+            // inputParcela3
+            // 
+            resources.ApplyResources(this.inputParcela3, "inputParcela3");
+            this.inputParcela3.Name = "inputParcela3";
+            this.inputParcela3.Properties.Appearance.Font = ((System.Drawing.Font)(resources.GetObject("inputParcela3.Properties.Appearance.Font")));
+            this.inputParcela3.Properties.Appearance.Options.UseFont = true;
+            this.inputParcela3.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(((DevExpress.XtraEditors.Controls.ButtonPredefines)(resources.GetObject("inputParcela3.Properties.Buttons"))))});
+            this.inputParcela3.Properties.CalendarTimeProperties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(((DevExpress.XtraEditors.Controls.ButtonPredefines)(resources.GetObject("inputParcela3.Properties.CalendarTimeProperties.Buttons"))))});
+            this.inputParcela3.Properties.Mask.EditMask = resources.GetString("inputParcela3.Properties.Mask.EditMask");
+            this.inputParcela3.Properties.Mask.UseMaskAsDisplayFormat = ((bool)(resources.GetObject("inputParcela3.Properties.Mask.UseMaskAsDisplayFormat")));
+            // 
+            // inputLabelParcela2
+            // 
+            this.inputLabelParcela2.Appearance.Font = ((System.Drawing.Font)(resources.GetObject("labelControl26.Appearance.Font")));
+            resources.ApplyResources(this.inputLabelParcela2, "inputLabelParcela2");
+            this.inputLabelParcela2.Name = "inputLabelParcela2";
+            // 
+            // inputParcela2
+            // 
+            resources.ApplyResources(this.inputParcela2, "inputParcela2");
+            this.inputParcela2.Name = "inputParcela2";
+            this.inputParcela2.Properties.Appearance.Font = ((System.Drawing.Font)(resources.GetObject("inputParcela2.Properties.Appearance.Font")));
+            this.inputParcela2.Properties.Appearance.Options.UseFont = true;
+            this.inputParcela2.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(((DevExpress.XtraEditors.Controls.ButtonPredefines)(resources.GetObject("inputParcela2.Properties.Buttons"))))});
+            this.inputParcela2.Properties.CalendarTimeProperties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(((DevExpress.XtraEditors.Controls.ButtonPredefines)(resources.GetObject("inputParcela2.Properties.CalendarTimeProperties.Buttons"))))});
+            this.inputParcela2.Properties.Mask.EditMask = resources.GetString("inputParcela2.Properties.Mask.EditMask");
+            this.inputParcela2.Properties.Mask.UseMaskAsDisplayFormat = ((bool)(resources.GetObject("inputParcela2.Properties.Mask.UseMaskAsDisplayFormat")));
+            // 
+            // inputLabelParcela1
+            // 
+            this.inputLabelParcela1.Appearance.Font = ((System.Drawing.Font)(resources.GetObject("labelControl20.Appearance.Font")));
+            resources.ApplyResources(this.inputLabelParcela1, "inputLabelParcela1");
+            this.inputLabelParcela1.Name = "inputLabelParcela1";
+            // 
+            // inputParcela1
+            // 
+            resources.ApplyResources(this.inputParcela1, "inputParcela1");
+            this.inputParcela1.Name = "inputParcela1";
+            this.inputParcela1.Properties.Appearance.Font = ((System.Drawing.Font)(resources.GetObject("inputParcela1.Properties.Appearance.Font")));
+            this.inputParcela1.Properties.Appearance.Options.UseFont = true;
+            this.inputParcela1.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(((DevExpress.XtraEditors.Controls.ButtonPredefines)(resources.GetObject("inputParcela1.Properties.Buttons"))))});
+            this.inputParcela1.Properties.CalendarTimeProperties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(((DevExpress.XtraEditors.Controls.ButtonPredefines)(resources.GetObject("inputParcela1.Properties.CalendarTimeProperties.Buttons"))))});
+            this.inputParcela1.Properties.Mask.EditMask = resources.GetString("inputParcela1.Properties.Mask.EditMask");
+            this.inputParcela1.Properties.Mask.UseMaskAsDisplayFormat = ((bool)(resources.GetObject("inputParcela1.Properties.Mask.UseMaskAsDisplayFormat")));
+            // 
             // xtraTabPageTestemunhas
             // 
             this.xtraTabPageTestemunhas.Controls.Add(this.labelControl22);
@@ -884,17 +1193,6 @@ namespace Principal.Forms
             this.botaoResetar.Appearance.Options.UseFont = true;
             this.botaoResetar.Name = "botaoResetar";
             this.botaoResetar.Click += new System.EventHandler(this.botaoResetar_Click);
-
-            this.inputNomeEP.ButtonClick += inputNomeEP_ButtonClick;
-            this.inputNomeResponsavel.ButtonClick += inputNomeResponsavel_ButtonClick;
-            this.inputTestemunha1.ButtonClick += inputTestemunha1_ButtonClick;
-            this.inputTestemunha2.ButtonClick += inputTestemunha2_ButtonClick;
-
-            //this.inputNomeEP.ButtonClick += inputNomeEP_ButtonClick;
-            //this.inputNomeResponsavel.ButtonClick += inputNomeResponsavel_ButtonClick;
-            //this.inputTestemunha1.ButtonClick += inputTestemunha1_ButtonClick;
-            //this.inputTestemunha2.ButtonClick += inputTestemunha2_ButtonClick;
-
             // 
             // RegistroApproved
             // 
@@ -954,6 +1252,32 @@ namespace Principal.Forms
             ((System.ComponentModel.ISupportInitialize)(this.inputModoPagamento.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.inputValorExtenso.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.inputValorContrato.Properties)).EndInit();
+            this.xtraTabPageParcelas.ResumeLayout(false);
+            this.xtraTabPageParcelas.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.inputParcela12.Properties.CalendarTimeProperties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.inputParcela12.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.inputParcela11.Properties.CalendarTimeProperties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.inputParcela11.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.inputParcela10.Properties.CalendarTimeProperties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.inputParcela10.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.inputParcela9.Properties.CalendarTimeProperties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.inputParcela9.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.inputParcela8.Properties.CalendarTimeProperties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.inputParcela8.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.inputParcela7.Properties.CalendarTimeProperties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.inputParcela7.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.inputParcela6.Properties.CalendarTimeProperties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.inputParcela6.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.inputParcela5.Properties.CalendarTimeProperties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.inputParcela5.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.inputParcela4.Properties.CalendarTimeProperties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.inputParcela4.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.inputParcela3.Properties.CalendarTimeProperties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.inputParcela3.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.inputParcela2.Properties.CalendarTimeProperties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.inputParcela2.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.inputParcela1.Properties.CalendarTimeProperties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.inputParcela1.Properties)).EndInit();
             this.xtraTabPageTestemunhas.ResumeLayout(false);
             this.xtraTabPageTestemunhas.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.inputTestemunha2.Properties)).EndInit();
@@ -966,6 +1290,11 @@ namespace Principal.Forms
             ((System.ComponentModel.ISupportInitialize)(this.pictureEditContratoPDF.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureEditContratoText.Properties)).EndInit();
             this.ResumeLayout(false);
+
+            this.inputNomeEP.ButtonClick += inputNomeEP_ButtonClick;
+            this.inputNomeResponsavel.ButtonClick += inputNomeResponsavel_ButtonClick;
+            this.inputTestemunha1.ButtonClick += inputTestemunha1_ButtonClick;
+            this.inputTestemunha2.ButtonClick += inputTestemunha2_ButtonClick;
 
         }
         #endregion
@@ -1049,5 +1378,30 @@ namespace Principal.Forms
         private DevExpress.XtraEditors.PictureEdit pictureEditContratoPDF;
         private DevExpress.XtraEditors.PictureEdit pictureEditTermoPDF;
         private DevExpress.XtraEditors.PictureEdit pictureEditTermoText;
+        private DevExpress.XtraTab.XtraTabPage xtraTabPageParcelas;
+        private DevExpress.XtraEditors.LabelControl inputLabelParcela1;
+        private DevExpress.XtraEditors.DateEdit inputParcela1;
+        private DevExpress.XtraEditors.LabelControl inputLabelParcela12;
+        private DevExpress.XtraEditors.DateEdit inputParcela12;
+        private DevExpress.XtraEditors.LabelControl inputLabelParcela11;
+        private DevExpress.XtraEditors.DateEdit inputParcela11;
+        private DevExpress.XtraEditors.LabelControl inputLabelParcela10;
+        private DevExpress.XtraEditors.DateEdit inputParcela10;
+        private DevExpress.XtraEditors.LabelControl inputLabelParcela9;
+        private DevExpress.XtraEditors.DateEdit inputParcela9;
+        private DevExpress.XtraEditors.LabelControl inputLabelParcela8;
+        private DevExpress.XtraEditors.DateEdit inputParcela8;
+        private DevExpress.XtraEditors.LabelControl inputLabelParcela7;
+        private DevExpress.XtraEditors.DateEdit inputParcela7;
+        private DevExpress.XtraEditors.LabelControl inputLabelParcela6;
+        private DevExpress.XtraEditors.DateEdit inputParcela6;
+        private DevExpress.XtraEditors.LabelControl inputLabelParcela5;
+        private DevExpress.XtraEditors.DateEdit inputParcela5;
+        private DevExpress.XtraEditors.LabelControl inputLabelParcela4;
+        private DevExpress.XtraEditors.DateEdit inputParcela4;
+        private DevExpress.XtraEditors.LabelControl inputLabelParcela3;
+        private DevExpress.XtraEditors.DateEdit inputParcela3;
+        private DevExpress.XtraEditors.LabelControl inputLabelParcela2;
+        private DevExpress.XtraEditors.DateEdit inputParcela2;
     }
 }

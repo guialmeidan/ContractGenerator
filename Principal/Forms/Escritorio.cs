@@ -312,10 +312,5 @@ namespace Principal.Forms
             }
                 
         }
-
-        private void inputLCP_EditValueChanged_1(object sender, EventArgs e)
-        {
-
-        }
     }
 }

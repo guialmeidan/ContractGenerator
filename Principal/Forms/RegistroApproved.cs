@@ -21,14 +21,14 @@ namespace Principal.Forms
     {
         ListaApproveds _formListaApproveds;
         private IApprovedService _servicoApproved;
-        private IPessoaRepositorio _repositorioPessoa;        
+        private IPessoaRepositorio _repositorioPessoa;
         private IEscritorioRepositorio _repositorioEscritorio;
         private IOpportunityRepository _repositorioOpportunity;
         private ITokenPublicoRepositorio _repositorioTokenPublico;
         private ITestemunhaRepositorio _repositorioTestemunha;
         private Domain.Entities.Escritorio _escritorio;
         private Domain.Entities.TokenPublico _token;
-        private Domain.Entities.Testemunha _testemunha;        
+        private Domain.Entities.Testemunha _testemunha;
 
         private Approved _approved;
 
@@ -60,17 +60,17 @@ namespace Principal.Forms
             _operacao = operacao;
             _documento = false;
             InitializeComponent();
-            this.Text = "Registro de Approved";
+            this.Text = "Registro de Approval";
             _approved = approved;
             _servicoApproved = AppCore.Container.Resolve<IApprovedService>();
             _repositorioPessoa = AppCore.Container.Resolve<IPessoaRepositorio>();
             _repositorioEscritorio = AppCore.Container.Resolve<IEscritorioRepositorio>();
             _repositorioOpportunity = AppCore.Container.Resolve<IOpportunityRepository>();
             _repositorioTokenPublico = AppCore.Container.Resolve<ITokenPublicoRepositorio>();
-            _repositorioTestemunha = AppCore.Container.Resolve<ITestemunhaRepositorio>();            
+            _repositorioTestemunha = AppCore.Container.Resolve<ITestemunhaRepositorio>();
             _escritorio = _repositorioEscritorio.ObterEscritorio();
             _token = _repositorioTokenPublico.ObterToken();
-            _testemunha = _repositorioTestemunha.ObterTestemunhas();            
+            _testemunha = _repositorioTestemunha.ObterTestemunhas();
 
             if (_operacao == 1)
             {
@@ -119,9 +119,21 @@ namespace Principal.Forms
                 inputModoDinheiro.Checked = approved.ModoDinheiro;
                 inputModoPagSeguro.Checked = approved.ModoPagSeguro;
                 inputModoTransferencia.Checked = approved.ModoTransferencia;
+                inputParcela1.Text = approved.Parcela1.ToString();
+                inputParcela2.Text = approved.Parcela2.ToString();
+                inputParcela3.Text = approved.Parcela3.ToString();
+                inputParcela4.Text = approved.Parcela4.ToString();
+                inputParcela5.Text = approved.Parcela5.ToString();
+                inputParcela6.Text = approved.Parcela6.ToString();
+                inputParcela7.Text = approved.Parcela7.ToString();
+                inputParcela8.Text = approved.Parcela8.ToString();
+                inputParcela9.Text = approved.Parcela9.ToString();
+                inputParcela10.Text = approved.Parcela10.ToString();
+                inputParcela11.Text = approved.Parcela11.ToString();
+                inputParcela12.Text = approved.Parcela12.ToString();
                 inputTestemunha1.Text = approved.NomeTestemunha1;
                 inputTestemunha2.Text = approved.NomeTestemunha2;
-                if(approved.TipoPagamento != 1)
+                if (approved.TipoPagamento != 1)
                     mostrarCamposParcelas(false);
                 _documento = true;
             }
@@ -158,10 +170,8 @@ namespace Principal.Forms
             inputValorParcial.Text = "";
             inputValorParcialExtenso.Text = "";
             resetarModosPagamento();
-            inputTestemunha1.Text = "";
-            inputTestemunha2.Text = "";
+            exibirCamposParcela(0);
             _documento = false;
-
             mostrarCamposParcelas(false);
             obterTestemunhas();
         }
@@ -224,6 +234,18 @@ namespace Principal.Forms
                             ModoDinheiro = inputModoDinheiro.Checked,
                             ModoPagSeguro = inputModoPagSeguro.Checked,
                             ModoTransferencia = inputModoTransferencia.Checked,
+                            Parcela1 = inputParcela1.DateTime,
+                            Parcela2 = inputParcela2.DateTime,
+                            Parcela3 = inputParcela3.DateTime,
+                            Parcela4 = inputParcela4.DateTime,
+                            Parcela5 = inputParcela5.DateTime,
+                            Parcela6 = inputParcela6.DateTime,
+                            Parcela7 = inputParcela7.DateTime,
+                            Parcela8 = inputParcela8.DateTime,
+                            Parcela9 = inputParcela9.DateTime,
+                            Parcela10 = inputParcela10.DateTime,
+                            Parcela11 = inputParcela11.DateTime,
+                            Parcela12 = inputParcela12.DateTime,
                             IdTestemunha1 = IDTestemunha1,
                             NomeTestemunha1 = inputTestemunha1.Text,
                             IdTestemunha2 = IDTestemunha2,
@@ -274,12 +296,24 @@ namespace Principal.Forms
                         _approved.ModoDinheiro = inputModoDinheiro.Checked;
                         _approved.ModoPagSeguro = inputModoPagSeguro.Checked;
                         _approved.ModoTransferencia = inputModoTransferencia.Checked;
+                        _approved.Parcela1 = inputParcela1.DateTime;
+                        _approved.Parcela2 = inputParcela2.DateTime;
+                        _approved.Parcela3 = inputParcela3.DateTime;
+                        _approved.Parcela4 = inputParcela4.DateTime;
+                        _approved.Parcela5 = inputParcela5.DateTime;
+                        _approved.Parcela6 = inputParcela6.DateTime;
+                        _approved.Parcela7 = inputParcela7.DateTime;
+                        _approved.Parcela8 = inputParcela8.DateTime;
+                        _approved.Parcela9 = inputParcela9.DateTime;
+                        _approved.Parcela10 = inputParcela10.DateTime;
+                        _approved.Parcela11 = inputParcela11.DateTime;
+                        _approved.Parcela12 = inputParcela12.DateTime;
                         _approved.IdTestemunha1 = IDTestemunha1;
                         _approved.NomeTestemunha1 = inputTestemunha1.Text;
                         _approved.IdTestemunha2 = IDTestemunha2;
                         _approved.NomeTestemunha2 = inputTestemunha2.Text;
 
-                        _servicoApproved.Atualizar(_approved);                        
+                        _servicoApproved.Atualizar(_approved);
                     }
 
                     XtraMessageBox.Show("Registro gravado!\n", "Sucesso", MessageBoxButtons.OK, MessageBoxIcon.Information);
@@ -310,7 +344,7 @@ namespace Principal.Forms
                 XtraMessageBox.Show("Informe o EP!", "Cadastro Incompleto", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 flag = 1;
             }
-            else 
+            else
             if (inputDataAPD.Text == "")
             {
                 XtraMessageBox.Show("Informe a data de approved!", "Cadastro Incompleto", MessageBoxButtons.OK, MessageBoxIcon.Error);
@@ -437,38 +471,49 @@ namespace Principal.Forms
                 flag = 1;
             }
             else
-            if (!verificarSeExisteModoPagamento())
-                if (inputModoPagamento.SelectedIndex == 0 || inputModoPagamento.SelectedIndex == 1)
-                {
+            if (!verificarSeExisteModoPagamento() && (inputModoPagamento.SelectedIndex == 0 || inputModoPagamento.SelectedIndex == 1))
+            {
                 XtraMessageBox.Show("Selecione pelo menos uma forma de pagamento!", "Cadastro Incompleto", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 flag = 1;
-                }
-                else
-                if (inputModoPagamento.SelectedIndex == 1)
-                    if(inputNumeroParcelas.Text == "")
-                    {
-                    XtraMessageBox.Show("Informe em quantas parcelas o pagamento foi parcelado!", "Cadastro Incompleto", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                    flag = 1;
-                    }
-
-             else
-             if(inputValorParcial.Text == "" || inputValorParcialExtenso.Text == "")
-                    {
-                        XtraMessageBox.Show("Informe o valor parcial referente a primeira parcela!", "Cadastro Incompleto", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                        flag = 1;
-                    }
-             else if (inputValorContrato.Text == "" || inputValorExtenso.Text == "")
-             {
+            }
+            else
+             if (inputModoPagamento.SelectedIndex == 1 && inputNumeroParcelas.Text == "")
+            {
+                XtraMessageBox.Show("Informe em quantas parcelas o pagamento foi parcelado!", "Cadastro Incompleto", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                flag = 1;
+            }
+            else
+             if (inputValorParcial.Text == "" || inputValorParcialExtenso.Text == "")
+            {
+                XtraMessageBox.Show("Informe o valor parcial referente a primeira parcela!", "Cadastro Incompleto", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                flag = 1;
+            }
+            else if (inputValorContrato.Text == "" || inputValorExtenso.Text == "")
+            {
                 XtraMessageBox.Show("Informe o valor do contrato!", "Cadastro Incompleto", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 flag = 1;
-             }
-            else 
-            if (IDTestemunha1 == 0 || IDTestemunha2 == 0)
+            }
+            else
+           if (IDTestemunha1 == 0 || IDTestemunha2 == 0)
             {
                 XtraMessageBox.Show("Informe as testemunhas do contrato!", "Cadastro Incompleto", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 flag = 1;
             }
-            else if ((inputDataFim.DateTime - inputDataInicio.DateTime).TotalDays < 42)
+            else
+           if (IDTestemunha1 == IDTestemunha2)
+            {
+                XtraMessageBox.Show("Informe testemunhas diferentes!", "Cadastro Incompleto", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                flag = 1;
+            }
+            else
+           if (IDTestemunha1 == IDEP || IDTestemunha2 == IDEP)
+            {
+                XtraMessageBox.Show("EP não pode ser testemunha!", "Cadastro Incompleto", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                flag = 1;
+            }
+
+            else 
+            if ((inputDataFim.DateTime - inputDataInicio.DateTime).TotalDays < 42)
             {
                 XtraMessageBox.Show("O intercâmbio possui menos que 6 semanas de duração!", "Atenção", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
@@ -490,7 +535,7 @@ namespace Principal.Forms
             var pessoas = _repositorioPessoa.ListarTodasPessoas();
             var form = new SelecionarPessoa(pessoas);
             form.ShowDialog(MdiParent);
-            
+
             if (form.SelectedItem.Id != 0)
             {
                 IDEP = form.SelectedItem.Id;
@@ -525,7 +570,7 @@ namespace Principal.Forms
             var pessoas = _repositorioPessoa.ListarTodasPessoas();
             var form = new SelecionarPessoa(pessoas);
             form.ShowDialog(MdiParent);
-            
+
             if (form.SelectedItem.Id != 0)
             {
                 IDTestemunha1 = form.SelectedItem.Id;
@@ -540,14 +585,14 @@ namespace Principal.Forms
             var pessoas = _repositorioPessoa.ListarTodasPessoas();
             var form = new SelecionarPessoa(pessoas);
             form.ShowDialog(MdiParent);
-            
+
             if (form.SelectedItem.Id != 0)
             {
                 IDTestemunha2 = form.SelectedItem.Id;
                 Testemunha2Nome = form.SelectedItem.Nome;
                 inputTestemunha2.Text = form.SelectedItem.Nome + " " + form.SelectedItem.Sobrenome;
             }
-                
+
         }
 
         private void botaoPesquisar_Click(object sender, EventArgs e)
@@ -657,8 +702,11 @@ namespace Principal.Forms
             {
                 valorContrato = valorContrato / Convert.ToInt32(inputNumeroParcelas.Value);
                 inputValorParcial.Text = valorContrato.ToString();
+                exibirCamposParcela(Convert.ToInt32(inputNumeroParcelas.Value));
             }
         }
+
+
 
         private void mostrarCamposParcelas(bool flag)
         {
@@ -668,6 +716,15 @@ namespace Principal.Forms
             inputValorParcial.Visible = flag;
             labelControlValorParcialExtenso.Visible = flag;
             inputValorParcialExtenso.Visible = flag;
+
+            if(flag == true)
+            {
+                exibirCamposParcela(Convert.ToInt32(inputNumeroParcelas.Value.ToString()));
+            }else
+            {
+                exibirCamposParcela(0);
+            }
+
         }
 
         private void atribuirTestemunhas(object sender, EventArgs e)
@@ -816,12 +873,159 @@ namespace Principal.Forms
 
         private void validarNovoApproved()
         {
-                    
-                            if (_documento == false)
+            if (_documento == false)
             {
                 XtraMessageBox.Show("Salve o registro antes de prosseguir!", "Ação não permitida!", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
+
+        private void exibirCamposParcela(int quantosExibir)
+        {
+            if (quantosExibir >= 1)
+            {
+                inputParcela1.Visible = true;
+                inputLabelParcela1.Visible = true;
+            }
+            else
+            {
+                inputParcela1.Text = "";
+                inputParcela1.Visible = false;
+                inputLabelParcela1.Visible = false;
+            }
+
+            if (quantosExibir >= 2)
+            {
+                inputParcela2.Visible = true;
+                inputLabelParcela2.Visible = true;
+            }
+            else
+            {
+                inputParcela2.Text = "";
+                inputParcela2.Visible = false;
+                inputLabelParcela2.Visible = false;
+            }
+
+            if (quantosExibir >= 3)
+            {                
+                inputParcela3.Visible = true;
+                inputLabelParcela3.Visible = true;
+            }
+            else
+            {
+                inputParcela3.Text = "";
+                inputParcela3.Visible = false;
+                inputLabelParcela3.Visible = false;
+            }
+
+            if (quantosExibir >= 4)
+            {
+                inputParcela4.Visible = true;
+                inputLabelParcela4.Visible = true;
+            }
+            else
+            {
+                inputParcela4.Text = "";
+                inputParcela4.Visible = false;
+                inputLabelParcela4.Visible = false;
+            }
+
+            if (quantosExibir >= 5)
+            {
+                inputParcela5.Visible = true;
+                inputLabelParcela5.Visible = true;
+            }
+            else
+            {
+                inputParcela5.Text = "";
+                inputParcela5.Visible = false;
+                inputLabelParcela5.Visible = false;
+            }
+
+            if (quantosExibir >= 6)
+            {
+                inputParcela6.Visible = true;
+                inputLabelParcela6.Visible = true;
+            }
+            else
+            {
+                inputParcela6.Text = "";
+                inputParcela6.Visible = false;
+                inputLabelParcela6.Visible = false;
+            }
+
+            if (quantosExibir >= 7)
+            {
+                inputParcela7.Visible = true;
+                inputLabelParcela7.Visible = true;
+            }
+            else
+            {
+                inputParcela7.Text = "";
+                inputParcela7.Visible = false;
+                inputLabelParcela7.Visible = false;
+            }
+
+            if (quantosExibir >= 8)
+            {
+                inputParcela8.Visible = true;
+                inputLabelParcela8.Visible = true;
+            }
+            else
+            {
+                inputParcela8.Text = "";
+                inputParcela8.Visible = false;
+                inputLabelParcela8.Visible = false;
+            }
+
+            if (quantosExibir >= 9)
+            {
+                inputParcela9.Visible = true;
+                inputLabelParcela9.Visible = true;
+            }
+            else
+            {
+                inputParcela9.Text = "";
+                inputParcela9.Visible = false;
+                inputLabelParcela9.Visible = false;
+            }
+
+            if (quantosExibir >= 10)
+            {
+                inputParcela10.Visible = true;
+                inputLabelParcela10.Visible = true;
+            }
+            else
+            {
+                inputParcela10.Text = "";
+                inputParcela10.Visible = false;
+                inputLabelParcela10.Visible = false;
+            }
+
+            if (quantosExibir >= 11)
+            {
+                inputParcela11.Visible = true;
+                inputLabelParcela11.Visible = true;
+            }
+            else
+            {
+                inputParcela11.Text = "";
+                inputParcela11.Visible = false;
+                inputLabelParcela11.Visible = false;
+            }
+
+            if (quantosExibir >= 12)
+            {
+                inputParcela12.Visible = true;
+                inputLabelParcela12.Visible = true;
+            }
+            else
+            {
+                inputParcela12.Text = "";
+                inputParcela12.Visible = false;
+                inputLabelParcela12.Visible = false;
+            }
+        }
+
     }
 }
 

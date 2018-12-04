@@ -147,7 +147,7 @@ namespace Principal.Forms
                             NumeroDocumento = inputNumeroDoc.Text,
                             OrgaoExpedidor = inputOrgaoExpedidor.Text,
                             UFEndereco = inputUFEndereco.Text,
-                            CPF = inputCPF.Text,
+                            CPF = obterCPF(inputCPF.Text),
                             Email = inputEmail.Text,
                             CEP = inputCEP.Text,
                             Rua = inputRua.Text,
@@ -172,7 +172,7 @@ namespace Principal.Forms
                         _pessoa.NumeroDocumento = inputNumeroDoc.Text;
                         _pessoa.OrgaoExpedidor = inputOrgaoExpedidor.Text;
                         _pessoa.UFEndereco = inputUFEndereco.Text;
-                        _pessoa.CPF = inputCPF.Text;
+                        _pessoa.CPF = obterCPF(inputCPF.Text);
                         _pessoa.Email = inputEmail.Text;
                         _pessoa.CEP = inputCEP.Text;
                         _pessoa.Rua = inputRua.Text;
@@ -195,6 +195,16 @@ namespace Principal.Forms
                 }            
             }
             
+        }
+
+        private string obterCPF(string text)
+        {
+            var teste = text.Substring(0, 1);
+            if (text.Substring(0, 1).Equals(" "))
+            {
+                return "";
+            }
+            else return text;
         }
 
         public void atualizarListaPessoas()
@@ -241,17 +251,11 @@ namespace Principal.Forms
                 flag = 1;
             }
             else
-                if (removerMascara(inputCPF.Text) == "")
-            {
-                XtraMessageBox.Show("Informe o CPF!", "Cadastro Incompleto", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                flag = 1;
-            }
-            else
-                if (validador.validarCPF(inputCPF.Text) == false)
-            {
-                XtraMessageBox.Show("CPF incorreto!", "Cadastro Incompleto", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                flag = 1;
-            }
+                if(radioGroupDocumento.SelectedIndex != 2 && (removerMascara(inputCPF.Text) == "" || validador.validarCPF(inputCPF.Text) == false))
+                {
+                        XtraMessageBox.Show("CPF incorreto!", "Cadastro Incompleto", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        flag = 1;
+                }
             else
                 if (radioGroupDocumento.SelectedIndex == 0)
                 if (inputOrgaoExpedidor.Text == "" || inputUFDocumento.Text == "")
@@ -263,6 +267,12 @@ namespace Principal.Forms
             if (inputEmail.Text == "")
                 {
                     XtraMessageBox.Show("Informe o e-mail!", "Cadastro Incompleto", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    flag = 1;
+                }
+                else
+            if (validador.validarEmail(inputEmail.Text) == false)
+                {
+                    XtraMessageBox.Show("E-mail inválido!", "Cadastro Incompleto", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     flag = 1;
                 }
                 else
@@ -309,6 +319,20 @@ namespace Principal.Forms
         {
             string campoNovo = campoMascara.Replace(".", "").Replace("-", "").Replace("_", "").Replace(" ", "");
                 return campoNovo;
+        }
+
+        private void radioGroupDocumento_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if(radioGroupDocumento.SelectedIndex == 0)
+            {
+                inputOrgaoExpedidor.Enabled = true;
+                inputUFDocumento.Enabled = true;
+            }
+            else
+            {
+                inputOrgaoExpedidor.Enabled = false;
+                inputUFDocumento.Enabled = false;
+            }
         }
     }
 }

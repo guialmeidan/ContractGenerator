@@ -16,6 +16,7 @@ C:\Users\guilh\source\repos\Principal\Principal\bin\Release\x86\sqlceer40EN.dll
 C:\Users\guilh\source\repos\Principal\Principal\bin\Release\x86\sqlceme40.dll
 C:\Users\guilh\source\repos\Principal\Principal\bin\Release\x86\sqlceqp40.dll
 C:\Users\guilh\source\repos\Principal\Principal\bin\Release\x86\sqlcese40.dll
+C:\Users\guilh\source\repos\Principal\Principal\bin\Release\Resources\TNA Hubble - Icone.ico
 C:\Users\guilh\source\repos\Principal\Principal\bin\Release\Resources\Contrato-OGX.docx
 C:\Users\guilh\source\repos\Principal\Principal\bin\Release\Resources\Termo-OGX.docx
 C:\Users\guilh\source\repos\Principal\Principal\bin\Release\Principal.exe.config
@@ -357,6 +358,7 @@ C:\Users\guilh\source\repos\Principal\Principal\bin\Release\de\DevExpress.XtraCh
 C:\Users\guilh\source\repos\Principal\Principal\bin\Release\es\DevExpress.XtraCharts.v15.1.Wizard.resources.dll
 C:\Users\guilh\source\repos\Principal\Principal\bin\Release\ja\DevExpress.XtraCharts.v15.1.Wizard.resources.dll
 C:\Users\guilh\source\repos\Principal\Principal\bin\Release\ru\DevExpress.XtraCharts.v15.1.Wizard.resources.dll
+C:\Users\guilh\source\repos\Principal\Principal\obj\Release\GeraContrato.csprojAssemblyReference.cache
 C:\Users\guilh\source\repos\Principal\Principal\obj\Release\Principal.exe.config
 C:\Users\guilh\source\repos\Principal\Principal\obj\Release\Principal.Forms.ConsultarVaga.resources
 C:\Users\guilh\source\repos\Principal\Principal\obj\Release\Principal.Forms.ContratoTrabalhoOGX.resources
@@ -365,6 +367,7 @@ C:\Users\guilh\source\repos\Principal\Principal\obj\Release\Principal.Forms.Inse
 C:\Users\guilh\source\repos\Principal\Principal\obj\Release\Principal.Principal.resources
 C:\Users\guilh\source\repos\Principal\Principal\obj\Release\Principal.Forms.ListaApproveds.resources
 C:\Users\guilh\source\repos\Principal\Principal\obj\Release\Principal.Forms.ListaPessoas.resources
+C:\Users\guilh\source\repos\Principal\Principal\obj\Release\Principal.Forms.MenuLateral.resources
 C:\Users\guilh\source\repos\Principal\Principal\obj\Release\Principal.Forms.PastaDestino.resources
 C:\Users\guilh\source\repos\Principal\Principal\obj\Release\Principal.Forms.RegistroApproved.resources
 C:\Users\guilh\source\repos\Principal\Principal\obj\Release\Principal.Forms.SelecionarPessoa.resources
@@ -382,5 +385,3 @@ C:\Users\guilh\source\repos\Principal\Principal\obj\Release\GeraContrato.csproj.
 C:\Users\guilh\source\repos\Principal\Principal\obj\Release\Principal.exe
 C:\Users\guilh\source\repos\Principal\Principal\obj\Release\Principal.pdb
 C:\Users\guilh\source\repos\Principal\Principal\obj\Release\Principal.XmlSerializers.dll
-C:\Users\guilh\source\repos\Principal\Principal\bin\Release\Resources\TNA Hubble - Icone.ico
-C:\Users\guilh\source\repos\Principal\Principal\obj\Release\GeraContrato.csprojAssemblyReference.cache
