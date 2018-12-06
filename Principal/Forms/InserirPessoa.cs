@@ -23,6 +23,8 @@ namespace Principal.Forms
         ListaPessoas _formListaPessoas;
         private IPessoaRepositorio _repositorioPessoa;
         private Pessoa _pessoa;
+        private IEscritorioRepositorio _repositorioEscritorio;
+        private Domain.Entities.Escritorio _escritorio;
         Dictionary<string, Control> _binds = new Dictionary<string, Control>();
         Validacoes validador = new Validacoes();
         int _operacao;
@@ -40,10 +42,12 @@ namespace Principal.Forms
             _formListaPessoas = formListaPessoas;
             _operacao = operacao;
             InitializeComponent();
-            _pessoa = pessoa;
+            _pessoa = pessoa;            
             _repositorioPessoa = AppCore.Container.Resolve<IPessoaRepositorio>();
+            _repositorioEscritorio = AppCore.Container.Resolve<IEscritorioRepositorio>();
+            _escritorio = _repositorioEscritorio.ObterEscritorio();
 
-            if(_operacao == 1)
+            if (_operacao == 1)
             {
                 ResetarCampos();
             }
@@ -88,6 +92,7 @@ namespace Principal.Forms
             radioGroupDocumento.SelectedIndex = 0;
             inputNumeroDoc.Text = "";
             inputOrgaoExpedidor.SelectedIndex = 0;
+            inputUFDocumento.Text = _escritorio.UF;
             inputUFEndereco.SelectedIndex = 0;
             inputCPF.Text = "";
             inputEmail.Text = "";
@@ -96,7 +101,6 @@ namespace Principal.Forms
             inputNumero.Text = "";
             inputBairro.Text = "";
             inputCidade.Text = "";
-            inputUFDocumento.SelectedIndex = 0;
             inputComplemento.Text = "";
         }
 
@@ -257,13 +261,11 @@ namespace Principal.Forms
                         flag = 1;
                 }
             else
-                if (radioGroupDocumento.SelectedIndex == 0)
-                if (inputOrgaoExpedidor.Text == "" || inputUFDocumento.Text == "")
+                if (radioGroupDocumento.SelectedIndex == 0 && (inputOrgaoExpedidor.Text == "" || inputUFDocumento.Text == ""))
                 {
                     XtraMessageBox.Show("Informe o complemento do RG!", "Cadastro Incompleto", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     flag = 1;
                 }
-                else
             if (inputEmail.Text == "")
                 {
                     XtraMessageBox.Show("Informe o e-mail!", "Cadastro Incompleto", MessageBoxButtons.OK, MessageBoxIcon.Error);

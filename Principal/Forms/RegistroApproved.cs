@@ -45,6 +45,7 @@ namespace Principal.Forms
 
         Dictionary<string, Control> _binds = new Dictionary<string, Control>();
         Validacoes validador = new Validacoes();
+        DateTime dataNula = new DateTime(0001, 1, 2, 1, 1, 0);
 
         //OPERACAO 1 = NOVO, 2 = EDITAR
         public RegistroApproved(Approved approved, int operacao, ListaApproveds formListaApproveds)
@@ -483,9 +484,15 @@ namespace Principal.Forms
                 flag = 1;
             }
             else
-             if (inputValorParcial.Text == "" || inputValorParcialExtenso.Text == "")
+             if (inputModoPagamento.SelectedIndex == 1 && (inputValorParcial.Text == "" || inputValorParcialExtenso.Text == ""))
             {
                 XtraMessageBox.Show("Informe o valor parcial referente a primeira parcela!", "Cadastro Incompleto", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                flag = 1;
+            } // VerificarDatasParcelas
+            else
+             if (VerificarDatasParcelas(Convert.ToInt32(inputNumeroParcelas.Value)) == false)
+            {
+                XtraMessageBox.Show("Informe as datas de todas as parcelas!", "Cadastro Incompleto", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 flag = 1;
             }
             else if (inputValorContrato.Text == "" || inputValorExtenso.Text == "")
@@ -881,8 +888,11 @@ namespace Principal.Forms
 
         private void exibirCamposParcela(int quantosExibir)
         {
+            labelValorNaoParcelado.Visible = true;
+
             if (quantosExibir >= 1)
             {
+                labelValorNaoParcelado.Visible = false;
                 inputParcela1.Visible = true;
                 inputLabelParcela1.Visible = true;
             }
@@ -1024,6 +1034,51 @@ namespace Principal.Forms
                 inputParcela12.Visible = false;
                 inputLabelParcela12.Visible = false;
             }
+        }
+
+        private bool VerificarDatasParcelas(int nParcelas)
+        {
+            if (inputModoPagamento.SelectedIndex == 1)
+                for (int i = 1; i <= nParcelas; i++)
+                {
+                    if (i == 1)
+                        if (inputParcela1.DateTime < dataNula)
+                            return false;
+                    if (i == 2)
+                        if (inputParcela2.DateTime < dataNula)
+                            return false;
+                    if (i == 3)
+                        if (inputParcela3.DateTime < dataNula)
+                            return false;
+                    if (i == 4)
+                        if (inputParcela4.DateTime < dataNula)
+                            return false;
+                    if (i == 5)
+                        if (inputParcela5.DateTime < dataNula)
+                            return false;
+                    if (i == 6)
+                        if (inputParcela6.DateTime < dataNula)
+                            return false;
+                    if (i == 7)
+                        if (inputParcela7.DateTime < dataNula)
+                            return false;
+                    if (i == 8)
+                        if (inputParcela8.DateTime < dataNula)
+                            return false;
+                    if (i == 9)
+                        if (inputParcela9.DateTime < dataNula)
+                            return false;
+                    if (i == 10)
+                        if (inputParcela10.DateTime < dataNula)
+                            return false;
+                    if (i == 11)
+                        if (inputParcela11.DateTime < dataNula)
+                            return false;
+                    if (i == 12)
+                        if (inputParcela12.DateTime < dataNula)
+                            return false;
+                }
+            return true;
         }
 
     }

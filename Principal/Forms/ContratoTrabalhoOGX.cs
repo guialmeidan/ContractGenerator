@@ -81,11 +81,11 @@ namespace Principal.Forms
             richTextBox.Document.ReplaceAll("<<profissaoEP>>", _pessoaEP.Profissao, SearchOptions.CaseSensitive);
             richTextBox.Document.ReplaceAll("<<dadosCompletoDocumento>>", Conversoes.Conversoes.retornarStringDocumentoCompleto(_pessoaEP), SearchOptions.CaseSensitive);
             richTextBox.Document.ReplaceAll("<<numeroDocumentoEP>>", _pessoaEP.NumeroDocumento, SearchOptions.CaseSensitive);
-            richTextBox.Document.ReplaceAll("<<CPFEP>>", _pessoaEP.CPF, SearchOptions.CaseSensitive);
+            richTextBox.Document.ReplaceAll("<<CPFEP>>", Conversoes.Conversoes.retornarStringCPF(_pessoaEP.CPF), SearchOptions.CaseSensitive);
             richTextBox.Document.ReplaceAll("<<emailEP>>", _pessoaEP.Email, SearchOptions.CaseSensitive);
             richTextBox.Document.ReplaceAll("<<ruaEP>>", _pessoaEP.Rua, SearchOptions.CaseSensitive);
             richTextBox.Document.ReplaceAll("<<numeroEP>>", _pessoaEP.Numero, SearchOptions.CaseSensitive);
-            richTextBox.Document.ReplaceAll("<<complementoEP>>", _pessoaEP.Complemento, SearchOptions.CaseSensitive);
+            richTextBox.Document.ReplaceAll("<<complementoEP>>", Conversoes.Conversoes.retornarComplemento(_pessoaEP.Complemento), SearchOptions.CaseSensitive);
             richTextBox.Document.ReplaceAll("<<bairroEP>>", _pessoaEP.Bairro, SearchOptions.CaseSensitive);
             richTextBox.Document.ReplaceAll("<<CEPEP>>", _pessoaEP.CEP, SearchOptions.CaseSensitive);
             richTextBox.Document.ReplaceAll("<<cidadeEP>>", _pessoaEP.Cidade, SearchOptions.CaseSensitive);
@@ -99,7 +99,7 @@ namespace Principal.Forms
             richTextBox.Document.ReplaceAll("<<CNPJAIESEC>>", _escritorio.CNPJ, SearchOptions.CaseSensitive);
             richTextBox.Document.ReplaceAll("<<ruaAIESEC>>", _escritorio.Rua, SearchOptions.CaseSensitive);
             richTextBox.Document.ReplaceAll("<<numeroAIESEC>>", _escritorio.Numero, SearchOptions.CaseSensitive);
-            richTextBox.Document.ReplaceAll("<<complementoAIESEC>>", _escritorio.Complemento, SearchOptions.CaseSensitive);
+            richTextBox.Document.ReplaceAll("<<complementoAIESEC>>", Conversoes.Conversoes.retornarComplemento(_escritorio.Complemento), SearchOptions.CaseSensitive);
             richTextBox.Document.ReplaceAll("<<bairroAIESEC>>", _escritorio.Bairro, SearchOptions.CaseSensitive);
             richTextBox.Document.ReplaceAll("<<CEPAIESEC>>", _escritorio.CEP, SearchOptions.CaseSensitive);
             richTextBox.Document.ReplaceAll("<<cidadeAIESEC>>", _escritorio.Cidade, SearchOptions.CaseSensitive);
@@ -113,8 +113,8 @@ namespace Principal.Forms
             richTextBox.Document.ReplaceAll("<<TNID>>", _approved.TNID, SearchOptions.CaseSensitive);
             richTextBox.Document.ReplaceAll("<<paisDestino>>", _approved.PaisDestino, SearchOptions.CaseSensitive);
             richTextBox.Document.ReplaceAll("<<cidadeDestino>>", _approved.CidadeDestino, SearchOptions.CaseSensitive);
-            richTextBox.Document.ReplaceAll("<<dataInicio>>", _approved.DataInicio.Date.Day.ToString() + "/" + _approved.DataInicio.Date.Month.ToString() + "/" + _approved.DataInicio.Date.Year.ToString(), SearchOptions.CaseSensitive);
-            richTextBox.Document.ReplaceAll("<<dataFim>>", _approved.DataFim.Date.Day.ToString() + "/" + _approved.DataFim.Date.Month.ToString() + "/" + _approved.DataFim.Date.Year.ToString(), SearchOptions.CaseSensitive);
+            richTextBox.Document.ReplaceAll("<<dataInicio>>", RetornaDiaFormatado(_approved.DataInicio), SearchOptions.CaseSensitive);
+            richTextBox.Document.ReplaceAll("<<dataFim>>", RetornaDiaFormatado(_approved.DataFim), SearchOptions.CaseSensitive);
             richTextBox.Document.ReplaceAll("<<cargaHoraria>>", _approved.CargaHorariaNumeral.ToString() + " (" + _approved.CargaHorariaExtenso + ")", SearchOptions.CaseSensitive);
             richTextBox.Document.ReplaceAll("<<taxaICX>>", _approved.TaxaDestino, SearchOptions.CaseSensitive);
             richTextBox.Document.ReplaceAll("<<bolsaAuxilio>>", _approved.BolsaAuxilio, SearchOptions.CaseSensitive);
@@ -130,13 +130,13 @@ namespace Principal.Forms
             richTextBox.Document.ReplaceAll("<<tipoPagamento>>", Conversoes.Conversoes.retornarTipoPagamento(_approved), SearchOptions.CaseSensitive);
             richTextBox.Document.ReplaceAll("<<modosPagamento>>", Conversoes.Conversoes.retornarModosPagamento(_approved), SearchOptions.CaseSensitive);
 
-            richTextBox.Document.ReplaceAll("<<diaPagamento>>", _approved.DataPagamento.Date.Day.ToString() + "/" + _approved.DataPagamento.Date.Month.ToString() + "/" + _approved.DataPagamento.Date.Year.ToString(), SearchOptions.CaseSensitive);
+            richTextBox.Document.ReplaceAll("<<diaPagamento>>", RetornaDiaFormatado(_approved.DataPagamento), SearchOptions.CaseSensitive);
             richTextBox.Document.ReplaceAll("<<condicaoPagamento>>", obterCondicaoPagamento(), SearchOptions.CaseSensitive);
             richTextBox.Document.ReplaceAll("<<datasParcelas>>", obterDatasParcelas(), SearchOptions.CaseSensitive);
 
             richTextBox.Document.ReplaceAll("<<estadoCompletoAIESEC>>", _escritorio.UFCompleto, SearchOptions.CaseSensitive);
 
-            richTextBox.Document.ReplaceAll("<<diaApproved>>", _approved.DataApproved.Day.ToString(), SearchOptions.CaseSensitive);
+            richTextBox.Document.ReplaceAll("<<diaApproved>>", _approved.DataApproved.Day.ToString("D2"), SearchOptions.CaseSensitive);
             richTextBox.Document.ReplaceAll("<<mesExtensoApproved>>", Conversoes.Conversoes.retornarMesExtenso(_approved.DataApproved.Month), SearchOptions.CaseSensitive);
             richTextBox.Document.ReplaceAll("<<anoApproved>>", _approved.DataApproved.Year.ToString(), SearchOptions.CaseSensitive);
 
@@ -171,16 +171,73 @@ namespace Principal.Forms
             }
         }
 
+        private string RetornaDiaFormatado(DateTime data)
+        {
+            return data.Date.Day.ToString("D2") + "/" + data.Date.Month.ToString("D2") + "/" + data.Date.Year.ToString("D2");
+        }
+
         private string obterDatasParcelas()
         {
-            string parcelas = "Isento";
+            DateTime dataNula = new DateTime(0001, 1, 2, 1, 1, 0);
+            string parcelas = "";
             int numeroParcelas = _approved.QtdParcelas;
 
-            if(numeroParcelas > 0)
+            if (_approved.TipoPagamento == 2)
+                return "Isento";
+            else if (_approved.TipoPagamento == 0)
+                return "Pagamento à vista";
+            else if (_approved.TipoPagamento == 1 && numeroParcelas >= 2)
             {
+                if (_approved.Parcela1 > dataNula)
+                {
+                    parcelas += RetornaDiaFormatado(_approved.Parcela1);
+                }
+                if (_approved.Parcela2 > dataNula)
+                {
+                    parcelas += "; " + RetornaDiaFormatado(_approved.Parcela2);
+                }
+                if(_approved.Parcela3 > dataNula)
+                {
+                    parcelas += "; "+ RetornaDiaFormatado(_approved.Parcela3);
+                }
+                if(_approved.Parcela4 > dataNula)
+                {
+                    parcelas += "; " + RetornaDiaFormatado(_approved.Parcela4);
+                }
+                if (_approved.Parcela5 > dataNula)
+                {
+                    parcelas += "; " + RetornaDiaFormatado(_approved.Parcela5);
+                }
+                if (_approved.Parcela6 > dataNula)
+                {
+                    parcelas += "; " + RetornaDiaFormatado(_approved.Parcela6);
+                }
+                if (_approved.Parcela7 > dataNula)
+                {
+                    parcelas += "; " + RetornaDiaFormatado(_approved.Parcela7);
+                }
+                if (_approved.Parcela8 > dataNula)
+                {
+                    parcelas += "; " + RetornaDiaFormatado(_approved.Parcela8);
+                }
+                if (_approved.Parcela9 > dataNula)
+                {
+                    parcelas += "; " + RetornaDiaFormatado(_approved.Parcela9);
+                }
+                if (_approved.Parcela10 > dataNula)
+                {
+                    parcelas += "; " + RetornaDiaFormatado(_approved.Parcela10);
+                }
+                if (_approved.Parcela11 > dataNula)
+                {
+                    parcelas += "; " + RetornaDiaFormatado(_approved.Parcela11);
+                }
+                if (_approved.Parcela12 > dataNula)
+                {
+                    parcelas += "; " + RetornaDiaFormatado(_approved.Parcela12);
+                }
 
             }
-
             return parcelas;
         }
 
@@ -200,8 +257,10 @@ namespace Principal.Forms
 
         private string obterCondicaoPagamento()
         {
-            if (_approved.TipoPagamento == 0 || _approved.TipoPagamento == 2)
+            if (_approved.TipoPagamento == 0)
                 return "Valor Integral";
+            else if (_approved.TipoPagamento == 2)
+                return "Isento";
             else return "Valor Parcial de R$" + _approved.ValorParcialNumerico.ToString("n2") + " (" + _approved.ValorParcialExtenso + ")";
         }
     }

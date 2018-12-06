@@ -135,6 +135,7 @@ namespace Principal.Forms
             this.pictureEditContratoText = new DevExpress.XtraEditors.PictureEdit();
             this.botaoSalvar = new DevExpress.XtraEditors.SimpleButton();
             this.botaoResetar = new DevExpress.XtraEditors.SimpleButton();
+            this.labelValorNaoParcelado = new DevExpress.XtraEditors.LabelControl();
             ((System.ComponentModel.ISupportInitialize)(this.inputNomeEP.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.inputNomeResponsavel.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.groupControlDadosGerais)).BeginInit();
@@ -216,6 +217,12 @@ namespace Principal.Forms
             ((System.ComponentModel.ISupportInitialize)(this.pictureEditContratoPDF.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureEditContratoText.Properties)).BeginInit();
             this.SuspendLayout();
+
+            this.inputNomeEP.ButtonClick += inputNomeEP_ButtonClick;
+            this.inputNomeResponsavel.ButtonClick += inputNomeResponsavel_ButtonClick;
+            this.inputTestemunha1.ButtonClick += inputTestemunha1_ButtonClick;
+            this.inputTestemunha2.ButtonClick += inputTestemunha2_ButtonClick;
+
             // 
             // labelControl1
             // 
@@ -812,6 +819,7 @@ namespace Principal.Forms
             // 
             // xtraTabPageParcelas
             // 
+            this.xtraTabPageParcelas.Controls.Add(this.labelValorNaoParcelado);
             this.xtraTabPageParcelas.Controls.Add(this.inputLabelParcela12);
             this.xtraTabPageParcelas.Controls.Add(this.inputParcela12);
             this.xtraTabPageParcelas.Controls.Add(this.inputLabelParcela11);
@@ -842,7 +850,7 @@ namespace Principal.Forms
             // inputLabelParcela12
             // 
             resources.ApplyResources(this.inputLabelParcela12, "inputLabelParcela12");
-            this.inputLabelParcela12.Appearance.Font = ((System.Drawing.Font)(resources.GetObject("labelControl36.Appearance.Font")));
+            this.inputLabelParcela12.Appearance.Font = ((System.Drawing.Font)(resources.GetObject("inputLabelParcela12.Appearance.Font")));
             this.inputLabelParcela12.Name = "inputLabelParcela12";
             // 
             // inputParcela12
@@ -861,7 +869,7 @@ namespace Principal.Forms
             // inputLabelParcela11
             // 
             resources.ApplyResources(this.inputLabelParcela11, "inputLabelParcela11");
-            this.inputLabelParcela11.Appearance.Font = ((System.Drawing.Font)(resources.GetObject("labelControl35.Appearance.Font")));
+            this.inputLabelParcela11.Appearance.Font = ((System.Drawing.Font)(resources.GetObject("inputLabelParcela11.Appearance.Font")));
             this.inputLabelParcela11.Name = "inputLabelParcela11";
             // 
             // inputParcela11
@@ -880,7 +888,7 @@ namespace Principal.Forms
             // inputLabelParcela10
             // 
             resources.ApplyResources(this.inputLabelParcela10, "inputLabelParcela10");
-            this.inputLabelParcela10.Appearance.Font = ((System.Drawing.Font)(resources.GetObject("labelControl34.Appearance.Font")));
+            this.inputLabelParcela10.Appearance.Font = ((System.Drawing.Font)(resources.GetObject("inputLabelParcela10.Appearance.Font")));
             this.inputLabelParcela10.Name = "inputLabelParcela10";
             // 
             // inputParcela10
@@ -899,9 +907,8 @@ namespace Principal.Forms
             // inputLabelParcela9
             // 
             resources.ApplyResources(this.inputLabelParcela9, "inputLabelParcela9");
-            this.inputLabelParcela9.Appearance.Font = ((System.Drawing.Font)(resources.GetObject("labelControl33.Appearance.Font")));
+            this.inputLabelParcela9.Appearance.Font = ((System.Drawing.Font)(resources.GetObject("inputLabelParcela9.Appearance.Font")));
             this.inputLabelParcela9.Name = "inputLabelParcela9";
-
             // 
             // inputParcela9
             // 
@@ -919,7 +926,7 @@ namespace Principal.Forms
             // inputLabelParcela8
             // 
             resources.ApplyResources(this.inputLabelParcela8, "inputLabelParcela8");
-            this.inputLabelParcela8.Appearance.Font = ((System.Drawing.Font)(resources.GetObject("labelControl32.Appearance.Font")));
+            this.inputLabelParcela8.Appearance.Font = ((System.Drawing.Font)(resources.GetObject("inputLabelParcela8.Appearance.Font")));
             this.inputLabelParcela8.Name = "inputLabelParcela8";
             // 
             // inputParcela8
@@ -938,7 +945,7 @@ namespace Principal.Forms
             // inputLabelParcela7
             // 
             resources.ApplyResources(this.inputLabelParcela7, "inputLabelParcela7");
-            this.inputLabelParcela7.Appearance.Font = ((System.Drawing.Font)(resources.GetObject("labelControl31.Appearance.Font")));
+            this.inputLabelParcela7.Appearance.Font = ((System.Drawing.Font)(resources.GetObject("inputLabelParcela7.Appearance.Font")));
             this.inputLabelParcela7.Name = "inputLabelParcela7";
             // 
             // inputParcela7
@@ -956,7 +963,7 @@ namespace Principal.Forms
             // 
             // inputLabelParcela6
             // 
-            this.inputLabelParcela6.Appearance.Font = ((System.Drawing.Font)(resources.GetObject("labelControl30.Appearance.Font")));
+            this.inputLabelParcela6.Appearance.Font = ((System.Drawing.Font)(resources.GetObject("inputLabelParcela6.Appearance.Font")));
             resources.ApplyResources(this.inputLabelParcela6, "inputLabelParcela6");
             this.inputLabelParcela6.Name = "inputLabelParcela6";
             // 
@@ -975,7 +982,7 @@ namespace Principal.Forms
             // 
             // inputLabelParcela5
             // 
-            this.inputLabelParcela5.Appearance.Font = ((System.Drawing.Font)(resources.GetObject("labelControl29.Appearance.Font")));
+            this.inputLabelParcela5.Appearance.Font = ((System.Drawing.Font)(resources.GetObject("inputLabelParcela5.Appearance.Font")));
             resources.ApplyResources(this.inputLabelParcela5, "inputLabelParcela5");
             this.inputLabelParcela5.Name = "inputLabelParcela5";
             // 
@@ -994,7 +1001,7 @@ namespace Principal.Forms
             // 
             // inputLabelParcela4
             // 
-            this.inputLabelParcela4.Appearance.Font = ((System.Drawing.Font)(resources.GetObject("labelControl28.Appearance.Font")));
+            this.inputLabelParcela4.Appearance.Font = ((System.Drawing.Font)(resources.GetObject("inputLabelParcela4.Appearance.Font")));
             resources.ApplyResources(this.inputLabelParcela4, "inputLabelParcela4");
             this.inputLabelParcela4.Name = "inputLabelParcela4";
             // 
@@ -1013,7 +1020,7 @@ namespace Principal.Forms
             // 
             // inputLabelParcela3
             // 
-            this.inputLabelParcela3.Appearance.Font = ((System.Drawing.Font)(resources.GetObject("labelControl27.Appearance.Font")));
+            this.inputLabelParcela3.Appearance.Font = ((System.Drawing.Font)(resources.GetObject("inputLabelParcela3.Appearance.Font")));
             resources.ApplyResources(this.inputLabelParcela3, "inputLabelParcela3");
             this.inputLabelParcela3.Name = "inputLabelParcela3";
             // 
@@ -1032,7 +1039,7 @@ namespace Principal.Forms
             // 
             // inputLabelParcela2
             // 
-            this.inputLabelParcela2.Appearance.Font = ((System.Drawing.Font)(resources.GetObject("labelControl26.Appearance.Font")));
+            this.inputLabelParcela2.Appearance.Font = ((System.Drawing.Font)(resources.GetObject("inputLabelParcela2.Appearance.Font")));
             resources.ApplyResources(this.inputLabelParcela2, "inputLabelParcela2");
             this.inputLabelParcela2.Name = "inputLabelParcela2";
             // 
@@ -1051,7 +1058,7 @@ namespace Principal.Forms
             // 
             // inputLabelParcela1
             // 
-            this.inputLabelParcela1.Appearance.Font = ((System.Drawing.Font)(resources.GetObject("labelControl20.Appearance.Font")));
+            this.inputLabelParcela1.Appearance.Font = ((System.Drawing.Font)(resources.GetObject("inputLabelParcela1.Appearance.Font")));
             resources.ApplyResources(this.inputLabelParcela1, "inputLabelParcela1");
             this.inputLabelParcela1.Name = "inputLabelParcela1";
             // 
@@ -1194,6 +1201,12 @@ namespace Principal.Forms
             this.botaoResetar.Name = "botaoResetar";
             this.botaoResetar.Click += new System.EventHandler(this.botaoResetar_Click);
             // 
+            // labelValorNaoParcelado
+            // 
+            this.labelValorNaoParcelado.Appearance.Font = ((System.Drawing.Font)(resources.GetObject("labelControl20.Appearance.Font")));
+            resources.ApplyResources(this.labelValorNaoParcelado, "labelValorNaoParcelado");
+            this.labelValorNaoParcelado.Name = "labelValorNaoParcelado";
+            // 
             // RegistroApproved
             // 
             resources.ApplyResources(this, "$this");
@@ -1290,11 +1303,6 @@ namespace Principal.Forms
             ((System.ComponentModel.ISupportInitialize)(this.pictureEditContratoPDF.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureEditContratoText.Properties)).EndInit();
             this.ResumeLayout(false);
-
-            this.inputNomeEP.ButtonClick += inputNomeEP_ButtonClick;
-            this.inputNomeResponsavel.ButtonClick += inputNomeResponsavel_ButtonClick;
-            this.inputTestemunha1.ButtonClick += inputTestemunha1_ButtonClick;
-            this.inputTestemunha2.ButtonClick += inputTestemunha2_ButtonClick;
 
         }
         #endregion
@@ -1403,5 +1411,6 @@ namespace Principal.Forms
         private DevExpress.XtraEditors.DateEdit inputParcela3;
         private DevExpress.XtraEditors.LabelControl inputLabelParcela2;
         private DevExpress.XtraEditors.DateEdit inputParcela2;
+        private DevExpress.XtraEditors.LabelControl labelValorNaoParcelado;
     }
 }

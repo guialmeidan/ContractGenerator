@@ -76,10 +76,10 @@ namespace Principal.Forms
         {
             richTextBox.Document.ReplaceAll("<<nomeEPCompleto>>", _pessoaEP.Nome + " " + _pessoaEP.Sobrenome, SearchOptions.CaseSensitive);
             richTextBox.Document.ReplaceAll("<<dadosCompletoDocumento>>", Conversoes.Conversoes.retornarStringDocumentoCompleto(_pessoaEP), SearchOptions.CaseSensitive);
-            richTextBox.Document.ReplaceAll("<<CPFEP>>", _pessoaEP.CPF, SearchOptions.CaseSensitive);
+            richTextBox.Document.ReplaceAll("<<CPFEP>>", Conversoes.Conversoes.retornarStringCPF(_pessoaEP.CPF), SearchOptions.CaseSensitive);
             richTextBox.Document.ReplaceAll("<<ruaEP>>", _pessoaEP.Rua, SearchOptions.CaseSensitive);
             richTextBox.Document.ReplaceAll("<<numeroEP>>", _pessoaEP.Numero, SearchOptions.CaseSensitive);
-            richTextBox.Document.ReplaceAll("<<complementoEP>>", _pessoaEP.Complemento, SearchOptions.CaseSensitive);
+            richTextBox.Document.ReplaceAll("<<complementoEP>>", Conversoes.Conversoes.retornarComplemento(_pessoaEP.Complemento), SearchOptions.CaseSensitive);
             richTextBox.Document.ReplaceAll("<<bairroEP>>", _pessoaEP.Bairro, SearchOptions.CaseSensitive);
             richTextBox.Document.ReplaceAll("<<CEPEP>>", _pessoaEP.CEP, SearchOptions.CaseSensitive);
             richTextBox.Document.ReplaceAll("<<cidadeEP>>", _pessoaEP.Cidade, SearchOptions.CaseSensitive);
@@ -93,7 +93,7 @@ namespace Principal.Forms
             richTextBox.Document.ReplaceAll("<<CNPJAIESEC>>", _escritorio.CNPJ, SearchOptions.CaseSensitive);
             richTextBox.Document.ReplaceAll("<<ruaAIESEC>>", _escritorio.Rua, SearchOptions.CaseSensitive);
             richTextBox.Document.ReplaceAll("<<numeroAIESEC>>", _escritorio.Numero, SearchOptions.CaseSensitive);
-            richTextBox.Document.ReplaceAll("<<complementoAIESEC>>", _escritorio.Complemento, SearchOptions.CaseSensitive);
+            richTextBox.Document.ReplaceAll("<<complementoAIESEC>>", Conversoes.Conversoes.retornarComplemento(_escritorio.Complemento), SearchOptions.CaseSensitive);
             richTextBox.Document.ReplaceAll("<<bairroAIESEC>>", _escritorio.Bairro, SearchOptions.CaseSensitive);
             richTextBox.Document.ReplaceAll("<<CEPAIESEC>>", _escritorio.CEP, SearchOptions.CaseSensitive);
             richTextBox.Document.ReplaceAll("<<cidadeAIESEC>>", _escritorio.Cidade, SearchOptions.CaseSensitive);
@@ -104,7 +104,7 @@ namespace Principal.Forms
 
             richTextBox.Document.ReplaceAll("<<estadoCompletoAIESEC>>", _escritorio.UFCompleto, SearchOptions.CaseSensitive);
 
-            richTextBox.Document.ReplaceAll("<<diaApproved>>", _approved.DataApproved.Day.ToString(), SearchOptions.CaseSensitive);
+            richTextBox.Document.ReplaceAll("<<diaApproved>>", _approved.DataApproved.Day.ToString("D2"), SearchOptions.CaseSensitive);
             richTextBox.Document.ReplaceAll("<<mesExtensoApproved>>", Conversoes.Conversoes.retornarMesExtenso(_approved.DataApproved.Month), SearchOptions.CaseSensitive);
             richTextBox.Document.ReplaceAll("<<anoApproved>>", _approved.DataApproved.Year.ToString(), SearchOptions.CaseSensitive);
 

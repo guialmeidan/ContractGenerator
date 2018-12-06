@@ -382,4 +382,3 @@ C:\Users\guilh\source\repos\Principal\Principal\obj\Debug\pt-BR\Principal.resour
 C:\Users\guilh\source\repos\Principal\Principal\obj\Debug\GeraContrato.csproj.CopyComplete
 C:\Users\guilh\source\repos\Principal\Principal\obj\Debug\Principal.exe
 C:\Users\guilh\source\repos\Principal\Principal\obj\Debug\Principal.pdb
-C:\Users\guilh\source\repos\Principal\Principal\obj\Debug\GeraContrato.csprojAssemblyReference.cache

@@ -27,11 +27,18 @@ namespace Principal.Conversoes
         {
             if (pessoa.Id > 0)
                 return " neste ato representado(a) por " + pessoa.Nome + " " + pessoa.Sobrenome + ", " + pessoa.Nacionalidade +
-                    ", portador do " + retornarStringDocumentoCompleto(pessoa) + " e inscrito(a) no CPF sob o nº " + pessoa.CPF +
-                    ", residente e domiciliado(a) na " + pessoa.Rua + ", " + pessoa.Complemento + " " + pessoa.Bairro + ", CEP " +
+                    ", portador do " + retornarStringDocumentoCompleto(pessoa) + retornarStringCPF(pessoa.CPF) +
+                    ", residente e domiciliado(a) na " + pessoa.Rua + ", nº " + pessoa.Numero + ", " + retornarComplemento(pessoa.Complemento) + "Bairro " + pessoa.Bairro + ", CEP " +
                     pessoa.CEP + ", " + pessoa.Cidade + " - " + pessoa.UFEndereco;
             else return "";
 
+        }
+
+        public static string retornarStringCPF(string CPF)
+        {
+            if (CPF != "")
+                return " e inscrito(a) no CPF sob o nº " + CPF;
+            else return "";
         }
 
 
@@ -132,6 +139,13 @@ namespace Principal.Conversoes
             else if (produto.Equals("GE"))
                 return "Empreendedor Global";
             else return "Talento Global";
+        }
+
+        internal static string retornarComplemento(string complemento)
+        {
+            if (complemento == "")
+                return complemento;
+            else return complemento + ", ";
         }
 
         public static string ConverteNumericoExtenso(int valor)
