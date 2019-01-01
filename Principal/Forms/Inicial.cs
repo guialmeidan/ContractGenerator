@@ -1,5 +1,6 @@
 ﻿using DevExpress.XtraEditors;
 using Principal.Domain;
+using Principal.Domain.Entities;
 using Principal.Forms;
 using System;
 using System.Collections.Generic;
@@ -11,14 +12,41 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Escritorio = Principal.Forms.Escritorio;
+using Unity;
+using Principal.WinApp;
+using Principal.Domain.Repositories;
 
 namespace Principal
 {
+
     public partial class Principal : XtraForm
     {
+        private ILoginRepository _repositorioLogin;
         public Principal()
         {
             InitializeComponent();
+            _repositorioLogin = AppCore.Container.Resolve<ILoginRepository>();
+            this.Load += carregarMenuLateral;
+        }
+
+        private void carregarMenuLateral(object sender, EventArgs e)
+        {
+            var form = new MenuLateral(modulosToolStripMenuItem) { MdiParent = this };
+            form.Show();
+            carregarLogin();
+        }
+
+        private void carregarLogin()
+        {
+            var form = new Forms.Login(_repositorioLogin);
+            form.ShowDialog(this);
+
+            if (!_repositorioLogin.IsAuthenticated)
+            {
+                XtraMessageBox.Show("Login Incorreto!", "Login Incompleto", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                System.Windows.Forms.Application.Exit();
+            }
         }
 
         private void toolStripMenuItem1_Click(object sender, EventArgs e)
@@ -27,7 +55,7 @@ namespace Principal
 
         private void tNIDToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            Forms.ConsultaOpportunity janelaConsulta = new Forms.ConsultaOpportunity();
+            Forms.ConsultarVaga janelaConsulta = new Forms.ConsultarVaga();
             janelaConsulta.MdiParent = this;
             janelaConsulta.Show();
         }
@@ -73,27 +101,154 @@ namespace Principal
 
         private void emitirDocumentoToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            var f = Application.OpenForms[nameof(ContratoOGX)];
-            if (f != null)
-                f.BringToFront();
-            else
-            {
-                ContratoOGX contratoOGX = new ContratoOGX();
-                contratoOGX.MdiParent = this;
-                contratoOGX.Show();
-            }
+            
         }
 
         private void registroDeApprovedToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            var f = Application.OpenForms[nameof(RegistroApproved)];
+            var f = Application.OpenForms[nameof(Inicial)];
             if (f != null)
                 f.BringToFront();
             else
             {
-                RegistroApproved registroApproved = new RegistroApproved();
-                registroApproved.MdiParent = this;
-                registroApproved.Show();
+                Inicial listaApproveds = new Inicial();
+                listaApproveds.MdiParent = this;
+                listaApproveds.Show();
+            }
+        }
+
+        private void tokenToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            var f = Application.OpenForms[nameof(Token)];
+            if (f != null)
+                f.BringToFront();
+            else
+            {
+                Token token = new Token();
+                token.MdiParent = this;
+                token.Show();
+            }
+        }
+
+        private void cadastrarDiretórioToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            var f = Application.OpenForms[nameof(PastaDestino)];
+            if (f != null)
+                f.BringToFront();
+            else
+            {
+                PastaDestino pastaDestino = new PastaDestino();
+                pastaDestino.MdiParent = this;
+                pastaDestino.Show();
+            }
+        }
+
+        private void tutorialToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            var f = Application.OpenForms[nameof(Sobre)];
+            if (f != null)
+                f.BringToFront();
+            else
+            {
+                Sobre pastaDestino = new Sobre();
+                pastaDestino.MdiParent = this;
+                pastaDestino.Show();
+            }
+        }
+
+        private void enviarSugestãoToolStripMenuItem_Click(object sender, EventArgs e)
+        {            
+            System.Diagnostics.Process.Start("https://docs.google.com/forms/d/e/1FAIpQLSeK2uRcUAM73eQso-lS0Ug7n9QgSZF1nPz2zBuDe_kf6ZJNKA/viewform?usp=sf_link");
+        }
+
+        private void escritorioToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            var f = Application.OpenForms[nameof(Inicial)];
+            if (f != null)
+                f.BringToFront();
+            else
+            {
+                Inicial listaApproveds = new Inicial();
+                listaApproveds.MdiParent = this;
+                listaApproveds.Show();
+            }
+        }
+
+        private void pessoaToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            var f = Application.OpenForms[nameof(ListaPessoas)];
+            if (f != null)
+                f.BringToFront();
+            else
+            {
+                ListaPessoas listaPessoas = new ListaPessoas();
+                listaPessoas.MdiParent = this;
+                listaPessoas.Show();
+            }
+        }
+
+        private void diretorioToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            var f = Application.OpenForms[nameof(PastaDestino)];
+            if (f != null)
+                f.BringToFront();
+            else
+            {
+                PastaDestino pastaDestino = new PastaDestino();
+                pastaDestino.MdiParent = this;
+                pastaDestino.Show();
+            }
+        }
+
+        private void escritorioToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            var f = Application.OpenForms[nameof(Escritorio)];
+            if (f != null)
+                f.BringToFront();
+            else
+            {
+                Escritorio escritorio = new Escritorio();
+                escritorio.MdiParent = this;
+                escritorio.Show();
+            }
+        }
+
+        private void testemunhasToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            var f = Application.OpenForms[nameof(Testemunhas)];
+            if (f != null)
+                f.BringToFront();
+            else
+            {
+                Testemunhas testemunhas = new Testemunhas();
+                testemunhas.MdiParent = this;
+                testemunhas.Show();
+            }
+        }
+
+        private void tokenToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            var f = Application.OpenForms[nameof(Token)];
+            if (f != null)
+                f.BringToFront();
+            else
+            {
+                Token token = new Token();
+                token.MdiParent = this;
+                token.Show();
+            }
+        }
+
+        private void tNIDToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            var f = Application.OpenForms[nameof(ConsultarVaga)];
+            if (f != null)
+                f.BringToFront();
+            else
+            {
+                ConsultarVaga consultaTNID = new ConsultarVaga();
+                consultaTNID.MdiParent = this;
+                consultaTNID.Show();
             }
         }
     }

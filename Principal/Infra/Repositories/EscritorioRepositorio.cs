@@ -43,5 +43,16 @@ namespace Principal.Infra.Repositories
                 
             }
         }
+
+        public bool VerificarSeELCP(int id)
+        {
+            using (var conn = DatabaseAdapter.GetConnection())
+            {
+                var query = $"SELECT  * FROM [Escritorio] Where [LCP] = '{id}'";
+                if (conn.Query<Escritorio>(query).FirstOrDefault() == null)
+                    return false;
+                else return true;
+            }
+        }
     }
 }

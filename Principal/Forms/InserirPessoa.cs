@@ -19,22 +19,35 @@ using DevExpress.XtraEditors;
 namespace Principal.Forms
 {
     public partial class InserirPessoa : XtraForm
-    {        
+    {
+        ListaPessoas _formListaPessoas;
         private IPessoaRepositorio _repositorioPessoa;
         private Pessoa _pessoa;
+        private IEscritorioRepositorio _repositorioEscritorio;
+        private Domain.Entities.Escritorio _escritorio;
         Dictionary<string, Control> _binds = new Dictionary<string, Control>();
         Validacoes validador = new Validacoes();
         int _operacao;
 
         //OPERACAO 1 = NOVO, 2 = EDITAR
-        public InserirPessoa(Pessoa pessoa, int operacao)
+        public InserirPessoa(Pessoa pessoa, int operacao, ListaPessoas formListaPessoas)
         {
+            //Altera a cultura para substituir , por . e vice-versa (no caso dos valores monetários)
+            System.Globalization.CultureInfo newCulture = (System.Globalization.CultureInfo)System.Globalization.CultureInfo.CurrentCulture.Clone();
+            newCulture.NumberFormat.NumberGroupSeparator = ",";
+            newCulture.NumberFormat.NumberDecimalSeparator = ".";
+            System.Threading.Thread.CurrentThread.CurrentCulture = newCulture;
+            System.Threading.Thread.CurrentThread.CurrentUICulture = newCulture;
+
+            _formListaPessoas = formListaPessoas;
             _operacao = operacao;
             InitializeComponent();
-            _pessoa = pessoa;
+            _pessoa = pessoa;            
             _repositorioPessoa = AppCore.Container.Resolve<IPessoaRepositorio>();
+            _repositorioEscritorio = AppCore.Container.Resolve<IEscritorioRepositorio>();
+            _escritorio = _repositorioEscritorio.ObterEscritorio();
 
-            if(_operacao == 1)
+            if (_operacao == 1)
             {
                 ResetarCampos();
             }
@@ -66,6 +79,7 @@ namespace Principal.Forms
         private void botaoResetar_Click(object sender, EventArgs e)
         {
             ResetarCampos();
+            _operacao = 1;
         }
 
         private void ResetarCampos()
@@ -73,11 +87,12 @@ namespace Principal.Forms
             inputNome.Text = "";
             inputSobrenome.Text = "";
             inputEstadoCivil.SelectedIndex = 0;
-            inputNacionalidade.Text = "";
+            inputNacionalidade.Text = "Brasileiro(a)";
             inputProfissao.Text = "";
             radioGroupDocumento.SelectedIndex = 0;
             inputNumeroDoc.Text = "";
             inputOrgaoExpedidor.SelectedIndex = 0;
+            inputUFDocumento.Text = _escritorio.UF;
             inputUFEndereco.SelectedIndex = 0;
             inputCPF.Text = "";
             inputEmail.Text = "";
@@ -86,7 +101,6 @@ namespace Principal.Forms
             inputNumero.Text = "";
             inputBairro.Text = "";
             inputCidade.Text = "";
-            inputUFDocumento.SelectedIndex = 0;
             inputComplemento.Text = "";
         }
 
@@ -97,6 +111,7 @@ namespace Principal.Forms
             {
                 try
                 {
+                    this.ExibirFormEspera();
                     var resultado = ws.consultaCEP(inputCEP.Text);
                     this.inputRua.Text = resultado.end;
                     this.inputCidade.Text = resultado.cidade;
@@ -105,8 +120,12 @@ namespace Principal.Forms
                 }
                 catch (Exception ex)
                 {
-                    MessageBox.Show(ex.Message, "Atenção!",
+                    XtraMessageBox.Show(ex.Message, "Atenção!",
                     MessageBoxButtons.OK);
+                }
+                finally
+                {
+                    this.FecharFormEspera();
                 }
             }
         }
@@ -132,7 +151,7 @@ namespace Principal.Forms
                             NumeroDocumento = inputNumeroDoc.Text,
                             OrgaoExpedidor = inputOrgaoExpedidor.Text,
                             UFEndereco = inputUFEndereco.Text,
-                            CPF = inputCPF.Text,
+                            CPF = obterCPF(inputCPF.Text),
                             Email = inputEmail.Text,
                             CEP = inputCEP.Text,
                             Rua = inputRua.Text,
@@ -143,6 +162,7 @@ namespace Principal.Forms
                             Complemento = inputComplemento.Text
                         };
                         _repositorioPessoa.Criar(pessoa);
+                        _pessoa = pessoa;
                     }
                         
                     else if(_operacao == 2)
@@ -156,7 +176,7 @@ namespace Principal.Forms
                         _pessoa.NumeroDocumento = inputNumeroDoc.Text;
                         _pessoa.OrgaoExpedidor = inputOrgaoExpedidor.Text;
                         _pessoa.UFEndereco = inputUFEndereco.Text;
-                        _pessoa.CPF = inputCPF.Text;
+                        _pessoa.CPF = obterCPF(inputCPF.Text);
                         _pessoa.Email = inputEmail.Text;
                         _pessoa.CEP = inputCEP.Text;
                         _pessoa.Rua = inputRua.Text;
@@ -168,18 +188,32 @@ namespace Principal.Forms
 
                         _repositorioPessoa.Atualizar(_pessoa);
                     }
-                        
 
-                    MessageBox.Show("Registro gravado!\n", "Sucesso", MessageBoxButtons.OK, MessageBoxIcon.Information);
-
-                    //ResetarCampos();
+                    XtraMessageBox.Show("Registro gravado!\n", "Sucesso", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    _operacao = 2;
+                    atualizarListaPessoas();
                 }
                 catch (Exception ex)
                 {
-                    MessageBox.Show("Erro ao inserir Pessoa\n" + ex.Message, "ERRO", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    XtraMessageBox.Show("Erro ao inserir Pessoa\n" + ex.Message, "ERRO", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }            
             }
             
+        }
+
+        private string obterCPF(string text)
+        {
+            var teste = text.Substring(0, 1);
+            if (text.Substring(0, 1).Equals(" "))
+            {
+                return "";
+            }
+            else return text;
+        }
+
+        public void atualizarListaPessoas()
+        {
+            _formListaPessoas.iniciarGrid();
         }
 
         private int validarPessoa(int flag)
@@ -187,98 +221,96 @@ namespace Principal.Forms
             //confere se existem campos em branco ou inválidos
             if (inputNome.Text == "")
             {
-                MessageBox.Show("Informe o nome!", "Cadastro Incompleto", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                XtraMessageBox.Show("Informe o nome!", "Cadastro Incompleto", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 flag = 1;
             }
             else
             if (inputSobrenome.Text == "")
             {
-                MessageBox.Show("Informe o sobrenome!", "Cadastro Incompleto", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                XtraMessageBox.Show("Informe o sobrenome!", "Cadastro Incompleto", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 flag = 1;
             }
             else
                 if (inputNacionalidade.Text == "")
             {
-                MessageBox.Show("Informe a nacionalidade!", "Cadastro Incompleto", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                XtraMessageBox.Show("Informe a nacionalidade!", "Cadastro Incompleto", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 flag = 1;
             }
             else
                 if (inputEstadoCivil.Text == "")
             {
-                MessageBox.Show("Informe o estado civil!", "Cadastro Incompleto", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                XtraMessageBox.Show("Informe o estado civil!", "Cadastro Incompleto", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 flag = 1;
             }
             else
                 if (inputProfissao.Text == "")
             {
-                MessageBox.Show("Informe a profissao!", "Cadastro Incompleto", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                XtraMessageBox.Show("Informe a profissao!", "Cadastro Incompleto", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 flag = 1;
             }
             else
                 if (inputNumeroDoc.Text == "")
             {
-                MessageBox.Show("Informe o numero do documento!", "Cadastro Incompleto", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                XtraMessageBox.Show("Informe o numero do documento!", "Cadastro Incompleto", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 flag = 1;
             }
             else
-                if (removerMascara(inputCPF.Text) == "")
-            {
-                MessageBox.Show("Informe o CPF!", "Cadastro Incompleto", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                flag = 1;
-            }
-            else
-                if (validador.validarCPF(inputCPF.Text) == false)
-            {
-                MessageBox.Show("CPF incorreto!", "Cadastro Incompleto", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                flag = 1;
-            }
-            else
-                if (radioGroupDocumento.SelectedIndex == 0)
-                if (inputOrgaoExpedidor.Text == "" || inputUFDocumento.Text == "")
+                if(radioGroupDocumento.SelectedIndex != 2 && (removerMascara(inputCPF.Text) == "" || validador.validarCPF(inputCPF.Text) == false))
                 {
-                    MessageBox.Show("Informe o complemento do RG!", "Cadastro Incompleto", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        XtraMessageBox.Show("CPF incorreto!", "Cadastro Incompleto", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        flag = 1;
+                }
+            else
+                if (radioGroupDocumento.SelectedIndex == 0 && (inputOrgaoExpedidor.Text == "" || inputUFDocumento.Text == ""))
+                {
+                    XtraMessageBox.Show("Informe o complemento do RG!", "Cadastro Incompleto", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    flag = 1;
+                }
+            if (inputEmail.Text == "")
+                {
+                    XtraMessageBox.Show("Informe o e-mail!", "Cadastro Incompleto", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     flag = 1;
                 }
                 else
-            if (inputEmail.Text == "")
+            if (validador.validarEmail(inputEmail.Text) == false)
                 {
-                    MessageBox.Show("Informe o e-mail!", "Cadastro Incompleto", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    XtraMessageBox.Show("E-mail inválido!", "Cadastro Incompleto", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     flag = 1;
                 }
                 else
             if (removerMascara(inputCEP.Text) == "")
                 {
-                    MessageBox.Show("Informe o CEP!", "Cadastro Incompleto", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    XtraMessageBox.Show("Informe o CEP!", "Cadastro Incompleto", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     flag = 1;
                 }
                 else
             if (inputRua.Text == "")
                 {
-                    MessageBox.Show("Informe a rua!", "Cadastro Incompleto", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    XtraMessageBox.Show("Informe a rua!", "Cadastro Incompleto", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     flag = 1;
                 }
                 else
             if (inputBairro.Text == "")
                 {
-                    MessageBox.Show("Informe o bairro!", "Cadastro Incompleto", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    XtraMessageBox.Show("Informe o bairro!", "Cadastro Incompleto", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     flag = 1;
                 }
                 else
             if (inputCidade.Text == "")
                 {
-                    MessageBox.Show("Informe a cidade!", "Cadastro Incompleto", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    XtraMessageBox.Show("Informe a cidade!", "Cadastro Incompleto", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     flag = 1;
                 }
                 else
             if (inputUFEndereco.Text == "")
                 {
-                    MessageBox.Show("Informe a UF do endereço!", "Cadastro Incompleto", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    XtraMessageBox.Show("Informe a UF do endereço!", "Cadastro Incompleto", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     flag = 1;
                 }
                 else
             if (inputNumero.Text == "")
                 {
-                    MessageBox.Show("Informe o número do endereço!", "Cadastro Incompleto", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    XtraMessageBox.Show("Informe o número do endereço!", "Cadastro Incompleto", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     flag = 1;
                 }
 
@@ -290,6 +322,19 @@ namespace Principal.Forms
             string campoNovo = campoMascara.Replace(".", "").Replace("-", "").Replace("_", "").Replace(" ", "");
                 return campoNovo;
         }
+
+        private void radioGroupDocumento_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if(radioGroupDocumento.SelectedIndex == 0)
+            {
+                inputOrgaoExpedidor.Enabled = true;
+                inputUFDocumento.Enabled = true;
+            }
+            else
+            {
+                inputOrgaoExpedidor.Enabled = false;
+                inputUFDocumento.Enabled = false;
+            }
+        }
     }
 }
-

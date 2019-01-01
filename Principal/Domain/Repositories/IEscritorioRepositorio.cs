@@ -11,5 +11,6 @@ namespace Principal.Domain.Repositories
     {
         Escritorio ObterEscritorio();
         void Atualizar(Escritorio escritorio);
+        bool VerificarSeELCP(int id);
     }
 }

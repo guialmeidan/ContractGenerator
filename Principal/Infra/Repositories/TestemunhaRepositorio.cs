@@ -43,5 +43,18 @@ namespace Principal.Infra.Repositories
 
             }
         }
+
+        public bool VerificarTestemunhaExiste(int id)
+        {
+            using (var conn = DatabaseAdapter.GetConnection())
+            {
+                var query = $"SELECT  * FROM [Testemunha] Where [IdTestemunha1GV] = '{id}' or [IdTestemunha2GV] = '{id}' or " +
+                                                              $"[IdTestemunha1GE] = '{id}' or [IdTestemunha2GE] = '{id}' or" +
+                                                              $"[IdTestemunha1GT] = '{id}' or[IdTestemunha2GT] = '{id}'";
+                if (conn.Query<Testemunha>(query).FirstOrDefault() == null)
+                    return false;
+                else return true;
+            }
+        }
     }
 }

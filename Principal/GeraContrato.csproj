@@ -74,6 +74,7 @@
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\..\..\..\..\..\Program Files (x86)\DevExpress 15.1\Components\Bin\Framework\DevExpress.DataAccess.v15.1.dll</HintPath>
     </Reference>
+    <Reference Include="DevExpress.Mvvm.v15.1, Version=15.1.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
     <Reference Include="DevExpress.Office.v15.1.Core, Version=15.1.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\..\..\..\..\..\Program Files (x86)\DevExpress 15.1\Components\Bin\Framework\DevExpress.Office.v15.1.Core.dll</HintPath>
@@ -212,14 +213,22 @@
     <Reference Include="Microsoft.Extensions.Primitives, Version=2.0.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
       <HintPath>..\packages\Microsoft.Extensions.Primitives.2.0.0\lib\netstandard2.0\Microsoft.Extensions.Primitives.dll</HintPath>
     </Reference>
-    <Reference Include="Newtonsoft.Json, Version=9.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
-      <HintPath>..\packages\Newtonsoft.Json.9.0.1\lib\net45\Newtonsoft.Json.dll</HintPath>
+    <Reference Include="Microsoft.Win32.Primitives, Version=4.0.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Win32.Primitives.4.0.1\lib\net46\Microsoft.Win32.Primitives.dll</HintPath>
+      <Private>True</Private>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=10.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.10.0.3\lib\net45\Newtonsoft.Json.dll</HintPath>
     </Reference>
     <Reference Include="PresentationCore" />
     <Reference Include="RestSharp, Version=106.4.2.0, Culture=neutral, PublicKeyToken=598062e77f915f75, processorArchitecture=MSIL">
       <HintPath>..\packages\RestSharp.106.4.2\lib\net452\RestSharp.dll</HintPath>
     </Reference>
     <Reference Include="System" />
+    <Reference Include="System.Collections.Immutable, Version=1.2.2.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Collections.Immutable.1.4.0\lib\netstandard2.0\System.Collections.Immutable.dll</HintPath>
+    </Reference>
     <Reference Include="System.ComponentModel.Annotations, Version=4.2.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
       <HintPath>..\packages\System.ComponentModel.Annotations.4.4.1\lib\net461\System.ComponentModel.Annotations.dll</HintPath>
     </Reference>
@@ -239,13 +248,44 @@
       <HintPath>..\packages\System.Data.SQLite.Linq.1.0.108.0\lib\net46\System.Data.SQLite.Linq.dll</HintPath>
     </Reference>
     <Reference Include="System.Data.SqlXml" />
+    <Reference Include="System.Diagnostics.DiagnosticSource, Version=4.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Diagnostics.DiagnosticSource.4.0.0\lib\net46\System.Diagnostics.DiagnosticSource.dll</HintPath>
+    </Reference>
     <Reference Include="System.DirectoryServices" />
     <Reference Include="System.EnterpriseServices" />
+    <Reference Include="System.Interactive.Async, Version=3.0.3000.0, Culture=neutral, PublicKeyToken=94bc3704cddfc263, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Interactive.Async.3.1.1\lib\net46\System.Interactive.Async.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net.Http, Version=4.1.0.1, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Net.Http.4.1.1\lib\net46\System.Net.Http.dll</HintPath>
+      <Private>True</Private>
+      <Private>True</Private>
+    </Reference>
     <Reference Include="System.Runtime.CompilerServices.Unsafe, Version=4.0.3.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
       <HintPath>..\packages\System.Runtime.CompilerServices.Unsafe.4.4.0\lib\netstandard2.0\System.Runtime.CompilerServices.Unsafe.dll</HintPath>
     </Reference>
     <Reference Include="System.Runtime.Remoting" />
     <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security.Cryptography.Algorithms, Version=4.1.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Security.Cryptography.Algorithms.4.2.0\lib\net461\System.Security.Cryptography.Algorithms.dll</HintPath>
+      <Private>True</Private>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Security.Cryptography.Encoding, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Security.Cryptography.Encoding.4.0.0\lib\net46\System.Security.Cryptography.Encoding.dll</HintPath>
+      <Private>True</Private>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Security.Cryptography.Primitives, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Security.Cryptography.Primitives.4.0.0\lib\net46\System.Security.Cryptography.Primitives.dll</HintPath>
+      <Private>True</Private>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Security.Cryptography.X509Certificates, Version=4.1.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Security.Cryptography.X509Certificates.4.1.0\lib\net461\System.Security.Cryptography.X509Certificates.dll</HintPath>
+      <Private>True</Private>
+      <Private>True</Private>
+    </Reference>
     <Reference Include="System.ServiceModel" />
     <Reference Include="System.ValueTuple, Version=4.0.2.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
       <HintPath>..\packages\System.ValueTuple.4.4.0\lib\net461\System.ValueTuple.dll</HintPath>
@@ -260,7 +300,6 @@
     <Reference Include="System.Data" />
     <Reference Include="System.Deployment" />
     <Reference Include="System.Drawing" />
-    <Reference Include="System.Net.Http" />
     <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml" />
     <Reference Include="UIAutomationClient" />
@@ -289,29 +328,41 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Conversoes\Conversoes.cs" />
+    <Compile Include="Conversoes\ConverterMoedas.cs" />
+    <Compile Include="Conversoes\MD5Hash.cs" />
     <Compile Include="Domain\Entities\Approved.cs" />
+    <Compile Include="Domain\Entities\DiretorioArmazenamento.cs" />
     <Compile Include="Domain\Entities\Escritorio.cs" />
+    <Compile Include="Domain\Entities\Login.cs" />
     <Compile Include="Domain\Entities\Opportunity.cs" />
     <Compile Include="Domain\Entities\Pessoa.cs" />
+    <Compile Include="Domain\Entities\RegistroApproved.cs" />
+    <Compile Include="Domain\Entities\TokenPublico.cs" />
     <Compile Include="Domain\Entities\Testemunha.cs" />
+    <Compile Include="Domain\Entities\VagaResumidaBR.cs" />
     <Compile Include="Domain\Repositories\IApprovedRepositorio.cs" />
+    <Compile Include="Domain\Repositories\IDiretorioArmazenamento.cs" />
     <Compile Include="Domain\Repositories\IEscritorioRepositorio.cs" />
+    <Compile Include="Domain\Repositories\ILoginRepository.cs" />
     <Compile Include="Domain\Repositories\IOpportunityRepository.cs" />
     <Compile Include="Domain\Repositories\IPessoaRepositorio.cs" />
+    <Compile Include="Domain\Repositories\IRegistroApprovedRepository.cs" />
     <Compile Include="Domain\Repositories\ITestemunhaRepositorio.cs" />
+    <Compile Include="Domain\Repositories\ITokenPublicoRepositorio.cs" />
+    <Compile Include="Domain\Services\IApprovedService.cs" />
     <Compile Include="Domain\Services\IOpportunityService.cs" />
     <Compile Include="Domain\Services\IPessoaService.cs" />
-    <Compile Include="Forms\ConsultaOpportunity.cs">
+    <Compile Include="Forms\ConsultarVaga.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\ConsultaOpportunity.Designer.cs">
-      <DependentUpon>ConsultaOpportunity.cs</DependentUpon>
+    <Compile Include="Forms\ConsultarVaga.Designer.cs">
+      <DependentUpon>ConsultarVaga.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\ContratoOGX.cs">
+    <Compile Include="Forms\ContratoTrabalhoOGX.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\ContratoOGX.Designer.cs">
-      <DependentUpon>ContratoOGX.cs</DependentUpon>
+    <Compile Include="Forms\ContratoTrabalhoOGX.Designer.cs">
+      <DependentUpon>ContratoTrabalhoOGX.cs</DependentUpon>
     </Compile>
     <Compile Include="Forms\Escritorio.cs">
       <SubType>Form</SubType>
@@ -319,6 +370,7 @@
     <Compile Include="Forms\Escritorio.Designer.cs">
       <DependentUpon>Escritorio.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\FormExtentions.cs" />
     <Compile Include="Forms\InserirPessoa.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -332,11 +384,32 @@
       <DependentUpon>Inicial.cs</DependentUpon>
     </Compile>
     <Compile Include="ConsoleApplication1.cs" />
+    <Compile Include="Forms\ListaApproveds.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Forms\ListaPessoas.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Forms\ListaPessoas.Designer.cs">
       <DependentUpon>ListaPessoas.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Login.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Login.Designer.cs">
+      <DependentUpon>Login.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\MenuLateral.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\MenuLateral.Designer.cs">
+      <DependentUpon>MenuLateral.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\PastaDestino.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\PastaDestino.Designer.cs">
+      <DependentUpon>PastaDestino.cs</DependentUpon>
     </Compile>
     <Compile Include="Forms\RegistroApproved.cs">
       <SubType>Form</SubType>
@@ -350,27 +423,52 @@
     <Compile Include="Forms\SelecionarPessoa.Designer.cs">
       <DependentUpon>SelecionarPessoa.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\Sobre.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Sobre.Designer.cs">
+      <DependentUpon>Sobre.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\TermoVoluntario.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\TermoVoluntario.Designer.cs">
+      <DependentUpon>TermoVoluntario.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\Testemunhas.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Forms\Testemunhas.Designer.cs">
       <DependentUpon>Testemunhas.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\Token.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Token.Designer.cs">
+      <DependentUpon>Token.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Infra\Login\LoginRepository.cs" />
     <Compile Include="Infra\DatabaseFactory\DatabaseAdapters\DatabaseAdapterSQL.cs" />
     <Compile Include="Infra\DatabaseFactory\IDatabaseAdapter.cs" />
+    <Compile Include="Infra\Migrations\201011051832_Criar_DiretorioArmazenamento.cs" />
     <Compile Include="Infra\Migrations\201810012310_Criar_Banco.cs" />
     <Compile Include="Infra\Migrations\201810012330_Criar_Pessoa.cs" />
     <Compile Include="Infra\Migrations\201810141300_Criar_Escritorio.cs" />
     <Compile Include="Infra\Migrations\201810141816_Criar_Testemunha.cs" />
     <Compile Include="Infra\Migrations\201810211238_Criar_Approved.cs" />
+    <Compile Include="Infra\Migrations\201810272103_Criar_Token.cs" />
     <Compile Include="Infra\Migrations\Runner\IMigrationRunner.cs" />
     <Compile Include="Infra\Migrations\Runner\MigrationRunnerWinApp.cs" />
     <Compile Include="Infra\Opportunity\OpportunityRepository.cs" />
     <Compile Include="Infra\Opportunity\OpportunityService.cs" />
     <Compile Include="Infra\Repositories\ApprovedRepositorio.cs" />
+    <Compile Include="Infra\Repositories\DiretorioArmazenamentoRepositorio.cs" />
     <Compile Include="Infra\Repositories\EscritorioRepositorio.cs" />
     <Compile Include="Infra\Repositories\PessoaRepositorio.cs" />
+    <Compile Include="Infra\Repositories\RegistroApprovedRepository.cs" />
     <Compile Include="Infra\Repositories\TestemunhaRepositorio.cs" />
+    <Compile Include="Infra\Repositories\TokenPublicoRepositorio.cs" />
+    <Compile Include="Infra\Services\ApprovedServico.cs" />
     <Compile Include="Infra\Services\PessoaServico.cs" />
     <Compile Include="IOC\Register.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -388,11 +486,11 @@
     <Compile Include="WinApp\AppCore.cs" />
     <Compile Include="WinApp\DescricaoValores.cs" />
     <Compile Include="WinApp\Extensions.cs" />
-    <EmbeddedResource Include="Forms\ConsultaOpportunity.resx">
-      <DependentUpon>ConsultaOpportunity.cs</DependentUpon>
+    <EmbeddedResource Include="Forms\ConsultarVaga.resx">
+      <DependentUpon>ConsultarVaga.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\ContratoOGX.resx">
-      <DependentUpon>ContratoOGX.cs</DependentUpon>
+    <EmbeddedResource Include="Forms\ContratoTrabalhoOGX.resx">
+      <DependentUpon>ContratoTrabalhoOGX.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\Escritorio.resx">
       <DependentUpon>Escritorio.cs</DependentUpon>
@@ -403,8 +501,23 @@
     <EmbeddedResource Include="Forms\Inicial.resx">
       <DependentUpon>Inicial.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Forms\ListaApproveds.resx">
+      <DependentUpon>ListaApproveds.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forms\ListaPessoas.resx">
       <DependentUpon>ListaPessoas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Login.resx">
+      <DependentUpon>Login.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\MenuLateral.resx">
+      <DependentUpon>MenuLateral.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\PastaDestino.resx">
+      <DependentUpon>PastaDestino.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\RegistroApproved.pt-BR.resx">
+      <DependentUpon>RegistroApproved.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\RegistroApproved.resx">
       <DependentUpon>RegistroApproved.cs</DependentUpon>
@@ -412,8 +525,17 @@
     <EmbeddedResource Include="Forms\SelecionarPessoa.resx">
       <DependentUpon>SelecionarPessoa.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Sobre.resx">
+      <DependentUpon>Sobre.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\TermoVoluntario.resx">
+      <DependentUpon>TermoVoluntario.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forms\Testemunhas.resx">
       <DependentUpon>Testemunhas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Token.resx">
+      <DependentUpon>Token.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\licenses.licx" />
     <EmbeddedResource Include="Properties\Resources.resx">
@@ -421,6 +543,9 @@
       <SubType>Designer</SubType>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
+    <None Include="credentials.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -431,6 +556,12 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
+    <None Include="Resources\Contrato-OGX.docx">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Resources\Termo-OGX.docx">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
     <None Include="Web References\br.com.correios.apps\AtendeClienteService.wsdl" />
     <None Include="Web References\br.com.correios.apps\clienteERP.datasource">
       <DependentUpon>Reference.map</DependentUpon>
@@ -507,8 +638,19 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="DevExpress.XtraEditors.v15.1.dll" />
+    <Content Include="Resources\EditorTextoIcone.png" />
+    <None Include="Resources\iconeAdicionar.png" />
+    <None Include="Resources\iconeConfiguracao.png" />
+    <None Include="Resources\iconeConsultar.png" />
+    <Content Include="Resources\PDFIcone.png" />
+    <None Include="Resources\subModulo.png" />
+    <Content Include="Resources\TNA Hubble - Icone.ico">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <None Include="Resources\Pessoas.png" />
     <None Include="Resources\TNA Hubble - Logo Grande.png" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Import Project="..\packages\System.Data.SQLite.Core.1.0.108.0\build\net46\System.Data.SQLite.Core.targets" Condition="Exists('..\packages\System.Data.SQLite.Core.1.0.108.0\build\net46\System.Data.SQLite.Core.targets')" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">

@@ -57,10 +57,7 @@ namespace Principal.Infra.Repositories
         {
             using (var conn = DatabaseAdapter.GetConnection())
             {
-                var query = $"SELECT  [P].[Nome], [P].[Sobrenome], [A].[TNID], [A].[DataApproved], [A].[TipoProduto], " +
-                    $"FROM [Pessoa] P, [Approved] A " +
-                    $"Where [P].[Nome] like '%{valor}%' or [P].[Sobrenome] like '%{valor}%' or [A].[TNID]='{valor}' " +
-                    $"AND [P].[ID] = [A].[IdEP] GROUP BY [P].[ID]";
+                var query = $"SELECT  * FROM [Approved] Where [NomeEP] like '%{valor}%' or [TNID] like '%{valor}%' or [PaisDestino] like '%{valor}%' or [CidadeDestino] like '%{valor}%' ";
                 return conn.Query<Approved>(query);
             }
         }

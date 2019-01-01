@@ -195,7 +195,7 @@ namespace Principal.Forms
             // inputNacionalidade
             // 
             this.inputNacionalidade.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.inputNacionalidade.EditValue = "Brasileiro(a)";
+            this.inputNacionalidade.EditValue = "";
             this.inputNacionalidade.Location = new System.Drawing.Point(579, 57);
             this.inputNacionalidade.Name = "inputNacionalidade";
             this.inputNacionalidade.Properties.Appearance.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -270,7 +270,7 @@ namespace Principal.Forms
             this.inputCPF.Mask = "000.000.000-00";
             this.inputCPF.Name = "inputCPF";
             this.inputCPF.Size = new System.Drawing.Size(102, 22);
-            this.inputCPF.TabIndex = 9;
+            this.inputCPF.TabIndex = 10;
             // 
             // inputUFDocumento
             // 
@@ -310,7 +310,7 @@ namespace Principal.Forms
             "TO"});
             this.inputUFDocumento.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
             this.inputUFDocumento.Size = new System.Drawing.Size(55, 22);
-            this.inputUFDocumento.TabIndex = 10;
+            this.inputUFDocumento.TabIndex = 8;
             // 
             // labelControl6
             // 
@@ -336,6 +336,7 @@ namespace Principal.Forms
             new DevExpress.XtraEditors.Controls.RadioGroupItem(null, "RNE")});
             this.radioGroupDocumento.Size = new System.Drawing.Size(105, 91);
             this.radioGroupDocumento.TabIndex = 6;
+            this.radioGroupDocumento.SelectedIndexChanged += new System.EventHandler(this.radioGroupDocumento_SelectedIndexChanged);
             // 
             // inputOrgaoExpedidor
             // 
@@ -351,6 +352,7 @@ namespace Principal.Forms
             "PM",
             "PC",
             "CNT",
+            "CREA",
             "DIC",
             "DETRAN",
             "CTPS",
@@ -358,16 +360,19 @@ namespace Principal.Forms
             "IFP",
             "IPF",
             "IML",
+            "ITEP",
             "MTE",
+            "MA",
+            "ME",
             "MMA",
             "MAE",
             "MEX",
             "POF",
             "POM",
+            "SDS",
             "SES",
             "SJS",
             "SJTS"});
-            this.inputOrgaoExpedidor.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
             this.inputOrgaoExpedidor.Size = new System.Drawing.Size(102, 22);
             this.inputOrgaoExpedidor.TabIndex = 7;
             // 
@@ -387,7 +392,7 @@ namespace Principal.Forms
             this.inputNumeroDoc.Properties.Appearance.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.inputNumeroDoc.Properties.Appearance.Options.UseFont = true;
             this.inputNumeroDoc.Size = new System.Drawing.Size(102, 22);
-            this.inputNumeroDoc.TabIndex = 8;
+            this.inputNumeroDoc.TabIndex = 9;
             // 
             // labelControl9
             // 
@@ -434,7 +439,7 @@ namespace Principal.Forms
             this.inputComplemento.Properties.Appearance.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.inputComplemento.Properties.Appearance.Options.UseFont = true;
             this.inputComplemento.Size = new System.Drawing.Size(328, 22);
-            this.inputComplemento.TabIndex = 14;
+            this.inputComplemento.TabIndex = 18;
             // 
             // labelControl17
             // 
@@ -497,7 +502,7 @@ namespace Principal.Forms
             this.inputBairro.Properties.Appearance.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.inputBairro.Properties.Appearance.Options.UseFont = true;
             this.inputBairro.Size = new System.Drawing.Size(328, 22);
-            this.inputBairro.TabIndex = 13;
+            this.inputBairro.TabIndex = 16;
             // 
             // labelControl11
             // 
@@ -528,7 +533,7 @@ namespace Principal.Forms
             this.inputCidade.Properties.Appearance.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.inputCidade.Properties.Appearance.Options.UseFont = true;
             this.inputCidade.Size = new System.Drawing.Size(167, 22);
-            this.inputCidade.TabIndex = 18;
+            this.inputCidade.TabIndex = 17;
             // 
             // inputRua
             // 
@@ -539,7 +544,7 @@ namespace Principal.Forms
             this.inputRua.Properties.Appearance.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.inputRua.Properties.Appearance.Options.UseFont = true;
             this.inputRua.Size = new System.Drawing.Size(328, 22);
-            this.inputRua.TabIndex = 12;
+            this.inputRua.TabIndex = 14;
             // 
             // labelControl14
             // 
@@ -548,9 +553,9 @@ namespace Principal.Forms
             this.labelControl14.Appearance.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelControl14.Location = new System.Drawing.Point(16, 57);
             this.labelControl14.Name = "labelControl14";
-            this.labelControl14.Size = new System.Drawing.Size(25, 16);
+            this.labelControl14.Size = new System.Drawing.Size(70, 16);
             this.labelControl14.TabIndex = 46;
-            this.labelControl14.Text = "Rua";
+            this.labelControl14.Text = "Logradouro";
             // 
             // inputEmail
             // 
@@ -602,7 +607,7 @@ namespace Principal.Forms
             this.inputCEP.Mask = "00.000-000";
             this.inputCEP.Name = "inputCEP";
             this.inputCEP.Size = new System.Drawing.Size(86, 22);
-            this.inputCEP.TabIndex = 15;
+            this.inputCEP.TabIndex = 12;
             // 
             // inputNumero
             // 
@@ -612,7 +617,7 @@ namespace Principal.Forms
             this.inputNumero.Properties.Appearance.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.inputNumero.Properties.Appearance.Options.UseFont = true;
             this.inputNumero.Size = new System.Drawing.Size(86, 22);
-            this.inputNumero.TabIndex = 17;
+            this.inputNumero.TabIndex = 15;
             // 
             // labelControl12
             // 
@@ -632,7 +637,7 @@ namespace Principal.Forms
             this.botaoPesquisarCEP.Location = new System.Drawing.Point(671, 26);
             this.botaoPesquisarCEP.Name = "botaoPesquisarCEP";
             this.botaoPesquisarCEP.Size = new System.Drawing.Size(75, 23);
-            this.botaoPesquisarCEP.TabIndex = 16;
+            this.botaoPesquisarCEP.TabIndex = 13;
             this.botaoPesquisarCEP.Text = "Pesquisar";
             this.botaoPesquisarCEP.Click += new System.EventHandler(this.botaoPesquisarCEP_Click);
             // 

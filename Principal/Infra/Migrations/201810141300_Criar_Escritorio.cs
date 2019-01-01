@@ -27,6 +27,7 @@ namespace Principal.Infra.Migrations
                     .WithColumn("Bairro").AsString(200)
                     .WithColumn("Cidade").AsString(200)
                     .WithColumn("UF").AsString(200)
+                    .WithColumn("UFCompleto").AsString(200)
                     .WithColumn("Complemento").AsString(200).Nullable()
                     .WithColumn("LCP").AsInt32().ForeignKey().Nullable()
                     .WithColumn("LCPNome").AsString(200).Nullable();
@@ -41,6 +42,7 @@ namespace Principal.Infra.Migrations
                 {"Bairro", "Vila Mariana"},
                 {"Cidade", "São Paulo"},
                 {"UF", "SP"},
+                {"UFCompleto", "São Paulo"},
                 {"Complemento", ""}
             });
         }

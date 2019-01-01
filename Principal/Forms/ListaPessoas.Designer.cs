@@ -48,18 +48,18 @@
             // 
             this.inputNome.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.inputNome.Location = new System.Drawing.Point(68, 9);
+            this.inputNome.Location = new System.Drawing.Point(68, 10);
             this.inputNome.Name = "inputNome";
-            this.inputNome.Properties.Appearance.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.inputNome.Properties.Appearance.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.inputNome.Properties.Appearance.Options.UseFont = true;
-            this.inputNome.Size = new System.Drawing.Size(575, 22);
+            this.inputNome.Size = new System.Drawing.Size(575, 24);
             this.inputNome.TabIndex = 31;
             this.inputNome.KeyDown += new System.Windows.Forms.KeyEventHandler(this.textBoxSearch_KeyDown);
             // 
             // labelControl1
             // 
             this.labelControl1.Appearance.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelControl1.Location = new System.Drawing.Point(12, 12);
+            this.labelControl1.Location = new System.Drawing.Point(12, 14);
             this.labelControl1.Name = "labelControl1";
             this.labelControl1.Size = new System.Drawing.Size(37, 16);
             this.labelControl1.TabIndex = 32;
@@ -72,7 +72,7 @@
             this.botaoPesquisar.Appearance.Options.UseFont = true;
             this.botaoPesquisar.Location = new System.Drawing.Point(649, 8);
             this.botaoPesquisar.Name = "botaoPesquisar";
-            this.botaoPesquisar.Size = new System.Drawing.Size(75, 23);
+            this.botaoPesquisar.Size = new System.Drawing.Size(75, 27);
             this.botaoPesquisar.TabIndex = 49;
             this.botaoPesquisar.Text = "Pesquisar";
             this.botaoPesquisar.Click += new System.EventHandler(this.botaoPesquisar_Click);
@@ -182,7 +182,7 @@
             this.Name = "ListaPessoas";
             this.ShowIcon = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "ListaPessoas";
+            this.Text = "Pessoas";
             ((System.ComponentModel.ISupportInitialize)(this.inputNome.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridControlListaPessoas)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).EndInit();

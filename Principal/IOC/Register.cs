@@ -36,9 +36,15 @@ namespace Principal.IOC
         {
             container.RegisterType<IPessoaRepositorio, PessoaRepositorio>(new HierarchicalLifetimeManager());
             container.RegisterType<IPessoaService, PessoaServico>(new HierarchicalLifetimeManager());
+            container.RegisterType<IDiretorioArmazenamentoRepositorio, DiretorioArmazenamentoRepositorio>(new HierarchicalLifetimeManager());
+            container.RegisterType<IApprovedRepositorio, ApprovedRepositorio>(new HierarchicalLifetimeManager());
+            container.RegisterType<IApprovedService, ApprovedServico>(new HierarchicalLifetimeManager());
+            container.RegisterType<ILoginRepository, LoginRepository>(new HierarchicalLifetimeManager());
+            container.RegisterType<IRegistroApprovedRepository, RegistroApprovedRepository>(new HierarchicalLifetimeManager());
             container.RegisterType<IOpportunityRepository, OpportunityRepository>(new HierarchicalLifetimeManager());
             container.RegisterType<ITestemunhaRepositorio, TestemunhaRepositorio>(new HierarchicalLifetimeManager());
             container.RegisterType<IEscritorioRepositorio, EscritorioRepositorio>(new HierarchicalLifetimeManager());
+            container.RegisterType<ITokenPublicoRepositorio, TokenPublicoRepositorio>(new HierarchicalLifetimeManager());
             container.RegisterType<IOpportunityService, OpportunityService>(new HierarchicalLifetimeManager());
             container.RegisterType<IRestClient, RestClient>(new HierarchicalLifetimeManager(), new InjectionConstructor());
             container.RegisterType<IRestRequest, RestRequest>(new HierarchicalLifetimeManager(), new InjectionConstructor());            

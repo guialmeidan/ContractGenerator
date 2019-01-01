@@ -1,4 +1,6 @@
-﻿namespace Principal.Forms
+﻿using System;
+
+namespace Principal.Forms
 {
     partial class RegistroApproved
     {
@@ -28,6 +30,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(RegistroApproved));
             this.labelControl1 = new DevExpress.XtraEditors.LabelControl();
             this.inputNomeEP = new DevExpress.XtraEditors.ButtonEdit();
             this.inputNomeResponsavel = new DevExpress.XtraEditors.ButtonEdit();
@@ -48,7 +51,6 @@
             this.labelControl6 = new DevExpress.XtraEditors.LabelControl();
             this.labelControl7 = new DevExpress.XtraEditors.LabelControl();
             this.inputDataFim = new DevExpress.XtraEditors.DateEdit();
-            this.inputCargaHoraria = new DevExpress.XtraEditors.TextEdit();
             this.labelControl8 = new DevExpress.XtraEditors.LabelControl();
             this.inputFeeICX = new DevExpress.XtraEditors.TextEdit();
             this.labelControl10 = new DevExpress.XtraEditors.LabelControl();
@@ -58,32 +60,82 @@
             this.labelControl12 = new DevExpress.XtraEditors.LabelControl();
             this.inputAcomodacaoCoberta = new DevExpress.XtraEditors.TextEdit();
             this.labelControl13 = new DevExpress.XtraEditors.LabelControl();
-            this.inputAlimentacaoCoberta = new DevExpress.XtraEditors.TextEdit();
+            this.inputAlimentacaoFimDeSemana = new DevExpress.XtraEditors.TextEdit();
             this.labelControl14 = new DevExpress.XtraEditors.LabelControl();
-            this.inputAlimentacaoProvida = new DevExpress.XtraEditors.TextEdit();
+            this.inputAlimentacaoSemana = new DevExpress.XtraEditors.TextEdit();
             this.labelControl15 = new DevExpress.XtraEditors.LabelControl();
             this.inputComputador = new DevExpress.XtraEditors.TextEdit();
             this.labelControl16 = new DevExpress.XtraEditors.LabelControl();
-            this.labelControl9 = new DevExpress.XtraEditors.LabelControl();
             this.xtraTabControl = new DevExpress.XtraTab.XtraTabControl();
             this.xtraTabPageVaga = new DevExpress.XtraTab.XtraTabPage();
+            this.inputTrabalhoSabado = new DevExpress.XtraEditors.TextEdit();
+            this.labelControl25 = new DevExpress.XtraEditors.LabelControl();
+            this.radioGroupPrograma = new DevExpress.XtraEditors.RadioGroup();
+            this.labelControl9 = new DevExpress.XtraEditors.LabelControl();
+            this.inputCargaHorariaExtenso = new DevExpress.XtraEditors.TextEdit();
+            this.inputCargaHorariaNumero = new DevExpress.XtraEditors.SpinEdit();
             this.xtraTabPagePagamento = new DevExpress.XtraTab.XtraTabPage();
-            this.inputNumeroParcelas = new System.Windows.Forms.NumericUpDown();
+            this.inputNumeroParcelas = new DevExpress.XtraEditors.SpinEdit();
+            this.labelControlValorParcialExtenso = new DevExpress.XtraEditors.LabelControl();
+            this.inputValorParcialExtenso = new DevExpress.XtraEditors.TextEdit();
+            this.labelControlValorParcial = new DevExpress.XtraEditors.LabelControl();
+            this.inputValorParcial = new DevExpress.XtraEditors.TextEdit();
+            this.inputModoTransferencia = new DevExpress.XtraEditors.CheckEdit();
+            this.inputModoPagSeguro = new DevExpress.XtraEditors.CheckEdit();
+            this.inputModoDinheiro = new DevExpress.XtraEditors.CheckEdit();
+            this.inputModoDeposito = new DevExpress.XtraEditors.CheckEdit();
+            this.inputModoCheque = new DevExpress.XtraEditors.CheckEdit();
+            this.inputModoDebito = new DevExpress.XtraEditors.CheckEdit();
+            this.inputModoCredito = new DevExpress.XtraEditors.CheckEdit();
+            this.inputModoBoleto = new DevExpress.XtraEditors.CheckEdit();
             this.labelControl21 = new DevExpress.XtraEditors.LabelControl();
             this.inputDataPagamento = new DevExpress.XtraEditors.DateEdit();
-            this.inputFormasPagamento = new DevExpress.XtraEditors.CheckedListBoxControl();
-            this.labelControl20 = new DevExpress.XtraEditors.LabelControl();
+            this.labelControlNumeroParcelas = new DevExpress.XtraEditors.LabelControl();
             this.inputModoPagamento = new DevExpress.XtraEditors.RadioGroup();
             this.labelControl19 = new DevExpress.XtraEditors.LabelControl();
             this.inputValorExtenso = new DevExpress.XtraEditors.TextEdit();
             this.labelControl18 = new DevExpress.XtraEditors.LabelControl();
             this.inputValorContrato = new DevExpress.XtraEditors.TextEdit();
+            this.xtraTabPageParcelas = new DevExpress.XtraTab.XtraTabPage();
+            this.labelValorNaoParcelado = new DevExpress.XtraEditors.LabelControl();
+            this.inputLabelParcela12 = new DevExpress.XtraEditors.LabelControl();
+            this.inputParcela12 = new DevExpress.XtraEditors.DateEdit();
+            this.inputLabelParcela11 = new DevExpress.XtraEditors.LabelControl();
+            this.inputParcela11 = new DevExpress.XtraEditors.DateEdit();
+            this.inputLabelParcela10 = new DevExpress.XtraEditors.LabelControl();
+            this.inputParcela10 = new DevExpress.XtraEditors.DateEdit();
+            this.inputLabelParcela9 = new DevExpress.XtraEditors.LabelControl();
+            this.inputParcela9 = new DevExpress.XtraEditors.DateEdit();
+            this.inputLabelParcela8 = new DevExpress.XtraEditors.LabelControl();
+            this.inputParcela8 = new DevExpress.XtraEditors.DateEdit();
+            this.inputLabelParcela7 = new DevExpress.XtraEditors.LabelControl();
+            this.inputParcela7 = new DevExpress.XtraEditors.DateEdit();
+            this.inputLabelParcela6 = new DevExpress.XtraEditors.LabelControl();
+            this.inputParcela6 = new DevExpress.XtraEditors.DateEdit();
+            this.inputLabelParcela5 = new DevExpress.XtraEditors.LabelControl();
+            this.inputParcela5 = new DevExpress.XtraEditors.DateEdit();
+            this.inputLabelParcela4 = new DevExpress.XtraEditors.LabelControl();
+            this.inputParcela4 = new DevExpress.XtraEditors.DateEdit();
+            this.inputLabelParcela3 = new DevExpress.XtraEditors.LabelControl();
+            this.inputParcela3 = new DevExpress.XtraEditors.DateEdit();
+            this.inputLabelParcela2 = new DevExpress.XtraEditors.LabelControl();
+            this.inputParcela2 = new DevExpress.XtraEditors.DateEdit();
+            this.inputLabelParcela1 = new DevExpress.XtraEditors.LabelControl();
+            this.inputParcela1 = new DevExpress.XtraEditors.DateEdit();
             this.xtraTabPageTestemunhas = new DevExpress.XtraTab.XtraTabPage();
             this.labelControl22 = new DevExpress.XtraEditors.LabelControl();
             this.inputTestemunha2 = new DevExpress.XtraEditors.ButtonEdit();
             this.labelControl23 = new DevExpress.XtraEditors.LabelControl();
             this.inputTestemunha1 = new DevExpress.XtraEditors.ButtonEdit();
+            this.xtraTabPageDocumentos = new DevExpress.XtraTab.XtraTabPage();
+            this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.pictureEditTermoPDF = new DevExpress.XtraEditors.PictureEdit();
+            this.pictureEditTermoText = new DevExpress.XtraEditors.PictureEdit();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.pictureEditContratoPDF = new DevExpress.XtraEditors.PictureEdit();
+            this.pictureEditContratoText = new DevExpress.XtraEditors.PictureEdit();
             this.botaoSalvar = new DevExpress.XtraEditors.SimpleButton();
+            this.botaoResetar = new DevExpress.XtraEditors.SimpleButton();
             ((System.ComponentModel.ISupportInitialize)(this.inputNomeEP.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.inputNomeResponsavel.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.groupControlDadosGerais)).BeginInit();
@@ -98,80 +150,116 @@
             ((System.ComponentModel.ISupportInitialize)(this.inputDataInicio.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.inputDataFim.Properties.CalendarTimeProperties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.inputDataFim.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.inputCargaHoraria.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.inputFeeICX.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.inputBolsaAuxilio.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.inputAcomodacaoProvida.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.inputAcomodacaoCoberta.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.inputAlimentacaoCoberta.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.inputAlimentacaoProvida.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.inputAlimentacaoFimDeSemana.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.inputAlimentacaoSemana.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.inputComputador.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.xtraTabControl)).BeginInit();
             this.xtraTabControl.SuspendLayout();
             this.xtraTabPageVaga.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.inputTrabalhoSabado.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.radioGroupPrograma.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.inputCargaHorariaExtenso.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.inputCargaHorariaNumero.Properties)).BeginInit();
             this.xtraTabPagePagamento.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.inputNumeroParcelas)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.inputNumeroParcelas.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.inputValorParcialExtenso.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.inputValorParcial.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.inputModoTransferencia.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.inputModoPagSeguro.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.inputModoDinheiro.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.inputModoDeposito.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.inputModoCheque.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.inputModoDebito.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.inputModoCredito.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.inputModoBoleto.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.inputDataPagamento.Properties.CalendarTimeProperties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.inputDataPagamento.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.inputFormasPagamento)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.inputModoPagamento.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.inputValorExtenso.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.inputValorContrato.Properties)).BeginInit();
+            this.xtraTabPageParcelas.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.inputParcela12.Properties.CalendarTimeProperties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.inputParcela12.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.inputParcela11.Properties.CalendarTimeProperties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.inputParcela11.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.inputParcela10.Properties.CalendarTimeProperties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.inputParcela10.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.inputParcela9.Properties.CalendarTimeProperties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.inputParcela9.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.inputParcela8.Properties.CalendarTimeProperties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.inputParcela8.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.inputParcela7.Properties.CalendarTimeProperties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.inputParcela7.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.inputParcela6.Properties.CalendarTimeProperties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.inputParcela6.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.inputParcela5.Properties.CalendarTimeProperties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.inputParcela5.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.inputParcela4.Properties.CalendarTimeProperties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.inputParcela4.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.inputParcela3.Properties.CalendarTimeProperties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.inputParcela3.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.inputParcela2.Properties.CalendarTimeProperties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.inputParcela2.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.inputParcela1.Properties.CalendarTimeProperties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.inputParcela1.Properties)).BeginInit();
             this.xtraTabPageTestemunhas.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.inputTestemunha2.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.inputTestemunha1.Properties)).BeginInit();
+            this.xtraTabPageDocumentos.SuspendLayout();
+            this.groupBox2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureEditTermoPDF.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureEditTermoText.Properties)).BeginInit();
+            this.groupBox1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureEditContratoPDF.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureEditContratoText.Properties)).BeginInit();
             this.SuspendLayout();
             // 
             // labelControl1
             // 
-            this.labelControl1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.labelControl1.Appearance.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelControl1.Location = new System.Drawing.Point(16, 32);
+            this.labelControl1.Appearance.Font = ((System.Drawing.Font)(resources.GetObject("labelControl1.Appearance.Font")));
+            resources.ApplyResources(this.labelControl1, "labelControl1");
             this.labelControl1.Name = "labelControl1";
-            this.labelControl1.Size = new System.Drawing.Size(18, 16);
-            this.labelControl1.TabIndex = 32;
-            this.labelControl1.Text = "EP";
             // 
             // inputNomeEP
             // 
-            this.inputNomeEP.Location = new System.Drawing.Point(120, 29);
+            resources.ApplyResources(this.inputNomeEP, "inputNomeEP");
             this.inputNomeEP.Name = "inputNomeEP";
             this.inputNomeEP.Properties.AllowFocused = false;
-            this.inputNomeEP.Properties.Appearance.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.inputNomeEP.Properties.Appearance.Font = ((System.Drawing.Font)(resources.GetObject("inputNomeEP.Properties.Appearance.Font")));
             this.inputNomeEP.Properties.Appearance.Options.UseFont = true;
             this.inputNomeEP.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton()});
             this.inputNomeEP.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
-            this.inputNomeEP.Size = new System.Drawing.Size(333, 22);
-            this.inputNomeEP.TabIndex = 33;
+
+            this.inputNomeEP.ButtonClick += inputNomeEP_ButtonClick;
+            this.inputNomeResponsavel.ButtonClick += inputNomeResponsavel_ButtonClick;
+            this.inputTestemunha1.ButtonClick += inputTestemunha1_ButtonClick;
+            this.inputTestemunha2.ButtonClick += inputTestemunha2_ButtonClick;
             // 
             // inputNomeResponsavel
             // 
-            this.inputNomeResponsavel.Location = new System.Drawing.Point(120, 57);
+            resources.ApplyResources(this.inputNomeResponsavel, "inputNomeResponsavel");
             this.inputNomeResponsavel.Name = "inputNomeResponsavel";
             this.inputNomeResponsavel.Properties.AllowFocused = false;
-            this.inputNomeResponsavel.Properties.Appearance.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.inputNomeResponsavel.Properties.Appearance.Font = ((System.Drawing.Font)(resources.GetObject("inputNomeResponsavel.Properties.Appearance.Font")));
             this.inputNomeResponsavel.Properties.Appearance.Options.UseFont = true;
             this.inputNomeResponsavel.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton()});
             this.inputNomeResponsavel.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
-            this.inputNomeResponsavel.Size = new System.Drawing.Size(333, 22);
-            this.inputNomeResponsavel.TabIndex = 35;
             // 
             // labelControl2
             // 
-            this.labelControl2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.labelControl2.Appearance.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelControl2.Location = new System.Drawing.Point(16, 60);
+            this.labelControl2.Appearance.Font = ((System.Drawing.Font)(resources.GetObject("labelControl2.Appearance.Font")));
+            resources.ApplyResources(this.labelControl2, "labelControl2");
             this.labelControl2.Name = "labelControl2";
-            this.labelControl2.Size = new System.Drawing.Size(81, 16);
-            this.labelControl2.TabIndex = 34;
-            this.labelControl2.Text = "Responsável";
             // 
             // groupControlDadosGerais
             // 
+            resources.ApplyResources(this.groupControlDadosGerais, "groupControlDadosGerais");
             this.groupControlDadosGerais.Controls.Add(this.labelControl24);
             this.groupControlDadosGerais.Controls.Add(this.inputDataAPD);
             this.groupControlDadosGerais.Controls.Add(this.labelControl17);
@@ -180,335 +268,254 @@
             this.groupControlDadosGerais.Controls.Add(this.inputNomeResponsavel);
             this.groupControlDadosGerais.Controls.Add(this.inputNomeEP);
             this.groupControlDadosGerais.Controls.Add(this.labelControl2);
-            this.groupControlDadosGerais.Location = new System.Drawing.Point(12, 12);
             this.groupControlDadosGerais.Name = "groupControlDadosGerais";
-            this.groupControlDadosGerais.Size = new System.Drawing.Size(660, 95);
-            this.groupControlDadosGerais.TabIndex = 36;
-            this.groupControlDadosGerais.Text = "Contratante";
             // 
             // labelControl24
             // 
-            this.labelControl24.Appearance.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelControl24.Location = new System.Drawing.Point(469, 58);
+            resources.ApplyResources(this.labelControl24, "labelControl24");
+            this.labelControl24.Appearance.Font = ((System.Drawing.Font)(resources.GetObject("labelControl24.Appearance.Font")));
             this.labelControl24.Name = "labelControl24";
-            this.labelControl24.Size = new System.Drawing.Size(60, 16);
-            this.labelControl24.TabIndex = 61;
-            this.labelControl24.Text = "Data APD";
             // 
             // inputDataAPD
             // 
-            this.inputDataAPD.EditValue = null;
-            this.inputDataAPD.Location = new System.Drawing.Point(535, 57);
+            resources.ApplyResources(this.inputDataAPD, "inputDataAPD");
             this.inputDataAPD.Name = "inputDataAPD";
+            this.inputDataAPD.Properties.Appearance.Font = ((System.Drawing.Font)(resources.GetObject("inputDataAPD.Properties.Appearance.Font")));
+            this.inputDataAPD.Properties.Appearance.Options.UseFont = true;
             this.inputDataAPD.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            new DevExpress.XtraEditors.Controls.EditorButton(((DevExpress.XtraEditors.Controls.ButtonPredefines)(resources.GetObject("inputDataAPD.Properties.Buttons"))))});
             this.inputDataAPD.Properties.CalendarTimeProperties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.inputDataAPD.Size = new System.Drawing.Size(100, 20);
-            this.inputDataAPD.TabIndex = 60;
+            new DevExpress.XtraEditors.Controls.EditorButton(((DevExpress.XtraEditors.Controls.ButtonPredefines)(resources.GetObject("inputDataAPD.Properties.CalendarTimeProperties.Buttons"))))});
+            this.inputDataAPD.Properties.Mask.EditMask = resources.GetString("inputDataAPD.Properties.Mask.EditMask");
+            this.inputDataAPD.Properties.Mask.UseMaskAsDisplayFormat = ((bool)(resources.GetObject("inputDataAPD.Properties.Mask.UseMaskAsDisplayFormat")));
             // 
             // labelControl17
             // 
-            this.labelControl17.Appearance.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelControl17.Location = new System.Drawing.Point(469, 32);
+            resources.ApplyResources(this.labelControl17, "labelControl17");
+            this.labelControl17.Appearance.Font = ((System.Drawing.Font)(resources.GetObject("labelControl17.Appearance.Font")));
             this.labelControl17.Name = "labelControl17";
-            this.labelControl17.Size = new System.Drawing.Size(34, 16);
-            this.labelControl17.TabIndex = 36;
-            this.labelControl17.Text = "EP ID";
             // 
             // inputEPID
             // 
-            this.inputEPID.Location = new System.Drawing.Point(535, 29);
+            resources.ApplyResources(this.inputEPID, "inputEPID");
             this.inputEPID.Name = "inputEPID";
-            this.inputEPID.Properties.Appearance.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.inputEPID.Properties.Appearance.Font = ((System.Drawing.Font)(resources.GetObject("inputEPID.Properties.Appearance.Font")));
             this.inputEPID.Properties.Appearance.Options.UseFont = true;
-            this.inputEPID.Size = new System.Drawing.Size(100, 22);
-            this.inputEPID.TabIndex = 37;
+            this.inputEPID.Properties.Mask.EditMask = resources.GetString("inputEPID.Properties.Mask.EditMask");
+            this.inputEPID.Properties.Mask.SaveLiteral = ((bool)(resources.GetObject("inputEPID.Properties.Mask.SaveLiteral")));
+            this.inputEPID.Properties.Mask.ShowPlaceHolders = ((bool)(resources.GetObject("inputEPID.Properties.Mask.ShowPlaceHolders")));
+            this.inputEPID.Properties.MaxLength = 9;
             // 
             // labelControl3
             // 
-            this.labelControl3.Appearance.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelControl3.Location = new System.Drawing.Point(15, 12);
+            this.labelControl3.Appearance.Font = ((System.Drawing.Font)(resources.GetObject("labelControl3.Appearance.Font")));
+            resources.ApplyResources(this.labelControl3, "labelControl3");
             this.labelControl3.Name = "labelControl3";
-            this.labelControl3.Size = new System.Drawing.Size(35, 16);
-            this.labelControl3.TabIndex = 32;
-            this.labelControl3.Text = "TN ID";
             // 
             // inputTNID
             // 
-            this.inputTNID.Location = new System.Drawing.Point(119, 9);
+            resources.ApplyResources(this.inputTNID, "inputTNID");
             this.inputTNID.Name = "inputTNID";
-            this.inputTNID.Properties.Appearance.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.inputTNID.Properties.Appearance.Font = ((System.Drawing.Font)(resources.GetObject("inputTNID.Properties.Appearance.Font")));
             this.inputTNID.Properties.Appearance.Options.UseFont = true;
-            this.inputTNID.Size = new System.Drawing.Size(97, 22);
-            this.inputTNID.TabIndex = 33;
             // 
             // botaoPesquisar
             // 
-            this.botaoPesquisar.Appearance.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.botaoPesquisar.Appearance.Font = ((System.Drawing.Font)(resources.GetObject("botaoPesquisar.Appearance.Font")));
             this.botaoPesquisar.Appearance.Options.UseFont = true;
-            this.botaoPesquisar.Location = new System.Drawing.Point(222, 8);
+            resources.ApplyResources(this.botaoPesquisar, "botaoPesquisar");
             this.botaoPesquisar.Name = "botaoPesquisar";
-            this.botaoPesquisar.Size = new System.Drawing.Size(75, 23);
-            this.botaoPesquisar.TabIndex = 34;
-            this.botaoPesquisar.Text = "Pesquisar";
+            this.botaoPesquisar.Click += new System.EventHandler(this.botaoPesquisar_Click);
             // 
             // inputPaisDestino
             // 
-            this.inputPaisDestino.Location = new System.Drawing.Point(119, 45);
+            resources.ApplyResources(this.inputPaisDestino, "inputPaisDestino");
             this.inputPaisDestino.Name = "inputPaisDestino";
-            this.inputPaisDestino.Properties.Appearance.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.inputPaisDestino.Properties.Appearance.Font = ((System.Drawing.Font)(resources.GetObject("inputPaisDestino.Properties.Appearance.Font")));
             this.inputPaisDestino.Properties.Appearance.Options.UseFont = true;
-            this.inputPaisDestino.Size = new System.Drawing.Size(250, 22);
-            this.inputPaisDestino.TabIndex = 36;
             // 
             // labelControl4
             // 
-            this.labelControl4.Appearance.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelControl4.Location = new System.Drawing.Point(15, 48);
+            this.labelControl4.Appearance.Font = ((System.Drawing.Font)(resources.GetObject("labelControl4.Appearance.Font")));
+            resources.ApplyResources(this.labelControl4, "labelControl4");
             this.labelControl4.Name = "labelControl4";
-            this.labelControl4.Size = new System.Drawing.Size(76, 16);
-            this.labelControl4.TabIndex = 35;
-            this.labelControl4.Text = "País Destino";
             // 
             // inputCidadeDestino
             // 
-            this.inputCidadeDestino.Location = new System.Drawing.Point(119, 73);
+            resources.ApplyResources(this.inputCidadeDestino, "inputCidadeDestino");
             this.inputCidadeDestino.Name = "inputCidadeDestino";
-            this.inputCidadeDestino.Properties.Appearance.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.inputCidadeDestino.Properties.Appearance.Font = ((System.Drawing.Font)(resources.GetObject("inputCidadeDestino.Properties.Appearance.Font")));
             this.inputCidadeDestino.Properties.Appearance.Options.UseFont = true;
-            this.inputCidadeDestino.Size = new System.Drawing.Size(250, 22);
-            this.inputCidadeDestino.TabIndex = 38;
             // 
             // labelControl5
             // 
-            this.labelControl5.Appearance.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelControl5.Location = new System.Drawing.Point(15, 76);
+            this.labelControl5.Appearance.Font = ((System.Drawing.Font)(resources.GetObject("labelControl5.Appearance.Font")));
+            resources.ApplyResources(this.labelControl5, "labelControl5");
             this.labelControl5.Name = "labelControl5";
-            this.labelControl5.Size = new System.Drawing.Size(93, 16);
-            this.labelControl5.TabIndex = 37;
-            this.labelControl5.Text = "Cidade Destino";
             // 
             // inputDataInicio
             // 
-            this.inputDataInicio.EditValue = null;
-            this.inputDataInicio.Location = new System.Drawing.Point(534, 47);
+            resources.ApplyResources(this.inputDataInicio, "inputDataInicio");
             this.inputDataInicio.Name = "inputDataInicio";
+            this.inputDataInicio.Properties.Appearance.Font = ((System.Drawing.Font)(resources.GetObject("inputDataInicio.Properties.Appearance.Font")));
+            this.inputDataInicio.Properties.Appearance.Options.UseFont = true;
             this.inputDataInicio.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            new DevExpress.XtraEditors.Controls.EditorButton(((DevExpress.XtraEditors.Controls.ButtonPredefines)(resources.GetObject("inputDataInicio.Properties.Buttons"))))});
             this.inputDataInicio.Properties.CalendarTimeProperties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.inputDataInicio.Size = new System.Drawing.Size(100, 20);
-            this.inputDataInicio.TabIndex = 39;
+            new DevExpress.XtraEditors.Controls.EditorButton(((DevExpress.XtraEditors.Controls.ButtonPredefines)(resources.GetObject("inputDataInicio.Properties.CalendarTimeProperties.Buttons"))))});
+            this.inputDataInicio.Properties.Mask.EditMask = resources.GetString("inputDataInicio.Properties.Mask.EditMask");
+            this.inputDataInicio.Properties.Mask.UseMaskAsDisplayFormat = ((bool)(resources.GetObject("inputDataInicio.Properties.Mask.UseMaskAsDisplayFormat")));
             // 
             // labelControl6
             // 
-            this.labelControl6.Appearance.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelControl6.Location = new System.Drawing.Point(418, 48);
+            resources.ApplyResources(this.labelControl6, "labelControl6");
+            this.labelControl6.Appearance.Font = ((System.Drawing.Font)(resources.GetObject("labelControl6.Appearance.Font")));
             this.labelControl6.Name = "labelControl6";
-            this.labelControl6.Size = new System.Drawing.Size(63, 16);
-            this.labelControl6.TabIndex = 40;
-            this.labelControl6.Text = "Data Início";
             // 
             // labelControl7
             // 
-            this.labelControl7.Appearance.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelControl7.Location = new System.Drawing.Point(418, 74);
+            resources.ApplyResources(this.labelControl7, "labelControl7");
+            this.labelControl7.Appearance.Font = ((System.Drawing.Font)(resources.GetObject("labelControl7.Appearance.Font")));
             this.labelControl7.Name = "labelControl7";
-            this.labelControl7.Size = new System.Drawing.Size(54, 16);
-            this.labelControl7.TabIndex = 42;
-            this.labelControl7.Text = "Data Fim";
             // 
             // inputDataFim
             // 
-            this.inputDataFim.EditValue = null;
-            this.inputDataFim.Location = new System.Drawing.Point(534, 73);
+            resources.ApplyResources(this.inputDataFim, "inputDataFim");
             this.inputDataFim.Name = "inputDataFim";
+            this.inputDataFim.Properties.Appearance.Font = ((System.Drawing.Font)(resources.GetObject("inputDataFim.Properties.Appearance.Font")));
+            this.inputDataFim.Properties.Appearance.Options.UseFont = true;
             this.inputDataFim.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            new DevExpress.XtraEditors.Controls.EditorButton(((DevExpress.XtraEditors.Controls.ButtonPredefines)(resources.GetObject("inputDataFim.Properties.Buttons"))))});
             this.inputDataFim.Properties.CalendarTimeProperties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.inputDataFim.Size = new System.Drawing.Size(100, 20);
-            this.inputDataFim.TabIndex = 41;
-            // 
-            // inputCargaHoraria
-            // 
-            this.inputCargaHoraria.Location = new System.Drawing.Point(119, 126);
-            this.inputCargaHoraria.Name = "inputCargaHoraria";
-            this.inputCargaHoraria.Properties.Appearance.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.inputCargaHoraria.Properties.Appearance.Options.UseFont = true;
-            this.inputCargaHoraria.Size = new System.Drawing.Size(74, 22);
-            this.inputCargaHoraria.TabIndex = 44;
+            new DevExpress.XtraEditors.Controls.EditorButton(((DevExpress.XtraEditors.Controls.ButtonPredefines)(resources.GetObject("inputDataFim.Properties.CalendarTimeProperties.Buttons"))))});
+            this.inputDataFim.Properties.Mask.EditMask = resources.GetString("inputDataFim.Properties.Mask.EditMask");
+            this.inputDataFim.Properties.Mask.UseMaskAsDisplayFormat = ((bool)(resources.GetObject("inputDataFim.Properties.Mask.UseMaskAsDisplayFormat")));
             // 
             // labelControl8
             // 
-            this.labelControl8.Appearance.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelControl8.Location = new System.Drawing.Point(15, 129);
+            this.labelControl8.Appearance.Font = ((System.Drawing.Font)(resources.GetObject("labelControl8.Appearance.Font")));
+            resources.ApplyResources(this.labelControl8, "labelControl8");
             this.labelControl8.Name = "labelControl8";
-            this.labelControl8.Size = new System.Drawing.Size(85, 16);
-            this.labelControl8.TabIndex = 43;
-            this.labelControl8.Text = "Carga Horária";
             // 
             // inputFeeICX
             // 
-            this.inputFeeICX.Location = new System.Drawing.Point(534, 98);
+            resources.ApplyResources(this.inputFeeICX, "inputFeeICX");
             this.inputFeeICX.Name = "inputFeeICX";
-            this.inputFeeICX.Properties.Appearance.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.inputFeeICX.Properties.Appearance.Font = ((System.Drawing.Font)(resources.GetObject("inputFeeICX.Properties.Appearance.Font")));
             this.inputFeeICX.Properties.Appearance.Options.UseFont = true;
-            this.inputFeeICX.Size = new System.Drawing.Size(100, 22);
-            this.inputFeeICX.TabIndex = 47;
             // 
             // labelControl10
             // 
-            this.labelControl10.Appearance.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelControl10.Location = new System.Drawing.Point(418, 101);
+            this.labelControl10.Appearance.Font = ((System.Drawing.Font)(resources.GetObject("labelControl10.Appearance.Font")));
+            resources.ApplyResources(this.labelControl10, "labelControl10");
             this.labelControl10.Name = "labelControl10";
-            this.labelControl10.Size = new System.Drawing.Size(47, 16);
-            this.labelControl10.TabIndex = 46;
-            this.labelControl10.Text = "Fee ICX";
             // 
             // inputBolsaAuxilio
             // 
-            this.inputBolsaAuxilio.Location = new System.Drawing.Point(119, 99);
+            resources.ApplyResources(this.inputBolsaAuxilio, "inputBolsaAuxilio");
             this.inputBolsaAuxilio.Name = "inputBolsaAuxilio";
-            this.inputBolsaAuxilio.Properties.Appearance.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.inputBolsaAuxilio.Properties.Appearance.Font = ((System.Drawing.Font)(resources.GetObject("inputBolsaAuxilio.Properties.Appearance.Font")));
             this.inputBolsaAuxilio.Properties.Appearance.Options.UseFont = true;
-            this.inputBolsaAuxilio.Size = new System.Drawing.Size(250, 22);
-            this.inputBolsaAuxilio.TabIndex = 49;
             // 
             // labelControl11
             // 
-            this.labelControl11.Appearance.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelControl11.Location = new System.Drawing.Point(15, 104);
+            this.labelControl11.Appearance.Font = ((System.Drawing.Font)(resources.GetObject("labelControl11.Appearance.Font")));
+            resources.ApplyResources(this.labelControl11, "labelControl11");
             this.labelControl11.Name = "labelControl11";
-            this.labelControl11.Size = new System.Drawing.Size(78, 16);
-            this.labelControl11.TabIndex = 48;
-            this.labelControl11.Text = "Bolsa-Auxílio";
             // 
             // inputAcomodacaoProvida
             // 
-            this.inputAcomodacaoProvida.Location = new System.Drawing.Point(534, 126);
+            resources.ApplyResources(this.inputAcomodacaoProvida, "inputAcomodacaoProvida");
             this.inputAcomodacaoProvida.Name = "inputAcomodacaoProvida";
-            this.inputAcomodacaoProvida.Properties.Appearance.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.inputAcomodacaoProvida.Properties.Appearance.Font = ((System.Drawing.Font)(resources.GetObject("inputAcomodacaoProvida.Properties.Appearance.Font")));
             this.inputAcomodacaoProvida.Properties.Appearance.Options.UseFont = true;
-            this.inputAcomodacaoProvida.Size = new System.Drawing.Size(100, 22);
-            this.inputAcomodacaoProvida.TabIndex = 51;
             // 
             // labelControl12
             // 
-            this.labelControl12.Appearance.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelControl12.Location = new System.Drawing.Point(418, 129);
+            resources.ApplyResources(this.labelControl12, "labelControl12");
+            this.labelControl12.Appearance.Font = ((System.Drawing.Font)(resources.GetObject("labelControl12.Appearance.Font")));
             this.labelControl12.Name = "labelControl12";
-            this.labelControl12.Size = new System.Drawing.Size(88, 16);
-            this.labelControl12.TabIndex = 50;
-            this.labelControl12.Text = "Acom. Provida";
             // 
             // inputAcomodacaoCoberta
             // 
-            this.inputAcomodacaoCoberta.Location = new System.Drawing.Point(534, 154);
+            resources.ApplyResources(this.inputAcomodacaoCoberta, "inputAcomodacaoCoberta");
             this.inputAcomodacaoCoberta.Name = "inputAcomodacaoCoberta";
-            this.inputAcomodacaoCoberta.Properties.Appearance.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.inputAcomodacaoCoberta.Properties.Appearance.Font = ((System.Drawing.Font)(resources.GetObject("inputAcomodacaoCoberta.Properties.Appearance.Font")));
             this.inputAcomodacaoCoberta.Properties.Appearance.Options.UseFont = true;
-            this.inputAcomodacaoCoberta.Size = new System.Drawing.Size(100, 22);
-            this.inputAcomodacaoCoberta.TabIndex = 53;
             // 
             // labelControl13
             // 
-            this.labelControl13.Appearance.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelControl13.Location = new System.Drawing.Point(418, 157);
+            resources.ApplyResources(this.labelControl13, "labelControl13");
+            this.labelControl13.Appearance.Font = ((System.Drawing.Font)(resources.GetObject("labelControl13.Appearance.Font")));
             this.labelControl13.Name = "labelControl13";
-            this.labelControl13.Size = new System.Drawing.Size(89, 16);
-            this.labelControl13.TabIndex = 52;
-            this.labelControl13.Text = "Acom. Coberta";
             // 
-            // inputAlimentacaoCoberta
+            // inputAlimentacaoFimDeSemana
             // 
-            this.inputAlimentacaoCoberta.Location = new System.Drawing.Point(119, 181);
-            this.inputAlimentacaoCoberta.Name = "inputAlimentacaoCoberta";
-            this.inputAlimentacaoCoberta.Properties.Appearance.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.inputAlimentacaoCoberta.Properties.Appearance.Options.UseFont = true;
-            this.inputAlimentacaoCoberta.Size = new System.Drawing.Size(250, 22);
-            this.inputAlimentacaoCoberta.TabIndex = 57;
+            resources.ApplyResources(this.inputAlimentacaoFimDeSemana, "inputAlimentacaoFimDeSemana");
+            this.inputAlimentacaoFimDeSemana.Name = "inputAlimentacaoFimDeSemana";
+            this.inputAlimentacaoFimDeSemana.Properties.Appearance.Font = ((System.Drawing.Font)(resources.GetObject("inputAlimentacaoFimDeSemana.Properties.Appearance.Font")));
+            this.inputAlimentacaoFimDeSemana.Properties.Appearance.Options.UseFont = true;
             // 
             // labelControl14
             // 
-            this.labelControl14.Appearance.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelControl14.Location = new System.Drawing.Point(18, 184);
+            this.labelControl14.Appearance.Font = ((System.Drawing.Font)(resources.GetObject("labelControl14.Appearance.Font")));
+            resources.ApplyResources(this.labelControl14, "labelControl14");
             this.labelControl14.Name = "labelControl14";
-            this.labelControl14.Size = new System.Drawing.Size(80, 16);
-            this.labelControl14.TabIndex = 56;
-            this.labelControl14.Text = "Alim. Coberta";
             // 
-            // inputAlimentacaoProvida
+            // inputAlimentacaoSemana
             // 
-            this.inputAlimentacaoProvida.Location = new System.Drawing.Point(119, 153);
-            this.inputAlimentacaoProvida.Name = "inputAlimentacaoProvida";
-            this.inputAlimentacaoProvida.Properties.Appearance.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.inputAlimentacaoProvida.Properties.Appearance.Options.UseFont = true;
-            this.inputAlimentacaoProvida.Size = new System.Drawing.Size(250, 22);
-            this.inputAlimentacaoProvida.TabIndex = 55;
+            resources.ApplyResources(this.inputAlimentacaoSemana, "inputAlimentacaoSemana");
+            this.inputAlimentacaoSemana.Name = "inputAlimentacaoSemana";
+            this.inputAlimentacaoSemana.Properties.Appearance.Font = ((System.Drawing.Font)(resources.GetObject("inputAlimentacaoSemana.Properties.Appearance.Font")));
+            this.inputAlimentacaoSemana.Properties.Appearance.Options.UseFont = true;
             // 
             // labelControl15
             // 
-            this.labelControl15.Appearance.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelControl15.Location = new System.Drawing.Point(18, 156);
+            this.labelControl15.Appearance.Font = ((System.Drawing.Font)(resources.GetObject("labelControl15.Appearance.Font")));
+            resources.ApplyResources(this.labelControl15, "labelControl15");
             this.labelControl15.Name = "labelControl15";
-            this.labelControl15.Size = new System.Drawing.Size(79, 16);
-            this.labelControl15.TabIndex = 54;
-            this.labelControl15.Text = "Alim. Provida";
             // 
             // inputComputador
             // 
-            this.inputComputador.Location = new System.Drawing.Point(534, 182);
+            resources.ApplyResources(this.inputComputador, "inputComputador");
             this.inputComputador.Name = "inputComputador";
-            this.inputComputador.Properties.Appearance.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.inputComputador.Properties.Appearance.Font = ((System.Drawing.Font)(resources.GetObject("inputComputador.Properties.Appearance.Font")));
             this.inputComputador.Properties.Appearance.Options.UseFont = true;
-            this.inputComputador.Size = new System.Drawing.Size(100, 22);
-            this.inputComputador.TabIndex = 59;
             // 
             // labelControl16
             // 
-            this.labelControl16.Appearance.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelControl16.Location = new System.Drawing.Point(418, 185);
+            resources.ApplyResources(this.labelControl16, "labelControl16");
+            this.labelControl16.Appearance.Font = ((System.Drawing.Font)(resources.GetObject("labelControl16.Appearance.Font")));
             this.labelControl16.Name = "labelControl16";
-            this.labelControl16.Size = new System.Drawing.Size(74, 16);
-            this.labelControl16.TabIndex = 58;
-            this.labelControl16.Text = "Computador";
-            // 
-            // labelControl9
-            // 
-            this.labelControl9.Appearance.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelControl9.Location = new System.Drawing.Point(199, 127);
-            this.labelControl9.Name = "labelControl9";
-            this.labelControl9.Size = new System.Drawing.Size(101, 16);
-            this.labelControl9.TabIndex = 45;
-            this.labelControl9.Text = "Horas Semanais";
             // 
             // xtraTabControl
             // 
-            this.xtraTabControl.Location = new System.Drawing.Point(12, 116);
+            resources.ApplyResources(this.xtraTabControl, "xtraTabControl");
             this.xtraTabControl.Name = "xtraTabControl";
             this.xtraTabControl.SelectedTabPage = this.xtraTabPageVaga;
-            this.xtraTabControl.Size = new System.Drawing.Size(660, 250);
-            this.xtraTabControl.TabIndex = 38;
             this.xtraTabControl.TabPages.AddRange(new DevExpress.XtraTab.XtraTabPage[] {
             this.xtraTabPageVaga,
             this.xtraTabPagePagamento,
-            this.xtraTabPageTestemunhas});
+            this.xtraTabPageParcelas,
+            this.xtraTabPageTestemunhas,
+            this.xtraTabPageDocumentos});
             // 
             // xtraTabPageVaga
             // 
-            this.xtraTabPageVaga.Controls.Add(this.inputAlimentacaoCoberta);
+            this.xtraTabPageVaga.Controls.Add(this.inputTrabalhoSabado);
+            this.xtraTabPageVaga.Controls.Add(this.labelControl25);
+            this.xtraTabPageVaga.Controls.Add(this.radioGroupPrograma);
+            this.xtraTabPageVaga.Controls.Add(this.labelControl9);
+            this.xtraTabPageVaga.Controls.Add(this.inputCargaHorariaExtenso);
+            this.xtraTabPageVaga.Controls.Add(this.inputAlimentacaoFimDeSemana);
             this.xtraTabPageVaga.Controls.Add(this.labelControl3);
             this.xtraTabPageVaga.Controls.Add(this.botaoPesquisar);
             this.xtraTabPageVaga.Controls.Add(this.labelControl4);
             this.xtraTabPageVaga.Controls.Add(this.labelControl8);
             this.xtraTabPageVaga.Controls.Add(this.inputPaisDestino);
-            this.xtraTabPageVaga.Controls.Add(this.inputCargaHoraria);
             this.xtraTabPageVaga.Controls.Add(this.labelControl5);
             this.xtraTabPageVaga.Controls.Add(this.labelControl6);
             this.xtraTabPageVaga.Controls.Add(this.inputCidadeDestino);
-            this.xtraTabPageVaga.Controls.Add(this.labelControl9);
             this.xtraTabPageVaga.Controls.Add(this.labelControl16);
             this.xtraTabPageVaga.Controls.Add(this.inputComputador);
             this.xtraTabPageVaga.Controls.Add(this.inputAcomodacaoProvida);
@@ -523,136 +530,555 @@
             this.xtraTabPageVaga.Controls.Add(this.inputBolsaAuxilio);
             this.xtraTabPageVaga.Controls.Add(this.labelControl7);
             this.xtraTabPageVaga.Controls.Add(this.labelControl10);
-            this.xtraTabPageVaga.Controls.Add(this.inputAlimentacaoProvida);
+            this.xtraTabPageVaga.Controls.Add(this.inputAlimentacaoSemana);
             this.xtraTabPageVaga.Controls.Add(this.labelControl15);
             this.xtraTabPageVaga.Controls.Add(this.inputAcomodacaoCoberta);
+            this.xtraTabPageVaga.Controls.Add(this.inputCargaHorariaNumero);
             this.xtraTabPageVaga.Name = "xtraTabPageVaga";
-            this.xtraTabPageVaga.Size = new System.Drawing.Size(654, 222);
-            this.xtraTabPageVaga.Text = "Dados da Vaga";
+            resources.ApplyResources(this.xtraTabPageVaga, "xtraTabPageVaga");
+            // 
+            // inputTrabalhoSabado
+            // 
+            resources.ApplyResources(this.inputTrabalhoSabado, "inputTrabalhoSabado");
+            this.inputTrabalhoSabado.Name = "inputTrabalhoSabado";
+            this.inputTrabalhoSabado.Properties.Appearance.Font = ((System.Drawing.Font)(resources.GetObject("inputTrabalhoSabado.Properties.Appearance.Font")));
+            this.inputTrabalhoSabado.Properties.Appearance.Options.UseFont = true;
+            // 
+            // labelControl25
+            // 
+            resources.ApplyResources(this.labelControl25, "labelControl25");
+            this.labelControl25.Appearance.Font = ((System.Drawing.Font)(resources.GetObject("labelControl25.Appearance.Font")));
+            this.labelControl25.Name = "labelControl25";
+            // 
+            // radioGroupPrograma
+            // 
+            resources.ApplyResources(this.radioGroupPrograma, "radioGroupPrograma");
+            this.radioGroupPrograma.Name = "radioGroupPrograma";
+            this.radioGroupPrograma.Properties.Appearance.Font = ((System.Drawing.Font)(resources.GetObject("radioGroupPrograma.Properties.Appearance.Font")));
+            this.radioGroupPrograma.Properties.Appearance.Options.UseFont = true;
+            this.radioGroupPrograma.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder;
+            this.radioGroupPrograma.Properties.Items.AddRange(new DevExpress.XtraEditors.Controls.RadioGroupItem[] {
+            new DevExpress.XtraEditors.Controls.RadioGroupItem(((object)(resources.GetObject("radioGroupPrograma.Properties.Items"))), resources.GetString("radioGroupPrograma.Properties.Items1")),
+            new DevExpress.XtraEditors.Controls.RadioGroupItem(((object)(resources.GetObject("radioGroupPrograma.Properties.Items2"))), resources.GetString("radioGroupPrograma.Properties.Items3")),
+            new DevExpress.XtraEditors.Controls.RadioGroupItem(((object)(resources.GetObject("radioGroupPrograma.Properties.Items4"))), resources.GetString("radioGroupPrograma.Properties.Items5"))});
+            this.radioGroupPrograma.SelectedIndexChanged += new System.EventHandler(this.atribuirTestemunhas);
+            // 
+            // labelControl9
+            // 
+            resources.ApplyResources(this.labelControl9, "labelControl9");
+            this.labelControl9.Appearance.Font = ((System.Drawing.Font)(resources.GetObject("labelControl9.Appearance.Font")));
+            this.labelControl9.Name = "labelControl9";
+            // 
+            // inputCargaHorariaExtenso
+            // 
+            resources.ApplyResources(this.inputCargaHorariaExtenso, "inputCargaHorariaExtenso");
+            this.inputCargaHorariaExtenso.Name = "inputCargaHorariaExtenso";
+            this.inputCargaHorariaExtenso.Properties.Appearance.Font = ((System.Drawing.Font)(resources.GetObject("inputCargaHorariaExtenso.Properties.Appearance.Font")));
+            this.inputCargaHorariaExtenso.Properties.Appearance.Options.UseFont = true;
+            // 
+            // inputCargaHorariaNumero
+            // 
+            resources.ApplyResources(this.inputCargaHorariaNumero, "inputCargaHorariaNumero");
+            this.inputCargaHorariaNumero.Name = "inputCargaHorariaNumero";
+            this.inputCargaHorariaNumero.Properties.Appearance.Font = ((System.Drawing.Font)(resources.GetObject("inputCargaHorariaNumero.Properties.Appearance.Font")));
+            this.inputCargaHorariaNumero.Properties.Appearance.Options.UseFont = true;
+            this.inputCargaHorariaNumero.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(((DevExpress.XtraEditors.Controls.ButtonPredefines)(resources.GetObject("inputCargaHorariaNumero.Properties.Buttons"))))});
+            this.inputCargaHorariaNumero.Properties.EditValueChangedFiringMode = DevExpress.XtraEditors.Controls.EditValueChangedFiringMode.Default;
+            this.inputCargaHorariaNumero.Properties.IsFloatValue = false;
+            this.inputCargaHorariaNumero.Properties.Mask.EditMask = resources.GetString("inputCargaHorariaNumero.Properties.Mask.EditMask");
+            this.inputCargaHorariaNumero.Properties.MaxValue = new decimal(new int[] {
+            99,
+            0,
+            0,
+            0});
+            this.inputCargaHorariaNumero.Properties.MinValue = new decimal(new int[] {
+            25,
+            0,
+            0,
+            0});
+            this.inputCargaHorariaNumero.EditValueChanged += new System.EventHandler(this.alterarCargaHorariaNumerica);
             // 
             // xtraTabPagePagamento
             // 
             this.xtraTabPagePagamento.Controls.Add(this.inputNumeroParcelas);
+            this.xtraTabPagePagamento.Controls.Add(this.labelControlValorParcialExtenso);
+            this.xtraTabPagePagamento.Controls.Add(this.inputValorParcialExtenso);
+            this.xtraTabPagePagamento.Controls.Add(this.labelControlValorParcial);
+            this.xtraTabPagePagamento.Controls.Add(this.inputValorParcial);
+            this.xtraTabPagePagamento.Controls.Add(this.inputModoTransferencia);
+            this.xtraTabPagePagamento.Controls.Add(this.inputModoPagSeguro);
+            this.xtraTabPagePagamento.Controls.Add(this.inputModoDinheiro);
+            this.xtraTabPagePagamento.Controls.Add(this.inputModoDeposito);
+            this.xtraTabPagePagamento.Controls.Add(this.inputModoCheque);
+            this.xtraTabPagePagamento.Controls.Add(this.inputModoDebito);
+            this.xtraTabPagePagamento.Controls.Add(this.inputModoCredito);
+            this.xtraTabPagePagamento.Controls.Add(this.inputModoBoleto);
             this.xtraTabPagePagamento.Controls.Add(this.labelControl21);
             this.xtraTabPagePagamento.Controls.Add(this.inputDataPagamento);
-            this.xtraTabPagePagamento.Controls.Add(this.inputFormasPagamento);
-            this.xtraTabPagePagamento.Controls.Add(this.labelControl20);
+            this.xtraTabPagePagamento.Controls.Add(this.labelControlNumeroParcelas);
             this.xtraTabPagePagamento.Controls.Add(this.inputModoPagamento);
             this.xtraTabPagePagamento.Controls.Add(this.labelControl19);
             this.xtraTabPagePagamento.Controls.Add(this.inputValorExtenso);
             this.xtraTabPagePagamento.Controls.Add(this.labelControl18);
             this.xtraTabPagePagamento.Controls.Add(this.inputValorContrato);
             this.xtraTabPagePagamento.Name = "xtraTabPagePagamento";
-            this.xtraTabPagePagamento.Size = new System.Drawing.Size(654, 222);
-            this.xtraTabPagePagamento.Text = "Dados do Pagamento";
+            resources.ApplyResources(this.xtraTabPagePagamento, "xtraTabPagePagamento");
             // 
             // inputNumeroParcelas
             // 
-            this.inputNumeroParcelas.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.inputNumeroParcelas.Location = new System.Drawing.Point(119, 101);
+            resources.ApplyResources(this.inputNumeroParcelas, "inputNumeroParcelas");
             this.inputNumeroParcelas.Name = "inputNumeroParcelas";
-            this.inputNumeroParcelas.Size = new System.Drawing.Size(52, 22);
-            this.inputNumeroParcelas.TabIndex = 44;
+            this.inputNumeroParcelas.Properties.Appearance.Font = ((System.Drawing.Font)(resources.GetObject("inputNumeroParcelas.Properties.Appearance.Font")));
+            this.inputNumeroParcelas.Properties.Appearance.Options.UseFont = true;
+            this.inputNumeroParcelas.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(((DevExpress.XtraEditors.Controls.ButtonPredefines)(resources.GetObject("inputNumeroParcelas.Properties.Buttons"))))});
+            this.inputNumeroParcelas.Properties.EditValueChangedFiringMode = DevExpress.XtraEditors.Controls.EditValueChangedFiringMode.Default;
+            this.inputNumeroParcelas.Properties.IsFloatValue = false;
+            this.inputNumeroParcelas.Properties.Mask.EditMask = resources.GetString("inputNumeroParcelas.Properties.Mask.EditMask");
+            this.inputNumeroParcelas.Properties.MaxValue = new decimal(new int[] {
+            12,
+            0,
+            0,
+            0});
+            this.inputNumeroParcelas.Properties.MinValue = new decimal(new int[] {
+            2,
+            0,
+            0,
+            0});
+            this.inputNumeroParcelas.EditValueChanged += new System.EventHandler(this.alterarValorParcial);
+            // 
+            // labelControlValorParcialExtenso
+            // 
+            this.labelControlValorParcialExtenso.Appearance.Font = ((System.Drawing.Font)(resources.GetObject("labelControlValorParcialExtenso.Appearance.Font")));
+            resources.ApplyResources(this.labelControlValorParcialExtenso, "labelControlValorParcialExtenso");
+            this.labelControlValorParcialExtenso.Name = "labelControlValorParcialExtenso";
+            // 
+            // inputValorParcialExtenso
+            // 
+            resources.ApplyResources(this.inputValorParcialExtenso, "inputValorParcialExtenso");
+            this.inputValorParcialExtenso.Name = "inputValorParcialExtenso";
+            this.inputValorParcialExtenso.Properties.Appearance.Font = ((System.Drawing.Font)(resources.GetObject("inputValorParcialExtenso.Properties.Appearance.Font")));
+            this.inputValorParcialExtenso.Properties.Appearance.Options.UseFont = true;
+            // 
+            // labelControlValorParcial
+            // 
+            this.labelControlValorParcial.Appearance.Font = ((System.Drawing.Font)(resources.GetObject("labelControlValorParcial.Appearance.Font")));
+            resources.ApplyResources(this.labelControlValorParcial, "labelControlValorParcial");
+            this.labelControlValorParcial.Name = "labelControlValorParcial";
+            // 
+            // inputValorParcial
+            // 
+            resources.ApplyResources(this.inputValorParcial, "inputValorParcial");
+            this.inputValorParcial.Name = "inputValorParcial";
+            this.inputValorParcial.Properties.Appearance.Font = ((System.Drawing.Font)(resources.GetObject("inputValorParcial.Properties.Appearance.Font")));
+            this.inputValorParcial.Properties.Appearance.Options.UseFont = true;
+            this.inputValorParcial.Properties.Mask.AutoComplete = ((DevExpress.XtraEditors.Mask.AutoCompleteType)(resources.GetObject("inputValorParcial.Properties.Mask.AutoComplete")));
+            this.inputValorParcial.Properties.Mask.EditMask = resources.GetString("inputValorParcial.Properties.Mask.EditMask");
+            this.inputValorParcial.Properties.Mask.IgnoreMaskBlank = ((bool)(resources.GetObject("inputValorParcial.Properties.Mask.IgnoreMaskBlank")));
+            this.inputValorParcial.Properties.Mask.MaskType = ((DevExpress.XtraEditors.Mask.MaskType)(resources.GetObject("inputValorParcial.Properties.Mask.MaskType")));
+            this.inputValorParcial.Properties.Mask.ShowPlaceHolders = ((bool)(resources.GetObject("inputValorParcial.Properties.Mask.ShowPlaceHolders")));
+            this.inputValorParcial.Properties.Mask.UseMaskAsDisplayFormat = ((bool)(resources.GetObject("inputValorParcial.Properties.Mask.UseMaskAsDisplayFormat")));
+            this.inputValorParcial.EditValueChanged += new System.EventHandler(this.alterarValorParcialExtenso);
+            // 
+            // inputModoTransferencia
+            // 
+            resources.ApplyResources(this.inputModoTransferencia, "inputModoTransferencia");
+            this.inputModoTransferencia.Name = "inputModoTransferencia";
+            this.inputModoTransferencia.Properties.Appearance.Font = ((System.Drawing.Font)(resources.GetObject("inputModoTransferencia.Properties.Appearance.Font")));
+            this.inputModoTransferencia.Properties.Appearance.Options.UseFont = true;
+            this.inputModoTransferencia.Properties.Caption = resources.GetString("inputModoTransferencia.Properties.Caption");
+            // 
+            // inputModoPagSeguro
+            // 
+            resources.ApplyResources(this.inputModoPagSeguro, "inputModoPagSeguro");
+            this.inputModoPagSeguro.Name = "inputModoPagSeguro";
+            this.inputModoPagSeguro.Properties.Appearance.Font = ((System.Drawing.Font)(resources.GetObject("inputModoPagSeguro.Properties.Appearance.Font")));
+            this.inputModoPagSeguro.Properties.Appearance.Options.UseFont = true;
+            this.inputModoPagSeguro.Properties.Caption = resources.GetString("inputModoPagSeguro.Properties.Caption");
+            // 
+            // inputModoDinheiro
+            // 
+            resources.ApplyResources(this.inputModoDinheiro, "inputModoDinheiro");
+            this.inputModoDinheiro.Name = "inputModoDinheiro";
+            this.inputModoDinheiro.Properties.Appearance.Font = ((System.Drawing.Font)(resources.GetObject("inputModoDinheiro.Properties.Appearance.Font")));
+            this.inputModoDinheiro.Properties.Appearance.Options.UseFont = true;
+            this.inputModoDinheiro.Properties.Caption = resources.GetString("inputModoDinheiro.Properties.Caption");
+            // 
+            // inputModoDeposito
+            // 
+            resources.ApplyResources(this.inputModoDeposito, "inputModoDeposito");
+            this.inputModoDeposito.Name = "inputModoDeposito";
+            this.inputModoDeposito.Properties.Appearance.Font = ((System.Drawing.Font)(resources.GetObject("inputModoDeposito.Properties.Appearance.Font")));
+            this.inputModoDeposito.Properties.Appearance.Options.UseFont = true;
+            this.inputModoDeposito.Properties.Caption = resources.GetString("inputModoDeposito.Properties.Caption");
+            // 
+            // inputModoCheque
+            // 
+            resources.ApplyResources(this.inputModoCheque, "inputModoCheque");
+            this.inputModoCheque.Name = "inputModoCheque";
+            this.inputModoCheque.Properties.Appearance.Font = ((System.Drawing.Font)(resources.GetObject("inputModoCheque.Properties.Appearance.Font")));
+            this.inputModoCheque.Properties.Appearance.Options.UseFont = true;
+            this.inputModoCheque.Properties.Caption = resources.GetString("inputModoCheque.Properties.Caption");
+            // 
+            // inputModoDebito
+            // 
+            resources.ApplyResources(this.inputModoDebito, "inputModoDebito");
+            this.inputModoDebito.Name = "inputModoDebito";
+            this.inputModoDebito.Properties.Appearance.Font = ((System.Drawing.Font)(resources.GetObject("inputModoDebito.Properties.Appearance.Font")));
+            this.inputModoDebito.Properties.Appearance.Options.UseFont = true;
+            this.inputModoDebito.Properties.Caption = resources.GetString("inputModoDebito.Properties.Caption");
+            // 
+            // inputModoCredito
+            // 
+            resources.ApplyResources(this.inputModoCredito, "inputModoCredito");
+            this.inputModoCredito.Name = "inputModoCredito";
+            this.inputModoCredito.Properties.Appearance.Font = ((System.Drawing.Font)(resources.GetObject("inputModoCredito.Properties.Appearance.Font")));
+            this.inputModoCredito.Properties.Appearance.Options.UseFont = true;
+            this.inputModoCredito.Properties.Caption = resources.GetString("inputModoCredito.Properties.Caption");
+            // 
+            // inputModoBoleto
+            // 
+            resources.ApplyResources(this.inputModoBoleto, "inputModoBoleto");
+            this.inputModoBoleto.Name = "inputModoBoleto";
+            this.inputModoBoleto.Properties.Appearance.Font = ((System.Drawing.Font)(resources.GetObject("inputModoBoleto.Properties.Appearance.Font")));
+            this.inputModoBoleto.Properties.Appearance.Options.UseFont = true;
+            this.inputModoBoleto.Properties.Caption = resources.GetString("inputModoBoleto.Properties.Caption");
             // 
             // labelControl21
             // 
-            this.labelControl21.Appearance.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelControl21.Location = new System.Drawing.Point(244, 13);
+            resources.ApplyResources(this.labelControl21, "labelControl21");
+            this.labelControl21.Appearance.Font = ((System.Drawing.Font)(resources.GetObject("labelControl21.Appearance.Font")));
             this.labelControl21.Name = "labelControl21";
-            this.labelControl21.Size = new System.Drawing.Size(102, 16);
-            this.labelControl21.TabIndex = 43;
-            this.labelControl21.Text = "Data Pagamento";
             // 
             // inputDataPagamento
             // 
-            this.inputDataPagamento.EditValue = null;
-            this.inputDataPagamento.Location = new System.Drawing.Point(352, 11);
+            resources.ApplyResources(this.inputDataPagamento, "inputDataPagamento");
             this.inputDataPagamento.Name = "inputDataPagamento";
+            this.inputDataPagamento.Properties.Appearance.Font = ((System.Drawing.Font)(resources.GetObject("inputDataPagamento.Properties.Appearance.Font")));
+            this.inputDataPagamento.Properties.Appearance.Options.UseFont = true;
             this.inputDataPagamento.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            new DevExpress.XtraEditors.Controls.EditorButton(((DevExpress.XtraEditors.Controls.ButtonPredefines)(resources.GetObject("inputDataPagamento.Properties.Buttons"))))});
             this.inputDataPagamento.Properties.CalendarTimeProperties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.inputDataPagamento.Size = new System.Drawing.Size(100, 20);
-            this.inputDataPagamento.TabIndex = 42;
+            new DevExpress.XtraEditors.Controls.EditorButton(((DevExpress.XtraEditors.Controls.ButtonPredefines)(resources.GetObject("inputDataPagamento.Properties.CalendarTimeProperties.Buttons"))))});
+            this.inputDataPagamento.Properties.Mask.EditMask = resources.GetString("inputDataPagamento.Properties.Mask.EditMask");
+            this.inputDataPagamento.Properties.Mask.UseMaskAsDisplayFormat = ((bool)(resources.GetObject("inputDataPagamento.Properties.Mask.UseMaskAsDisplayFormat")));
             // 
-            // inputFormasPagamento
+            // labelControlNumeroParcelas
             // 
-            this.inputFormasPagamento.Appearance.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.inputFormasPagamento.Appearance.Options.UseFont = true;
-            this.inputFormasPagamento.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder;
-            this.inputFormasPagamento.Items.AddRange(new DevExpress.XtraEditors.Controls.CheckedListBoxItem[] {
-            new DevExpress.XtraEditors.Controls.CheckedListBoxItem(null, "Boleto Bancário"),
-            new DevExpress.XtraEditors.Controls.CheckedListBoxItem(null, "Cartão de Crédito"),
-            new DevExpress.XtraEditors.Controls.CheckedListBoxItem(null, "Cartão de Débito"),
-            new DevExpress.XtraEditors.Controls.CheckedListBoxItem(null, "Cheque"),
-            new DevExpress.XtraEditors.Controls.CheckedListBoxItem(null, "Depósito Bancário"),
-            new DevExpress.XtraEditors.Controls.CheckedListBoxItem(null, "Dinheiro"),
-            new DevExpress.XtraEditors.Controls.CheckedListBoxItem(null, "PagSeguro"),
-            new DevExpress.XtraEditors.Controls.CheckedListBoxItem(null, "Transferência Bancária")});
-            this.inputFormasPagamento.Location = new System.Drawing.Point(278, 77);
-            this.inputFormasPagamento.MultiColumn = true;
-            this.inputFormasPagamento.Name = "inputFormasPagamento";
-            this.inputFormasPagamento.Size = new System.Drawing.Size(356, 83);
-            this.inputFormasPagamento.TabIndex = 41;
-            // 
-            // labelControl20
-            // 
-            this.labelControl20.Appearance.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelControl20.Location = new System.Drawing.Point(177, 104);
-            this.labelControl20.Name = "labelControl20";
-            this.labelControl20.Size = new System.Drawing.Size(38, 16);
-            this.labelControl20.TabIndex = 40;
-            this.labelControl20.Text = "Vezes";
+            this.labelControlNumeroParcelas.Appearance.Font = ((System.Drawing.Font)(resources.GetObject("labelControlNumeroParcelas.Appearance.Font")));
+            resources.ApplyResources(this.labelControlNumeroParcelas, "labelControlNumeroParcelas");
+            this.labelControlNumeroParcelas.Name = "labelControlNumeroParcelas";
             // 
             // inputModoPagamento
             // 
-            this.inputModoPagamento.Location = new System.Drawing.Point(15, 68);
+            resources.ApplyResources(this.inputModoPagamento, "inputModoPagamento");
             this.inputModoPagamento.Name = "inputModoPagamento";
-            this.inputModoPagamento.Properties.Appearance.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.inputModoPagamento.Properties.Appearance.Font = ((System.Drawing.Font)(resources.GetObject("inputModoPagamento.Properties.Appearance.Font")));
             this.inputModoPagamento.Properties.Appearance.Options.UseFont = true;
             this.inputModoPagamento.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder;
             this.inputModoPagamento.Properties.Items.AddRange(new DevExpress.XtraEditors.Controls.RadioGroupItem[] {
-            new DevExpress.XtraEditors.Controls.RadioGroupItem(null, "À vista"),
-            new DevExpress.XtraEditors.Controls.RadioGroupItem(null, "Parcelado"),
-            new DevExpress.XtraEditors.Controls.RadioGroupItem(null, "Isento")});
-            this.inputModoPagamento.Size = new System.Drawing.Size(109, 93);
-            this.inputModoPagamento.TabIndex = 38;
+            new DevExpress.XtraEditors.Controls.RadioGroupItem(((object)(resources.GetObject("inputModoPagamento.Properties.Items"))), resources.GetString("inputModoPagamento.Properties.Items1")),
+            new DevExpress.XtraEditors.Controls.RadioGroupItem(((object)(resources.GetObject("inputModoPagamento.Properties.Items2"))), resources.GetString("inputModoPagamento.Properties.Items3")),
+            new DevExpress.XtraEditors.Controls.RadioGroupItem(((object)(resources.GetObject("inputModoPagamento.Properties.Items4"))), resources.GetString("inputModoPagamento.Properties.Items5"))});
+            this.inputModoPagamento.SelectedIndexChanged += new System.EventHandler(this.alterarNumeroParcelas);
             // 
             // labelControl19
             // 
-            this.labelControl19.Appearance.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelControl19.Location = new System.Drawing.Point(15, 41);
+            this.labelControl19.Appearance.Font = ((System.Drawing.Font)(resources.GetObject("labelControl19.Appearance.Font")));
+            resources.ApplyResources(this.labelControl19, "labelControl19");
             this.labelControl19.Name = "labelControl19";
-            this.labelControl19.Size = new System.Drawing.Size(83, 16);
-            this.labelControl19.TabIndex = 37;
-            this.labelControl19.Text = "Valor Extenso";
             // 
             // inputValorExtenso
             // 
-            this.inputValorExtenso.Location = new System.Drawing.Point(119, 38);
+            resources.ApplyResources(this.inputValorExtenso, "inputValorExtenso");
             this.inputValorExtenso.Name = "inputValorExtenso";
-            this.inputValorExtenso.Properties.Appearance.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.inputValorExtenso.Properties.Appearance.Font = ((System.Drawing.Font)(resources.GetObject("inputValorExtenso.Properties.Appearance.Font")));
             this.inputValorExtenso.Properties.Appearance.Options.UseFont = true;
-            this.inputValorExtenso.Size = new System.Drawing.Size(515, 22);
-            this.inputValorExtenso.TabIndex = 36;
             // 
             // labelControl18
             // 
-            this.labelControl18.Appearance.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelControl18.Location = new System.Drawing.Point(15, 13);
+            this.labelControl18.Appearance.Font = ((System.Drawing.Font)(resources.GetObject("labelControl18.Appearance.Font")));
+            resources.ApplyResources(this.labelControl18, "labelControl18");
             this.labelControl18.Name = "labelControl18";
-            this.labelControl18.Size = new System.Drawing.Size(60, 16);
-            this.labelControl18.TabIndex = 34;
-            this.labelControl18.Text = "Valor (R$)";
             // 
             // inputValorContrato
             // 
-            this.inputValorContrato.Location = new System.Drawing.Point(119, 10);
+            resources.ApplyResources(this.inputValorContrato, "inputValorContrato");
             this.inputValorContrato.Name = "inputValorContrato";
-            this.inputValorContrato.Properties.Appearance.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.inputValorContrato.Properties.Appearance.Font = ((System.Drawing.Font)(resources.GetObject("inputValorContrato.Properties.Appearance.Font")));
             this.inputValorContrato.Properties.Appearance.Options.UseFont = true;
-            this.inputValorContrato.Size = new System.Drawing.Size(93, 22);
-            this.inputValorContrato.TabIndex = 35;
+            this.inputValorContrato.Properties.Mask.AutoComplete = ((DevExpress.XtraEditors.Mask.AutoCompleteType)(resources.GetObject("inputValorContrato.Properties.Mask.AutoComplete")));
+            this.inputValorContrato.Properties.Mask.EditMask = resources.GetString("inputValorContrato.Properties.Mask.EditMask");
+            this.inputValorContrato.Properties.Mask.IgnoreMaskBlank = ((bool)(resources.GetObject("inputValorContrato.Properties.Mask.IgnoreMaskBlank")));
+            this.inputValorContrato.Properties.Mask.MaskType = ((DevExpress.XtraEditors.Mask.MaskType)(resources.GetObject("inputValorContrato.Properties.Mask.MaskType")));
+            this.inputValorContrato.Properties.Mask.ShowPlaceHolders = ((bool)(resources.GetObject("inputValorContrato.Properties.Mask.ShowPlaceHolders")));
+            this.inputValorContrato.Properties.Mask.UseMaskAsDisplayFormat = ((bool)(resources.GetObject("inputValorContrato.Properties.Mask.UseMaskAsDisplayFormat")));
+            this.inputValorContrato.EditValueChanged += new System.EventHandler(this.alterarValorContrato);
+            // 
+            // xtraTabPageParcelas
+            // 
+            this.xtraTabPageParcelas.Controls.Add(this.labelValorNaoParcelado);
+            this.xtraTabPageParcelas.Controls.Add(this.inputLabelParcela12);
+            this.xtraTabPageParcelas.Controls.Add(this.inputParcela12);
+            this.xtraTabPageParcelas.Controls.Add(this.inputLabelParcela11);
+            this.xtraTabPageParcelas.Controls.Add(this.inputParcela11);
+            this.xtraTabPageParcelas.Controls.Add(this.inputLabelParcela10);
+            this.xtraTabPageParcelas.Controls.Add(this.inputParcela10);
+            this.xtraTabPageParcelas.Controls.Add(this.inputLabelParcela9);
+            this.xtraTabPageParcelas.Controls.Add(this.inputParcela9);
+            this.xtraTabPageParcelas.Controls.Add(this.inputLabelParcela8);
+            this.xtraTabPageParcelas.Controls.Add(this.inputParcela8);
+            this.xtraTabPageParcelas.Controls.Add(this.inputLabelParcela7);
+            this.xtraTabPageParcelas.Controls.Add(this.inputParcela7);
+            this.xtraTabPageParcelas.Controls.Add(this.inputLabelParcela6);
+            this.xtraTabPageParcelas.Controls.Add(this.inputParcela6);
+            this.xtraTabPageParcelas.Controls.Add(this.inputLabelParcela5);
+            this.xtraTabPageParcelas.Controls.Add(this.inputParcela5);
+            this.xtraTabPageParcelas.Controls.Add(this.inputLabelParcela4);
+            this.xtraTabPageParcelas.Controls.Add(this.inputParcela4);
+            this.xtraTabPageParcelas.Controls.Add(this.inputLabelParcela3);
+            this.xtraTabPageParcelas.Controls.Add(this.inputParcela3);
+            this.xtraTabPageParcelas.Controls.Add(this.inputLabelParcela2);
+            this.xtraTabPageParcelas.Controls.Add(this.inputParcela2);
+            this.xtraTabPageParcelas.Controls.Add(this.inputLabelParcela1);
+            this.xtraTabPageParcelas.Controls.Add(this.inputParcela1);
+            this.xtraTabPageParcelas.Name = "xtraTabPageParcelas";
+            resources.ApplyResources(this.xtraTabPageParcelas, "xtraTabPageParcelas");
+            // 
+            // labelValorNaoParcelado
+            // 
+            this.labelValorNaoParcelado.Appearance.Font = ((System.Drawing.Font)(resources.GetObject("labelValorNaoParcelado.Appearance.Font")));
+            resources.ApplyResources(this.labelValorNaoParcelado, "labelValorNaoParcelado");
+            this.labelValorNaoParcelado.Name = "labelValorNaoParcelado";
+            // 
+            // inputLabelParcela12
+            // 
+            resources.ApplyResources(this.inputLabelParcela12, "inputLabelParcela12");
+            this.inputLabelParcela12.Appearance.Font = ((System.Drawing.Font)(resources.GetObject("inputLabelParcela12.Appearance.Font")));
+            this.inputLabelParcela12.Name = "inputLabelParcela12";
+            // 
+            // inputParcela12
+            // 
+            resources.ApplyResources(this.inputParcela12, "inputParcela12");
+            this.inputParcela12.Name = "inputParcela12";
+            this.inputParcela12.Properties.Appearance.Font = ((System.Drawing.Font)(resources.GetObject("inputParcela12.Properties.Appearance.Font")));
+            this.inputParcela12.Properties.Appearance.Options.UseFont = true;
+            this.inputParcela12.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(((DevExpress.XtraEditors.Controls.ButtonPredefines)(resources.GetObject("inputParcela12.Properties.Buttons"))))});
+            this.inputParcela12.Properties.CalendarTimeProperties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(((DevExpress.XtraEditors.Controls.ButtonPredefines)(resources.GetObject("inputParcela12.Properties.CalendarTimeProperties.Buttons"))))});
+            this.inputParcela12.Properties.Mask.EditMask = resources.GetString("inputParcela12.Properties.Mask.EditMask");
+            this.inputParcela12.Properties.Mask.UseMaskAsDisplayFormat = ((bool)(resources.GetObject("inputParcela12.Properties.Mask.UseMaskAsDisplayFormat")));
+            // 
+            // inputLabelParcela11
+            // 
+            resources.ApplyResources(this.inputLabelParcela11, "inputLabelParcela11");
+            this.inputLabelParcela11.Appearance.Font = ((System.Drawing.Font)(resources.GetObject("inputLabelParcela11.Appearance.Font")));
+            this.inputLabelParcela11.Name = "inputLabelParcela11";
+            // 
+            // inputParcela11
+            // 
+            resources.ApplyResources(this.inputParcela11, "inputParcela11");
+            this.inputParcela11.Name = "inputParcela11";
+            this.inputParcela11.Properties.Appearance.Font = ((System.Drawing.Font)(resources.GetObject("inputParcela11.Properties.Appearance.Font")));
+            this.inputParcela11.Properties.Appearance.Options.UseFont = true;
+            this.inputParcela11.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(((DevExpress.XtraEditors.Controls.ButtonPredefines)(resources.GetObject("inputParcela11.Properties.Buttons"))))});
+            this.inputParcela11.Properties.CalendarTimeProperties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(((DevExpress.XtraEditors.Controls.ButtonPredefines)(resources.GetObject("inputParcela11.Properties.CalendarTimeProperties.Buttons"))))});
+            this.inputParcela11.Properties.Mask.EditMask = resources.GetString("inputParcela11.Properties.Mask.EditMask");
+            this.inputParcela11.Properties.Mask.UseMaskAsDisplayFormat = ((bool)(resources.GetObject("inputParcela11.Properties.Mask.UseMaskAsDisplayFormat")));
+            // 
+            // inputLabelParcela10
+            // 
+            resources.ApplyResources(this.inputLabelParcela10, "inputLabelParcela10");
+            this.inputLabelParcela10.Appearance.Font = ((System.Drawing.Font)(resources.GetObject("inputLabelParcela10.Appearance.Font")));
+            this.inputLabelParcela10.Name = "inputLabelParcela10";
+            // 
+            // inputParcela10
+            // 
+            resources.ApplyResources(this.inputParcela10, "inputParcela10");
+            this.inputParcela10.Name = "inputParcela10";
+            this.inputParcela10.Properties.Appearance.Font = ((System.Drawing.Font)(resources.GetObject("inputParcela10.Properties.Appearance.Font")));
+            this.inputParcela10.Properties.Appearance.Options.UseFont = true;
+            this.inputParcela10.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(((DevExpress.XtraEditors.Controls.ButtonPredefines)(resources.GetObject("inputParcela10.Properties.Buttons"))))});
+            this.inputParcela10.Properties.CalendarTimeProperties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(((DevExpress.XtraEditors.Controls.ButtonPredefines)(resources.GetObject("inputParcela10.Properties.CalendarTimeProperties.Buttons"))))});
+            this.inputParcela10.Properties.Mask.EditMask = resources.GetString("inputParcela10.Properties.Mask.EditMask");
+            this.inputParcela10.Properties.Mask.UseMaskAsDisplayFormat = ((bool)(resources.GetObject("inputParcela10.Properties.Mask.UseMaskAsDisplayFormat")));
+            // 
+            // inputLabelParcela9
+            // 
+            resources.ApplyResources(this.inputLabelParcela9, "inputLabelParcela9");
+            this.inputLabelParcela9.Appearance.Font = ((System.Drawing.Font)(resources.GetObject("inputLabelParcela9.Appearance.Font")));
+            this.inputLabelParcela9.Name = "inputLabelParcela9";
+            // 
+            // inputParcela9
+            // 
+            resources.ApplyResources(this.inputParcela9, "inputParcela9");
+            this.inputParcela9.Name = "inputParcela9";
+            this.inputParcela9.Properties.Appearance.Font = ((System.Drawing.Font)(resources.GetObject("inputParcela9.Properties.Appearance.Font")));
+            this.inputParcela9.Properties.Appearance.Options.UseFont = true;
+            this.inputParcela9.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(((DevExpress.XtraEditors.Controls.ButtonPredefines)(resources.GetObject("inputParcela9.Properties.Buttons"))))});
+            this.inputParcela9.Properties.CalendarTimeProperties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(((DevExpress.XtraEditors.Controls.ButtonPredefines)(resources.GetObject("inputParcela9.Properties.CalendarTimeProperties.Buttons"))))});
+            this.inputParcela9.Properties.Mask.EditMask = resources.GetString("inputParcela9.Properties.Mask.EditMask");
+            this.inputParcela9.Properties.Mask.UseMaskAsDisplayFormat = ((bool)(resources.GetObject("inputParcela9.Properties.Mask.UseMaskAsDisplayFormat")));
+            // 
+            // inputLabelParcela8
+            // 
+            resources.ApplyResources(this.inputLabelParcela8, "inputLabelParcela8");
+            this.inputLabelParcela8.Appearance.Font = ((System.Drawing.Font)(resources.GetObject("inputLabelParcela8.Appearance.Font")));
+            this.inputLabelParcela8.Name = "inputLabelParcela8";
+            // 
+            // inputParcela8
+            // 
+            resources.ApplyResources(this.inputParcela8, "inputParcela8");
+            this.inputParcela8.Name = "inputParcela8";
+            this.inputParcela8.Properties.Appearance.Font = ((System.Drawing.Font)(resources.GetObject("inputParcela8.Properties.Appearance.Font")));
+            this.inputParcela8.Properties.Appearance.Options.UseFont = true;
+            this.inputParcela8.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(((DevExpress.XtraEditors.Controls.ButtonPredefines)(resources.GetObject("inputParcela8.Properties.Buttons"))))});
+            this.inputParcela8.Properties.CalendarTimeProperties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(((DevExpress.XtraEditors.Controls.ButtonPredefines)(resources.GetObject("inputParcela8.Properties.CalendarTimeProperties.Buttons"))))});
+            this.inputParcela8.Properties.Mask.EditMask = resources.GetString("inputParcela8.Properties.Mask.EditMask");
+            this.inputParcela8.Properties.Mask.UseMaskAsDisplayFormat = ((bool)(resources.GetObject("inputParcela8.Properties.Mask.UseMaskAsDisplayFormat")));
+            // 
+            // inputLabelParcela7
+            // 
+            resources.ApplyResources(this.inputLabelParcela7, "inputLabelParcela7");
+            this.inputLabelParcela7.Appearance.Font = ((System.Drawing.Font)(resources.GetObject("inputLabelParcela7.Appearance.Font")));
+            this.inputLabelParcela7.Name = "inputLabelParcela7";
+            // 
+            // inputParcela7
+            // 
+            resources.ApplyResources(this.inputParcela7, "inputParcela7");
+            this.inputParcela7.Name = "inputParcela7";
+            this.inputParcela7.Properties.Appearance.Font = ((System.Drawing.Font)(resources.GetObject("inputParcela7.Properties.Appearance.Font")));
+            this.inputParcela7.Properties.Appearance.Options.UseFont = true;
+            this.inputParcela7.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(((DevExpress.XtraEditors.Controls.ButtonPredefines)(resources.GetObject("inputParcela7.Properties.Buttons"))))});
+            this.inputParcela7.Properties.CalendarTimeProperties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(((DevExpress.XtraEditors.Controls.ButtonPredefines)(resources.GetObject("inputParcela7.Properties.CalendarTimeProperties.Buttons"))))});
+            this.inputParcela7.Properties.Mask.EditMask = resources.GetString("inputParcela7.Properties.Mask.EditMask");
+            this.inputParcela7.Properties.Mask.UseMaskAsDisplayFormat = ((bool)(resources.GetObject("inputParcela7.Properties.Mask.UseMaskAsDisplayFormat")));
+            // 
+            // inputLabelParcela6
+            // 
+            this.inputLabelParcela6.Appearance.Font = ((System.Drawing.Font)(resources.GetObject("inputLabelParcela6.Appearance.Font")));
+            resources.ApplyResources(this.inputLabelParcela6, "inputLabelParcela6");
+            this.inputLabelParcela6.Name = "inputLabelParcela6";
+            // 
+            // inputParcela6
+            // 
+            resources.ApplyResources(this.inputParcela6, "inputParcela6");
+            this.inputParcela6.Name = "inputParcela6";
+            this.inputParcela6.Properties.Appearance.Font = ((System.Drawing.Font)(resources.GetObject("inputParcela6.Properties.Appearance.Font")));
+            this.inputParcela6.Properties.Appearance.Options.UseFont = true;
+            this.inputParcela6.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(((DevExpress.XtraEditors.Controls.ButtonPredefines)(resources.GetObject("inputParcela6.Properties.Buttons"))))});
+            this.inputParcela6.Properties.CalendarTimeProperties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(((DevExpress.XtraEditors.Controls.ButtonPredefines)(resources.GetObject("inputParcela6.Properties.CalendarTimeProperties.Buttons"))))});
+            this.inputParcela6.Properties.Mask.EditMask = resources.GetString("inputParcela6.Properties.Mask.EditMask");
+            this.inputParcela6.Properties.Mask.UseMaskAsDisplayFormat = ((bool)(resources.GetObject("inputParcela6.Properties.Mask.UseMaskAsDisplayFormat")));
+            // 
+            // inputLabelParcela5
+            // 
+            this.inputLabelParcela5.Appearance.Font = ((System.Drawing.Font)(resources.GetObject("inputLabelParcela5.Appearance.Font")));
+            resources.ApplyResources(this.inputLabelParcela5, "inputLabelParcela5");
+            this.inputLabelParcela5.Name = "inputLabelParcela5";
+            // 
+            // inputParcela5
+            // 
+            resources.ApplyResources(this.inputParcela5, "inputParcela5");
+            this.inputParcela5.Name = "inputParcela5";
+            this.inputParcela5.Properties.Appearance.Font = ((System.Drawing.Font)(resources.GetObject("inputParcela5.Properties.Appearance.Font")));
+            this.inputParcela5.Properties.Appearance.Options.UseFont = true;
+            this.inputParcela5.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(((DevExpress.XtraEditors.Controls.ButtonPredefines)(resources.GetObject("inputParcela5.Properties.Buttons"))))});
+            this.inputParcela5.Properties.CalendarTimeProperties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(((DevExpress.XtraEditors.Controls.ButtonPredefines)(resources.GetObject("inputParcela5.Properties.CalendarTimeProperties.Buttons"))))});
+            this.inputParcela5.Properties.Mask.EditMask = resources.GetString("inputParcela5.Properties.Mask.EditMask");
+            this.inputParcela5.Properties.Mask.UseMaskAsDisplayFormat = ((bool)(resources.GetObject("inputParcela5.Properties.Mask.UseMaskAsDisplayFormat")));
+            // 
+            // inputLabelParcela4
+            // 
+            this.inputLabelParcela4.Appearance.Font = ((System.Drawing.Font)(resources.GetObject("inputLabelParcela4.Appearance.Font")));
+            resources.ApplyResources(this.inputLabelParcela4, "inputLabelParcela4");
+            this.inputLabelParcela4.Name = "inputLabelParcela4";
+            // 
+            // inputParcela4
+            // 
+            resources.ApplyResources(this.inputParcela4, "inputParcela4");
+            this.inputParcela4.Name = "inputParcela4";
+            this.inputParcela4.Properties.Appearance.Font = ((System.Drawing.Font)(resources.GetObject("inputParcela4.Properties.Appearance.Font")));
+            this.inputParcela4.Properties.Appearance.Options.UseFont = true;
+            this.inputParcela4.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(((DevExpress.XtraEditors.Controls.ButtonPredefines)(resources.GetObject("inputParcela4.Properties.Buttons"))))});
+            this.inputParcela4.Properties.CalendarTimeProperties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(((DevExpress.XtraEditors.Controls.ButtonPredefines)(resources.GetObject("inputParcela4.Properties.CalendarTimeProperties.Buttons"))))});
+            this.inputParcela4.Properties.Mask.EditMask = resources.GetString("inputParcela4.Properties.Mask.EditMask");
+            this.inputParcela4.Properties.Mask.UseMaskAsDisplayFormat = ((bool)(resources.GetObject("inputParcela4.Properties.Mask.UseMaskAsDisplayFormat")));
+            // 
+            // inputLabelParcela3
+            // 
+            this.inputLabelParcela3.Appearance.Font = ((System.Drawing.Font)(resources.GetObject("inputLabelParcela3.Appearance.Font")));
+            resources.ApplyResources(this.inputLabelParcela3, "inputLabelParcela3");
+            this.inputLabelParcela3.Name = "inputLabelParcela3";
+            // 
+            // inputParcela3
+            // 
+            resources.ApplyResources(this.inputParcela3, "inputParcela3");
+            this.inputParcela3.Name = "inputParcela3";
+            this.inputParcela3.Properties.Appearance.Font = ((System.Drawing.Font)(resources.GetObject("inputParcela3.Properties.Appearance.Font")));
+            this.inputParcela3.Properties.Appearance.Options.UseFont = true;
+            this.inputParcela3.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(((DevExpress.XtraEditors.Controls.ButtonPredefines)(resources.GetObject("inputParcela3.Properties.Buttons"))))});
+            this.inputParcela3.Properties.CalendarTimeProperties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(((DevExpress.XtraEditors.Controls.ButtonPredefines)(resources.GetObject("inputParcela3.Properties.CalendarTimeProperties.Buttons"))))});
+            this.inputParcela3.Properties.Mask.EditMask = resources.GetString("inputParcela3.Properties.Mask.EditMask");
+            this.inputParcela3.Properties.Mask.UseMaskAsDisplayFormat = ((bool)(resources.GetObject("inputParcela3.Properties.Mask.UseMaskAsDisplayFormat")));
+            // 
+            // inputLabelParcela2
+            // 
+            this.inputLabelParcela2.Appearance.Font = ((System.Drawing.Font)(resources.GetObject("inputLabelParcela2.Appearance.Font")));
+            resources.ApplyResources(this.inputLabelParcela2, "inputLabelParcela2");
+            this.inputLabelParcela2.Name = "inputLabelParcela2";
+            // 
+            // inputParcela2
+            // 
+            resources.ApplyResources(this.inputParcela2, "inputParcela2");
+            this.inputParcela2.Name = "inputParcela2";
+            this.inputParcela2.Properties.Appearance.Font = ((System.Drawing.Font)(resources.GetObject("inputParcela2.Properties.Appearance.Font")));
+            this.inputParcela2.Properties.Appearance.Options.UseFont = true;
+            this.inputParcela2.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(((DevExpress.XtraEditors.Controls.ButtonPredefines)(resources.GetObject("inputParcela2.Properties.Buttons"))))});
+            this.inputParcela2.Properties.CalendarTimeProperties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(((DevExpress.XtraEditors.Controls.ButtonPredefines)(resources.GetObject("inputParcela2.Properties.CalendarTimeProperties.Buttons"))))});
+            this.inputParcela2.Properties.Mask.EditMask = resources.GetString("inputParcela2.Properties.Mask.EditMask");
+            this.inputParcela2.Properties.Mask.UseMaskAsDisplayFormat = ((bool)(resources.GetObject("inputParcela2.Properties.Mask.UseMaskAsDisplayFormat")));
+            // 
+            // inputLabelParcela1
+            // 
+            this.inputLabelParcela1.Appearance.Font = ((System.Drawing.Font)(resources.GetObject("inputLabelParcela1.Appearance.Font")));
+            resources.ApplyResources(this.inputLabelParcela1, "inputLabelParcela1");
+            this.inputLabelParcela1.Name = "inputLabelParcela1";
+            // 
+            // inputParcela1
+            // 
+            resources.ApplyResources(this.inputParcela1, "inputParcela1");
+            this.inputParcela1.Name = "inputParcela1";
+            this.inputParcela1.Properties.Appearance.Font = ((System.Drawing.Font)(resources.GetObject("inputParcela1.Properties.Appearance.Font")));
+            this.inputParcela1.Properties.Appearance.Options.UseFont = true;
+            this.inputParcela1.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(((DevExpress.XtraEditors.Controls.ButtonPredefines)(resources.GetObject("inputParcela1.Properties.Buttons"))))});
+            this.inputParcela1.Properties.CalendarTimeProperties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(((DevExpress.XtraEditors.Controls.ButtonPredefines)(resources.GetObject("inputParcela1.Properties.CalendarTimeProperties.Buttons"))))});
+            this.inputParcela1.Properties.Mask.EditMask = resources.GetString("inputParcela1.Properties.Mask.EditMask");
+            this.inputParcela1.Properties.Mask.UseMaskAsDisplayFormat = ((bool)(resources.GetObject("inputParcela1.Properties.Mask.UseMaskAsDisplayFormat")));
             // 
             // xtraTabPageTestemunhas
             // 
@@ -661,83 +1087,135 @@
             this.xtraTabPageTestemunhas.Controls.Add(this.labelControl23);
             this.xtraTabPageTestemunhas.Controls.Add(this.inputTestemunha1);
             this.xtraTabPageTestemunhas.Name = "xtraTabPageTestemunhas";
-            this.xtraTabPageTestemunhas.Size = new System.Drawing.Size(654, 222);
-            this.xtraTabPageTestemunhas.Text = "Testemunhas";
+            resources.ApplyResources(this.xtraTabPageTestemunhas, "xtraTabPageTestemunhas");
             // 
             // labelControl22
             // 
-            this.labelControl22.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.labelControl22.Appearance.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelControl22.Location = new System.Drawing.Point(14, 18);
+            this.labelControl22.Appearance.Font = ((System.Drawing.Font)(resources.GetObject("labelControl22.Appearance.Font")));
+            resources.ApplyResources(this.labelControl22, "labelControl22");
             this.labelControl22.Name = "labelControl22";
-            this.labelControl22.Size = new System.Drawing.Size(85, 16);
-            this.labelControl22.TabIndex = 32;
-            this.labelControl22.Text = "Testemunha 1";
             // 
             // inputTestemunha2
             // 
-            this.inputTestemunha2.Location = new System.Drawing.Point(118, 43);
+            resources.ApplyResources(this.inputTestemunha2, "inputTestemunha2");
             this.inputTestemunha2.Name = "inputTestemunha2";
             this.inputTestemunha2.Properties.AllowFocused = false;
-            this.inputTestemunha2.Properties.Appearance.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.inputTestemunha2.Properties.Appearance.Font = ((System.Drawing.Font)(resources.GetObject("inputTestemunha2.Properties.Appearance.Font")));
             this.inputTestemunha2.Properties.Appearance.Options.UseFont = true;
             this.inputTestemunha2.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton()});
             this.inputTestemunha2.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
-            this.inputTestemunha2.Size = new System.Drawing.Size(515, 22);
-            this.inputTestemunha2.TabIndex = 35;
             // 
             // labelControl23
             // 
-            this.labelControl23.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.labelControl23.Appearance.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelControl23.Location = new System.Drawing.Point(14, 46);
+            this.labelControl23.Appearance.Font = ((System.Drawing.Font)(resources.GetObject("labelControl23.Appearance.Font")));
+            resources.ApplyResources(this.labelControl23, "labelControl23");
             this.labelControl23.Name = "labelControl23";
-            this.labelControl23.Size = new System.Drawing.Size(85, 16);
-            this.labelControl23.TabIndex = 34;
-            this.labelControl23.Text = "Testemunha 2";
             // 
             // inputTestemunha1
             // 
-            this.inputTestemunha1.Location = new System.Drawing.Point(118, 15);
+            resources.ApplyResources(this.inputTestemunha1, "inputTestemunha1");
             this.inputTestemunha1.Name = "inputTestemunha1";
             this.inputTestemunha1.Properties.AllowFocused = false;
-            this.inputTestemunha1.Properties.Appearance.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.inputTestemunha1.Properties.Appearance.Font = ((System.Drawing.Font)(resources.GetObject("inputTestemunha1.Properties.Appearance.Font")));
             this.inputTestemunha1.Properties.Appearance.Options.UseFont = true;
             this.inputTestemunha1.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton()});
             this.inputTestemunha1.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
-            this.inputTestemunha1.Size = new System.Drawing.Size(515, 22);
-            this.inputTestemunha1.TabIndex = 33;
+            // 
+            // xtraTabPageDocumentos
+            // 
+            this.xtraTabPageDocumentos.Controls.Add(this.groupBox2);
+            this.xtraTabPageDocumentos.Controls.Add(this.groupBox1);
+            this.xtraTabPageDocumentos.Name = "xtraTabPageDocumentos";
+            resources.ApplyResources(this.xtraTabPageDocumentos, "xtraTabPageDocumentos");
+            // 
+            // groupBox2
+            // 
+            this.groupBox2.Controls.Add(this.pictureEditTermoPDF);
+            this.groupBox2.Controls.Add(this.pictureEditTermoText);
+            resources.ApplyResources(this.groupBox2, "groupBox2");
+            this.groupBox2.Name = "groupBox2";
+            this.groupBox2.TabStop = false;
+            // 
+            // pictureEditTermoPDF
+            // 
+            resources.ApplyResources(this.pictureEditTermoPDF, "pictureEditTermoPDF");
+            this.pictureEditTermoPDF.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.pictureEditTermoPDF.EditValue = global::Principal.Properties.Resources.PDFIcone;
+            this.pictureEditTermoPDF.Name = "pictureEditTermoPDF";
+            this.pictureEditTermoPDF.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder;
+            this.pictureEditTermoPDF.Properties.ShowCameraMenuItem = DevExpress.XtraEditors.Controls.CameraMenuItemVisibility.Auto;
+            this.pictureEditTermoPDF.Properties.SizeMode = DevExpress.XtraEditors.Controls.PictureSizeMode.Zoom;
+            this.pictureEditTermoPDF.Click += new System.EventHandler(this.botaoTermoPDF_Click);
+            // 
+            // pictureEditTermoText
+            // 
+            resources.ApplyResources(this.pictureEditTermoText, "pictureEditTermoText");
+            this.pictureEditTermoText.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.pictureEditTermoText.EditValue = global::Principal.Properties.Resources.EditorTextoIcone;
+            this.pictureEditTermoText.Name = "pictureEditTermoText";
+            this.pictureEditTermoText.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder;
+            this.pictureEditTermoText.Properties.ShowCameraMenuItem = DevExpress.XtraEditors.Controls.CameraMenuItemVisibility.Auto;
+            this.pictureEditTermoText.Properties.SizeMode = DevExpress.XtraEditors.Controls.PictureSizeMode.Zoom;
+            this.pictureEditTermoText.Click += new System.EventHandler(this.botaoTermoText_Click);
+            // 
+            // groupBox1
+            // 
+            this.groupBox1.Controls.Add(this.pictureEditContratoPDF);
+            this.groupBox1.Controls.Add(this.pictureEditContratoText);
+            resources.ApplyResources(this.groupBox1, "groupBox1");
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.TabStop = false;
+            // 
+            // pictureEditContratoPDF
+            // 
+            this.pictureEditContratoPDF.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.pictureEditContratoPDF.EditValue = global::Principal.Properties.Resources.PDFIcone;
+            resources.ApplyResources(this.pictureEditContratoPDF, "pictureEditContratoPDF");
+            this.pictureEditContratoPDF.Name = "pictureEditContratoPDF";
+            this.pictureEditContratoPDF.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder;
+            this.pictureEditContratoPDF.Properties.ShowCameraMenuItem = DevExpress.XtraEditors.Controls.CameraMenuItemVisibility.Auto;
+            this.pictureEditContratoPDF.Properties.SizeMode = DevExpress.XtraEditors.Controls.PictureSizeMode.Zoom;
+            this.pictureEditContratoPDF.Click += new System.EventHandler(this.botaoContratoPDF_Click);
+            // 
+            // pictureEditContratoText
+            // 
+            this.pictureEditContratoText.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.pictureEditContratoText.EditValue = global::Principal.Properties.Resources.EditorTextoIcone;
+            resources.ApplyResources(this.pictureEditContratoText, "pictureEditContratoText");
+            this.pictureEditContratoText.Name = "pictureEditContratoText";
+            this.pictureEditContratoText.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder;
+            this.pictureEditContratoText.Properties.ShowCameraMenuItem = DevExpress.XtraEditors.Controls.CameraMenuItemVisibility.Auto;
+            this.pictureEditContratoText.Properties.SizeMode = DevExpress.XtraEditors.Controls.PictureSizeMode.Zoom;
+            this.pictureEditContratoText.Click += new System.EventHandler(this.botaoContratoText_Click);
             // 
             // botaoSalvar
             // 
-            this.botaoSalvar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.botaoSalvar.Appearance.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            resources.ApplyResources(this.botaoSalvar, "botaoSalvar");
+            this.botaoSalvar.Appearance.Font = ((System.Drawing.Font)(resources.GetObject("botaoSalvar.Appearance.Font")));
             this.botaoSalvar.Appearance.Options.UseFont = true;
-            this.botaoSalvar.Location = new System.Drawing.Point(13, 372);
             this.botaoSalvar.Name = "botaoSalvar";
-            this.botaoSalvar.Size = new System.Drawing.Size(75, 30);
-            this.botaoSalvar.TabIndex = 39;
-            this.botaoSalvar.Text = "Salvar";
+            this.botaoSalvar.Click += new System.EventHandler(this.botaoSalvar_Click);
+            // 
+            // botaoResetar
+            // 
+            resources.ApplyResources(this.botaoResetar, "botaoResetar");
+            this.botaoResetar.Appearance.Font = ((System.Drawing.Font)(resources.GetObject("botaoResetar.Appearance.Font")));
+            this.botaoResetar.Appearance.Options.UseFont = true;
+            this.botaoResetar.Name = "botaoResetar";
+            this.botaoResetar.Click += new System.EventHandler(this.botaoResetar_Click);
             // 
             // RegistroApproved
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(684, 411);
+            this.Controls.Add(this.botaoResetar);
             this.Controls.Add(this.botaoSalvar);
             this.Controls.Add(this.xtraTabControl);
             this.Controls.Add(this.groupControlDadosGerais);
-            this.MaximizeBox = false;
-            this.MaximumSize = new System.Drawing.Size(700, 450);
-            this.MinimumSize = new System.Drawing.Size(700, 450);
             this.Name = "RegistroApproved";
             this.ShowIcon = false;
-            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "RegistroApproved";
             ((System.ComponentModel.ISupportInitialize)(this.inputNomeEP.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.inputNomeResponsavel.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.groupControlDadosGerais)).EndInit();
@@ -753,35 +1231,79 @@
             ((System.ComponentModel.ISupportInitialize)(this.inputDataInicio.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.inputDataFim.Properties.CalendarTimeProperties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.inputDataFim.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.inputCargaHoraria.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.inputFeeICX.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.inputBolsaAuxilio.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.inputAcomodacaoProvida.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.inputAcomodacaoCoberta.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.inputAlimentacaoCoberta.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.inputAlimentacaoProvida.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.inputAlimentacaoFimDeSemana.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.inputAlimentacaoSemana.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.inputComputador.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.xtraTabControl)).EndInit();
             this.xtraTabControl.ResumeLayout(false);
             this.xtraTabPageVaga.ResumeLayout(false);
             this.xtraTabPageVaga.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.inputTrabalhoSabado.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.radioGroupPrograma.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.inputCargaHorariaExtenso.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.inputCargaHorariaNumero.Properties)).EndInit();
             this.xtraTabPagePagamento.ResumeLayout(false);
             this.xtraTabPagePagamento.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.inputNumeroParcelas)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.inputNumeroParcelas.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.inputValorParcialExtenso.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.inputValorParcial.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.inputModoTransferencia.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.inputModoPagSeguro.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.inputModoDinheiro.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.inputModoDeposito.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.inputModoCheque.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.inputModoDebito.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.inputModoCredito.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.inputModoBoleto.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.inputDataPagamento.Properties.CalendarTimeProperties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.inputDataPagamento.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.inputFormasPagamento)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.inputModoPagamento.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.inputValorExtenso.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.inputValorContrato.Properties)).EndInit();
+            this.xtraTabPageParcelas.ResumeLayout(false);
+            this.xtraTabPageParcelas.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.inputParcela12.Properties.CalendarTimeProperties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.inputParcela12.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.inputParcela11.Properties.CalendarTimeProperties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.inputParcela11.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.inputParcela10.Properties.CalendarTimeProperties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.inputParcela10.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.inputParcela9.Properties.CalendarTimeProperties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.inputParcela9.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.inputParcela8.Properties.CalendarTimeProperties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.inputParcela8.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.inputParcela7.Properties.CalendarTimeProperties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.inputParcela7.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.inputParcela6.Properties.CalendarTimeProperties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.inputParcela6.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.inputParcela5.Properties.CalendarTimeProperties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.inputParcela5.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.inputParcela4.Properties.CalendarTimeProperties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.inputParcela4.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.inputParcela3.Properties.CalendarTimeProperties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.inputParcela3.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.inputParcela2.Properties.CalendarTimeProperties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.inputParcela2.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.inputParcela1.Properties.CalendarTimeProperties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.inputParcela1.Properties)).EndInit();
             this.xtraTabPageTestemunhas.ResumeLayout(false);
             this.xtraTabPageTestemunhas.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.inputTestemunha2.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.inputTestemunha1.Properties)).EndInit();
+            this.xtraTabPageDocumentos.ResumeLayout(false);
+            this.groupBox2.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureEditTermoPDF.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureEditTermoText.Properties)).EndInit();
+            this.groupBox1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureEditContratoPDF.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureEditContratoText.Properties)).EndInit();
             this.ResumeLayout(false);
 
         }
-
         #endregion
 
         private DevExpress.XtraEditors.LabelControl labelControl1;
@@ -798,17 +1320,15 @@
         private DevExpress.XtraEditors.LabelControl labelControl4;
         private DevExpress.XtraEditors.LabelControl labelControl17;
         private DevExpress.XtraEditors.TextEdit inputEPID;
-        private DevExpress.XtraEditors.TextEdit inputAlimentacaoCoberta;
+        private DevExpress.XtraEditors.TextEdit inputAlimentacaoFimDeSemana;
         private DevExpress.XtraEditors.LabelControl labelControl8;
-        private DevExpress.XtraEditors.TextEdit inputCargaHoraria;
         private DevExpress.XtraEditors.LabelControl labelControl6;
-        private DevExpress.XtraEditors.LabelControl labelControl9;
         private DevExpress.XtraEditors.TextEdit inputComputador;
         private DevExpress.XtraEditors.LabelControl labelControl14;
         private DevExpress.XtraEditors.DateEdit inputDataFim;
         private DevExpress.XtraEditors.DateEdit inputDataInicio;
         private DevExpress.XtraEditors.LabelControl labelControl7;
-        private DevExpress.XtraEditors.TextEdit inputAlimentacaoProvida;
+        private DevExpress.XtraEditors.TextEdit inputAlimentacaoSemana;
         private DevExpress.XtraEditors.TextEdit inputAcomodacaoCoberta;
         private DevExpress.XtraEditors.LabelControl labelControl15;
         private DevExpress.XtraEditors.LabelControl labelControl10;
@@ -827,8 +1347,7 @@
         private DevExpress.XtraEditors.TextEdit inputValorExtenso;
         private DevExpress.XtraEditors.LabelControl labelControl18;
         private DevExpress.XtraEditors.TextEdit inputValorContrato;
-        private DevExpress.XtraEditors.CheckedListBoxControl inputFormasPagamento;
-        private DevExpress.XtraEditors.LabelControl labelControl20;
+        private DevExpress.XtraEditors.LabelControl labelControlNumeroParcelas;
         private DevExpress.XtraTab.XtraTabPage xtraTabPageTestemunhas;
         private DevExpress.XtraEditors.LabelControl labelControl22;
         private DevExpress.XtraEditors.ButtonEdit inputTestemunha2;
@@ -839,6 +1358,58 @@
         private DevExpress.XtraEditors.DateEdit inputDataPagamento;
         private DevExpress.XtraEditors.LabelControl labelControl24;
         private DevExpress.XtraEditors.DateEdit inputDataAPD;
-        private System.Windows.Forms.NumericUpDown inputNumeroParcelas;
+        private DevExpress.XtraEditors.TextEdit inputCargaHorariaExtenso;
+        private DevExpress.XtraEditors.SimpleButton botaoResetar;
+        private DevExpress.XtraEditors.RadioGroup radioGroupPrograma;
+        private DevExpress.XtraEditors.LabelControl labelControl9;
+        private DevExpress.XtraEditors.SpinEdit inputCargaHorariaNumero;
+        private DevExpress.XtraEditors.TextEdit inputTrabalhoSabado;
+        private DevExpress.XtraEditors.LabelControl labelControl25;
+        private DevExpress.XtraEditors.CheckEdit inputModoTransferencia;
+        private DevExpress.XtraEditors.CheckEdit inputModoPagSeguro;
+        private DevExpress.XtraEditors.CheckEdit inputModoDinheiro;
+        private DevExpress.XtraEditors.CheckEdit inputModoDeposito;
+        private DevExpress.XtraEditors.CheckEdit inputModoCheque;
+        private DevExpress.XtraEditors.CheckEdit inputModoDebito;
+        private DevExpress.XtraEditors.CheckEdit inputModoCredito;
+        private DevExpress.XtraEditors.CheckEdit inputModoBoleto;
+        private DevExpress.XtraEditors.LabelControl labelControlValorParcialExtenso;
+        private DevExpress.XtraEditors.TextEdit inputValorParcialExtenso;
+        private DevExpress.XtraEditors.LabelControl labelControlValorParcial;
+        private DevExpress.XtraEditors.TextEdit inputValorParcial;
+        private DevExpress.XtraEditors.SpinEdit inputNumeroParcelas;
+        private DevExpress.XtraTab.XtraTabPage xtraTabPageDocumentos;
+        private System.Windows.Forms.GroupBox groupBox2;
+        private System.Windows.Forms.GroupBox groupBox1;
+        private DevExpress.XtraEditors.PictureEdit pictureEditContratoText;
+        private DevExpress.XtraEditors.PictureEdit pictureEditContratoPDF;
+        private DevExpress.XtraEditors.PictureEdit pictureEditTermoPDF;
+        private DevExpress.XtraEditors.PictureEdit pictureEditTermoText;
+        private DevExpress.XtraTab.XtraTabPage xtraTabPageParcelas;
+        private DevExpress.XtraEditors.LabelControl inputLabelParcela1;
+        private DevExpress.XtraEditors.DateEdit inputParcela1;
+        private DevExpress.XtraEditors.LabelControl inputLabelParcela12;
+        private DevExpress.XtraEditors.DateEdit inputParcela12;
+        private DevExpress.XtraEditors.LabelControl inputLabelParcela11;
+        private DevExpress.XtraEditors.DateEdit inputParcela11;
+        private DevExpress.XtraEditors.LabelControl inputLabelParcela10;
+        private DevExpress.XtraEditors.DateEdit inputParcela10;
+        private DevExpress.XtraEditors.LabelControl inputLabelParcela9;
+        private DevExpress.XtraEditors.DateEdit inputParcela9;
+        private DevExpress.XtraEditors.LabelControl inputLabelParcela8;
+        private DevExpress.XtraEditors.DateEdit inputParcela8;
+        private DevExpress.XtraEditors.LabelControl inputLabelParcela7;
+        private DevExpress.XtraEditors.DateEdit inputParcela7;
+        private DevExpress.XtraEditors.LabelControl inputLabelParcela6;
+        private DevExpress.XtraEditors.DateEdit inputParcela6;
+        private DevExpress.XtraEditors.LabelControl inputLabelParcela5;
+        private DevExpress.XtraEditors.DateEdit inputParcela5;
+        private DevExpress.XtraEditors.LabelControl inputLabelParcela4;
+        private DevExpress.XtraEditors.DateEdit inputParcela4;
+        private DevExpress.XtraEditors.LabelControl inputLabelParcela3;
+        private DevExpress.XtraEditors.DateEdit inputParcela3;
+        private DevExpress.XtraEditors.LabelControl inputLabelParcela2;
+        private DevExpress.XtraEditors.DateEdit inputParcela2;
+        private DevExpress.XtraEditors.LabelControl labelValorNaoParcelado;
     }
 }

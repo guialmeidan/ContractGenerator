@@ -24,18 +24,27 @@ namespace Principal.Forms
         private IPessoaRepositorio _pessoaRepositorio;
         private int operacao;
         private Pessoa _pessoa;
+
+        private ITestemunhaRepositorio _repositorioTestemunha;
+        private IEscritorioRepositorio _repositorioEscritorio;
+
         public ListaPessoas()
         {
             InitializeComponent();
             _pessoaService = AppCore.Container.Resolve<IPessoaService>();
             _pessoaRepositorio = AppCore.Container.Resolve<IPessoaRepositorio>();
+            _repositorioTestemunha = AppCore.Container.Resolve<ITestemunhaRepositorio>();
+            _repositorioEscritorio = AppCore.Container.Resolve<IEscritorioRepositorio>();
+
             iniciarGrid();
-            this.Text = "Lista de Pessoas";
+            this.Text = "Pessoas";
         }
 
-        private void iniciarGrid()
+        public void iniciarGrid()
         {
-            gridControlListaPessoas.DataSource = _pessoaRepositorio.ListarTodasPessoas();
+            this.gridControlListaPessoas.Refresh();
+            this.gridControlListaPessoas.DataSource = _pessoaRepositorio.ListarTodasPessoas();
+
         }
 
         private void botaoPesquisar_Click(object sender, EventArgs e)
@@ -60,7 +69,7 @@ namespace Principal.Forms
                 f.BringToFront();
             else
             {
-                var formEdit = new InserirPessoa(null, operacao) { MdiParent = this.MdiParent };
+                var formEdit = new InserirPessoa(null, operacao, this) { MdiParent = this.MdiParent };
                 formEdit.Show();
             }
         }
@@ -69,7 +78,7 @@ namespace Principal.Forms
         {
             _pessoa = ((GridView)gridControlListaPessoas.MainView).GetFocusedRow() as Pessoa;
             if (_pessoa == null)
-                throw new Exception("Selecione uma linha");
+                XtraMessageBox.Show("Selecione uma linha!", "Atenção!", MessageBoxButtons.OK, MessageBoxIcon.Error);
             return _pessoa;
         }
 
@@ -80,7 +89,7 @@ namespace Principal.Forms
             var f = Application.OpenForms[nameof(InserirPessoa)];
             if (f != null)
                 f.Close();
-             var formEdit = new InserirPessoa(_pessoa, operacao) { MdiParent = this.MdiParent };
+             var formEdit = new InserirPessoa(_pessoa, operacao, this) { MdiParent = this.MdiParent };
              formEdit.Show();
         }
 
@@ -92,14 +101,18 @@ namespace Principal.Forms
         private void botaoRemover_Click(object sender, EventArgs e)
         {
             _pessoa = ObterPessoaSelecionada();
-            if (MessageBox.Show("Tem certeza que deseja remover "+_pessoa.Nome+"?", "Confirmação", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+
+            if (_repositorioEscritorio.VerificarSeELCP(_pessoa.Id) == true)
+                XtraMessageBox.Show("Não é permitido remover o(a) LCP!", "Ação não permitida!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            else if (_repositorioTestemunha.VerificarTestemunhaExiste(_pessoa.Id) == true)
+                XtraMessageBox.Show("Não é permitido remover uma testemunha padrão!", "Ação não permitida!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            else if (_pessoaRepositorio.VerificarSePessoaEstaEmApproved(_pessoa.Id) == true)
+                XtraMessageBox.Show("Esta pessoa está envolvida em um ou mais approveds!", "Ação não permitida!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            else if (XtraMessageBox.Show("Tem certeza que deseja remover "+_pessoa.Nome+"?", "Confirmação", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
             {
                 _pessoaRepositorio.Remover(_pessoa);
-                gridControlListaPessoas.Refresh();
+                iniciarGrid();
             }
-            
-            
-
         }
     }
 }
