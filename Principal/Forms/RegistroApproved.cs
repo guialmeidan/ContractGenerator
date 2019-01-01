@@ -364,8 +364,8 @@ namespace Principal.Forms
 
         private void atualizarListaApproveds()
         {
-            var f = Application.OpenForms[nameof(Inicial)];
-            if (f != null)
+            //var f = Application.OpenForms[nameof(Inicial)];
+            //if (f != null)
                 _formListaApproveds.iniciarGrid();
         }
 

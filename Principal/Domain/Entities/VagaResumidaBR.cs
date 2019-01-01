@@ -37,8 +37,14 @@ namespace Principal.Domain.Entities
             this.NomeVaga = vagaEXPA.title;
             this.PaisDestino = vagaEXPA.host_lc.country;
             this.CidadeDestino = vagaEXPA.location.Split(new[] { ',' }, 2)[0].Trim();
-            this.CargaHorariaNumerica = obterCargaHorariaNumerica(vagaEXPA);
-            this.CargaHorariaExtenso = obterCargaHorariaExtenso();
+
+            if(!Double.IsNaN(Double.Parse(vagaEXPA.specifics_info.expected_work_schedule.from)) && !Double.IsNaN(Double.Parse(vagaEXPA.specifics_info.expected_work_schedule.to)))
+            {
+                this.CargaHorariaNumerica = obterCargaHorariaNumerica(vagaEXPA);
+                this.CargaHorariaExtenso = obterCargaHorariaExtenso();
+            }
+            
+
             this.DuracaoIntercambio = vagaEXPA.duration.ToString() + " semanas";
             this.LocalizacaoONG = vagaEXPA.role_info.city;
             this.TipoProdutoId = Conversoes.Conversoes.ConverteStringIntTipoProduto(vagaEXPA.programmes.short_name);
