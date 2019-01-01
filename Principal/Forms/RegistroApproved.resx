@@ -2048,7 +2048,7 @@
   <data name="&gt;&gt;xtraTabPagePagamento.ZOrder" xml:space="preserve">
     <value>1</value>
   </data>
-  <data name="labelControl20.Appearance.Font" type="System.Drawing.Font, System.Drawing">
+  <data name="labelValorNaoParcelado.Appearance.Font" type="System.Drawing.Font, System.Drawing">
     <value>Microsoft Sans Serif, 9.75pt</value>
   </data>
   <data name="labelValorNaoParcelado.Location" type="System.Drawing.Point, System.Drawing">

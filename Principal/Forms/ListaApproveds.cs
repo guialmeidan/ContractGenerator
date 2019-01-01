@@ -19,7 +19,7 @@ using Unity;
 
 namespace Principal.Forms
 {
-    public partial class ListaApproveds : XtraForm
+    public partial class Inicial : XtraForm
     {
         private SimpleButton botaoPesquisar;
         private TextEdit inputPesquisa;
@@ -38,7 +38,7 @@ namespace Principal.Forms
         private int operacao;
         private Approved _approved;
 
-        public ListaApproveds()
+        public Inicial()
         {
             InitializeComponent();
             _approvedService = AppCore.Container.Resolve<IApprovedService>();

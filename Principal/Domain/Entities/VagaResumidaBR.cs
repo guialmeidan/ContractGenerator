@@ -43,8 +43,13 @@ namespace Principal.Domain.Entities
             this.LocalizacaoONG = vagaEXPA.role_info.city;
             this.TipoProdutoId = Conversoes.Conversoes.ConverteStringIntTipoProduto(vagaEXPA.programmes.short_name);
             this.TipoProdutoDescricao = Conversoes.Conversoes.ConverteStringCurtaStringLongaTipoProduto(vagaEXPA.programmes.short_name);
-            this.DataInicio = vagaEXPA.earliest_start_date.Date.AddDays(-1);
-            this.DataFim = vagaEXPA.latest_end_date.Date.AddDays(-1);
+
+            var dataInicio = vagaEXPA.earliest_start_date.Date.ToString("o");
+            this.DataInicio = DateTime.Parse(dataInicio);
+
+            var dataFim = vagaEXPA.latest_end_date.Date.ToString("o");
+            this.DataFim = DateTime.Parse(dataFim);
+            
             this.TrabalhoSabado = Conversoes.Conversoes.converteBoolPortugues(vagaEXPA.specifics_info.saturday_work);
             this.AcomodacaoProvida = Conversoes.Conversoes.ConverteAcomodacaoProvida(vagaEXPA.logistics_info.accommodation_provided);
             this.AcomodacaoCoberta = Conversoes.Conversoes.ConverteStringBoolParaPortugues(vagaEXPA.logistics_info.accommodation_covered);

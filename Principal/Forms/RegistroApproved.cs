@@ -19,10 +19,11 @@ namespace Principal.Forms
 {
     public partial class RegistroApproved : XtraForm
     {
-        ListaApproveds _formListaApproveds;
+        Inicial _formListaApproveds;
         private IApprovedService _servicoApproved;
         private IPessoaRepositorio _repositorioPessoa;
         private IEscritorioRepositorio _repositorioEscritorio;
+        private IRegistroApprovedRepository _registroApprovedRepositorio;
         private IOpportunityRepository _repositorioOpportunity;
         private ITokenPublicoRepositorio _repositorioTokenPublico;
         private ITestemunhaRepositorio _repositorioTestemunha;
@@ -42,13 +43,14 @@ namespace Principal.Forms
         private string Testemunha2Nome;
         int _operacao;
         bool _documento;
+        int _programaSelecionado;
 
         Dictionary<string, Control> _binds = new Dictionary<string, Control>();
         Validacoes validador = new Validacoes();
         DateTime dataNula = new DateTime(0001, 1, 2, 1, 1, 0);
 
         //OPERACAO 1 = NOVO, 2 = EDITAR
-        public RegistroApproved(Approved approved, int operacao, ListaApproveds formListaApproveds)
+        public RegistroApproved(Approved approved, int operacao, Inicial formListaApproveds)
         {
             //Altera a cultura para substituir , por . e vice-versa (no caso dos valores monetários)
             System.Globalization.CultureInfo newCulture = (System.Globalization.CultureInfo)System.Globalization.CultureInfo.CurrentCulture.Clone();
@@ -69,6 +71,7 @@ namespace Principal.Forms
             _repositorioOpportunity = AppCore.Container.Resolve<IOpportunityRepository>();
             _repositorioTokenPublico = AppCore.Container.Resolve<ITokenPublicoRepositorio>();
             _repositorioTestemunha = AppCore.Container.Resolve<ITestemunhaRepositorio>();
+            _registroApprovedRepositorio = AppCore.Container.Resolve<IRegistroApprovedRepository>();
             _escritorio = _repositorioEscritorio.ObterEscritorio();
             _token = _repositorioTokenPublico.ObterToken();
             _testemunha = _repositorioTestemunha.ObterTestemunhas();
@@ -91,6 +94,7 @@ namespace Principal.Forms
                 inputDataAPD.Text = approved.DataApproved.ToString();
                 inputTNID.Text = approved.TNID;
                 radioGroupPrograma.SelectedIndex = approved.TipoProdutoId;
+                _programaSelecionado = approved.TipoProdutoId;
                 inputPaisDestino.Text = approved.PaisDestino;
                 inputCidadeDestino.Text = approved.CidadeDestino;
                 inputBolsaAuxilio.Text = approved.BolsaAuxilio;
@@ -148,6 +152,7 @@ namespace Principal.Forms
             inputDataAPD.Text = "";
             inputTNID.Text = "";
             radioGroupPrograma.SelectedIndex = 0;
+            _programaSelecionado = 0;
             inputModoPagamento.SelectedIndex = 0;
             inputPaisDestino.Text = "";
             inputCidadeDestino.Text = "";
@@ -180,6 +185,7 @@ namespace Principal.Forms
         private void botaoResetar_Click(object sender, EventArgs e)
         {
             ResetarCampos();
+            _operacao = 1;
         }
 
         private void botaoSalvar_Click(object sender, EventArgs e)
@@ -218,7 +224,7 @@ namespace Principal.Forms
                             AcomodacaoCoberta = inputAcomodacaoCoberta.Text,
                             AlimentacaoDiaTrabalho = inputAlimentacaoSemana.Text,
                             AlimentacaoFimSemana = inputAlimentacaoFimDeSemana.Text,
-                            Computador = inputAcomodacaoProvida.Text,
+                            Computador = inputComputador.Text,
                             DataApproved = inputDataAPD.DateTime,
                             ValorContratoNumerico = Convert.ToDecimal(inputValorContrato.Text),
                             ValorContratoExtenso = inputValorExtenso.Text,
@@ -252,7 +258,9 @@ namespace Principal.Forms
                             IdTestemunha2 = IDTestemunha2,
                             NomeTestemunha2 = inputTestemunha2.Text
                         };
+                        this.ExibirFormEspera();
                         _servicoApproved.Criar(approved);
+                         SalvarEmNuvem(approved);
                         _approved = approved;
                         _documento = true;
                     }
@@ -280,7 +288,7 @@ namespace Principal.Forms
                         _approved.AcomodacaoCoberta = inputAcomodacaoCoberta.Text;
                         _approved.AlimentacaoDiaTrabalho = inputAlimentacaoSemana.Text;
                         _approved.AlimentacaoFimSemana = inputAlimentacaoFimDeSemana.Text;
-                        _approved.Computador = inputAcomodacaoProvida.Text;
+                        _approved.Computador = inputComputador.Text;
                         _approved.DataApproved = inputDataAPD.DateTime;
                         _approved.ValorContratoNumerico = Convert.ToDecimal(inputValorContrato.Text);
                         _approved.ValorContratoExtenso = inputValorExtenso.Text;
@@ -327,13 +335,36 @@ namespace Principal.Forms
                     XtraMessageBox.Show("Erro ao salvar Approved!\n" + ex.Message, "ERRO", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     _documento = false;
                 }
+                finally
+                {
+                    this.FecharFormEspera();
+                }
             }
             //Fim do Metodo
         }
 
+        //Método responsável por captar informações e salvar em núvem
+        private void SalvarEmNuvem(Approved approved)
+        {
+            try
+            {
+                Domain.Entities.RegistroApproved NovoRegistro = new Domain.Entities.RegistroApproved()
+                {
+                    DataCriacao = System.DateTime.Now.Date,
+                    NomeCL = _escritorio.Nome,
+                    Programa = approved.TipoProdutoId
+                };
+                _registroApprovedRepositorio.SalvarApproved(NovoRegistro);
+            }
+            catch (Exception e)
+            {
+
+            }            
+        }
+
         private void atualizarListaApproveds()
         {
-            var f = Application.OpenForms[nameof(ListaApproveds)];
+            var f = Application.OpenForms[nameof(Inicial)];
             if (f != null)
                 _formListaApproveds.iniciarGrid();
         }
@@ -736,41 +767,43 @@ namespace Principal.Forms
 
         private void atribuirTestemunhas(object sender, EventArgs e)
         {
-            obterTestemunhas();
+                obterTestemunhas();
         }
 
         private void obterTestemunhas()
         {
             int tipoProduto = this.radioGroupPrograma.SelectedIndex;
-
-            try
+            
+            if(tipoProduto != _programaSelecionado)
             {
-                if (tipoProduto == 0)
+                try
                 {
-                    IDTestemunha1 = _testemunha.IdTestemunha1GV;
-                    IDTestemunha2 = _testemunha.IdTestemunha2GV;
-                    inputTestemunha1.Text = _testemunha.NomeTestemunha1GV;
-                    inputTestemunha2.Text = _testemunha.NomeTestemunha2GV;
+                    if (tipoProduto == 0)
+                    {
+                        IDTestemunha1 = _testemunha.IdTestemunha1GV;
+                        IDTestemunha2 = _testemunha.IdTestemunha2GV;
+                        inputTestemunha1.Text = _testemunha.NomeTestemunha1GV;
+                        inputTestemunha2.Text = _testemunha.NomeTestemunha2GV;
+                    }
+                    else if (tipoProduto == 1)
+                    {
+                        IDTestemunha1 = _testemunha.IdTestemunha1GE;
+                        IDTestemunha2 = _testemunha.IdTestemunha2GE;
+                        inputTestemunha1.Text = _testemunha.NomeTestemunha1GE;
+                        inputTestemunha2.Text = _testemunha.NomeTestemunha2GE;
+                    }
+                    else if (tipoProduto == 2)
+                    {
+                        IDTestemunha1 = _testemunha.IdTestemunha1GT;
+                        IDTestemunha2 = _testemunha.IdTestemunha2GT;
+                        inputTestemunha1.Text = _testemunha.NomeTestemunha1GT;
+                        inputTestemunha2.Text = _testemunha.NomeTestemunha2GT;
+                    }
                 }
-                else if (tipoProduto == 1)
+                catch (Exception ex)
                 {
-                    IDTestemunha1 = _testemunha.IdTestemunha1GE;
-                    IDTestemunha2 = _testemunha.IdTestemunha2GE;
-                    inputTestemunha1.Text = _testemunha.NomeTestemunha1GE;
-                    inputTestemunha2.Text = _testemunha.NomeTestemunha2GE;
                 }
-                else if (tipoProduto == 2)
-                {
-                    IDTestemunha1 = _testemunha.IdTestemunha1GT;
-                    IDTestemunha2 = _testemunha.IdTestemunha2GT;
-                    inputTestemunha1.Text = _testemunha.NomeTestemunha1GT;
-                    inputTestemunha2.Text = _testemunha.NomeTestemunha2GT;
-                }
-            }
-            catch (Exception ex)
-            {
-            }
-
+            }  
         }
 
         private void botaoContratoText_Click(object sender, EventArgs e)
@@ -1080,7 +1113,6 @@ namespace Principal.Forms
                 }
             return true;
         }
-
     }
 }
 

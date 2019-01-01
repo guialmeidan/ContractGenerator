@@ -13,21 +13,40 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using Escritorio = Principal.Forms.Escritorio;
+using Unity;
+using Principal.WinApp;
+using Principal.Domain.Repositories;
 
 namespace Principal
 {
+
     public partial class Principal : XtraForm
     {
+        private ILoginRepository _repositorioLogin;
         public Principal()
         {
             InitializeComponent();
-            carregarMenuLateral();
+            _repositorioLogin = AppCore.Container.Resolve<ILoginRepository>();
+            this.Load += carregarMenuLateral;
         }
 
-        private void carregarMenuLateral()
+        private void carregarMenuLateral(object sender, EventArgs e)
         {
             var form = new MenuLateral(modulosToolStripMenuItem) { MdiParent = this };
             form.Show();
+            carregarLogin();
+        }
+
+        private void carregarLogin()
+        {
+            var form = new Forms.Login(_repositorioLogin);
+            form.ShowDialog(this);
+
+            if (!_repositorioLogin.IsAuthenticated)
+            {
+                XtraMessageBox.Show("Login Incorreto!", "Login Incompleto", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                System.Windows.Forms.Application.Exit();
+            }
         }
 
         private void toolStripMenuItem1_Click(object sender, EventArgs e)
@@ -87,12 +106,12 @@ namespace Principal
 
         private void registroDeApprovedToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            var f = Application.OpenForms[nameof(ListaApproveds)];
+            var f = Application.OpenForms[nameof(Inicial)];
             if (f != null)
                 f.BringToFront();
             else
             {
-                ListaApproveds listaApproveds = new ListaApproveds();
+                Inicial listaApproveds = new Inicial();
                 listaApproveds.MdiParent = this;
                 listaApproveds.Show();
             }
@@ -144,12 +163,12 @@ namespace Principal
 
         private void escritorioToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            var f = Application.OpenForms[nameof(ListaApproveds)];
+            var f = Application.OpenForms[nameof(Inicial)];
             if (f != null)
                 f.BringToFront();
             else
             {
-                ListaApproveds listaApproveds = new ListaApproveds();
+                Inicial listaApproveds = new Inicial();
                 listaApproveds.MdiParent = this;
                 listaApproveds.Show();
             }

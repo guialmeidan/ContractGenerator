@@ -192,6 +192,51 @@
     <Reference Include="FluentMigrator.Runner, Version=1.6.2.0, Culture=neutral, PublicKeyToken=aacfc7de5acabf05, processorArchitecture=MSIL">
       <HintPath>..\packages\FluentMigrator.Runner.1.6.2\lib\40\FluentMigrator.Runner.dll</HintPath>
     </Reference>
+    <Reference Include="Google.Api.CommonProtos, Version=1.3.0.0, Culture=neutral, PublicKeyToken=3ec5ea7f18953e47, processorArchitecture=MSIL">
+      <HintPath>..\packages\Google.Api.CommonProtos.1.3.0\lib\net45\Google.Api.CommonProtos.dll</HintPath>
+    </Reference>
+    <Reference Include="Google.Api.Gax, Version=2.5.0.0, Culture=neutral, PublicKeyToken=3ec5ea7f18953e47, processorArchitecture=MSIL">
+      <HintPath>..\packages\Google.Api.Gax.2.5.0\lib\net45\Google.Api.Gax.dll</HintPath>
+    </Reference>
+    <Reference Include="Google.Api.Gax.Grpc, Version=2.5.0.0, Culture=neutral, PublicKeyToken=3ec5ea7f18953e47, processorArchitecture=MSIL">
+      <HintPath>..\packages\Google.Api.Gax.Grpc.2.5.0\lib\net45\Google.Api.Gax.Grpc.dll</HintPath>
+    </Reference>
+    <Reference Include="Google.Apis, Version=1.36.1.0, Culture=neutral, PublicKeyToken=4b01fa6e34db77ab, processorArchitecture=MSIL">
+      <HintPath>..\packages\Google.Apis.1.36.1\lib\net45\Google.Apis.dll</HintPath>
+    </Reference>
+    <Reference Include="Google.Apis.Auth, Version=1.36.1.0, Culture=neutral, PublicKeyToken=4b01fa6e34db77ab, processorArchitecture=MSIL">
+      <HintPath>..\packages\Google.Apis.Auth.1.36.1\lib\net45\Google.Apis.Auth.dll</HintPath>
+    </Reference>
+    <Reference Include="Google.Apis.Auth.PlatformServices, Version=1.36.1.0, Culture=neutral, PublicKeyToken=4b01fa6e34db77ab, processorArchitecture=MSIL">
+      <HintPath>..\packages\Google.Apis.Auth.1.36.1\lib\net45\Google.Apis.Auth.PlatformServices.dll</HintPath>
+    </Reference>
+    <Reference Include="Google.Apis.Core, Version=1.36.1.0, Culture=neutral, PublicKeyToken=4b01fa6e34db77ab, processorArchitecture=MSIL">
+      <HintPath>..\packages\Google.Apis.Core.1.36.1\lib\net45\Google.Apis.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="Google.Apis.PlatformServices, Version=1.36.1.0, Culture=neutral, PublicKeyToken=4b01fa6e34db77ab, processorArchitecture=MSIL">
+      <HintPath>..\packages\Google.Apis.1.36.1\lib\net45\Google.Apis.PlatformServices.dll</HintPath>
+    </Reference>
+    <Reference Include="Google.Apis.Sheets.v4, Version=1.36.1.1415, Culture=neutral, PublicKeyToken=4b01fa6e34db77ab, processorArchitecture=MSIL">
+      <HintPath>..\packages\Google.Apis.Sheets.v4.1.36.1.1415\lib\net45\Google.Apis.Sheets.v4.dll</HintPath>
+    </Reference>
+    <Reference Include="Google.Cloud.Firestore, Version=1.0.0.0, Culture=neutral, PublicKeyToken=185c282632e132a0, processorArchitecture=MSIL">
+      <HintPath>..\packages\Google.Cloud.Firestore.1.0.0-beta14\lib\net45\Google.Cloud.Firestore.dll</HintPath>
+    </Reference>
+    <Reference Include="Google.Cloud.Firestore.V1Beta1, Version=1.0.0.0, Culture=neutral, PublicKeyToken=185c282632e132a0, processorArchitecture=MSIL">
+      <HintPath>..\packages\Google.Cloud.Firestore.V1Beta1.1.0.0-beta14\lib\net45\Google.Cloud.Firestore.V1Beta1.dll</HintPath>
+    </Reference>
+    <Reference Include="Google.LongRunning, Version=1.0.0.0, Culture=neutral, PublicKeyToken=185c282632e132a0, processorArchitecture=MSIL">
+      <HintPath>..\packages\Google.LongRunning.1.0.0\lib\net45\Google.LongRunning.dll</HintPath>
+    </Reference>
+    <Reference Include="Google.Protobuf, Version=3.5.1.0, Culture=neutral, PublicKeyToken=a7d26565bac4d604, processorArchitecture=MSIL">
+      <HintPath>..\packages\Google.Protobuf.3.5.1\lib\net45\Google.Protobuf.dll</HintPath>
+    </Reference>
+    <Reference Include="Grpc.Auth, Version=1.0.0.0, Culture=neutral, PublicKeyToken=d754f35622e28bad, processorArchitecture=MSIL">
+      <HintPath>..\packages\Grpc.Auth.1.13.1\lib\net45\Grpc.Auth.dll</HintPath>
+    </Reference>
+    <Reference Include="Grpc.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=d754f35622e28bad, processorArchitecture=MSIL">
+      <HintPath>..\packages\Grpc.Core.1.13.1\lib\net45\Grpc.Core.dll</HintPath>
+    </Reference>
     <Reference Include="Microsoft.Extensions.Configuration.Abstractions, Version=2.0.1.0, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
       <HintPath>..\packages\Microsoft.Extensions.Configuration.Abstractions.2.0.1\lib\netstandard2.0\Microsoft.Extensions.Configuration.Abstractions.dll</HintPath>
     </Reference>
@@ -226,6 +271,9 @@
       <HintPath>..\packages\RestSharp.106.4.2\lib\net452\RestSharp.dll</HintPath>
     </Reference>
     <Reference Include="System" />
+    <Reference Include="System.Collections.Immutable, Version=1.2.2.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Collections.Immutable.1.4.0\lib\netstandard2.0\System.Collections.Immutable.dll</HintPath>
+    </Reference>
     <Reference Include="System.ComponentModel.Annotations, Version=4.2.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
       <HintPath>..\packages\System.ComponentModel.Annotations.4.4.1\lib\net461\System.ComponentModel.Annotations.dll</HintPath>
     </Reference>
@@ -326,19 +374,24 @@
   <ItemGroup>
     <Compile Include="Conversoes\Conversoes.cs" />
     <Compile Include="Conversoes\ConverterMoedas.cs" />
+    <Compile Include="Conversoes\MD5Hash.cs" />
     <Compile Include="Domain\Entities\Approved.cs" />
     <Compile Include="Domain\Entities\DiretorioArmazenamento.cs" />
     <Compile Include="Domain\Entities\Escritorio.cs" />
+    <Compile Include="Domain\Entities\Login.cs" />
     <Compile Include="Domain\Entities\Opportunity.cs" />
     <Compile Include="Domain\Entities\Pessoa.cs" />
+    <Compile Include="Domain\Entities\RegistroApproved.cs" />
     <Compile Include="Domain\Entities\TokenPublico.cs" />
     <Compile Include="Domain\Entities\Testemunha.cs" />
     <Compile Include="Domain\Entities\VagaResumidaBR.cs" />
     <Compile Include="Domain\Repositories\IApprovedRepositorio.cs" />
     <Compile Include="Domain\Repositories\IDiretorioArmazenamento.cs" />
     <Compile Include="Domain\Repositories\IEscritorioRepositorio.cs" />
+    <Compile Include="Domain\Repositories\ILoginRepository.cs" />
     <Compile Include="Domain\Repositories\IOpportunityRepository.cs" />
     <Compile Include="Domain\Repositories\IPessoaRepositorio.cs" />
+    <Compile Include="Domain\Repositories\IRegistroApprovedRepository.cs" />
     <Compile Include="Domain\Repositories\ITestemunhaRepositorio.cs" />
     <Compile Include="Domain\Repositories\ITokenPublicoRepositorio.cs" />
     <Compile Include="Domain\Services\IApprovedService.cs" />
@@ -384,6 +437,12 @@
     </Compile>
     <Compile Include="Forms\ListaPessoas.Designer.cs">
       <DependentUpon>ListaPessoas.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Login.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Login.Designer.cs">
+      <DependentUpon>Login.cs</DependentUpon>
     </Compile>
     <Compile Include="Forms\MenuLateral.cs">
       <SubType>Form</SubType>
@@ -433,6 +492,7 @@
     <Compile Include="Forms\Token.Designer.cs">
       <DependentUpon>Token.cs</DependentUpon>
     </Compile>
+    <Compile Include="Infra\Login\LoginRepository.cs" />
     <Compile Include="Infra\DatabaseFactory\DatabaseAdapters\DatabaseAdapterSQL.cs" />
     <Compile Include="Infra\DatabaseFactory\IDatabaseAdapter.cs" />
     <Compile Include="Infra\Migrations\201011051832_Criar_DiretorioArmazenamento.cs" />
@@ -450,6 +510,7 @@
     <Compile Include="Infra\Repositories\DiretorioArmazenamentoRepositorio.cs" />
     <Compile Include="Infra\Repositories\EscritorioRepositorio.cs" />
     <Compile Include="Infra\Repositories\PessoaRepositorio.cs" />
+    <Compile Include="Infra\Repositories\RegistroApprovedRepository.cs" />
     <Compile Include="Infra\Repositories\TestemunhaRepositorio.cs" />
     <Compile Include="Infra\Repositories\TokenPublicoRepositorio.cs" />
     <Compile Include="Infra\Services\ApprovedServico.cs" />
@@ -491,6 +552,9 @@
     <EmbeddedResource Include="Forms\ListaPessoas.resx">
       <DependentUpon>ListaPessoas.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Login.resx">
+      <DependentUpon>Login.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forms\MenuLateral.resx">
       <DependentUpon>MenuLateral.cs</DependentUpon>
     </EmbeddedResource>
@@ -524,6 +588,9 @@
       <SubType>Designer</SubType>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
+    <None Include="credentials.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -628,6 +695,9 @@
     <None Include="Resources\Pessoas.png" />
     <None Include="Resources\TNA Hubble - Logo Grande.png" />
   </ItemGroup>
+  <ItemGroup>
+    <Folder Include="ConexaoAPI\" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Import Project="..\packages\System.Data.SQLite.Core.1.0.108.0\build\net46\System.Data.SQLite.Core.targets" Condition="Exists('..\packages\System.Data.SQLite.Core.1.0.108.0\build\net46\System.Data.SQLite.Core.targets')" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
@@ -636,6 +706,8 @@
     </PropertyGroup>
     <Error Condition="!Exists('..\packages\System.Data.SQLite.Core.1.0.108.0\build\net46\System.Data.SQLite.Core.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\System.Data.SQLite.Core.1.0.108.0\build\net46\System.Data.SQLite.Core.targets'))" />
     <Error Condition="!Exists('..\packages\FluentMigrator.Runner.SqlServerCe.3.1.3\build\netstandard2.0\FluentMigrator.Runner.SqlServerCe.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\FluentMigrator.Runner.SqlServerCe.3.1.3\build\netstandard2.0\FluentMigrator.Runner.SqlServerCe.targets'))" />
+    <Error Condition="!Exists('..\packages\Grpc.Core.1.13.1\build\net45\Grpc.Core.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Grpc.Core.1.13.1\build\net45\Grpc.Core.targets'))" />
   </Target>
   <Import Project="..\packages\FluentMigrator.Runner.SqlServerCe.3.1.3\build\netstandard2.0\FluentMigrator.Runner.SqlServerCe.targets" Condition="Exists('..\packages\FluentMigrator.Runner.SqlServerCe.3.1.3\build\netstandard2.0\FluentMigrator.Runner.SqlServerCe.targets')" />
+  <Import Project="..\packages\Grpc.Core.1.13.1\build\net45\Grpc.Core.targets" Condition="Exists('..\packages\Grpc.Core.1.13.1\build\net45\Grpc.Core.targets')" />
 </Project>

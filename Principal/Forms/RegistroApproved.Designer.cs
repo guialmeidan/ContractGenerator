@@ -97,6 +97,7 @@ namespace Principal.Forms
             this.labelControl18 = new DevExpress.XtraEditors.LabelControl();
             this.inputValorContrato = new DevExpress.XtraEditors.TextEdit();
             this.xtraTabPageParcelas = new DevExpress.XtraTab.XtraTabPage();
+            this.labelValorNaoParcelado = new DevExpress.XtraEditors.LabelControl();
             this.inputLabelParcela12 = new DevExpress.XtraEditors.LabelControl();
             this.inputParcela12 = new DevExpress.XtraEditors.DateEdit();
             this.inputLabelParcela11 = new DevExpress.XtraEditors.LabelControl();
@@ -135,7 +136,6 @@ namespace Principal.Forms
             this.pictureEditContratoText = new DevExpress.XtraEditors.PictureEdit();
             this.botaoSalvar = new DevExpress.XtraEditors.SimpleButton();
             this.botaoResetar = new DevExpress.XtraEditors.SimpleButton();
-            this.labelValorNaoParcelado = new DevExpress.XtraEditors.LabelControl();
             ((System.ComponentModel.ISupportInitialize)(this.inputNomeEP.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.inputNomeResponsavel.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.groupControlDadosGerais)).BeginInit();
@@ -217,12 +217,6 @@ namespace Principal.Forms
             ((System.ComponentModel.ISupportInitialize)(this.pictureEditContratoPDF.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureEditContratoText.Properties)).BeginInit();
             this.SuspendLayout();
-
-            this.inputNomeEP.ButtonClick += inputNomeEP_ButtonClick;
-            this.inputNomeResponsavel.ButtonClick += inputNomeResponsavel_ButtonClick;
-            this.inputTestemunha1.ButtonClick += inputTestemunha1_ButtonClick;
-            this.inputTestemunha2.ButtonClick += inputTestemunha2_ButtonClick;
-
             // 
             // labelControl1
             // 
@@ -240,6 +234,11 @@ namespace Principal.Forms
             this.inputNomeEP.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton()});
             this.inputNomeEP.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
+
+            this.inputNomeEP.ButtonClick += inputNomeEP_ButtonClick;
+            this.inputNomeResponsavel.ButtonClick += inputNomeResponsavel_ButtonClick;
+            this.inputTestemunha1.ButtonClick += inputTestemunha1_ButtonClick;
+            this.inputTestemunha2.ButtonClick += inputTestemunha2_ButtonClick;
             // 
             // inputNomeResponsavel
             // 
@@ -847,6 +846,12 @@ namespace Principal.Forms
             this.xtraTabPageParcelas.Name = "xtraTabPageParcelas";
             resources.ApplyResources(this.xtraTabPageParcelas, "xtraTabPageParcelas");
             // 
+            // labelValorNaoParcelado
+            // 
+            this.labelValorNaoParcelado.Appearance.Font = ((System.Drawing.Font)(resources.GetObject("labelValorNaoParcelado.Appearance.Font")));
+            resources.ApplyResources(this.labelValorNaoParcelado, "labelValorNaoParcelado");
+            this.labelValorNaoParcelado.Name = "labelValorNaoParcelado";
+            // 
             // inputLabelParcela12
             // 
             resources.ApplyResources(this.inputLabelParcela12, "inputLabelParcela12");
@@ -1200,12 +1205,6 @@ namespace Principal.Forms
             this.botaoResetar.Appearance.Options.UseFont = true;
             this.botaoResetar.Name = "botaoResetar";
             this.botaoResetar.Click += new System.EventHandler(this.botaoResetar_Click);
-            // 
-            // labelValorNaoParcelado
-            // 
-            this.labelValorNaoParcelado.Appearance.Font = ((System.Drawing.Font)(resources.GetObject("labelControl20.Appearance.Font")));
-            resources.ApplyResources(this.labelValorNaoParcelado, "labelValorNaoParcelado");
-            this.labelValorNaoParcelado.Name = "labelValorNaoParcelado";
             // 
             // RegistroApproved
             // 

@@ -111,7 +111,7 @@ namespace Principal.Forms
             else if (XtraMessageBox.Show("Tem certeza que deseja remover "+_pessoa.Nome+"?", "Confirmação", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
             {
                 _pessoaRepositorio.Remover(_pessoa);
-                gridControlListaPessoas.Refresh();
+                iniciarGrid();
             }
         }
     }

@@ -12,6 +12,7 @@ using System.Globalization;
 using System.IO.Compression;
 using System.IO;
 using DevExpress.Skins;
+using Principal.Forms;
 
 namespace Principal
 {
@@ -29,8 +30,14 @@ namespace Principal
             SkinManager.EnableFormSkins();
             AppCore.Start();
             RunMigration();
-            
-            Application.Run(new Principal());            
+
+            //parte nova
+            var mdiForm = new Principal();
+            //App.Init(mdiForm);
+            Application.Run(mdiForm);
+
+
+            //Application.Run(new Login());            
         }
 
         private static void RunMigration()
