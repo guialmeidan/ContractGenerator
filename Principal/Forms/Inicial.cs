@@ -106,12 +106,12 @@ namespace Principal
 
         private void registroDeApprovedToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            var f = Application.OpenForms[nameof(Inicial)];
+            var f = Application.OpenForms[nameof(ListaApproveds)];
             if (f != null)
                 f.BringToFront();
             else
             {
-                Inicial listaApproveds = new Inicial();
+                ListaApproveds listaApproveds = new ListaApproveds();
                 listaApproveds.MdiParent = this;
                 listaApproveds.Show();
             }
@@ -163,12 +163,12 @@ namespace Principal
 
         private void escritorioToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            var f = Application.OpenForms[nameof(Inicial)];
+            var f = Application.OpenForms[nameof(ListaApproveds)];
             if (f != null)
                 f.BringToFront();
             else
             {
-                Inicial listaApproveds = new Inicial();
+                ListaApproveds listaApproveds = new ListaApproveds();
                 listaApproveds.MdiParent = this;
                 listaApproveds.Show();
             }

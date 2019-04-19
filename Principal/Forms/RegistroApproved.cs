@@ -19,7 +19,7 @@ namespace Principal.Forms
 {
     public partial class RegistroApproved : XtraForm
     {
-        Inicial _formListaApproveds;
+        ListaApproveds _formListaApproveds;
         private IApprovedService _servicoApproved;
         private IPessoaRepositorio _repositorioPessoa;
         private IEscritorioRepositorio _repositorioEscritorio;
@@ -50,7 +50,7 @@ namespace Principal.Forms
         DateTime dataNula = new DateTime(0001, 1, 2, 1, 1, 0);
 
         //OPERACAO 1 = NOVO, 2 = EDITAR
-        public RegistroApproved(Approved approved, int operacao, Inicial formListaApproveds)
+        public RegistroApproved(Approved approved, int operacao, ListaApproveds formListaApproveds)
         {
             //Altera a cultura para substituir , por . e vice-versa (no caso dos valores monetários)
             System.Globalization.CultureInfo newCulture = (System.Globalization.CultureInfo)System.Globalization.CultureInfo.CurrentCulture.Clone();
@@ -668,6 +668,7 @@ namespace Principal.Forms
             this.inputAlimentacaoSemana.Text = vaga.AlimentacaoSemana;
             this.inputAlimentacaoFimDeSemana.Text = vaga.AlimentacaoFimSemana;
             this.inputComputador.Text = vaga.Computador;
+            this.obterTestemunhas();
         }
 
         private void alterarCargaHorariaNumerica(object sender, EventArgs e)
@@ -774,8 +775,8 @@ namespace Principal.Forms
         {
             int tipoProduto = this.radioGroupPrograma.SelectedIndex;
             
-            if(tipoProduto != _programaSelecionado)
-            {
+            //if(tipoProduto != _programaSelecionado)
+            //{
                 try
                 {
                     if (tipoProduto == 0)
@@ -803,7 +804,7 @@ namespace Principal.Forms
                 catch (Exception ex)
                 {
                 }
-            }  
+            //}  
         }
 
         private void botaoContratoText_Click(object sender, EventArgs e)

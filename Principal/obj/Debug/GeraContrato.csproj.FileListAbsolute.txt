@@ -367,7 +367,6 @@ C:\Users\guilh\source\repos\Principal\Principal\obj\Debug\Principal.Forms.Contra
 C:\Users\guilh\source\repos\Principal\Principal\obj\Debug\Principal.Forms.Escritorio.resources
 C:\Users\guilh\source\repos\Principal\Principal\obj\Debug\Principal.Forms.InserirPessoa.resources
 C:\Users\guilh\source\repos\Principal\Principal\obj\Debug\Principal.Principal.resources
-C:\Users\guilh\source\repos\Principal\Principal\obj\Debug\Principal.Forms.Inicial.resources
 C:\Users\guilh\source\repos\Principal\Principal\obj\Debug\Principal.Forms.ListaPessoas.resources
 C:\Users\guilh\source\repos\Principal\Principal\obj\Debug\Principal.Forms.Login.resources
 C:\Users\guilh\source\repos\Principal\Principal\obj\Debug\Principal.Forms.MenuLateral.resources
@@ -387,3 +386,4 @@ C:\Users\guilh\source\repos\Principal\Principal\obj\Debug\pt-BR\Principal.resour
 C:\Users\guilh\source\repos\Principal\Principal\obj\Debug\GeraContrato.csproj.CopyComplete
 C:\Users\guilh\source\repos\Principal\Principal\obj\Debug\Principal.exe
 C:\Users\guilh\source\repos\Principal\Principal\obj\Debug\Principal.pdb
+C:\Users\guilh\source\repos\Principal\Principal\obj\Debug\Principal.Forms.ListaApproveds.resources

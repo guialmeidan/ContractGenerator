@@ -118,17 +118,17 @@ namespace Principal.Forms
         private int validarTestemunhasIguais(int flag)
         {
             //verifica se existem testemunhas iguais
-            if (_testemunha.IdTestemunha1GV == _testemunha.IdTestemunha2GV)
+            if (_testemunha.IdTestemunha1GV == _testemunha.IdTestemunha2GV && _testemunha.IdTestemunha1GV > 0)
             {
                 XtraMessageBox.Show("GV está com testemunhas 1 e 2 iguais!", "Atenção", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 flag = 1;
             }
-            else if (_testemunha.IdTestemunha1GE == _testemunha.IdTestemunha2GE)
+            else if (_testemunha.IdTestemunha1GE == _testemunha.IdTestemunha2GE && _testemunha.IdTestemunha1GE > 0)
             {
                 XtraMessageBox.Show("GE está com testemunhas 1 e 2 iguais!", "Atenção", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 flag = 1;
             }
-            else if (_testemunha.IdTestemunha1GT == _testemunha.IdTestemunha2GT)
+            else if (_testemunha.IdTestemunha1GT == _testemunha.IdTestemunha2GT && _testemunha.IdTestemunha1GT > 0)
             {
                 XtraMessageBox.Show("GT está com testemunhas 1 e 2 iguais!", "Atenção", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 flag = 1;

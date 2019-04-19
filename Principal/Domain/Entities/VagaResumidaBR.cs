@@ -82,7 +82,7 @@ namespace Principal.Domain.Entities
         private string obterBolsaAuxilio(Opportunity.MainOpportunity vagaEXPA)
         {           
             var salario = "";
-            if (string.IsNullOrEmpty(vagaEXPA.specifics_info.salary) || vagaEXPA.specifics_info.salary.Equals("0"))
+            if (string.IsNullOrEmpty(vagaEXPA.specifics_info.salary) || vagaEXPA.specifics_info.salary.Equals("0") || vagaEXPA.specifics_info.salary.Equals("Unpaid"))
             {
                 salario = "Não possui";
             }
