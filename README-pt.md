@@ -14,7 +14,7 @@ O sistema permite que o usuário insira os dados das partes envolvidas e consult
 
 O projeto foi dividido em duas camadas principais:
 
-- API de autenticação dos usuários;
+- [API de autenticação dos usuários](https://github.com/guialmeidan/apiContratos);
 - Cliente desktop (este repositório), que realiza a autenticação e consome uma segunda API para obter os dados da vaga e do contrato.
 
 Este cliente foi desenvolvido em C#, utilizando o Entity Framework como ORM para persistência de dados, e SQL Server como banco de dados relacional.
