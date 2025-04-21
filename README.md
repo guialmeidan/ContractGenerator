@@ -14,7 +14,7 @@ The system allows the user to input the information of the involved parties and 
 
 The project was structured in two main layers:
 
-- User authentication API;
+- [User authentication API](https://github.com/guialmeidan/apiContratos);
 - Desktop client (this repository), which handles authentication and consumes a second API to fetch contract and opportunity data.
 
 This client was developed in C#, using Entity Framework as the Object-Relational Mapper (ORM) for data persistence, and SQL Server as the relational database management system (RDBMS).
